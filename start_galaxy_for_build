@@ -1,0 +1,29 @@
+#!/bin/bash
+
+printf "firing up the galaxy stack"
+/usr/bin/supervisord -c /etc/galaxy/galaxy_build.conf
+
+n=20
+
+while [ $n -gt 0 ]; do
+    if $(supervisorctl status slurmd | grep -q "RUNNING") \
+    && $(supervisorctl status slurmctld | grep -q "RUNNING") \
+    && $(supervisorctl status nginx | grep -q "RUNNING") \
+    && $(supervisorctl status galaxy_uwsgi | grep -q "RUNNING") \
+    && $(supervisorctl status munge | grep -q "RUNNING") \
+    && $(supervisorctl status handler:handler0 | grep -q "RUNNING") \
+    && $(supervisorctl status postgresql:postgres | grep -q "RUNNING") ; then
+        echo "all services running"
+        break
+    fi
+    n=$(( $n-1 ))
+    printf "."
+    sleep 3
+done
+
+if [ $n -eq 0 ] ; then
+    printf "gave up waiting" 1>&2
+    exit 1
+fi
+
+exit 0

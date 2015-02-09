@@ -42,6 +42,25 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name pack
 
 RUN install-repository     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name suite_mirdeep_2_0"
 
+# need bioblend for api/install triggers
+RUN . /home/galaxy/venv/bin/activate && pip install bioblend
+
+# modified supervisor conf file
+ADD galaxy_build.conf /etc/galaxy/
+
+# starts a galaxy instance for build process
+ADD start_galaxy_for_build /usr/bin/
+RUN chmod +x /usr/bin/start_galaxy_for_build
+
+# specifies files to include as data libraries
+ADD setup_data_libraries.py /galaxy-central/
+ADD setup_data_libraries.ini /galaxy-central/
+
+# necessary for galaxy server path upload - possible security problems
+RUN sed -i 's|#allow_library_path_paste = False|allow_library_path_paste = True|' /etc/galaxy/galaxy.ini
+
+RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py
+
 # Mark folders as imported from the host.
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
 
