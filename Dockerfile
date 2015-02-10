@@ -50,6 +50,43 @@ RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > ma
 RUN cp -r galaxytools-master/visualisations/* config/plugins/visualizations/
 RUN rm master.tar.gz
 
+# need bioblend for api/install triggers
+RUN . /home/galaxy/venv/bin/activate && pip install bioblend
+
+# modified supervisor conf file
+ADD galaxy_build.conf /etc/galaxy/
+
+# starts a galaxy instance for build process
+ADD start_galaxy_for_build /usr/bin/
+RUN chmod +x /usr/bin/start_galaxy_for_build
+
+# specifies files to include as data libraries
+ADD setup_data_libraries.py /galaxy-central/
+ADD setup_data_libraries.ini /galaxy-central/
+
+# necessary for galaxy server path upload - possible security problems
+RUN sed -i 's|#allow_library_path_paste = False|allow_library_path_paste = True|' /etc/galaxy/galaxy.ini
+
+ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/galaxy-central/database/job_working_directory \
+GALAXY_CONFIG_FILE_PATH=/galaxy-central/database/files \
+GALAXY_CONFIG_NEW_FILE_PATH=/galaxy-central/database/files \
+GALAXY_CONFIG_TEMPLATE_CACHE_PATH=/galaxy-central/database/compiled_templates \
+GALAXY_CONFIG_CITATION_CACHE_DATA_DIR=/galaxy-central/database/citations/data \
+GALAXY_CONFIG_CLUSTER_FILES_DIRECTORY=/galaxy-central/database/pbs \
+GALAXY_CONFIG_FTP_UPLOAD_DIR=/galaxy-central/database/ftp \
+GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/galaxy-central/integrated_tool_panel.xml
+
+RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py && supervisorctl stop all
+
+ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/export/galaxy-central/database/job_working_directory \
+GALAXY_CONFIG_FILE_PATH=/export/galaxy-central/database/files \
+GALAXY_CONFIG_NEW_FILE_PATH=/export/galaxy-central/database/files \
+GALAXY_CONFIG_TEMPLATE_CACHE_PATH=/export/galaxy-central/database/compiled_templates \
+GALAXY_CONFIG_CITATION_CACHE_DATA_DIR=/export/galaxy-central/database/citations/data \
+GALAXY_CONFIG_CLUSTER_FILES_DIRECTORY=/export/galaxy-central/database/pbs \
+GALAXY_CONFIG_FTP_UPLOAD_DIR=/export/galaxy-central/database/ftp \
+GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/galaxy-central/integrated_tool_panel.xml
+
 # Mark folders as imported from the host.
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
 
