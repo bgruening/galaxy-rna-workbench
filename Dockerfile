@@ -17,6 +17,7 @@ RUN apt-get -qq update && apt-get install --no-install-recommends -y apt-transpo
     apt-get install --no-install-recommends -y rnashapes &&\
     apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+
 # The following line is a workaround for an issue on Ubuntu with AUFS
 # for details visit: https://github.com/docker/docker/issues/783
 #RUN mkdir /etc/ssl/private-copy; mv /etc/ssl/private/* /etc/ssl/private-copy/; rm -r /etc/ssl/private; mv /etc/ssl/private-copy /etc/ssl/private; chmod -R 0700 /etc/ssl/private; chown -R postgres /etc/ssl/private
@@ -64,9 +65,6 @@ RUN chmod +x /usr/bin/start_galaxy_for_build
 ADD setup_data_libraries.py /galaxy-central/
 ADD setup_data_libraries.ini /galaxy-central/
 
-# necessary for galaxy server path upload - possible security problems
-RUN sed -i 's|#allow_library_path_paste = False|allow_library_path_paste = True|' /etc/galaxy/galaxy.ini
-
 ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/galaxy-central/database/job_working_directory \
 GALAXY_CONFIG_FILE_PATH=/galaxy-central/database/files \
 GALAXY_CONFIG_NEW_FILE_PATH=/galaxy-central/database/files \
@@ -74,7 +72,8 @@ GALAXY_CONFIG_TEMPLATE_CACHE_PATH=/galaxy-central/database/compiled_templates \
 GALAXY_CONFIG_CITATION_CACHE_DATA_DIR=/galaxy-central/database/citations/data \
 GALAXY_CONFIG_CLUSTER_FILES_DIRECTORY=/galaxy-central/database/pbs \
 GALAXY_CONFIG_FTP_UPLOAD_DIR=/galaxy-central/database/ftp \
-GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/galaxy-central/integrated_tool_panel.xml
+GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/galaxy-central/integrated_tool_panel.xml \
+GALAXY_CONFIG_ALLOW_LIBRARY_PATH_PASTE=True
 
 RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py && supervisorctl stop all
 
