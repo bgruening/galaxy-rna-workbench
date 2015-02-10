@@ -17,6 +17,10 @@ RUN apt-get -qq update && apt-get install --no-install-recommends -y apt-transpo
     apt-get install --no-install-recommends -y rnashapes &&\
     apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# The following line is a workaround for an issue on Ubuntu with AUFS
+# for details visit: https://github.com/docker/docker/issues/783
+#RUN mkdir /etc/ssl/private-copy; mv /etc/ssl/private/* /etc/ssl/private-copy/; rm -r /etc/ssl/private; mv /etc/ssl/private-copy /etc/ssl/private; chmod -R 0700 /etc/ssl/private; chown -R postgres /etc/ssl/private
+
 
 RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name rnabob --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o bgruening --name text_processing --panel-section-id textutil" \
@@ -41,6 +45,10 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name pack
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name mirdeep2 --panel-section-name RNATools"
 
 RUN install-repository     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name suite_mirdeep_2_0"
+
+RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > master.tar.gz && tar -xf master.tar.gz galaxytools-master/visualisations
+RUN cp -r galaxytools-master/visualisations/* config/plugins/visualizations/
+RUN rm master.tar.gz
 
 # Mark folders as imported from the host.
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
