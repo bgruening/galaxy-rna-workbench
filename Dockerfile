@@ -46,7 +46,6 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name pack
 
 RUN install-repository     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name suite_mirdeep_2_0"
 
-
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > master.tar.gz && tar -xf master.tar.gz galaxytools-master/visualisations
 RUN cp -r galaxytools-master/visualisations/* config/plugins/visualizations/
 RUN rm master.tar.gz
