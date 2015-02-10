@@ -1,9 +1,14 @@
 import os
+import time
 import ConfigParser
 from bioblend import galaxy
+import subprocess
+from subprocess import CalledProcessError
 
 if __name__ == '__main__':
     
+    print "-- importing data libraries --"
+
     # read from config
     config = ConfigParser.ConfigParser()
     config.read('setup_data_libraries.ini')
@@ -24,8 +29,7 @@ if __name__ == '__main__':
         first = os.path.basename(os.path.normpath(path))
         if first == 'test-data' and '.hg' not in path:
             second = os.path.dirname(path)
-            third = os.path.dirname(second)
-            tests['%s-%s' % (os.path.basename(second),os.path.basename(third))] = path
+            tests[os.path.basename(second)] = path
     
     if tests:
         print "creating test data library"
@@ -34,9 +38,25 @@ if __name__ == '__main__':
         
         for fname, fpath in tests.items():
             print "building",fname,"folder"
-            folder = gi.libraries.create_folder(testlib['id'], fname)
-            files = '\n'.join(os.path.join(fpath, f) for f in os.listdir(fpath))
-            gi.libraries.upload_from_galaxy_filesystem(testlib['id'], files, folder_id=folder[0]['id'], link_data_only='link_to_files')
+            if not 'msa' in fname:
+                folder = gi.libraries.create_folder(testlib['id'], fname)
+                files = '\n'.join(os.path.join(fpath, f) for f in os.listdir(fpath) if not 'result' in f)
+                gi.libraries.upload_from_galaxy_filesystem(testlib['id'], files, folder_id=folder[0]['id'], link_data_only='link_to_files')
         
+        # wait for uploads to complete
+        print "uploading files",
+        n = 1
+        while n > 0:
+            try:
+                r = subprocess.check_output(["qstat"])
+                n = len(r.split('\n'))
+                time.sleep(3)
+            except CalledProcessError as inst:
+                if inst.returncode == 153: #queue is empty
+                    n = 0
+                else:
+                    raise        
+        
+        time.sleep(10)
         print "-- finished importing test data --" 
 
