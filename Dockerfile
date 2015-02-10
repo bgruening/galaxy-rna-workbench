@@ -68,7 +68,25 @@ ADD setup_data_libraries.ini /galaxy-central/
 # necessary for galaxy server path upload - possible security problems
 RUN sed -i 's|#allow_library_path_paste = False|allow_library_path_paste = True|' /etc/galaxy/galaxy.ini
 
-RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py
+ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/galaxy-central/database/job_working_directory \
+GALAXY_CONFIG_FILE_PATH=/galaxy-central/database/files \
+GALAXY_CONFIG_NEW_FILE_PATH=/galaxy-central/database/files \
+GALAXY_CONFIG_TEMPLATE_CACHE_PATH=/galaxy-central/database/compiled_templates \
+GALAXY_CONFIG_CITATION_CACHE_DATA_DIR=/galaxy-central/database/citations/data \
+GALAXY_CONFIG_CLUSTER_FILES_DIRECTORY=/galaxy-central/database/pbs \
+GALAXY_CONFIG_FTP_UPLOAD_DIR=/galaxy-central/database/ftp \
+GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/galaxy-central/integrated_tool_panel.xml
+
+RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py && supervisorctl stop all
+
+ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/export/galaxy-central/database/job_working_directory \
+GALAXY_CONFIG_FILE_PATH=/export/galaxy-central/database/files \
+GALAXY_CONFIG_NEW_FILE_PATH=/export/galaxy-central/database/files \
+GALAXY_CONFIG_TEMPLATE_CACHE_PATH=/export/galaxy-central/database/compiled_templates \
+GALAXY_CONFIG_CITATION_CACHE_DATA_DIR=/export/galaxy-central/database/citations/data \
+GALAXY_CONFIG_CLUSTER_FILES_DIRECTORY=/export/galaxy-central/database/pbs \
+GALAXY_CONFIG_FTP_UPLOAD_DIR=/export/galaxy-central/database/ftp \
+GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/galaxy-central/integrated_tool_panel.xml
 
 # Mark folders as imported from the host.
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
