@@ -45,6 +45,11 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name 
 
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz | tar xz && cp -r galaxytools-master/visualisations/* config/plugins/visualizations/ && rm -rf ./galaxytools-master
 
+# data managers supporting fetch and index of genomes
+RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o devteam --name data_manager_fetch_genome_all_fasta" \
+    "--url https://toolshed.g2.bx.psu.edu/ -o devteam --name data_manager_bwa_index_builder" \
+    "--url https://testtoolshed.g2.bx.psu.edu/ -o rnateam --name data_manager_bowtie"
+
 # modified supervisor conf file
 ADD galaxy_build.conf /etc/galaxy/
 
@@ -54,6 +59,13 @@ RUN chmod +x /usr/bin/start_galaxy_for_build
 
 # specifies files to include as data libraries
 ADD setup_data_libraries.py /galaxy-central/
+
+# download and index genomes
+ADD fetch_and_index_genomes.ini /galaxy-central/
+ADD fetch_and_index_genomes.py /galaxy-central/
+
+# necessary for galaxy server path upload - possible security problems ?? environment var for this ??
+RUN sed -i 's|#allow_library_path_paste = False|allow_library_path_paste = True|' /etc/galaxy/galaxy.ini
 
 ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/galaxy-central/database/job_working_directory \
     GALAXY_CONFIG_FILE_PATH=/galaxy-central/database/files \
@@ -65,7 +77,15 @@ ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/galaxy-central/database/job_working_dir
     GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/galaxy-central/integrated_tool_panel.xml \
     GALAXY_CONFIG_ALLOW_LIBRARY_PATH_PASTE=True
 
+ADD build_job_conf.xml /etc/galaxy/
+ENV GALAXY_CONFIG_JOB_CONFIG_FILE /etc/galaxy/build_job_conf.xml
+
 RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py --verbose && supervisorctl stop all
+
+RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate \
+    && python -u fetch_and_index_genomes.py --config fetch_and_index_genomes.ini && supervisorctl stop all
+
+ENV GALAXY_CONFIG_JOB_CONFIG_FILE $GALAXY_CONFIG_DIR/job_conf.xml
 
 ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/export/galaxy-central/database/job_working_directory \
     GALAXY_CONFIG_FILE_PATH=/export/galaxy-central/database/files \
@@ -76,6 +96,6 @@ ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/export/galaxy-central/database/job_work
     GALAXY_CONFIG_FTP_UPLOAD_DIR=/export/galaxy-central/database/ftp \
     GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/export/galaxy-central/integrated_tool_panel.xml
 
-# Volumnes and CMD are defined by the parent container
+# Volumes and CMD are defined by the parent container
 #VOLUME ["/export/", "/data/", "/var/lib/docker"]
 #CMD ["/usr/bin/startup"]
