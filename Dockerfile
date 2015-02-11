@@ -10,6 +10,10 @@ ENV GALAXY_CONFIG_BRAND RNA workbench
 
 WORKDIR /galaxy-central
 
+# workaround for a Docker AUFS bug: https://github.com/docker/docker/issues/783#issuecomment-56013588
+RUN mkdir /etc/ssl/private-copy; mv /etc/ssl/private/* /etc/ssl/private-copy/; rm -r /etc/ssl/private; mv /etc/ssl/private-copy /etc/ssl/private; chmod -R 0700 /etc/ssl/private; chown -R postgres /etc/ssl/private
+
+
 # TODO: rnashapes is currently not in the ToolShed install it via PPA
 RUN apt-get -qq update && apt-get install --no-install-recommends -y apt-transport-https software-properties-common && \
     apt-add-repository -y ppa:bibi-help/bibitools && \
@@ -75,6 +79,11 @@ ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/export/galaxy-central/database/job_work
     GALAXY_CONFIG_CLUSTER_FILES_DIRECTORY=/export/galaxy-central/database/pbs \
     GALAXY_CONFIG_FTP_UPLOAD_DIR=/export/galaxy-central/database/ftp \
     GALAXY_CONFIG_INTEGRATED_TOOL_PANEL_CONFIG=/export/galaxy-central/integrated_tool_panel.xml
+
+
+# Change the standard IPython notebook to galaxy-ipython-stable
+RUN sed 's|image =.*|image = bgruening/galaxy-ipython-notebook-plus|g' config/plugins/interactive_environments/ipython/config/ipython.ini.sample >  config/plugins/interactive_environments/ipython/config/ipython.ini
+
 
 # Volumnes and CMD are defined by the parent container
 #VOLUME ["/export/", "/data/", "/var/lib/docker"]
