@@ -85,7 +85,7 @@ ENV GALAXY_CONFIG_JOB_CONFIG_FILE /etc/galaxy/build_job_conf.xml
 RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py --verbose && supervisorctl stop all
 
 RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate \
-    && python -u fetch_and_index_genomes.py --config fetch_and_index_genomes.ini && supervisorctl stop all
+    && python -u fetch_and_index_genomes.py --config fetch_and_index_genomes.ini --verbose && supervisorctl stop all
 
 ENV GALAXY_CONFIG_JOB_CONFIG_FILE $GALAXY_CONFIG_DIR/job_conf.xml
 
