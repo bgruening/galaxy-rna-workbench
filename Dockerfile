@@ -39,7 +39,7 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name pack
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name mirdeep2_mapper --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name mirdeep2_quantifier --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name mirdeep2 --panel-section-name RNATools" \
-    "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name rnashapes --panel-section-name RNATools"
+    "--url https://testtoolshed.g2.bx.psu.edu/ -o rnateam --name rnashapes --panel-section-name RNATools"
 
 RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name suite_mirdeep_2_0"
 
