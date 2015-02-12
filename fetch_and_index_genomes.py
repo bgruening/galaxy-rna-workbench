@@ -48,7 +48,7 @@ def main( options ):
         else:
             log.info("The dbkey (%s) was specified more than once, skipping additional specification." % ( dbkey ))
 
-    gi.make_get_request(urlparse.urljoin(url,'api/tool_data/all_fasta/reload')
+    gi.make_get_request(urlparse.urljoin(url,'api/tool_data/all_fasta/reload'))
 
     # start indexers
     log.info("Start building genome indices.")
