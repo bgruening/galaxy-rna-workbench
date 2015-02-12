@@ -60,18 +60,11 @@ def main( options ):
                 # refresh the tool data tables
                 log.info("Refreshing tool-data tables.")
                 log.info( gi.make_get_request(urlparse.urljoin(url,'api/tool_data/all_fasta/reload')).text )
-                time.sleep(5)
-                log.info( gi.make_get_request(urlparse.urljoin(url,'api/tool_data/all_fasta/reload')).text )
-                time.sleep(5)
-                log.info( gi.make_get_request(urlparse.urljoin(url,'api/tool_data/all_fasta/reload')).text )
-                time.sleep(5)
+                time.sleep(2)
                 for tool_id in index_tools:
                     log.info("Indexing %s with %s." % (dbkey, tool_id) )
                     try:
-                        log.info("Foo: Indexing %s with %s." % (dbkey, tool_id) )
-                        blah = gi.tools.run_tool(history_id=None, tool_id=tool_id, tool_inputs={ 'all_fasta_source':dbkey })
-                        log.info("Bla: Indexing %s with %s." % (dbkey, tool_id) )
-                        indexing_tools.append(blah)
+                        indexing_tools.append(gi.tools.run_tool(history_id=None, tool_id=tool_id, tool_inputs={ 'all_fasta_source':dbkey }))
 
                     except ConnectionError as inst:
                         if '\"text\": \"no tool\",' in inst.body:

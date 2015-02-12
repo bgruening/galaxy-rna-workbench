@@ -56,6 +56,7 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o devteam --name 
 
 # modified supervisor conf file
 ADD galaxy_build.conf /etc/galaxy/
+ADD galaxy_build.ini /etc/galaxy/
 
 # starts a galaxy instance for build process
 ADD start_galaxy_for_build /usr/bin/
@@ -63,11 +64,6 @@ RUN chmod +x /usr/bin/start_galaxy_for_build
 
 # specifies files to include as data libraries
 ADD setup_data_libraries.py /galaxy-central/
-
-# download and index genomes
-ADD fetch_and_index_genomes.ini /galaxy-central/
-ADD fetch_and_index_genomes.py /galaxy-central/
-
 
 ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/galaxy-central/database/job_working_directory \
     GALAXY_CONFIG_FILE_PATH=/galaxy-central/database/files \
@@ -82,10 +78,14 @@ ENV GALAXY_CONFIG_JOB_WORKING_DIRECTORY=/galaxy-central/database/job_working_dir
 ADD build_job_conf.xml /etc/galaxy/
 ENV GALAXY_CONFIG_JOB_CONFIG_FILE /etc/galaxy/build_job_conf.xml
 
-RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py --verbose && supervisorctl stop all
+RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate && python -u setup_data_libraries.py --verbose && supervisorctl stop all && service supervisor stop
+
+# download and index genomes
+ADD fetch_and_index_genomes.ini /galaxy-central/
+ADD fetch_and_index_genomes.py /galaxy-central/
 
 RUN start_galaxy_for_build && . $GALAXY_VIRTUALENV/bin/activate \
-    && python -u fetch_and_index_genomes.py --config fetch_and_index_genomes.ini --verbose && supervisorctl stop all
+    && python -u fetch_and_index_genomes.py --config fetch_and_index_genomes.ini --verbose && supervisorctl stop all && service supervisor stop
 
 ENV GALAXY_CONFIG_JOB_CONFIG_FILE $GALAXY_CONFIG_DIR/job_conf.xml
 
