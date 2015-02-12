@@ -52,7 +52,8 @@ RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz | ta
 # data managers supporting fetch and index of genomes
 RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o devteam --name data_manager_fetch_genome_all_fasta" \
     "--url https://toolshed.g2.bx.psu.edu/ -o devteam --name data_manager_bwa_index_builder" \
-    "--url https://testtoolshed.g2.bx.psu.edu/ -o rnateam --name data_manager_bowtie"
+    "--url https://testtoolshed.g2.bx.psu.edu/ -o rnateam --name data_manager_bowtie" \
+    "--url https://testtoolshed.g2.bx.psu.edu/ -o rnateam --name blockclust_workflow"
 
 # modified supervisor conf file
 ADD galaxy_build.conf /etc/galaxy/
