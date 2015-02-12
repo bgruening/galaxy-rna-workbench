@@ -1,5 +1,6 @@
 ##!/usr/bin/env python
 ## much from scripts/api/data_manager_example_execute.py
+import os
 import time
 import argparse
 import urlparse
@@ -15,11 +16,12 @@ def main( options ):
     config.read(options.config)
 
     fetch_tool = config.get('main', 'genome_fetch_tool')
-    url = config.get('main', 'galaxy_base_url')
+    url = "http://localhost"
     sleep_time = float(config.get('main', 'sleep_time'))
 
-    admin_email = config.get('admin', 'email')
-    admin_pass = config.get('admin', 'password')
+    # The environment variables are set by the parent container
+    admin_email = os.environ.get('GALAXY_DEFAULT_ADMIN_USER', 'admin@galaxy.org')
+    admin_pass = os.environ.get('GALAXY_DEFAULT_ADMIN_PASSWORD', 'admin')
     
     genomes = config.get('genomes', 'ids').strip().split('\n')
     index_tools = config.get('build_indexers', 'ids').strip().split('\n')
