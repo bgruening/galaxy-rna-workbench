@@ -30,7 +30,7 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name 
     "--url https://toolshed.g2.bx.psu.edu/ -o bgruening --name trna_prediction --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name blockclust --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name blockclust_workflow" \
-    "--url https://testtoolshed.g2.bx.psu.edu/ -o rnateam --name cofold --panel-section-name RNATools" \
+    "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name cofold --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o bgruening --name infernal --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o lionelguy --name rnammer --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o bgruening --name rnaz --panel-section-name RNATools" \
@@ -42,7 +42,7 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name 
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name mirdeep2_mapper --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name mirdeep2_quantifier --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name mirdeep2 --panel-section-name RNATools" \
-    "--url https://testtoolshed.g2.bx.psu.edu/ -o rnateam --name rnashapes --panel-section-name RNATools" \
+    "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name rnashapes --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name suite_mirdeep_2_0"
 
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz | tar xz && cp -r galaxytools-master/visualisations/* config/plugins/visualizations/ && rm -rf ./galaxytools-master
