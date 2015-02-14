@@ -10,18 +10,6 @@ ENV GALAXY_CONFIG_BRAND RNA workbench
 
 WORKDIR /galaxy-central
 
-# workaround for a Docker AUFS bug: https://github.com/docker/docker/issues/783#issuecomment-56013588
-RUN mkdir /etc/ssl/private-copy; mv /etc/ssl/private/* /etc/ssl/private-copy/; rm -r /etc/ssl/private; mv /etc/ssl/private-copy /etc/ssl/private; chmod -R 0700 /etc/ssl/private; chown -R postgres /etc/ssl/private
-
-
-# TODO: rnashapes is currently not in the ToolShed install it via PPA
-RUN apt-get -qq update && apt-get install --no-install-recommends -y apt-transport-https software-properties-common && \
-    apt-add-repository -y ppa:bibi-help/bibitools && \
-    apt-get -qq update && \
-    apt-get install --no-install-recommends -y rnashapes && \
-    apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    . /home/galaxy/venv/bin/activate && pip install bioblend
-
 RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name rnabob --panel-section-name RNATools" \
     '--url https://toolshed.g2.bx.psu.edu/ -o iuc --name package_perl_pdf_api2_2_023' \
     "--url https://toolshed.g2.bx.psu.edu/ -o bgruening --name trna_prediction --panel-section-name RNATools" \
@@ -44,5 +32,3 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name pack
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name suite_mirdeep_2_0"
 
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz | tar xz && cp -r galaxytools-master/visualisations/* config/plugins/visualizations/ && rm -rf ./galaxytools-master
-
-
