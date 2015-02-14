@@ -20,4 +20,6 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name pack
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name suite_mirdeep_2_0" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name rnabob --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name package_perl_pdf_api2_2_023" \
-    "--url https://toolshed.g2.bx.psu.edu/ -o bgruening --name trna_prediction --panel-section-name RNATools"
+    "--url https://toolshed.g2.bx.psu.edu/ -o bgruening --name infernal --panel-section-name RNATools" \
+    "--url https://toolshed.g2.bx.psu.edu/ -o lionelguy --name rnammer --panel-section-name RNATools" \
+    "--url https://toolshed.g2.bx.psu.edu/ -o bgruening --name rnaz --panel-section-name RNATools"
