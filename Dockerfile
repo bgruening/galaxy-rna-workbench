@@ -37,4 +37,3 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name pack
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name antarna --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name dorina --panel-section-id getext" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name rnabob --panel-section-name RNATools"
-
