@@ -2,7 +2,7 @@
 #
 # VERSION       0.1
 
-FROM bgruening/galaxy-stable
+FROM bgruening/galaxy-stable:dev
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
@@ -40,4 +40,5 @@ RUN install-repository "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name pack
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name rnabob --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name mafft --panel-section-name RNATools" \
     "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name rnacode --panel-section-name RNATools" \
-    "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name gotohscan --panel-section-name RNATools"
+    "--url https://toolshed.g2.bx.psu.edu/ -o rnateam --name gotohscan --panel-section-name RNATools" 
+    
