@@ -9,6 +9,7 @@ MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 ENV GALAXY_CONFIG_BRAND RNA workbench
 
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz | tar xz && cp -r galaxytools-master/visualisations/* config/plugins/visualizations/ && rm -rf ./galaxytools-master
+RUN install-biojs msa
 
 RUN install-repository \
     "--url https://toolshed.g2.bx.psu.edu/ -o iuc --name package_numpy_1_7" \
