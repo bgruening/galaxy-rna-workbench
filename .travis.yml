@@ -44,7 +44,7 @@ before_install:
     -e GALAXY_CONFIG_ENABLE_BETA_WORKFLOW_MODULES=True \
     -v /tmp/:/tmp/ \
     galaxy-docker/test
-  - sleep 600
+  - travis_wait 15 'sleep 600'
   - docker ps
   - cd $GALAXY_HOME
   - sudo su $GALAXY_TRAVIS_USER -c 'wget https://github.com/bgruening/bioblend/archive/master.tar.gz'
