@@ -17,7 +17,7 @@ before_install:
   - make docker_install
   - travis_wait 45 make docker_build
   - make docker_run
-  - sleep 300
+  - travis_wait 15 sleep 600
 
 install:
   - make install
