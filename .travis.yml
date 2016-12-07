@@ -13,56 +13,17 @@ git:
   submodules: false
 
 before_install:
-  - export GALAXY_TRAVIS_USER=galaxy
-  - export GALAXY_UID=1450
-  - export GALAXY_GID=1450
-  - export GALAXY_HOME=/home/galaxy
-  - export GALAXY_USER=admin@galaxy.org
-  - export GALAXY_USER_EMAIL=admin@galaxy.org
-  - export GALAXY_USER_PASSWD=admin
-  - export BIOBLEND_GALAXY_API_KEY=admin
-  - export BIOBLEND_GALAXY_URL=http://localhost:8080
-
-  - sudo apt-get update -qq
-  - sudo apt-get install docker-engine --no-install-recommends -y -o Dpkg::Options::="--force-confmiss" -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew"
-
-  - docker --version
-  - docker info
-
-  - sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
-  - sudo useradd -u $GALAXY_UID -r -g $GALAXY_TRAVIS_USER -d $GALAXY_HOME -p travis_testing -c "Galaxy user" $GALAXY_TRAVIS_USER
-  - sudo mkdir $GALAXY_HOME
-  - sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
-  - travis_wait 45 'docker build -t galaxy-docker/test .'
-  - |
-    docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 \
-    --name galaxy_test_container \
-    --privileged=true \
-    -e GALAXY_CONFIG_ALLOW_USER_DATASET_PURGE=True \
-    -e GALAXY_CONFIG_ALLOW_LIBRARY_PATH_PASTE=True \
-    -e GALAXY_CONFIG_ENABLE_USER_DELETION=True \
-    -e GALAXY_CONFIG_ENABLE_BETA_WORKFLOW_MODULES=True \
-    -v /tmp/:/tmp/ \
-    galaxy-docker/test
-  - travis_wait 15 'sleep 600'
-  - docker ps
-  - cd $GALAXY_HOME
-  - sudo su $GALAXY_TRAVIS_USER -c 'wget https://github.com/bgruening/bioblend/archive/master.tar.gz'
-  - sudo su $GALAXY_TRAVIS_USER -c 'tar xfz master.tar.gz'
+  - wget https://raw.githubusercontent.com/bgruening/galaxy-flavor-testing/master/Makefile
+  - make docker_install
+  - travis_wait 45 make docker_build
+  - make docker_run
+  - sleep 300
 
 install:
-  - cd $GALAXY_HOME/bioblend-master
-  - sudo su $GALAXY_TRAVIS_USER -c 'pip install --user --upgrade "tox>=1.8.0" "pep8<=1.6.2" '
-  - sudo su $GALAXY_TRAVIS_USER -c 'python setup.py install --user'
-  # remove flake8 testing for bioblend from tox
-  - sudo su $GALAXY_TRAVIS_USER -c 'sed -i.bak "s/commands.*$/commands =/" tox.ini'
+  - make install
 
 script:
-  - curl --fail $BIOBLEND_GALAXY_URL/api/version
-  - time > $HOME/time.txt && curl --fail -T $HOME/time.txt ftp://localhost:8021 --user $GALAXY_USER:$GALAXY_USER_PASSWD
-  - curl --fail ftp://localhost:8021 --user $GALAXY_USER:$GALAXY_USER_PASSWD
-  # Run bioblend nosetests with the same UID and GID as the galaxy user inside if Docker
-  # this will guarantee that exchanged files bewteen bioblend and Docker are read & writable from both sides
-  - sudo -E su $GALAXY_TRAVIS_USER -c "export PATH=$GALAXY_HOME/.local/bin/:$PATH && cd $GALAXY_HOME/bioblend-master && tox -e $TOX_ENV -- -e 'test_download_dataset'"
-  # Test Docker in Docker, used by Interactive Environments; This needs to be at the end as Docker takes some time to start.
-  - docker exec -i -t galaxy_test_container docker info
+  - make test_api
+  - make test_ftp
+  - make test_bioblend
+  - make test_docker_in_docker
