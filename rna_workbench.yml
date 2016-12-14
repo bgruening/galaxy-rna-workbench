@@ -214,3 +214,33 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+
+## RNA-seq
+
+- install_resolver_dependencies: true
+  install_tool_dependencies: false
+  name: sailfish
+  owner: bgruening
+  tool_panel_section_label: 'NGS: RNA Analysis'
+  tool_shed_url: toolshed.g2.bx.psu.edu
+
+- install_resolver_dependencies: true
+  install_tool_dependencies: false
+  name: deseq2
+  owner: iuc
+  tool_panel_section_label: 'NGS: RNA Analysis'
+  tool_shed_url: toolshed.g2.bx.psu.edu
+
+- install_resolver_dependencies: true
+  install_tool_dependencies: false
+  name: salmon
+  owner: bgruening
+  tool_panel_section_label: 'NGS: RNA Analysis'
+  tool_shed_url: toolshed.g2.bx.psu.edu
+
+- install_resolver_dependencies: true
+  install_tool_dependencies: false
+  name: featurecounts
+  owner: iuc
+  tool_panel_section_label: 'NGS: RNA Analysis'
+  tool_shed_url: toolshed.g2.bx.psu.edu
