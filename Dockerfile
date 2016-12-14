@@ -1,11 +1,8 @@
 # Galaxy - RNA workbench
 
-FROM bgruening/galaxy-stable:16.07
+FROM bgruening/galaxy-ngs-preprocessing:16.10
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
-
-ENV GALAXY_CONFIG_BRAND NGS-preprocessing
-ENV ENABLE_TTS_INSTALL True
 
 # Enable Conda dependency resolution
 ENV GALAXY_CONFIG_CONDA_AUTO_INSTALL=True \
