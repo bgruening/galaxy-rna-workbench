@@ -79,7 +79,8 @@ Contributers
  - Torsten Houwaart
  - Bjoern Gruening
  - Joerg Fallmann
-
+ - Bérénice Batut
+ 
 History
 =======
 
