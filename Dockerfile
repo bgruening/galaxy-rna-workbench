@@ -7,6 +7,7 @@ MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 # Enable Conda dependency resolution
 ENV GALAXY_CONFIG_CONDA_AUTO_INSTALL=True \
     GALAXY_CONFIG_CONDA_AUTO_INIT=True \
+    GALAXY_CONFIG_USE_CACHED_DEPENDENCY_MANAGER=True \
     GALAXY_CONFIG_BRAND="RNA workbench"
 
 # Install tools
