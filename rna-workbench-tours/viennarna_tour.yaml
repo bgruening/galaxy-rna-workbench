@@ -1,8 +1,8 @@
+id: viennarna_tour
 name: Galaxy RNA-workbench Introduction Exercise
 description: The Galaxy RNA-workbench introduces itself
 title_default: "Galaxy RNA-workbench Introduction Exercise"
 steps:
-
     - title: "<b>Welcome to the Galaxy RNA-worbench!</b>"
       content: "This tour will walk you through an exercise which guides you on how to use the Galaxy RNA-workbench. <br><br>
                 Read and Follow the instructions before clicking <b>'Next'</b>.<br><br>
@@ -139,7 +139,7 @@ steps:
                 <li><b>BUT</b> this time set the 'Calculate Partition Function' option to 'Yes'</li>
                 <li>Click button 'Execute' and wait for the tool to finish.</li>
               </ol>"      
-      position: "right"      
+      position: "right"
       
     - title: "<b>Step 6: Inspect structure, ensembl MFE and ensembl population</b>"
       element: '#current-history-panel'
@@ -147,7 +147,7 @@ steps:
               <dir>
                 <li>Click on the <b>eye icon</b> of the latest dataset and scroll to the right</li>
                 <li>Note the extra lines in the dot-bracket output and the new MFEs at the end</li>
-                <li>The first new line shows a condensed representation of the pair probabilities, similar to the bracket notation, followed by the ensemble free energy in kcal/mol. This notation makes use of the letters " . , | { } ( ) " denoting bases that are essentially unpaired, weakly paired, strongly paired without preference, weakly upstream (downstream) paired, or strongly up− (down−)stream paired bases, respectively. On the next line the centroid structure as derived from the pair probabilities together with its free energy and distance to the ensemble is shown. The last line shows the frequency of the mfe structure, and the structural diversity (mean distance between the structures in the ensemble).</li>
+                <li>The first new line shows a condensed representation of the pair probabilities, similar to the bracket notation, followed by the ensemble free energy in kcal/mol. This notation makes use of the letters \" . , | { } ( ) \" denoting bases that are essentially unpaired, weakly paired, strongly paired without preference, weakly upstream (downstream) paired, or strongly up− (down−)stream paired bases, respectively. On the next line the centroid structure as derived from the pair probabilities together with its free energy and distance to the ensemble is shown. The last line shows the frequency of the mfe structure, and the structural diversity (mean distance between the structures in the ensemble).</li>
               </dir>"
       position: "left"              
               
