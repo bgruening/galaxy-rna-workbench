@@ -12,6 +12,10 @@ Usage
 
 Running the workbench requires the installation of Docker; please follow the instruction on https://docs.docker.com/installation/
 
+Starting the RNA workbench Docker container is analogous to starting
+the generic Galaxy Docker image; thus, the following description is
+adapted from <https://github.com/bgruening/docker-galaxy-stable>.
+
 After the successful installation, all what you need to do is:
 
 ``docker run -d -p 8080:80 bgruening/galaxy-rna-workbench``
