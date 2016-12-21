@@ -9,7 +9,7 @@ Center (RBC). This center is one of the eight service units of the
 [German Network for Bioinformatics Infrastructure
 (de.NBI)](http://www.denbi.de/).
 
-![de.NBI](https://www.denbi.de/templates/de.nbi2/img/deNBI_logo.jpg)
+<img src="https://www.denbi.de/templates/de.nbi2/img/deNBI_logo.jpg" width="200px">
 
 
 Usage
