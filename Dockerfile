@@ -14,3 +14,5 @@ ENV GALAXY_CONFIG_CONDA_AUTO_INSTALL=True \
 ADD rna_workbench.yml $GALAXY_ROOT/tools.yaml
 RUN install-tools $GALAXY_ROOT/tools.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs
+
+ADD ./rna-workbench-tours/viennarna_tour.yaml $GALAXY_ROOT/config/plugins/tours/rnateam.viennarna.yaml
