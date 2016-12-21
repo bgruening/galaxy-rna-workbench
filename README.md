@@ -4,7 +4,12 @@
 RNA Galaxy Workbench
 ====================
 
-The RNA analyses workbench is developed by the RNA Bioinformatics Center, which is part of the  [German Network for Bioinformatics Infrastructure (de.NBI)](http://www.denbi.de/). 
+The RNA analyses workbench is developed by the RNA Bioinformatics
+Center (RBC). This center is one of the eight service units of the
+[German Network for Bioinformatics Infrastructure
+(de.NBI)](http://www.denbi.de/).
+
+![de.NBI](https://www.denbi.de/templates/de.nbi2/img/deNBI_logo.jpg)
 
 
 Usage
