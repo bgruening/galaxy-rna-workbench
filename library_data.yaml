@@ -1,0 +1,5 @@
+libraries:
+    - name: "Test data"
+      files:
+        - https://raw.githubusercontent.com/eteriSokhoyan/test-data/master/cliques-high-representatives.fa
+        - https://raw.githubusercontent.com/eteriSokhoyan/test-data/master/cliques-low-representatives.fa
