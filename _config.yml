@@ -1,0 +1,25 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://bgruening.github.io/galaxy-rna-workbench/
+title: Galaxy RNA workbench
+subtitle: The RNA analyses workbench developed by the de.NBI RNA Bioinformatics Center
+email: your-email@domain.com
+author: RNA Bioinformatics Center (RBC)
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  - title: github
+    url: https://github.com/bgruening/galaxy-rna-workbench
