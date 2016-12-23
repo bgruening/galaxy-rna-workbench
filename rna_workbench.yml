@@ -47,14 +47,7 @@ tools:
   tool_panel_section_label: "RNA Analysis"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
-- name: compalignp
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
-  owner: rnateam
-  tool_panel_section_label: "RNA Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-
-- name: compalignp
+- - name: compalignp
   install_resolver_dependencies: true
   install_tool_dependencies: false
   owner: rnateam
@@ -221,4 +214,3 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
-
