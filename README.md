@@ -82,6 +82,18 @@ Requirements
 
 - [docker](https://docs.docker.com/installation/)
 
+Available Tools
+============
+
+| Category   | Tools |
+| -------- | ----------- |
+| RNA Structure Analysis| ViennaRNA, Kinwalker, MEA, RNAz, Cofold, RNAshapes, antaRNA|
+| RNA Alignment | Compalignp, MAFFT, LocARNA |
+| RNA Annotation | GotohScan, RNAcode, INFERNAL, rnammer, ARAGORN, tRNAscan, RNABOB   |
+| RNA-protein Interaction |  DoRiNA, Piranha, RNAcommender, PARalyzer|
+| Ribosome Profiling | RiboTaper |
+| RNA-Seq |SortMeRNA, BlockClust , MiRDeep2  |
+| RNA Target Prediction | TargetFinder |
 
 Contributors
 ============
