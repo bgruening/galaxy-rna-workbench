@@ -7,9 +7,9 @@ RNA Galaxy Workbench
 The RNA analyses workbench is developed by the RNA Bioinformatics
 Center (RBC). This center is one of the eight service units of the
 [German Network for Bioinformatics Infrastructure <img
-src="Logos/deNBI_logo.jpg" height="35px" alt="de.NBI"
+src="assets/img/deNBI_logo.jpg" height="35px" alt="de.NBI"
 valign="middle">](http://www.denbi.de/), running the German ELIXIR Node [<img
-src="Logos/elixir_germany.png" height="55px" alt="ELIXIR Germany"
+src="assets/img/elixir_germany.png" height="55px" alt="ELIXIR Germany"
 valign="middle">](https://www.elixir-europe.org/).
 
 
