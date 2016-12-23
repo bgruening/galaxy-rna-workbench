@@ -56,9 +56,23 @@ For a more specific configuration, you can have a look at the [documentation of 
 
 # Training
 
+To learn about RNA sequencing data analysis, we recommend you to have a look at the training material from the [Galaxy Training network](http://bgruening.github.io/training-material/RNA-Seq/), and particularly the [tutorial about the Reference-based RNA-seq data analysis](http://bgruening.github.io/training-material//RNA-Seq/tutorials/ref_based).
+
+In the Galaxy RNA workbench, you will also find way to learn about the RNA analyis with some [Galaxy tours](https://github.com/galaxyproject/galaxy-tours) to show you the way into the Galaxy instance, its tools and possibilities.
+
 
 # Credit
 
 The RNA analyses workbench is developed by the RNA Bioinformatics Center (RBC). This center is one of the eight service units of the German Network for Bioinformatics Infrastructure de.NBI, running the German ELIXIR Node ELIXIR Germany.
 
-<img src="Logos/deNBI_logo.jpg" height="35px" alt="de.NBI" valign="middle"><img src="Logos/elixir_germany.png" height="55px" alt="ELIXIR Germany" valign="middle">
+<img src="Logos/deNBI_logo.jpg" height="35px" alt="de.NBI" valign="middle"> <img src="Logos/elixir_germany.png" height="55px" alt="ELIXIR Germany" valign="middle">
+
+Contributors to this RNA analyses workbench:
+
+ - Bérénice Batut
+ - Joerg Fallmann
+ - Bjoern Gruening
+ - Torsten Houwaart
+ - Cameron Smith
+ - Sebastian Will
+ - Dilmurat Yusuf
