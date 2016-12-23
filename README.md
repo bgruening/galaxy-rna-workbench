@@ -62,7 +62,7 @@ The port 8800 is the proxy port that is used to handle Interactive Environments.
 Using Parent docker
 -------------------
 On some Linux distributions, Docker-In-Docker can run into issues (such as running out of loopback interfaces). If this is an issue,
-you can use a 'legacy' mode that use a docker socket for the parent docker installation mounted inside the container. To engage, set the 
+you can use a 'legacy' mode that use a docker socket for the parent docker installation mounted inside the container. To engage, set the
 environmental variable DOCKER_PARENT
 
 ``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -e DOCKER_PARENT=True -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/galaxy_storage/:/export/ bgruening/galaxy-rna-workbench``
@@ -91,7 +91,8 @@ Contributors
  - Bjoern Gruening
  - Torsten Houwaart
  - Cameron Smith
- - Sebastian Will 
+ - Sebastian Will
+ - Dilmurat Yusuf
 
 History
 =======
