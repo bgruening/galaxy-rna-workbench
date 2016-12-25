@@ -9,9 +9,9 @@ steps:
                 Read and Follow the instructions before clicking <b>'Next'</b>.<br><br>
                 Click <b>'Prev'</b> in case you missed out on any step"
       backdrop: true
-    
+      
     - title: "<b>Scenario</b>"
-      content: "In the study of [Brooks *et al.* 2011](http://genome.cshlp.org/content/21/2/193.long), the Pasilla (PS) gene, *Drosophila* homologue of the Human splicing regulators Nova-1 and Nova-2 Proteins, was depleted in *Drosophila melanogaster* by RNAi. The authors wanted to identify exons that are regulated by Pasilla gene using RNA sequencing data.
+      content: "In the study of <a href=\"http://genome.cshlp.org/content/21/2/193.long\" target=\"_blank\">Brooks et al. 2011<\a>, the Pasilla (PS) gene, *Drosophila* homologue of the Human splicing regulators Nova-1 and Nova-2 Proteins, was depleted in *Drosophila melanogaster* by RNAi. The authors wanted to identify exons that are regulated by Pasilla gene using RNA sequencing data.
 
       Total RNA was isolated and used for preparing either single-end or paired-end RNA-seq libraries for treated (PS depleted) samples and untreated samples. These libraries were sequenced to obtain a collection of RNA sequencing reads for each sample. The effects of Pasilla gene depletion on splicing events can then be analyzed by comparison of RNA sequencing data of the treated (PS depleted) and the untreated samples. 
     
@@ -58,14 +58,14 @@ steps:
       position: "bottom"
 
     - title: "<b>Step 2: Download data</b>"
-      content: "We will now proceed to download data to your computer and then <b>upload</b> the same files to Galaxy. The original data is available at NCBI Gene Expression Omnibus (GEO) under accession number [GSE18508](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18508). We will look at the 7 first samples: <br>
-      - 3 treated samples with Pasilla (PS) gene depletion: [GSM461179](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461179), [GSM461180](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461180), [GSM461181](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4611810)<br>
-        - 4 untreated samples: [GSM461176](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461176), [GSM461177](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461177), [GSM461178](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461178), [GSM461182](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461182)<br>
+      content: "We will now proceed to download data to Galaxy. The original data is available at NCBI Gene Expression Omnibus (GEO) under accession number <a href=\"http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18508\" target=\"_blank\">GSE18508</a>. We will look at the 7 first samples: <br>
+      - 3 treated samples with Pasilla (PS) gene depletion: <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461179\" target=\"_blank\">GSM461179</a>, <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461180\" target=\"_blank\">GSM461180</a>, <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4611810\" target=\"_blank\">GSM461181</a><br>
+        - 4 untreated samples: <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461176\" target=\"_blank\">GSM461176</a>, <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461177\" target=\"_blank\">GSM461177</a>, <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461178\" target=\"_blank\">GSM461178</a>, <a href=\"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM461182\" target=\"_blank\">GSM461182</a><br>
           Each sample constitutes a separate biological replicate of the corresponding condition (treated or untreated). Moreover, two of the treated and two of the untreated samples are from a paired-end sequencing assay, while the remaining samples are from a single-end sequencing experiment.<br>
           We have extracted sequences from the Sequence Read Archive (SRA) files to build FASTQ files."
       backdrop: true
-
-    - title: "<b>Step 2: Upload fastq files</b>"
+            
+    - title: "<b>Step 2: Download fastq files with RNA sequences</b>"
       element: ".upload-button"
       intro: "Use the upload button to upload the file to Galaxy.<br><br>
               Click <b>'Next'</b> and the tour will take you to the Upload screen"
@@ -73,27 +73,19 @@ steps:
       postclick:
         - ".upload-button"
 
-    - title: "<b>Step 2: Upload fastq files to galaxy</b>"
-      element: "button#btn-new"
-      intro: "This is the upload screen.<br><br>
-              Simply click <b>'Next'</b> and tour will open up your file directory for you to select the downloaded <b>'Homo_sapiens_CXCL2_sequence.fa'</b>."
-      position: "top"
-      postclick:
-        - "button#btn-new"
-
-    - title: "<b>Step 1: Download fasta file with RNA sequence</b>"
+    - title: "<b>Step 2: Download fastq files with RNA sequences</b>"
       element: "upload-box#upload-text-info"
-      intro: "We now paste the links to the datasets into the upload-box. Click next to do so."
-      position: "top"
+      intro: "We now paste the links to a fastq dataset pair into the upload-box. Click next to do so. (not working yet, in meantime please copy paste this links to the textbox: <br> 
+      https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_1.fastq<br>
+      https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_2.fastq"
+     position: "top"
       postclick:
-        - "upload-box#upload-text-info"
-        - ""
+        - "upload-box#upload-text-info"        
         
-        
-    - title: "<b>Step 1: Download fasta file with RNA sequence</b>"
+    - title: "<b>Step 2: Download fasta file with RNA sequence</b>"
       element: "button#btn-start"
-      intro: "Now that you've selected the file, select <b>'hg19'</b> as the genome
-              and fasta as file format.<br><br>
+      intro: "Now that you've selected the file, select <b>'dm3'</b> as the genome
+              and fastqsanger as file format.<br><br>
               Click <b>'Next'</b> and the tour will <b>'Start'</b> the upload.<br>
               Galaxy will automatically unpack the file."
       position: "bottom"
@@ -101,46 +93,168 @@ steps:
         - "button#btn-start"
         - "button#btn-close"
 
-    - title: "<b>Step 1: Download fasta file with RNA sequence</b>"
+    - title: "<b>Step 2: Download fasta file with RNA sequence</b>"
       element: "#right"
       intro: "This is your history!<br><br>
               All <b>analysis steps will be recorded</b> and can be redone at any time.<br><br>
               You should be able to see your uploaded file here in a few moments."
       position: "left"
 
-    - title: "<b>Step 2: Fold sequence with default RNAfold settings</b>"
+    - title: "<b>Step 3: Quality Control</b>"
+      intro: "These files contain the first 100.000 paired-end reads of one sample. The sequences are raw sequences from the sequencing machine, without any pretreatments. They need to be controlled for their quality.<br>
+      For quality control, we use similar tools as described in <a href=\"https://www.github.com/bgruening/training-material/NGS-QC\">NGS-QC tutorial<\a>"
+      position: "right"
+
+    - title: "<b>Step 3: Quality Control</b>"
       element: '#tool-search-query'
-      intro: "We now want to predict the secondary structure of our gene of interest using <b>RNAfold</b> from the ViennaRNA package.<br><br>
-              This Galaxy instance has the ViennaRNA package already integrated, so we don't need to install them.<br><br>
+      intro: "
+      We now want to examine the quality of our RNA-Seq reads using <b>FastQC</b>.<br><br>
+      This Galaxy instance has FastQC already integrated, so we don't need to install them.<br><br>
               <b>Note:</b> You can use 'tool search' to locate tools. Tools may take a couple of moments to load, please bear with us."
       position: "right"
 
-    - title: "<b>Step 2: Fold sequence with default RNAfold settings</b>"
-      element: "#tool-search-query"
-      intro: "You can now type and select <b>'RNAfold'</b>.<br><br>
+    - title: "<b>Step 3: Quality Control</b>"
+      element: '#tool-search-query'
+      intro: "You can now type and select <b>'FastQC'</b>.<br><br>
               <b>Follow this set of instructions once the tool was loaded:</b><br>
               <ol>
-                <li>Input from FASTA file</li>
-                <li>Sequence to fold: Homo_sapiens_CXCL2_sequence.fa</li>
+                <li>Select one of the samples from the paired datset.</li>
+                <li>Keep the rest of the options at their default values.</li>
+                <li>Click button 'Execute' and wait for the tool to finish.</li>
+                <li>Repeat with the other dataset.<\li>
+              </ol>"      
+      position: "right"      
+
+    - title: "<b>Step 3: Quality Control</b>"
+      element: '#current-history-panel'
+      intro: "To inspect the results of the FastQC run just<br><br>
+              <dir>
+                <li>Click on the <b>eye icon</b> of the latest dataset and have a look at the output, what do you see? What is the read length, is there anything you notice when you compare both datasets?</li>
+              </dir>"
+      position: "left"              
+
+    - title: "<b>Step 3: Quality Control</b>"
+      element: '#current-history-panel'
+      intro: "You should notice the following:<br><br>
+              <dir>
+              <li>The read length is 37 bp</li>
+              <li>The report for GSM461177_untreat_paired_subset_1 is quite good compared to the one for GSM461177_untreat_paired_subset_2. For the latter, the per base sequence quality is bad around the 25th bp (same for the per base N content), because the quality in the 2nd tile is bad (maybe because of some event during sequencing). We need to process these samples according to this quality control and keep in mind the paired-end information.</li>
+              </dir>"
+      position: "left"              
+
+
+    - title: "<b>Step 3: Quality Control</b>"
+      element: '#current-history-panel'
+      intro: "We now process the samples according to the quality of sequences by running <b>Trim Galore</b> on the paired-end datasets<br><br>
+              </dir>"
+      position: "left"              
+
+          - title: "<b>Step 3: Quality Control</b>"
+      element: '#tool-search-query'
+      intro: "You can now type and select <b>'TrimGalore'</b>.<br><br>
+              <b>Follow this set of instructions once the tool was loaded:</b><br>
+              <ol>
+                <li>Select the samples from the paired datset and set the sequencing type to paired-end.</li>
                 <li>Keep the rest of the options at their default values.</li>
                 <li>Click button 'Execute' and wait for the tool to finish.</li>
               </ol>"      
       position: "right"      
 
-    - title: "<b>Step 3: Inspect structure and MFE</b>"
-      element: '#current-history-panel'
-      intro: "To inspect the resulting folded sequence as dot-bracket string just<br><br>
-              <dir>
-                <li>Click on the <b>eye icon</b> of the latest dataset and scroll to the right</li>
-              </dir>"
-      position: "left"              
-
-    - title: "<b>Step 4: Visualize structure</b>"
-      element: "#tool-search-query"
-      intro: "You can now type and select <b>'RNAplot'</b>.<br><br>
+    - title: "<b>Step 3: Quality Control</b>"
+      element: '#tool-search-query'
+      intro: "You can now type and select <b>'FastQC'</b>.<br><br>
               <b>Follow this set of instructions once the tool was loaded:</b><br>
               <ol>
-                <li>Input from RNAfold on data</li>
+                <li>Select one of the TrimGalore processed samples.</li>
+                <li>Keep the rest of the options at their default values.</li>
+                <li>Click button 'Execute' and wait for the tool to finish.</li>
+                <li>Repeat with the other dataset.<\li>
+              </ol>"      
+      position: "right"      
+
+    - title: "<b>Step 3: Quality Control</b>"
+      element: '#current-history-panel'
+      intro: "To inspect the results of the FastQC run again just<br><br>
+              <dir>
+                <li>Click on the <b>eye icon</b> of the latest dataset and have a look at the output, what do you see? What is the read length now, is there anything you notice when you compare both datasets now to before the quality processing?</li>
+              </dir>"
+      position: "left"              
+   
+    - title: "<b>Step 4: Mapping</b>"
+      intro: "Now that we have quality controlled our samples, we want to continue our analysis.<br>
+      As the genome of *Drosophila melanogaster* is known and assembled, we can use this information and map the sequences on this genome to identify the effects of Pasilla gene depletion on splicing events.<br>
+      To make sense of the reads, their positions within *Drosophila melanogaster* genome must be determined. This process is known as aligning or 'mapping' the reads to the reference genome."
+      position: "center"
+      
+    - title: "<b>Step 4: Mapping</b>"
+      intro: "Because in the case of a eukaryotic transcriptome, most reads originate from processed mRNAs lacking exons, they cannot be simply mapped back to the genome as we normally do for DNA data. Instead the reads must be separated into two categories:<br>
+      <dir>
+      <li>Reads that map entirely within exons<\li>
+      <li>Reads that cannot be mapped within an exon across their entire length because they span two or more exons<\li>
+      <\dir>"
+      position: "center"
+
+    - title: "<b>Step 4: Mapping</b>"
+      intro: "Spliced mappers have been developed to efficiently map transcript-derived reads against genomes.<br>
+      <a href=\"https://ccb.jhu.edu/software/tophat/index.shtml\">TopHat<\a> was one of the first tools designed specifically to address this problem:<br>
+      <dir>
+      <li>1. Identification of potential exons using reads that do map to the genome<\li>
+      <li>2. Generation of possible splices between neighboring exons<\li>
+      <li>3. Comparison of reads that did not initially map to the genome against these *in silico* created junctions<\li>
+      <\dir>"
+      position: "center"
+
+
+    - title: "<b>Step 4: Mapping</b>"
+      intro: "TopHat needs to know two important parameters about the sequencing library<br>
+      <dir>
+      <li>The library type<\li>
+      <li>The mean inner distance between the mate pairs for paired end data<\li>
+      <\dir><br>
+      These information should usually come with your FASTQ files, ask your sequencing facility! If not, try to find them on the site where you downloaded the data or in the corresponding publication.<br>
+      Another option is to estimate these parameters with a *preliminary mapping* of a *downsampled* file and some analysis programs. Afterward, the actual mapping can be redone on the original files with the optimized parameters.<br>
+      To help finding the needed previous information and afterward annotating RNA sequences, we can take advantage from already known reference gene annotations."
+      position: "center"     
+
+    - title: "<b>Step 4: Mapping</b>"
+      element: ".upload-button"
+      intro: "Use the upload button to upload the dm3 reference genome annotation file to Galaxy.<br><br>
+              Click <b>'Next'</b> and the tour will take you to the Upload screen"
+      position: "right"
+      postclick:
+        - ".upload-button"
+
+    - title: "<b>Step 4: Mapping</b>"
+      element: "upload-box#upload-text-info"
+      intro: "We now paste the link to the ENSEMBL gene annotation gtf file into the upload-box. Click next to do so. (not working yet, in meantime please copy paste this links to the textbox: <br> 
+      https://zenodo.org/record/61771/files/Drosophila_melanogaster.BDGP5.78.gtf
+      "
+     position: "top"
+      postclick:
+        - "upload-box#upload-text-info"        
+        
+    - title: "<b>Step 4: Mapping</b>"
+      element: "button#btn-start"
+      intro: "Now that you've selected the file, select <b>'dm3'</b> as the genome
+              and gtf as file format.<br><br>
+              Click <b>'Next'</b> and the tour will <b>'Start'</b> the upload.<br>
+              Galaxy will automatically unpack the file.<br>
+              "
+      position: "bottom"
+      postclick:
+        - "button#btn-start"
+        - "button#btn-close"
+      
+    - title: "<b>Step 4: Mapping</b>"
+      element: "#tool-search-query"
+      intro: "Now we will use TopHat to map out reads to the dm3 genome. You can now type and select <b>'TopHat'</b>.<br><br>
+              <b>Follow this set of instructions once the tool was loaded:</b><br>
+              <ol>
+                <li>Paired-end instead of sinlge-end</li>
+                <li>'dm3' as reference genome<\li>
+                <li>Mean inner distance to 112<\li>
+                <li>Library type to<\li>
+                <li>Minimum length of read segments to 18<\li>
                 <li>Keep the rest of the options at their default values.</li>
                 <li>Click button 'Execute' and wait for the tool to finish.</li>
               </ol>"      
