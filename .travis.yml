@@ -1,6 +1,5 @@
 sudo: required
-
-language: python
+language: minimal
 python: 2.7
 
 services:
@@ -9,15 +8,14 @@ services:
 env:
   - TOX_ENV=py27
 
-git:
-  submodules: false
-
 before_install:
   - wget https://raw.githubusercontent.com/bgruening/galaxy-flavor-testing/master/Makefile
   - make docker_install
+  - sudo apt-get -qq update
+  - sudo apt-get install -y python-dev
   - travis_wait 45 make docker_build
   - make docker_run
-  - travis_wait 15 sleep 600
+  - sleep 120
 
 install:
   - make install
@@ -25,6 +23,5 @@ install:
 script:
   - make test_api
   - make test_ftp
-  - df -h
-  - #make test_bioblend
+  - make test_bioblend
   - make test_docker_in_docker
