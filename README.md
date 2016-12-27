@@ -15,11 +15,12 @@ valign="middle">](https://www.elixir-europe.org/).
 
 
 
-
 Usage
 =====
 
-Running the workbench requires the installation of Docker; please follow the instruction on https://docs.docker.com/installation/
+Windows and OS-X users are encouraged to use [kitematic](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic.md), a graphical User-Interface for managing Docker containers.
+
+For Linux users and people familiar with the commandline can follow the instruction on installing Docker at  https://docs.docker.com/installation
 
 Starting the RNA workbench Docker container is analogous to starting
 the generic Galaxy Docker image; thus, the following description is
@@ -68,7 +69,6 @@ environmental variable DOCKER_PARENT
 ``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -e DOCKER_PARENT=True -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/galaxy_storage/:/export/ bgruening/galaxy-rna-workbench``
 
 
-
 Users & Passwords
 ================
 
@@ -80,7 +80,7 @@ If you want to create new users, please make sure to use the ``/export/`` volume
 Requirements
 ============
 
-- [docker](https://docs.docker.com/installation/)
+The only requirement is to have [Docker](https://docs.docker.com/installation) installed.
 
 Available Tools
 ============
@@ -106,11 +106,6 @@ Contributors
  - Cameron Smith
  - Sebastian Will
  - Dilmurat Yusuf
-
-History
-=======
-
- - 0.1: Initial release!
 
 
 Support & Bug Reports
