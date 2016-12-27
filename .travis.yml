@@ -1,6 +1,5 @@
 sudo: required
-
-language: python
+language: minimal
 python: 2.7
 
 services:
