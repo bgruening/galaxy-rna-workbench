@@ -98,6 +98,7 @@ Available Tools
 Contributors
 ============
 
+ - Andrea Bagnacani
  - Bérénice Batut
  - Joerg Fallmann
  - Bjoern Gruening
