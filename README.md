@@ -13,8 +13,6 @@ src="assets/img/elixir_germany.png" height="55px" alt="ELIXIR Germany"
 valign="middle">](https://www.elixir-europe.org/).
 
 
-
-
 Usage
 =====
 
@@ -48,25 +46,6 @@ Given the additional ``-v /home/user/galaxy_storage/:/export/`` parameter, docke
   - In case of a non-empty ``/export/``, for example if you continue a previous session within the same folder, nothing will be moved, but the symlinks will be created.
 
 This enables you to have different export folders for different sessions - meaning real separation of your different projects.
-
-
-Enabling Interactive Environments in Galaxy
--------------------------------------------
-
-Interactive Environments (IE) are sophisticated ways to extend Galaxy with powerful services, like IPython, in a secure and reproducible way.
-For this we need to be able to launch Docker containers inside our Galaxy Docker container. At least docker 1.3 is needed on the host system.
-
-``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -v /home/user/galaxy_storage/:/export/ bgruening/galaxy-rna-workbench``
-
-The port 8800 is the proxy port that is used to handle Interactive Environments. ``--privileged`` is needed to start docker containers inside docker.
-
-Using Parent docker
--------------------
-On some Linux distributions, Docker-In-Docker can run into issues (such as running out of loopback interfaces). If this is an issue,
-you can use a 'legacy' mode that use a docker socket for the parent docker installation mounted inside the container. To engage, set the
-environmental variable DOCKER_PARENT
-
-``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -e DOCKER_PARENT=True -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/galaxy_storage/:/export/ bgruening/galaxy-rna-workbench``
 
 
 Users & Passwords
