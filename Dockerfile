@@ -30,3 +30,10 @@ RUN startup_lite && \
     . $GALAXY_VIRTUAL_ENV/bin/activate && \
     python $GALAXY_ROOT/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml && \
     python $GALAXY_ROOT/import_workflows.py
+
+# Add visualisations
+RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > master.tar.gz && \
+    tar -xf master.tar.gz galaxytools-master/visualisations && \
+    cp -r galaxytools-master/visualisations/dotplot/ config/plugins/visualizations/ && \
+    cp -r galaxytools-master/visualisations/dbgraph/ config/plugins/visualizations/ && \
+    rm -rf master.tar.gz rm galaxytools-master
