@@ -11,10 +11,8 @@ steps:
       backdrop: true
       
     - title: "<b>Scenario</b>"
-      content: "In the study of <a href=\"http://genome.cshlp.org/content/21/2/193.long\" target=\"_blank\">Brooks et al. 2011<\a>, the Pasilla (PS) gene, *Drosophila* homologue of the Human splicing regulators Nova-1 and Nova-2 Proteins, was depleted in *Drosophila melanogaster* by RNAi. The authors wanted to identify exons that are regulated by Pasilla gene using RNA sequencing data.
-
-      Total RNA was isolated and used for preparing either single-end or paired-end RNA-seq libraries for treated (PS depleted) samples and untreated samples. These libraries were sequenced to obtain a collection of RNA sequencing reads for each sample. The effects of Pasilla gene depletion on splicing events can then be analyzed by comparison of RNA sequencing data of the treated (PS depleted) and the untreated samples. 
-    
+      content: "In the study of <a href=\"http://genome.cshlp.org/content/21/2/193.long\" target=\"_blank\">Brooks et al. 2011</a>, the Pasilla (PS) gene, *Drosophila* homologue of the Human splicing regulators Nova-1 and Nova-2 Proteins, was depleted in *Drosophila melanogaster* by RNAi. The authors wanted to identify exons that are regulated by Pasilla gene using RNA sequencing data.<br>
+      Total RNA was isolated and used for preparing either single-end or paired-end RNA-seq libraries for treated (PS depleted) samples and untreated samples. These libraries were sequenced to obtain a collection of RNA sequencing reads for each sample. The effects of Pasilla gene depletion on splicing events can then be analyzed by comparison of RNA sequencing data of the treated (PS depleted) and the untreated samples.<br>
       The genome of *Drosophila melanogaster* is known and assembled. It can be used as reference genome to ease this analysis.  In a reference based RNA-seq data analysis, the reads are aligned (or mapped) against a reference genome, *Drosophila melanogaster* here, to significantly improve the ability to reconstruct transcripts and then identify differences of expression between several conditions."
       backdrop: true
 
@@ -76,7 +74,7 @@ steps:
       intro: "We now paste the links to a fastq dataset pair into the upload-box. Click next to do so. (not working yet, in meantime please copy paste this links to the textbox: <br> 
       https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_1.fastq<br>
       https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_2.fastq"
-     position: "top"
+      position: "top"
       postclick:
         - "upload-box#upload-text-info"        
         
@@ -100,27 +98,26 @@ steps:
 
     - title: "<b>Step 3: Quality Control</b>"
       intro: "These files contain the first 100.000 paired-end reads of one sample. The sequences are raw sequences from the sequencing machine, without any pretreatments. They need to be controlled for their quality.<br>
-      For quality control, we use similar tools as described in <a href=\"https://www.github.com/bgruening/training-material/NGS-QC\">NGS-QC tutorial<\a>"
+      For quality control, we use similar tools as described in <a href=\"https://www.github.com/bgruening/training-material/NGS-QC\">NGS-QC tutorial</a>"
       position: "right"
 
     - title: "<b>Step 3: Quality Control</b>"
       element: '#tool-search-query'
-      intro: "
-      We now want to examine the quality of our RNA-Seq reads using <b>FastQC</b>.<br><br>
-      This Galaxy instance has FastQC already integrated, so we don't need to install them.<br><br>
-              <b>Note:</b> You can use 'tool search' to locate tools. Tools may take a couple of moments to load, please bear with us."
+      intro: "We now want to examine the quality of our RNA-Seq reads using <b>FastQC</b>.<br>
+      This Galaxy instance has FastQC already integrated, so we don't need to install it.<br>
+      <b>Note:</b> You can use 'tool search' to locate tools. Tools may take a couple of moments to load, please bear with us."
       position: "right"
 
     - title: "<b>Step 3: Quality Control</b>"
       element: '#tool-search-query'
       intro: "You can now type and select <b>'FastQC'</b>.<br><br>
               <b>Follow this set of instructions once the tool was loaded:</b><br>
-              <ol>
-                <li>Select one of the samples from the paired datset.</li>
-                <li>Keep the rest of the options at their default values.</li>
-                <li>Click button 'Execute' and wait for the tool to finish.</li>
-                <li>Repeat with the other dataset.<\li>
-              </ol>"      
+              <dir>
+              <li>Select one of the samples from the paired datset.</li>
+              <li>Keep the rest of the options at their default values.</li>
+              <li>Click button 'Execute' and wait for the tool to finish.</li>
+              <li>Repeat with the other dataset.</li>
+              </dir>"      
       position: "right"      
 
     - title: "<b>Step 3: Quality Control</b>"
@@ -166,7 +163,7 @@ steps:
                 <li>Select one of the TrimGalore processed samples.</li>
                 <li>Keep the rest of the options at their default values.</li>
                 <li>Click button 'Execute' and wait for the tool to finish.</li>
-                <li>Repeat with the other dataset.<\li>
+                <li>Repeat with the other dataset.</li>
               </ol>"      
       position: "right"      
 
@@ -187,27 +184,27 @@ steps:
     - title: "<b>Step 4: Mapping</b>"
       intro: "Because in the case of a eukaryotic transcriptome, most reads originate from processed mRNAs lacking exons, they cannot be simply mapped back to the genome as we normally do for DNA data. Instead the reads must be separated into two categories:<br>
       <dir>
-      <li>Reads that map entirely within exons<\li>
-      <li>Reads that cannot be mapped within an exon across their entire length because they span two or more exons<\li>
-      <\dir>"
+      <li>Reads that map entirely within exons</li>
+      <li>Reads that cannot be mapped within an exon across their entire length because they span two or more exons</li>
+      </dir>"
       position: "center"
 
     - title: "<b>Step 4: Mapping</b>"
       intro: "Spliced mappers have been developed to efficiently map transcript-derived reads against genomes.<br>
-      <a href=\"https://ccb.jhu.edu/software/tophat/index.shtml\">TopHat<\a> was one of the first tools designed specifically to address this problem:<br>
+      <a href=\"https://ccb.jhu.edu/software/tophat/index.shtml\">TopHat</a> was one of the first tools designed specifically to address this problem:<br>
       <dir>
-      <li>1. Identification of potential exons using reads that do map to the genome<\li>
-      <li>2. Generation of possible splices between neighboring exons<\li>
-      <li>3. Comparison of reads that did not initially map to the genome against these *in silico* created junctions<\li>
-      <\dir>"
+      <li>1. Identification of potential exons using reads that do map to the genome</li>
+      <li>2. Generation of possible splices between neighboring exons</li>
+      <li>3. Comparison of reads that did not initially map to the genome against these *in silico* created junctions</li>
+      </dir>"
       position: "center"
 
     - title: "<b>Step 4: Mapping</b>"
       intro: "TopHat needs to know two important parameters about the sequencing library<br>
       <dir>
-      <li>The library type<\li>
-      <li>The mean inner distance between the mate pairs for paired end data<\li>
-      <\dir><br>
+      <li>The library type</li>
+      <li>The mean inner distance between the mate pairs for paired end data</li>
+      </dir><br>
       These information should usually come with your FASTQ files, ask your sequencing facility! If not, try to find them on the site where you downloaded the data or in the corresponding publication.<br>
       Another option is to estimate these parameters with a *preliminary mapping* of a *downsampled* file and some analysis programs. Afterward, the actual mapping can be redone on the original files with the optimized parameters.<br>
       To help finding the needed previous information and afterward annotating RNA sequences, we can take advantage from already known reference gene annotations."
@@ -248,15 +245,15 @@ steps:
                 <li>Paired-end instead of single-end</li>
                 <li>TrimGalore output as input in correct order (forward and reverse reads)</li>
                 <li>Unstranded</li>
-                <li>'dm3' as reference genome<\li>
-                <li>Mean inner distance to 112<\li>
-                <li>Library type to<\li>
-                <li>Minimum length of read segments to 18<\li>
-                <li>'Yes' to use own junction data<\li>
-                <li>'Yes' to use Gene Annotation Model<\li>
-                <li>`Drosophila_melanogaster.BDGP5.78.gtf` as Gene Model Annotations (to enable transcriptome alignment)<\li>
+                <li>'dm3' as reference genome</li>
+                <li>Mean inner distance to 112</li>
+                <li>Library type to</li>
+                <li>Minimum length of read segments to 18</li>
+                <li>'Yes' to use own junction data</li>
+                <li>'Yes' to use Gene Annotation Model</li>
+                <li>`Drosophila_melanogaster.BDGP5.78.gtf` as Gene Model Annotations (to enable transcriptome alignment)</li>
                 <li>'No (--coverage-search)' to use coverage-based search for junctions as it needs a lot a time. But consider this option for real world data.<br>
-                The TopHat algorithm splits reads into segments to map the reads across splice junctions. Coverage-based search for junctions increases the sensitivity.<\li>
+                The TopHat algorithm splits reads into segments to map the reads across splice junctions. Coverage-based search for junctions increases the sensitivity.</li>
                 <li>Keep the rest of the options at their default values.</li>
                 <li>Click button 'Execute' and wait for the tool to finish.</li>
               </ol>"      
@@ -269,8 +266,8 @@ steps:
                 <li>Click on the <b>'eye icon'</b> of the corresponding dataset</li>
                 <li>Inspect the 'align summary' file</li>
                 <li>How many forward and reverse reads where mapped?</li>
-                <li>What is the 'overall read mapping rate' and the 'concordant pair alignment rate'?<\li>
-                <li>Why do some reads have multiple alignments?<\li>
+                <li>What is the 'overall read mapping rate' and the 'concordant pair alignment rate'?</li>
+                <li>Why do some reads have multiple alignments?</li>
               </dir>"
       position: "left"
 
@@ -319,7 +316,7 @@ steps:
               and the corresponding file formats.<br><br>
               Click <b>'Next'</b> and the tour will <b>'Start'</b> the upload.<br>
               Galaxy will automatically unpack the files."
-              position: "bottom"
+      position: "bottom"
       postclick:
         - "button#btn-start"
         - "button#btn-close"
@@ -338,11 +335,11 @@ steps:
       content: "CLick on the 'IGV' symbol of the bam dataset you just uploaded to galaxy to start IGV.<br>
       <dir>
       <li>Open dataset  click on display with IGV and web current</li>
-      <li>Open the file with a JAVA plugin (e.g.\,IcedTea)</li>
+      <li>Open the file with a JAVA plugin (e.g.,IcedTea)</li>
       <li>Go to View and Preferences and Alignments and set the visibility range to $>=50$kb</li>
       <li>Inspect the region on chr4 between 560 kb to 600 kb and copy chr4:560000-600000 to locus window and click GO</li>
       <li>Now import the bed output into IGV and Open dataset and click on display with IGV and local</li>
-      <li>Inspect the results using a Sashimi plot (right-click on the bam file and select Sashimi Plot from the context menu)<\li>
+      <li>Inspect the results using a Sashimi plot (right-click on the bam file and select Sashimi Plot from the context menu)</li>
       </dir>"
       position : "center"
 
@@ -656,13 +653,13 @@ steps:
     - title: "Step 12: Analysis of the functional enrichment among differentially expressed genes"
       content: "For the up-regulated genes, the first cluster is more composed of functions related to chaperone and stress response. The down-regulated genes are more linked to ligase activity."
 
-    - title: "Step 13:  Inference of the differential exon usage"
+    - title: "Step 13: Inference of the differential exon usage"
       content: "Now, we would like to know the differential exon usage between treated (PS depleted) and untreated samples using RNA-seq exon counts.<br>
       We will therefore go back and work on the mapping results <a href=\"https://zenodo.org/record/61771/files/GSM461177_untreat_paired_chr4.bam\">GSM461177_untreat_paired_chr4.bam</a>.<br> 
       Copy the `Drosophila_melanogaster.BDGP5.78.gtf` file and the bam file from the first and second history<br>
       We use <a href=\"http://www.bioconductor.org/packages/release/bioc/html/DEXSeq.html>DEXSeq</a> which detects high sensitivity genes, and in many cases exons, that are subject to differential exon usage."
 
-    - title: "Step 13:  Inference of the differential exon usage"
+    - title: "Step 13: Inference of the differential exon usage"
       element: "#tool-search-query"
       intro: "First, we need to count the number of reads mapping the exons. This step is similar to counting the number of reads per annotated gene. Here instead of HTSeq-count, we are using DEXSeq-Count<br>
       You can now type and select <b>'DEXSeq-Count'</b>.<br><br>
@@ -676,7 +673,7 @@ steps:
       </dir>"      
       position: "right"
     
-    - title: "Step 13:  Inference of the differential exon usage"
+    - title: "Step 13: Inference of the differential exon usage"
       element: "#tool-search-query"
       intro: "Now we count reads<br>
       You can now type and select <b>'DEXSeq-Count'</b>.<br><br>
@@ -689,17 +686,17 @@ steps:
       </dir>"      
       position: "right"
     
-    - title: "Step 13:  Inference of the differential exon usage"
+    - title: "Step 13: Inference of the differential exon usage"
       element: '#current-history-panel' 
       intro: "Inspect the output<br>
-      <b>Which exon has the most read mapped on it? From which gene has this exon beed extracted? Is it similar to the previous result with HTSeq-count?"</b>
+      <b>Which exon has the most read mapped on it? From which gene has this exon beed extracted? Is it similar to the previous result with HTSeq-count?</b>"
       position: "right"
 
-    - title: "Step 13:  Inference of the differential exon usage"
+    - title: "Step 13: Inference of the differential exon usage"
       intro: "FBgn0017545:004 is the exon with the most read mapped on it. It is part of FBgn0017545, the feature with the most reads mapped from HTSeq-count"
       position: "center"
 
-    - title: "Step 13:  Inference of the differential exon usage"
+    - title: "Step 13: Inference of the differential exon usage"
       intro: "DEXSeq usage is similar to DESeq2. It uses similar statistics to find differentially used exons.<br> 
       As for DESeq2, we counted only reads that mapped to exons on chromosome 4 for only one sample in the previous step. To be able to identify differential exon usage induced by PS depletion, all datasets (3 treated and 4 untreated) must be analyzed with the similar procedure.<br>
       To save time, we did that for you. The results are available on <a href=\"http://dx.doi.org/10.5281/zenodo.61771\">Zenodo</a>, please load them into your history using the file upload procedure as before.<br>
