@@ -16,6 +16,7 @@ RUN install-tools $GALAXY_ROOT/tools.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs
 
 ADD ./rna-workbench-tours/viennarna_tour.yaml $GALAXY_ROOT/config/plugins/tours/rnateam.viennarna.yaml
+ADD ./rna-workbench-tours/rnaseq-tour.yaml $GALAXY_ROOT/config/plugins/tours/rnateam.rnaseq.yaml
 
 # Data libraries
 ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
