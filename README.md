@@ -13,10 +13,13 @@ valign="middle">](http://www.denbi.de)
 [<img src="assets/img/elixir_germany.png" height="55px" alt="ELIXIR Germany"
 valign="middle">](https://www.elixir-europe.org)
 
+This webserver is based on the [Galaxy Docker](https://github.com/bgruening/docker-galaxy-stable) for advanced local deploymentes we recommend the upstream [documentation](http://bgruening.github.io/docker-galaxy-stable).
+
+
 Usage
 =====
 
-Windows and OS-X users are encouraged to use [kitematic](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic.md), a graphical User-Interface for managing Docker containers.
+Windows and OS-X users are encouraged to use [Kitematic](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic.md), a graphical User-Interface for managing Docker containers.
 
 For Linux users and people familiar with the commandline can follow the instruction on installing Docker at  https://docs.docker.com/installation
 
