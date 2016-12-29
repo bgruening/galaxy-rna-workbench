@@ -3,3 +3,4 @@ libraries:
       files:
         - https://raw.githubusercontent.com/eteriSokhoyan/test-data/master/cliques-high-representatives.fa
         - https://raw.githubusercontent.com/eteriSokhoyan/test-data/master/cliques-low-representatives.fa
+        - https://raw.githubusercontent.com/bgruening/galaxytools/master/tools/rna_tools/vienna_rna/test-data/rnaplfold_result2.ps
