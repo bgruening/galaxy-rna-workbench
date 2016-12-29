@@ -37,3 +37,7 @@ RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > ma
     cp -r galaxytools-master/visualisations/dotplot/ config/plugins/visualizations/ && \
     cp -r galaxytools-master/visualisations/dbgraph/ config/plugins/visualizations/ && \
     rm -rf master.tar.gz rm galaxytools-master
+
+# Container Style
+ADD assets/img/logo.png $GALAXY_CONFIG_DIR/web/welcome_image.png
+ADD welcome.html $GALAXY_CONFIG_DIR/web/welcome.html
