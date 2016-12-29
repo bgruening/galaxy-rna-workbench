@@ -75,8 +75,8 @@ steps:
       https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_1.fastq<br>
       https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_2.fastq"
       position: "top"
-      postclick:
-        - "upload-box#upload-text-info"        
+#      postclick:
+#        - "upload-box#upload-text-info"        
         
     - title: "<b>Step 2: Download fasta file with RNA sequence</b>"
       element: "button#btn-start"
