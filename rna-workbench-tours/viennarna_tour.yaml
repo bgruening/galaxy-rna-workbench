@@ -4,7 +4,7 @@ title_default: "Galaxy RNA-workbench Introduction Exercise"
 
 steps:
 
-    - title: "<b>Welcome to the Galaxy RNA-worbench!</b>"
+    - title: "<b>Welcome to the Galaxy RNA-worbench ViennaRNA example!</b>"
       content: "This tour will walk you through an exercise which guides you on how to use the Galaxy RNA-workbench. <br><br>
                 Read and Follow the instructions before clicking <b>'Next'</b>.<br><br>
                 Click <b>'Prev'</b> in case you missed out on any step"
@@ -132,8 +132,10 @@ steps:
 
     - title: "<b>Step 5: Fold sequence with partition function output</b>"
       element: "#tool-search-query"
-      intro: "You can now type and select <b>'RNAfold'</b> again.<br><br>
-              <b>Follow this set of instructions once the tool was loaded:</b><br>
+      intro: "You can now type and select <b>'RNAfold'</b>.<br><br>"
+
+    - title: "<b>Step 5: Fold sequence with partition function output</b>"
+      intro: "<b>Follow this set of instructions once the tool was loaded:</b><br>
               <ol>
                 <li>Input from FASTA file, same as before</li>
                 <li>Sequence to fold: Homo_sapiens_CXCL2_sequence.fa</li>
@@ -141,7 +143,7 @@ steps:
                 <li><b>BUT</b> this time set the 'Calculate Partition Function' option to 'Yes'</li>
                 <li>Click button 'Execute' and wait for the tool to finish.</li>
               </ol>"      
-      position: "center"
+      position: "bottom"
 
     - title: "<b>Step 6: Inspect structure, ensembl MFE and ensembl population</b>"
       element: '#current-history-panel'
@@ -178,15 +180,16 @@ steps:
       backdrop: true
 
     - title: "<b>Step 8: Use binding sites as constraint for folding</b>"
-      element: "textarea#text-content"
-      content: "We will now upload the file containing constraints (the file <b>'Homo_sapiens_CXCL2_constraints.fa'</b>) from <a href=\"https://github.com/jfallmann/test-data/tree/master/viennarna-galaxy-tour\" target=\"_blank\">zenodo</a> to Galaxy. In contrast to the beginning of this tour, this will be done automatically this time" #, set the file type to txt."
+      element: ".upload-text-content:first"
+      content: "We will now upload the file containing constraints (the file <b>'Homo_sapiens_CXCL2_constraints.fa'</b>) from <a href=\"https://github.com/jfallmann/test-data/tree/master/viennarna-galaxy-tour\" target=\"_blank\">github</a> to Galaxy. In contrast to the beginning of this tour, this will be done automatically this time" #, set the file type to txt."
       preclick:
         - ".upload-button"
         - "button#btn-new"
-      postclick:
-        - textinsert: |
+      textinsert: |
             https://github.com/jfallmann/test-data/tree/master/viennarna-galaxy-tour\Homo_sapiens_CXCL2_constraints.fa
+      postclick:
         - "button#btn-start"
+        - "#btn-close"
            
     - title: "<b>Step 8: Use binding sites as constraint for folding</b>"
       element: "#tool-search-query"
@@ -213,13 +216,24 @@ steps:
       position: "left"              
 
     - title: "<b>Step 10: Download alignment of gene of interest</b>"
-      content: "Now download the file containing a multiple alignment of the gene of interest across 8 primate species (the file <b>'CXCL2_8_primates_EPO.fa'</b>) from <a href=\"http://doi.org/10.5281/zenodo.212693\" target=\"_blank\">zenodo</a> to your computer and then <b>upload</b> the same file to Galaxy as in the beginning of this tour, set the file type to fasta."
       backdrop: true
-
+      element: ".upload-text-content:first"
+      content: "Now we upload a file containing a multiple alignment of the gene of interest across 8 primate species (the file <b>'CXCL2_8_primates_EPO.fa'</b>) from <<a href=\"https://github.com/jfallmann/test-data/tree/master/viennarna-galaxy-tour\" target=\"_blank\">github</a> to Galaxy, this will be done automatically this time" #, set the file type to txt."
+      preclick:
+        - ".upload-button"
+        - "button#btn-new"
+      textinsert: |
+            https://github.com/jfallmann/test-data/tree/master/viennarna-galaxy-tour\CXCL2_8_primates_EPO.fa
+      postclick:
+        - "button#btn-start"
+        - "#btn-close"
+      
     - title: "<b>Step 11: Fold alignment and compare consesus structure to single sequence structure</b>"
       element: "#tool-search-query"
-      intro: "You can now type and select <b>'RNAalifold'</b> from the tool list.<br><br>
-              <b>Follow this set of instructions once the tool was loaded:</b><br>
+      intro: "You can now type and select <b>'RNAalifold'</b> from the tool list."
+
+    - title: "<b>Step 11: Fold alignment and compare consesus structure to single sequence structure</b>"
+      intro: "<b>Follow this set of instructions once the tool was loaded:</b><br>
               <ol>
                 <li>Input from FASTA file</li>
                 <li>Sequence to fold: CXCL2_8_primates_EPO.fa</li>
@@ -227,7 +241,7 @@ steps:
                 <li>Click button 'Execute' and wait for the tool to finish.</li>
                 <li>Then inspect the consensus structure predicted by <b>RNAalifold</b> and compare it to the <b>RNAfold</b> structures with and without constraints.</li>
               </ol>"      
-      position: "right"
+      position: "bottom"
 
     - title: "<b>Step 12: Name  your history</b>"
       element: "#current-history-panel > div.controls > div.title > div"
@@ -256,9 +270,7 @@ steps:
       element: '#history-options-button'   
       intro: "To make sure our workflow is correct, we look at it in the editor and make some small adjustments.<br><br>
               <dir>
-                <li>Although we have our two inputs in the workflow they are missing their connection to the first tool <b>(Intersect)</b>, because we didn't carry over the intermediate steps</li>
-                <li><b>Connect</b> each input dataset to the Intersect tool by <b>dragging</b> the arrow pointing outwards on the right of its box (which denotes an output) to an arrow on the left of the Intersect box pointing inwards (which denotes an input). Connect each input dataset with a different input of Intersect</li>
-                <li>You should also <b>change the names</b> of the input datasets to remember that the first one contains genes and the second one peaks. Don't forget to save it in the end by clicking on <b>'Options'</b> (top right) and selecting <b>'Save'</b></li>                
+                <li>You can <b>change the names</b> of the input datasets to remember what they are used for. Don't forget to save it in the end by clicking on <b>'Options'</b> (top right) and selecting <b>'Save'</b></li>                
               </dir>"  
       position: "left"    
 
