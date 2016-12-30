@@ -40,14 +40,15 @@ def main( data ):
         lib = gi.libraries.create_library('Training Data', 'Data pulled from online archives.')
         lib_id = lib['id']
 
-        for fname, urls in folders.items():
+        for fname, files in folders.items():
             log.info("Creating folder: %s" % fname)
             folder = gi.libraries.create_folder( lib_id, fname )
-            for url in urls:
+            for _file in files:
                 gi.libraries.upload_file_from_url(
                     lib_id,
-                    url,
+                    _file['url'],
                     folder_id = folder[0]['id'],
+                    file_type = _file['file_type']
                 )
         
         no_break = True
