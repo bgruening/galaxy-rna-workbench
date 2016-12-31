@@ -4,7 +4,7 @@ title_default: "Galaxy RNA-workbench RNA-Seq Exercise"
 
 steps:
 
-    - title: "<b>Welcome to the Galaxy RNA-worbench!</b>"
+    - title: "<b>Welcome to the Galaxy RNA-worbench RNA-Seq example tour!</b>"
       content: "This tour will walk you through an exercise which guides you on how to use the Galaxy RNA-workbench. <br><br>
                 Read and Follow the instructions before clicking <b>'Next'</b>.<br><br>
                 Click <b>'Prev'</b> in case you missed out on any step"
@@ -70,13 +70,14 @@ steps:
         - ".upload-button"
 
     - title: "<b>Step 2: Download fastq files with RNA sequences</b>"
-      element: "upload-box#upload-text-info"
-      intro: "We now paste the links to a fastq dataset pair into the upload-box. Click next to do so. (not working yet, in meantime please copy paste this links to the textbox: <br> 
-      https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_1.fastq<br>
-      https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_2.fastq"
-      position: "top"
-#      postclick:
-#        - "upload-box#upload-text-info"        
+      element: ".upload-text-content:first"
+      intro: "We now paste the links to a fastq dataset pair into the upload-box. Click next to do so."
+      preclick:
+        - ".upload-button"
+        - "button#btn-new"
+      textinsert: |      
+        https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_1.fastq
+        https://zenodo.org/record/61771/files/GSM461177_untreat_paired_subset_2.fastq
         
     - title: "<b>Step 2: Download fasta file with RNA sequence</b>"
       element: "button#btn-start"
@@ -136,7 +137,6 @@ steps:
               <li>The report for GSM461177_untreat_paired_subset_1 is quite good compared to the one for GSM461177_untreat_paired_subset_2. For the latter, the per base sequence quality is bad around the 25th bp (same for the per base N content), because the quality in the 2nd tile is bad (maybe because of some event during sequencing). We need to process these samples according to this quality control and keep in mind the paired-end information.</li>
               </dir>"
       position: "left"              
-
 
     - title: "<b>Step 3: Quality Control</b>"
       element: '#current-history-panel'
@@ -219,12 +219,13 @@ steps:
         - ".upload-button"
 
     - title: "<b>Step 4: Mapping</b>"
-      element: "upload-box#upload-text-info"
-      intro: "We now paste the link to the ENSEMBL gene annotation gtf file into the upload-box. Click next to do so. (not working yet, in meantime please copy paste this links to the textbox: <br> 
-      https://zenodo.org/record/61771/files/Drosophila_melanogaster.BDGP5.78.gtf"
-      position: "top"
-      postclick:
-        - "upload-box#upload-text-info"        
+      element: ".upload-text-content:first"
+      intro: "We now paste the link to the ENSEMBL gene annotation gtf file into the upload-box. Click next to do so."
+      preclick:
+        - ".upload-button"
+        - "button#btn-new"
+      textinsert: |
+        https://zenodo.org/record/61771/files/Drosophila_melanogaster.BDGP5.78.gtf
         
     - title: "<b>Step 4: Mapping</b>"
       element: "button#btn-start"
@@ -292,23 +293,16 @@ steps:
       position: "bottom"
 
     - title: "<b>Step 6: IGV</b>"
-      element: ".upload-button"
-      intro: "Use the upload button to upload the file to Galaxy.<br><br>
-              Click <b>'Next'</b> and the tour will take you to the Upload screen"
-      position: "right"
-      postclick:
+      element: ".upload-text-content:first"
+      intro: "We now paste the links to the new dataset into the upload-box. Click next to do so." 
+      preclick:
         - ".upload-button"
-
-    - title: "<b>Step 6: IGV</b>"
-      element: "upload-box#upload-text-info"
-      intro: "We now paste the links to the new dataset into the upload-box. Click next to do so. (not working yet, in meantime please copy paste this links to the textbox: <br> 
-      https://zenodo.org/record/61771/files/GSM461177_untreat_paired_chr4.bam <br>
-      https://zenodo.org/record/61771/files/GSM461177_untreat_paired_deletions_chr4.bed <br>
-      https://zenodo.org/record/61771/files/GSM461177_untreat_paired_insertions_chr4.bed<br>
-      https://zenodo.org/record/61771/files/GSM461177_untreat_paired_junctions_chr4.bed <br>"
-      position: "top"
-      postclick:
-        - "upload-box#upload-text-info"        
+        - "button#btn-new"
+      textinsert: |
+        https://zenodo.org/record/61771/files/GSM461177_untreat_paired_chr4.bam
+        https://zenodo.org/record/61771/files/GSM461177_untreat_paired_deletions_chr4.bed
+        https://zenodo.org/record/61771/files/GSM461177_untreat_paired_insertions_chr4.bed
+        https://zenodo.org/record/61771/files/GSM461177_untreat_paired_junctions_chr4.bed
 
     - title: "<b>Step 6: IGV</b>"
       element: "button#btn-start"
@@ -322,17 +316,8 @@ steps:
         - "button#btn-close"
       
     - title: "<b>Step 6: IGV</b>"
-      intro: "Import data from zenodo <br>
-      <a href=\"https://zenodo.org/record/61771/files/GSM461177_untreat_paired_chr4.bam\" target=\"_blank\">GSM461177_untreat_paired_chr4.bam</a>. 
-      <a href=\"https://zenodo.org/record/61771/files/GSM461177_untreat_paired_deletions_chr4.bed\" target=\"_blank\">GSM461177_untreat_paired_deletions_chr4.bed</a>. 
-      <a href=\"https://zenodo.org/record/61771/files/GSM461177_untreat_paired_insertions_chr4.bed\" target=\"_blank\">GSM461177_untreat_paired_insertions_chr4.bed</a>. 
-      <a href=\"https://zenodo.org/record/61771/files/GSM461177_untreat_paired_junctions_chr4.bed\" target=\"_blank\">GSM461177_untreat_paired_junctions_chr4.bed</a>"
-      backdrop: true
-
-    - title: "<b>Step 6: IGV</b>"
       element: '#current-history-panel' 
-      intro: "Visualize this BAM file and the three BED files, particularly the region on chromosome 4 between 560 kb to 600 kb (`chr4:560,000-600,000`)"
-      content: "CLick on the 'IGV' symbol of the bam dataset you just uploaded to galaxy to start IGV.<br>
+      intro: "Visualize this BAM file and the three BED files, particularly the region on chromosome 4 between 560 kb to 600 kb (`chr4:560,000-600,000`). Click on the 'IGV' symbol of the bam dataset you just uploaded to galaxy to start IGV.<br>
       <dir>
       <li>Open dataset  click on display with IGV and web current</li>
       <li>Open the file with a JAVA plugin (e.g.,IcedTea)</li>
@@ -344,8 +329,7 @@ steps:
       position : "center"
 
     - title: "<b>Step 6: IGV</b>"
-      intro: "What you should be able to see"
-      content: "Which information does the `GSM461177_untreat_paired_junctions_chr4.bed` BED file contain?<br>
+      intro: "What you should be able to see: Which information does the `GSM461177_untreat_paired_junctions_chr4.bed` BED file contain?<br>
       How is this information represented in the BED file? And in IGV?<br>
       Where is the 'JUNC00013368' junction situated? What is its score?<br>
       How many reads are concerned by the 'JUNC00013368' junction, visible when we zoom on `chr4:568,476-571,814`? Can you relate that to the score?<br>
@@ -353,8 +337,8 @@ steps:
       backdrop: true
 
     - title: "<b>Step 6: IGV</b>"
-      intro: "Answers"
-      content: "<dir>
+      intro: "Answers
+      <dir>
       <li>`GSM461177_untreat_paired_junctions_chr4.bed` BED file contain the splicing events, *i.e.* when at least a single read splits across two exons in the alignment track</li>
       <li>The BED file is a tabular with: Chrom, Start, End, Name, Score, Strand, ThickStart, ThickEnd, ItemRGB, BlockCount, BlockSizes, BlockStart. In IGV, the junctions are represented by an arc from the beginning to the end of the junction. The color of the arc represent the strand on which the junction is found. The height of the arc, and its thickness, are proportional to the depth of read coverage. </li>
       <li>The 'JUNC00013368' junction starts at 568,736 and ends at 569,905. It has a score of 6.</li>
@@ -364,8 +348,8 @@ steps:
     "
 
     - title: "<b>Step 6: IGV</b>"
-      intro: "Sashimi Plot"
-      content: "In the IGV window Right click on the BAM file and select <b>Sashimi Plot</b> from the context menu.<br>
+      intro: "Sashimi Plot<br>
+      In the IGV window Right click on the BAM file and select <b>Sashimi Plot</b> from the context menu.<br>
       <dir>
       <li>What does the bar graph represent? And the numbered line?</li>
       <li>What does the number means?</li>
@@ -373,8 +357,7 @@ steps:
       </dir>"
 
     - title: "<b>Step 6: IGV</b>"
-      intro: "Sashimi Plot"
-      content: "
+      intro: "Sashimi Plot<br>
       <dir>
       <li>The coverage for each alignment track is plotted as a bar graph. Arcs representing splice junctions connecting exons</li>
       <li>Arcs display the number of reads split across the junction (junction depth). </li>
@@ -382,8 +365,8 @@ steps:
       </dir>"
 
     - title: "<b>Step 7: Analysis of the differential gene expression</b>"
-      intro: "To identify exons that are regulated by the Pasilla gene, we need to identify genes and exons which are differentially expressed between samples with PS gene depletion and control samples."
-      content: "To compare the expression of single genes between different conditions (e.g. with or without PS depletion), an first essential step is to quantify the number of reads per gene. <a href=\"http://www-huber.embl.de/users/anders/HTSeq/doc/count.html\">HTSeq-count</a> is one of the most popular tools for gene expression quantification.<br>
+      intro: "To identify exons that are regulated by the Pasilla gene, we need to identify genes and exons which are differentially expressed between samples with PS gene depletion and control samples.<br>
+      To compare the expression of single genes between different conditions (e.g. with or without PS depletion), an first essential step is to quantify the number of reads per gene. <a href=\"http://www-huber.embl.de/users/anders/HTSeq/doc/count.html\">HTSeq-count</a> is one of the most popular tools for gene expression quantification.<br>
       To quantify the number of reads mapped to a gene, an annotation of the genomic features is needed. We already uploaded the <a href=\"https://zenodo.org/record/61771/files/Drosophila_melanogaster.BDGP5.78.gtf\">Drosophila_melanogaster.BDGP5.78.gtf</a> with the Ensembl gene annotation for *Drosophila melanogasterto Galaxy."
       position: "center"
 
@@ -393,8 +376,8 @@ steps:
       
     - title: "<b>Step 8: Count the number of reads per annotated gene</b>"
       element: '#current-history-panel' 
-      intro: " Copy the `Drosophila_melanogaster.BDGP5.78.gtf` file from the first history"
-      content: " Click on 'View all histories' in the top right <br>
+      intro: " Copy the `Drosophila_melanogaster.BDGP5.78.gtf` file from the first history<br>
+      Click on 'View all histories' in the top right <br>
       Drag and drop the file you want to copy to your new history <br>
       Click on 'Done' on the top left "
       
@@ -412,12 +395,12 @@ steps:
       position: "right"
 
     - title: "<b>Step 8: Count the number of reads per annotated gene</b>"
-      intro: "Which feature has the most reads mapped on it?"
-      content: "To display the most often found feature, we first need to sort the output file with the feature by the number of reads found for these feature. We do that using Sort tool, sort on the second column and in descending order. This shows us that FBgn0017545 is the feature with the most reads mapped on it with 4,030 reads."
+      intro: "Which feature has the most reads mapped on it?<br>
+      To display the most often found feature, we first need to sort the output file with the feature by the number of reads found for these feature. We do that using Sort tool, sort on the second column and in descending order. This shows us that FBgn0017545 is the feature with the most reads mapped on it with 4,030 reads."
 
     - title: "<b>Step 9: Analysis of DGE</b>"
-      intro: "In the previous section, we counted only reads that mapped to chromosome 4 for only one sample. To be able to identify differential gene expression induced by PS depletion, all datasets (3 treated and 4 untreated) must be analyzed with the similar procedure."
-      content: "You can export a workflow from the previous steps and rerun it on the 7 samples whose the raw sequences are available on [Zenodo](http://dx.doi.org/10.5281/zenodo.61771). For time saving, we run the previous steps for you and obtain 7 count files, available on [Zenodo](http://dx.doi.org/10.5281/zenodo.61771)<br>
+      intro: "In the previous section, we counted only reads that mapped to chromosome 4 for only one sample. To be able to identify differential gene expression induced by PS depletion, all datasets (3 treated and 4 untreated) must be analyzed with the similar procedure.<br>
+      You can export a workflow from the previous steps and rerun it on the 7 samples whose the raw sequences are available on [Zenodo](http://dx.doi.org/10.5281/zenodo.61771). For time saving, we run the previous steps for you and obtain 7 count files, available on [Zenodo](http://dx.doi.org/10.5281/zenodo.61771)<br>
       These files contain for each gene the number of reads mapped to it. We could compare directly the files and then having the differential gene expression. But the number of sequenced reads mapped to a gene depends on:<br>
       <dir>
       <li> Its own expression level</li>
@@ -464,22 +447,20 @@ steps:
         - ".upload-button"
 
     - title: "<b>Step 9: Analysis of DGE</b>"
-      element: "upload-box#upload-text-info"
-      intro: "We now paste the links to the new dataset into the upload-box. Click next to do so. (not working yet, in meantime please copy paste this links to the textbox: <br>
-      Import the seven count files from <a href=\"http://dx.doi.org/10.5281/zenodo.61771)\">Zenodo</a>
-      <dir>
-      <li> https://zenodo.org/record/61771/files/GSM461176_untreat_single.counts </li>
-      <li> https://zenodo.org/record/61771/files/GSM461177_untreat_paired.counts </li>
-      <li> https://zenodo.org/record/61771/files/GSM461178_untreat_paired.counts </li>
-      <li> https://zenodo.org/record/61771/files/GSM461179_treat_single.counts </li>
-      <li> https://zenodo.org/record/61771/files/GSM461180_treat_paired.counts </li>
-      <li> https://zenodo.org/record/61771/files/GSM461181_treat_paired.counts </li>
-      <li> https://zenodo.org/record/61771/files/GSM461182_untreat_single.counts </li>
-      </dir>"
-      position: "top"
-      postclick:
-        - "upload-box#upload-text-info"        
-        
+      element: ".upload-text-content:first"
+      intro: "We now paste the links to the new dataset into the upload-box. Click next to do so." 
+      preclick:
+        - ".upload-button"
+        - "button#btn-new"
+      textinsert: |
+        https://zenodo.org/record/61771/files/GSM461176_untreat_single.counts
+        https://zenodo.org/record/61771/files/GSM461177_untreat_paired.counts
+        https://zenodo.org/record/61771/files/GSM461178_untreat_paired.counts
+        https://zenodo.org/record/61771/files/GSM461179_treat_single.counts
+        https://zenodo.org/record/61771/files/GSM461180_treat_paired.counts
+        https://zenodo.org/record/61771/files/GSM461181_treat_paired.counts
+        https://zenodo.org/record/61771/files/GSM461182_untreat_single.counts
+
     - title: "<b>Step 9: Analysis of DGE</b>"
       element: "button#btn-start"
       intro: "Now that you've selected the file, select <b>'dm3'</b> as the genome.<br><br>
@@ -489,7 +470,6 @@ steps:
       postclick:
         - "button#btn-start"
         - "button#btn-close"
-
 
     - title: "<b>Step 9: Analysis of DGE</b>"
       element: "#tool-search-query"
@@ -699,21 +679,35 @@ steps:
     - title: "Step 13: Inference of the differential exon usage"
       intro: "DEXSeq usage is similar to DESeq2. It uses similar statistics to find differentially used exons.<br> 
       As for DESeq2, we counted only reads that mapped to exons on chromosome 4 for only one sample in the previous step. To be able to identify differential exon usage induced by PS depletion, all datasets (3 treated and 4 untreated) must be analyzed with the similar procedure.<br>
-      To save time, we did that for you. The results are available on <a href=\"http://dx.doi.org/10.5281/zenodo.61771\">Zenodo</a>, please load them into your history using the file upload procedure as before.<br>
-      <dir>
-      <li>Create a new history</li>
-      <li>Import the seven count files and the dexseq.gtf from Zenodo</li>
-      <li>https://zenodo.org/record/61771/files/dexseq.gtf</li>
-      <li>https://zenodo.org/record/61771/files/treated1_singlea.txt</li>
-      <li>https://zenodo.org/record/61771/files/treated2_paired.txt</li>
-      <li>https://zenodo.org/record/61771/files/treated3_paired.txt</li>
-      <li>https://zenodo.org/record/61771/files/untreated1_single.txt</li>
-      <li>https://zenodo.org/record/61771/files/untreated2_single.txt</li>
-      <li>https://zenodo.org/record/61771/files/untreated3_paired.txt</li>
-      <li>https://zenodo.org/record/61771/files/untreated4_paired.txt</li>
-      </dir>"
+      To save time, we did that for you. The results are available on <a href=\"http://dx.doi.org/10.5281/zenodo.61771\">Zenodo</a>, we will load them into your history using the file upload procedure as before. You can now create a new history."
       position: "center"
       backdrop: true
+
+    - title: "Step 13: Inference of the differential exon usage"
+      element: ".upload-text-content:first"
+      intro: "We now paste the links to the new dataset into the upload-box. Click next to do so." 
+      preclick:
+        - ".upload-button"
+        - "button#btn-new"
+      textinsert: |
+        https://zenodo.org/record/61771/files/dexseq.gtf
+        https://zenodo.org/record/61771/files/treated1_singlea.txt
+        https://zenodo.org/record/61771/files/treated2_paired.txt
+        https://zenodo.org/record/61771/files/treated3_paired.txt
+        https://zenodo.org/record/61771/files/untreated1_single.txt
+        https://zenodo.org/record/61771/files/untreated2_single.txt
+        https://zenodo.org/record/61771/files/untreated3_paired.txt
+        https://zenodo.org/record/61771/files/untreated4_paired.txt
+
+    - title: "Step 13: Inference of the differential exon usage"
+      element: "button#btn-start"
+      intro: "Now that you've selected the file, select <b>'dm3'</b> as the genome.<br><br>
+              Click <b>'Next'</b> and the tour will <b>'Start'</b> the upload.<br>
+              Galaxy will automatically unpack the files."
+      position: "bottom"
+      postclick:
+        - "button#btn-start"
+        - "button#btn-close"
     
     - title: "Step 13:  Inference of the differential exon usage"
       element: "#tool-search-query"
