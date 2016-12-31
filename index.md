@@ -6,33 +6,17 @@ layout: default
 
 The Galaxy RNA workbench is a framework dedicated to the analysis of RNAs. 
 
-The framework is based on a [Galaxy instance](https://galaxyproject.org/) with only RNA related tools:
+The framework is based on a [Galaxy instance](https://galaxyproject.org/) with 50 RNA related tools:
 
-- [ViennaRNA](http://www.tbi.univie.ac.at/RNA/)
-- Compalignp to compute fractional identity between trusted alignment and test alignment
-- DoRINA: data source for RNA interactions in post-transcriptional regulation
-- GotohScan to find subsequences in db
-- Kinwalker for the cotranscriptional folding of RNAs
-- MAFFT, a multiple alignment program for amino acid or nucleotide sequences
-- MEA to predict MEA structures and compare structures of RNAs
-- Piranha, a peak-caller for CLIP- and RIP-Seq data
-- [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/), a method for defining traslated ORFs using Ribosome Profiling data
-- RNAcode to analyze the protein coding potential in MSA
-- [RNAcommender](https://github.com/gianlucacorrado/RNAcommender) a tool for genome-wide recommendation of RNA-protein interactions
-- [SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/) for fast and accurate filtering of ribosomal RNAs in metatranscriptomic dat
-- [LocARNA](http://www.bioinf.uni-freiburg.de/Software/LocARNA/) for multiple Alignment and Folding of RNAs
-- [PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/), a method to generate a high resolution map of interaction sites between RNA-binding proteins and their targets
-- [infernal](http://infernal.janelia.org/) for the inference of RNA Alignments
-- RNAmme to find rRNA genes in a DNA sequence
-- trna_prediction for the prediction of t-RNA with aragorn and tRNAscan-SE
-- [RNAz](https://www.tbi.univie.ac.at/~wash/RNAz/) for predicting structural noncoding RNAs
-- BlockClust for the non-coding RNA clustering from deep sequencing read profiles
-- [Cofold](http://www.e-rna.org/cofold/) for the prediction of RNA secondary structure that takes co-transcriptional folding into account
-- [RNAshapes](http://bibiserv.techfak.uni-bielefeld.de/rnashapes/) for RNA secondary structure predictions
-- MiRDeep2 for identification of novel and known miRNAs in deep sequencing data
-- RNABOB for fast pattern searching for RNA structural motifs
-- antaRNA, using ant colony optimization to solve the inverse folding problem in RNA research
-- [TargetFinder](https://github.com/carringtonlab/TargetFinder.git) to predict plant small RNA target
+| Category   | Tools |
+| -------- | ----------- |
+| RNA Structure Analysis| [ViennaRNA](http://www.tbi.univie.ac.at/RNA/), [Kinwalker](http://www.bioinf.uni-leipzig.de/Software/Kinwalker/), [MEA](http://www.bioinf.uni-leipzig.de/Software/mea/), [RNAz](http://www.tbi.univie.ac.at/~wash/RNAz/), [Cofold](http://www.e-rna.org/cofold/), [RNAshapes](https://bibiserv2.cebitec.uni-bielefeld.de/rnashapes), [antaRNA](http://www.bioinf.uni-freiburg.de/Software/antaRNA/)|
+| RNA Alignment | [Compalignp](http://www.biophys.uni-duesseldorf.de/bralibase/), [MAFFT](http://mafft.cbrc.jp/alignment/software/), [LocARNA](http://rna.informatik.uni-freiburg.de/LocARNA/Input.jsp) |
+| RNA Annotation | [GotohScan](http://www.bioinf.uni-leipzig.de/Software/GotohScan/), [RNAcode](http://wash.github.io/rnacode/), [INFERNAL](http://eddylab.org/infernal/), [RNAmmer](http://www.cbs.dtu.dk/services/RNAmmer/), [ARAGORN](http://mbio-serv2.mbioekol.lu.se/ARAGORN/), [tRNAscan](http://lowelab.ucsc.edu/tRNAscan-SE/), [RNABOB](http://eddylab.org/software.html) |
+| RNA-protein Interaction |  [DoRiNA](http://dorina.mdc-berlin.de/), [Piranha](https://github.com/smithlabcode/piranha), [RNAcommender](https://github.com/gianlucacorrado/RNAcommender), [PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/)|
+| Ribosome Profiling | [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) |
+| RNA-Seq |[SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/), [BlockClust](http://www.bioinf.uni-freiburg.de/Software/) , [MiRDeep2](https://www.mdc-berlin.de/8551903/en/)  |
+| RNA Target Prediction | [TargetFinder](https://github.com/carringtonlab/TargetFinder) |
 
 # Usage
 
