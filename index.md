@@ -30,7 +30,7 @@ Windows and OS-X users are encouraged to use [Kitematic](https://github.com/bgru
 
 For Linux users and people familiar with the command line can follow the instruction on installing Docker from [Docker website](https://docs.docker.com/installation).
 
-## Usage
+## RNA workbench launch
 
 Starting the RNA workbench Docker container is analogous to starting the generic Galaxy Docker image: 
 
