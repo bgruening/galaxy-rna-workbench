@@ -33,7 +33,7 @@ After the successful installation, all what you need to do is:
 
 A detailed discussion of Docker's parameters is given in the [docker manual](http://docs.docker.io/), it's really worth reading; nevertheless, here is a quick rundown: ``docker run`` starts the Image/Container. In case the Container is not already stored locally, docker downloads it automatically. The argument ``-p 8080:80`` makes the port 80 (inside of the container) available on port 8080 on your host. Inside the container a Apache web server is running on port 80 and that port can be bound to a local port on your host computer. With this parameter you can access your Galaxy instance via ``http://localhost:8080`` immediately after executing the command above. ``bgruening/galaxy-rna-workbench`` is the Image/Container name, that directs docker to the correct path in the [docker index](https://index.docker.io/u/bgruening/galaxy-rna-workbench/). ``-d`` will start the docker container in daemon mode. For an interactive session, one executes:
 
-``docker run -i -t -p 8080:80 bgruening/galaxy-rna-workbench``
+``docker run -i -t -p 8080:80 bgruening/galaxy-rna-workbench /bin/bash``
 
 and manually invokes the ``` startup ``` script to start PostgreSQL, Apache and Galaxy.
 
