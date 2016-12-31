@@ -119,6 +119,7 @@ The RNA analyses workbench is developed by the RNA Bioinformatics Center (RBC). 
 
 Contributors to this RNA analyses workbench:
 
+ - Andrea Bagnacani
  - Bérénice Batut
  - Joerg Fallmann
  - Bjoern Gruening
