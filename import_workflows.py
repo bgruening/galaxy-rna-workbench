@@ -10,3 +10,5 @@ gi = galaxy.GalaxyInstance(url=url, email=admin_email, password=admin_pass)
 wf = galaxy.workflows.WorkflowClient(gi)
 #wf.import_workflow_from_local_path('/galaxy-dist/GraphClust_two.ga')
 #wf.import_workflow_from_local_path('/galaxy-dist/GraphClust_one.ga')
+
+wf.import_workflow_from_local_path('/home/galaxy/rnateam.workflow.trimming_mapping.ga')
