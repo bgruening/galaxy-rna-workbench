@@ -7,6 +7,7 @@ title: Galaxy RNA workbench
 subtitle: The RNA analyses workbench developed by the de.NBI RNA Bioinformatics Center
 email: your-email@domain.com
 author: RNA Bioinformatics Center (RBC)
+github: https://github.com/bgruening/galaxy-rna-workbench
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -15,11 +16,3 @@ author: RNA Bioinformatics Center (RBC)
 # Build settings
 markdown: kramdown
 permalink: pretty
-
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
-
-social:
-  - title: github
-    url: https://github.com/bgruening/galaxy-rna-workbench
