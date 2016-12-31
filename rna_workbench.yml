@@ -221,6 +221,13 @@ tools:
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
+- name: pipmir
+  owner: rnateam
+  tool_panel_section_label: "RNA-Seq"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+
 # RNA Target Prediction
 
 - name: targetfinder
