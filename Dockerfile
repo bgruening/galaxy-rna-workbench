@@ -22,6 +22,7 @@ ADD ./rna-workbench-tours/rnaseq-tour.yaml $GALAXY_ROOT/config/plugins/tours/rna
 ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
 ADD library_data.yaml $GALAXY_ROOT/library_data.yaml
 
+ADD ./rna-workbench-workflow/Galaxy-Workflow-trimming_mapping-treatment_untreatment-SE_PE.ga $GALAXY_HOME/rnateam.workflow.trimming_mapping.ga
 ADD import_workflows.py $GALAXY_ROOT/import_workflows.py
 
 # Download training data and populate the data library
