@@ -57,7 +57,7 @@ Nevertheless, here is a quick rundown:
   For an interactive session, one executes:
 
   ```
-  $ docker run -i -t -p 8080:80 bgruening/galaxy-rna-workbench
+  $ docker run -i -t -p 8080:80 bgruening/galaxy-rna-workbench /bin/bash
   ```
 
   and manually invokes the `startup` script to start PostgreSQL, Apache and Galaxy.

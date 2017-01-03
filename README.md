@@ -54,7 +54,7 @@ Nevertheless, here is a quick rundown:
   For an interactive session, one executes:
 
   ```
-  $ docker run -i -t -p 8080:80 bgruening/galaxy-rna-workbench
+  $ docker run -i -t -p 8080:80 bgruening/galaxy-rna-workbench /bin/bash
   ```
 
   and manually invokes the `startup` script to start PostgreSQL, Apache and Galaxy.
@@ -84,37 +84,6 @@ The Galaxy Admin User has the username `admin@galaxy.org` and the password `admi
 
 The PostgreSQL username is `galaxy`, the password `galaxy` and the database name `galaxy`.
 If you want to create new users, please make sure to use the `/export/` volume. Otherwise your user will be removed after your docker session is finished.
-
-Windows and OS-X users are encouraged to use [Kitematic](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic.md), a graphical User-Interface for managing Docker containers.
-
-For Linux users and people familiar with the commandline can follow the instruction on installing Docker at  https://docs.docker.com/installation
-
-Starting the RNA workbench Docker container is analogous to starting
-the generic Galaxy Docker image; thus, the following description is
-adapted from <https://github.com/bgruening/docker-galaxy-stable>.
-
-After the successful installation, all what you need to do is:
-
-``docker run -d -p 8080:80 bgruening/galaxy-rna-workbench``
-
-A detailed discussion of Docker's parameters is given in the [docker manual](http://docs.docker.io/), it's really worth reading; nevertheless, here is a quick rundown: ``docker run`` starts the Image/Container. In case the Container is not already stored locally, docker downloads it automatically. The argument ``-p 8080:80`` makes the port 80 (inside of the container) available on port 8080 on your host. Inside the container a Apache web server is running on port 80 and that port can be bound to a local port on your host computer. With this parameter you can access your Galaxy instance via ``http://localhost:8080`` immediately after executing the command above. ``bgruening/galaxy-rna-workbench`` is the Image/Container name, that directs docker to the correct path in the [docker index](https://index.docker.io/u/bgruening/galaxy-rna-workbench/). ``-d`` will start the docker container in daemon mode. For an interactive session, one executes:
-
-``docker run -i -t -p 8080:80 bgruening/galaxy-rna-workbench /bin/bash``
-
-and manually invokes the ``` startup ``` script to start PostgreSQL, Apache and Galaxy.
-
-Docker images are "read-only", such that all changes during one session are lost after restart. This mode is useful to present Galaxy to your colleagues or to run workshops with it. To install Tool Shed repositories or to save your data you need to export the calculated data to the host computer.
-
-Fortunately, this is as easy as:
-
-``docker run -d -p 8080:80 -v /home/user/galaxy_storage/:/export/ bgruening/galaxy-rna-workbench``
-
-Given the additional ``-v /home/user/galaxy_storage/:/export/`` parameter, docker will mount the folder ``/home/user/galaxy_storage`` into the Container under ``/export/``. A ``startup.sh`` script, that is usually starting Apache, PostgreSQL and Galaxy, will recognize the export directory with one of the following outcomes:
-
-  - In case of an empty ``/export/`` directory, it will move the [PostgreSQL](http://www.postgresql.org/) database, the Galaxy database directory, Shed Tools and Tool Dependencies and various configure scripts to /export/ and symlink back to the original location.
-  - In case of a non-empty ``/export/``, for example if you continue a previous session within the same folder, nothing will be moved, but the symlinks will be created.
-
-This enables you to have different export folders for different sessions - meaning real separation of your different projects.
 
 
 # Available Tools
