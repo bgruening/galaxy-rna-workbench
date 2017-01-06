@@ -46,25 +46,17 @@ Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Doc
 11. A connection to the Docker Hub is started, and the workbench is retrieved from the Docker Hub.  
   ![11.png](screenshots/kitematic/osx/11.png "Downloading the workbench")
 
-12. Once fully downloaded, the Docker container starts, loggin messages on the console.  
+12. Once fully downloaded, the Docker container starts, loggin messages on the console. A web preview of the Galaxy RNA workbench is provided next to the console log. Click on the preview window to open it in a browser.  
   ![12.png](screenshots/kitematic/osx/12.png "Docker container starts")
 
-13. A web preview of the Galaxy RNA workbench is provided next to the console log.  
-  Click on the preview image to open it in a browser.  
-  ![13.png](screenshots/kitematic/osx/13.png "Web preview")
+13. The web preview is fully opened in your default browser, where you can readilly start working on the workbench.  
+  The opening page shows some useful options to configure galaxy, install new tools, or try the workbench through a guided tour: an interactive demo showing the usage of preloaded tools to carry out a simple workflow experiment.  
+  Tours can be stopped at any time, and provide you an overview of what can be done through Galaxy, using its tools, and reusing all available workflows.  
+  ![13.png](screenshots/kitematic/osx/13.png "Workbench opens in the browser")
 
-14. The web preview is fully opened in your default browser, where you can readilly start working on the workbench.  
-  ![14.png](screenshots/kitematic/osx/14.png "Workbench opens in the browser")
-
-15. To start trying the workbench, we suggest you take an interactive tour of the galaxy workbench.  
-The tour can be stopped at any time, and gives you an overview of what you can do through the interface, using its tools, and reusing all available workflows. Click on _Help -> Interactive Tours_.  
-![15.png](screenshots/kitematic/osx/15.png "Have a tour")
-
-16. The interactive tours are listed. Click on the _Galaxy UI_ introductory tour.  
-  ![16.png](screenshots/kitematic/osx/16.png "Galaxy UI tour")
-
-17. Your Galaxy RNA workbench tour has started. Have fun :)  
-  ![17.png](screenshots/kitematic/osx/17.png "Have fun")
+14. To have an introductory tour on the Galaxy interface, Click on _Help -> Interactive Tours_, and select the _Galaxy UI_ tour.  
+  Your Galaxy RNA workbench tour has started. Have fun :)  
+  ![14.png](screenshots/kitematic/osx/14.png "Have fun")
 
 Once finished, finalize your installation by clicking _Continue_ in the Docker Toolbox installer.  
 This will create a Kitematic icon in your system's Applications directory, and close the Docker Toolbox installer.
