@@ -38,7 +38,7 @@ Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Doc
 
 9. Once logged in, the GUI shows some popular Docker images readilly available for running on your system.  
   We are interested in the _Galaxy RNA workbench_. Type _galaxy-rna-workbench_ in the search bar located on the top of the window to search for this image on the Docker Hub.  
-  ![09.png](screenshots/kitematic/osx/09.png "Search the galaxy-rna-orkbench")
+  ![09.png](screenshots/kitematic/osx/09.png "Search the galaxy-rna-workbench")
 
 10. The search dialog shows the retrieved results. Select the first on the left by clicking _Create_.  
   ![10.png](screenshots/kitematic/osx/10.png "Get the galaxy-rna-workbench")
@@ -50,13 +50,13 @@ Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Doc
   ![12.png](screenshots/kitematic/osx/12.png "Docker container starts")
 
 13. The web preview is fully opened in your default browser, where you can readilly start working on the workbench.  
-  The opening page shows some useful options to configure galaxy, install new tools, or try the workbench through a guided tour: an interactive demo showing the usage of preloaded tools to carry out a simple workflow experiment.  
+  The opening page shows some useful options to configure Galaxy, install new tools, or try the workbench through a guided tour: an interactive demo showing the usage of preloaded tools to carry out a simple workflow experiment.  
   Tours can be stopped at any time, and provide you an overview of what can be done through Galaxy, using its tools, and reusing all available workflows.  
   ![13.png](screenshots/kitematic/osx/13.png "Workbench opens in the browser")
 
 14. To have an introductory tour on the Galaxy interface, Click on _Help -> Interactive Tours_, and select the _Galaxy UI_ tour.  
   Your Galaxy RNA workbench tour has started. Have fun :)  
-  ![14.png](screenshots/kitematic/osx/14.png "Have fun")
+  ![14.png](screenshots/kitematic/osx/14.png "Introductory tour")
 
 Once finished, finalize your installation by clicking _Continue_ in the Docker Toolbox installer.  
 This will create a Kitematic icon in your system's Applications directory, and close the Docker Toolbox installer.
