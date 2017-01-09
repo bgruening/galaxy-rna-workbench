@@ -39,7 +39,7 @@ Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Doc
   Insert your credentials, and click _Login_.  
   ![09.png](screenshots/kitematic/win/09.png "Docker Hub")
 
-10. Once logged in, the GUI shows some popular Docker images readilly available for running on your system.  
+10. Once logged in, the GUI shows some popular Docker images readily available for running on your system.  
   We are interested in the _Galaxy RNA workbench_. Type _galaxy-rna-workbench_ in the search bar located on the top of the window to search for this image on the Docker Hub.  
   ![10.png](screenshots/kitematic/win/10.png "Search the galaxy-rna-workbench")
 
@@ -52,7 +52,7 @@ Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Doc
 13. Once fully downloaded, the Docker container starts, loggin messages on the console. A web preview of the Galaxy RNA workbench is provided next to the console log. Click on the preview window to open it in a browser.  
   ![13.png](screenshots/kitematic/win/13.png "Docker container starts")
 
-14. The web preview is fully opened in your default browser, where you can readilly start working on the workbench.  
+14. The web preview is fully opened in your default browser, where you can readily start working on the workbench.  
   The opening page shows some useful options to configure Galaxy, install new tools, or try the workbench through a guided tour: an interactive demo showing the usage of preloaded tools to carry out a simple workflow experiment.  
   Tours can be stopped at any time, and provide you an overview of what can be done through Galaxy, using its tools, and reusing all available workflows.  
   ![14.png](screenshots/kitematic/win/14.png "Workbench opens in the browser")

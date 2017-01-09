@@ -26,7 +26,7 @@ Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Doc
 5. The Docker Toolbox installer provides different types of installations. Here you can select the different components that are required to run Docker images. Click _Customize_ to review the components and fine-tune your installation, or leave the installation at its defaults (what we did here) by clicking _Install_.  
   ![05.png](screenshots/kitematic/osx/05.png "Customize")
 
-6. The Docker Toolbox installer lets you choose how you would like to start managing Docker images. From here, you can either click _Continue_ to finalize the installation (and later find Kitematic within your system's Applications directory), or between the *Docker Quickstart Terminal* and *Kitematic* to readilly start managin Docker images. Click on _Kitematic_ to overview its Docker GUI.  
+6. The Docker Toolbox installer lets you choose how you would like to start managing Docker images. From here, you can either click _Continue_ to finalize the installation (and later find Kitematic within your system's Applications directory), or between the *Docker Quickstart Terminal* and *Kitematic* to readily start managin Docker images. Click on _Kitematic_ to overview its Docker GUI.  
   ![06.png](screenshots/kitematic/osx/06.png "Manage")
 
 7. The Docker GUI starts. Let it load.  
@@ -36,7 +36,7 @@ Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Doc
   Insert your credentials, and click _Login_.  
   ![08.png](screenshots/kitematic/osx/08.png "Docker Hub")
 
-9. Once logged in, the GUI shows some popular Docker images readilly available for running on your system.  
+9. Once logged in, the GUI shows some popular Docker images readily available for running on your system.  
   We are interested in the _Galaxy RNA workbench_. Type _galaxy-rna-workbench_ in the search bar located on the top of the window to search for this image on the Docker Hub.  
   ![09.png](screenshots/kitematic/osx/09.png "Search the galaxy-rna-workbench")
 
@@ -49,7 +49,7 @@ Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Doc
 12. Once fully downloaded, the Docker container starts, loggin messages on the console. A web preview of the Galaxy RNA workbench is provided next to the console log. Click on the preview window to open it in a browser.  
   ![12.png](screenshots/kitematic/osx/12.png "Docker container starts")
 
-13. The web preview is fully opened in your default browser, where you can readilly start working on the workbench.  
+13. The web preview is fully opened in your default browser, where you can readily start working on the workbench.  
   The opening page shows some useful options to configure Galaxy, install new tools, or try the workbench through a guided tour: an interactive demo showing the usage of preloaded tools to carry out a simple workflow experiment.  
   Tours can be stopped at any time, and provide you an overview of what can be done through Galaxy, using its tools, and reusing all available workflows.  
   ![13.png](screenshots/kitematic/osx/13.png "Workbench opens in the browser")
