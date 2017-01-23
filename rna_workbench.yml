@@ -188,6 +188,14 @@ tools:
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
+- name: fuma
+  owner: yhoogstrate
+  tool_panel_section_label: "RNA Annotation"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+
+
 # Ribosome Profiling
 
 - name: ribotaper
