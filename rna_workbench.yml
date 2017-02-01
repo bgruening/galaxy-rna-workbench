@@ -144,6 +144,13 @@ tools:
   tool_panel_section_label: "RNA-protein Interaction"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
+- name: aresite2
+  install_resolver_dependencies: true
+  install_tool_dependencies: false
+  owner: jfallmann
+  tool_panel_section_label: "RNA-protein Interaction"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  
 # RNA Annotation
 
 - name: gotohscan
