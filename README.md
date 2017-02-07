@@ -95,7 +95,7 @@ If you want to create new users, please make sure to use the `/export/` volume. 
 | RNA Annotation | [GotohScan](http://www.bioinf.uni-leipzig.de/Software/GotohScan/), [RNAcode](http://wash.github.io/rnacode/), [INFERNAL](http://eddylab.org/infernal/), [RNAmmer](http://www.cbs.dtu.dk/services/RNAmmer/), [ARAGORN](http://mbio-serv2.mbioekol.lu.se/ARAGORN/), [tRNAscan](http://lowelab.ucsc.edu/tRNAscan-SE/), [RNABOB](http://eddylab.org/software.html) |
 | RNA-protein Interaction |  [DoRiNA](http://dorina.mdc-berlin.de/), [Piranha](https://github.com/smithlabcode/piranha), [RNAcommender](https://github.com/gianlucacorrado/RNAcommender), [PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/)|
 | Ribosome Profiling | [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) |
-| RNA-Seq |[SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/), [BlockClust](http://www.bioinf.uni-freiburg.de/Software/) , [MiRDeep2](https://www.mdc-berlin.de/8551903/en/)  |
+| RNA-Seq |[SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/), [BlockClust](http://www.bioinf.uni-freiburg.de/Software/) , [MiRDeep2](https://www.mdc-berlin.de/8551903/en/), [FlaiMapper](https://github.com/yhoogstrate/flaimapper)  |
 | RNA Target Prediction | [TargetFinder](https://github.com/carringtonlab/TargetFinder) |
 
 # Contributors
@@ -108,6 +108,7 @@ If you want to create new users, please make sure to use the `/export/` volume. 
  - Cameron Smith
  - Sebastian Will
  - Dilmurat Yusuf
+ - Youri Hoogstrate
 
 
 # Support & Bug Reports
