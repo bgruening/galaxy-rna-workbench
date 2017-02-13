@@ -29,7 +29,14 @@ Linux users and people familiar with the command line can follow the instruction
 
 ## RNA workbench launch
 
-Starting the RNA workbench Docker container is analogous to starting the generic Galaxy Docker image: 
+Kitematic users can launch the RNA workbench directly from its interface, browsing all publicly available images from the Docker Hub.
+
+The following video shows the launch of the RNA workbench from Kitematic:
+
+[![Galaxy RNA workbench launch through Kitematic](https://i.imgur.com/P5Mg1Qs.png)](https://www.youtube.com/watch?v=fYer4Xdw_h4 "Kitematic galaxy-rna-workbench launch")
+
+
+For non-Kitematic users, starting the RNA workbench is analogous to start the generic Galaxy Docker image:
 
 ```
 $ docker run -d -p 8080:80 bgruening/galaxy-rna-workbench
