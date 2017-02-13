@@ -33,7 +33,7 @@ Kitematic users can launch the RNA workbench directly from its interface, browsi
 
 The following video shows the launch of the RNA workbench from Kitematic:
 
-[![Galaxy RNA workbench launch through Kitematic](https://i.imgur.com/P5Mg1Qs.png)](https://www.youtube.com/watch?v=fYer4Xdw_h4 "Kitematic galaxy-rna-workbench launch")
+[![Galaxy RNA workbench launch through Kitematic](https://i.imgur.com/qjQlRxJ.png)](https://www.youtube.com/watch?v=fYer4Xdw_h4 "Kitematic galaxy-rna-workbench launch")
 
 
 For non-Kitematic users, starting the RNA workbench is analogous to start the generic Galaxy Docker image:
@@ -92,6 +92,15 @@ The Galaxy Admin User has the username `admin@galaxy.org` and the password `admi
 The PostgreSQL username is `galaxy`, the password `galaxy` and the database name `galaxy`.
 If you want to create new users, please make sure to use the `/export/` volume. Otherwise your user will be removed after your docker session is finished.
 
+## Tours
+
+The RNA workbench provides interactive tours that illustrate how the main interface works in relation to real-life user tasks.
+
+These show many common operations, such as searching, parametrizing, and running tools, or saving a history of operations in a sharable workflow.
+
+The following video demonstrates the main elements that compose the Galaxy user interface:
+
+[![Galaxy RNA workbench UI tour](https://i.imgur.com/c06O3I0.png)](https://www.youtube.com/watch?v=rP59wYIxWcI "Kitematic galaxy-rna-workbench launch")
 
 # Available Tools
 
