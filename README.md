@@ -25,11 +25,18 @@ To use the Galaxy RNA workbench, you will need [Docker](https://www.docker.com/p
 
 Non-Linux users are encouraged to use [Kitematic](https://kitematic.com) for [OSX](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic_osx.md) or [Windows](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic_win.md), a graphical User-Interface for managing Docker containers.
 
-For Linux users and people familiar with the command line can follow the instruction on installing Docker from [Docker website](https://docs.docker.com/installation).
+Linux users and people familiar with the command line can follow the instruction on installing Docker from [Docker website](https://docs.docker.com/installation).
 
 ## RNA workbench launch
 
-Starting the RNA workbench Docker container is analogous to starting the generic Galaxy Docker image: 
+Kitematic users can launch the RNA workbench directly from its interface, browsing all publicly available images from the Docker Hub.
+
+The following video shows the launch of the RNA workbench from Kitematic:
+
+[![Galaxy RNA workbench launch through Kitematic](https://i.imgur.com/qjQlRxJ.png)](https://www.youtube.com/watch?v=fYer4Xdw_h4 "Kitematic galaxy-rna-workbench launch")
+
+
+For non-Kitematic users, starting the RNA workbench is analogous to start the generic Galaxy Docker image:
 
 ```
 $ docker run -d -p 8080:80 bgruening/galaxy-rna-workbench
@@ -85,6 +92,15 @@ The Galaxy Admin User has the username `admin@galaxy.org` and the password `admi
 The PostgreSQL username is `galaxy`, the password `galaxy` and the database name `galaxy`.
 If you want to create new users, please make sure to use the `/export/` volume. Otherwise your user will be removed after your docker session is finished.
 
+## Tours
+
+The RNA workbench provides interactive tours that illustrate how the main interface works in relation to real-life user tasks.
+
+These show many common operations, such as searching, parametrizing, and running tools, or saving a history of operations in a sharable workflow.
+
+The following video demonstrates the main elements that compose the Galaxy user interface:
+
+[![Galaxy RNA workbench UI tour](https://i.imgur.com/c06O3I0.png)](https://www.youtube.com/watch?v=rP59wYIxWcI "Kitematic galaxy-rna-workbench launch")
 
 # Available Tools
 
