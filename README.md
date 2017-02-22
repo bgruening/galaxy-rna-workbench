@@ -9,7 +9,7 @@ Center (RBC). This center is one of the eight service units of the
 [German Network for Bioinformatics Infrastructure](http://www.denbi.de), running the German [ELIXIR Node](https://www.elixir-europe.org/).
 
 [<img src="assets/img/deNBI_logo.jpg" height="35px" alt="de.NBI"
-valign="middle">](http://www.denbi.de) 
+valign="middle">](http://www.denbi.de)
 [<img src="assets/img/elixir_germany.png" height="55px" alt="ELIXIR Germany"
 valign="middle">](https://www.elixir-europe.org)
 
@@ -21,7 +21,7 @@ The Galaxy RNA workbench is based on a dedicated Galaxy instance wrapped into a 
 
 ## Requirement
 
-To use the Galaxy RNA workbench, you will need [Docker](https://www.docker.com/products/overview#h_installation). 
+To use the Galaxy RNA workbench, you will need [Docker](https://www.docker.com/products/overview#h_installation).
 
 Non-Linux users are encouraged to use [Kitematic](https://kitematic.com) for [OSX](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic_osx.md) or [Windows](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic_win.md), a graphical User-Interface for managing Docker containers.
 
@@ -44,19 +44,19 @@ $ docker run -d -p 8080:80 bgruening/galaxy-rna-workbench
 
 A detailed discussion of Docker's parameters is given in the [Docker manual](http://docs.docker.io/). It is really worth reading.
 
-Nevertheless, here is a quick rundown: 
+Nevertheless, here is a quick rundown:
 
 - `docker run` starts the Image/Container
 
    In case the Container is not already stored locally, docker downloads it automatically
-   
+
 - The argument `-p 8080:80` makes the port 80 (inside of the container) available on port 8080 on your host
 
-    Inside the container a Apache web server is running on port 80 and that port can be bound to a local port on your host computer. 
+    Inside the container a Apache web server is running on port 80 and that port can be bound to a local port on your host computer.
     With this parameter you can access your Galaxy instance via `http://localhost:8080` immediately after executing the command above
-    
+
 - `bgruening/galaxy-rna-workbench` is the Image/Container name, that directs docker to the correct path in the [docker index](https://index.docker.io/u/bgruening/galaxy-rna-workbench/)
-- `-d` will start the docker container in Daemon mode. 
+- `-d` will start the docker container in Daemon mode.
 
   For an interactive session, one executes:
 
@@ -66,7 +66,7 @@ Nevertheless, here is a quick rundown:
 
   and manually invokes the `startup` script to start PostgreSQL, Apache and Galaxy.
 
-Docker images are "read-only". All changes during one session are lost after restart. This mode is useful to present Galaxy to your colleagues or to run workshops with it. 
+Docker images are "read-only". All changes during one session are lost after restart. This mode is useful to present Galaxy to your colleagues or to run workshops with it.
 
 To install Tool Shed repositories or to save your data, you need to export the calculated data to the host computer. Fortunately, this is as easy as:
 
@@ -111,7 +111,7 @@ The following video demonstrates the main elements that compose the Galaxy user 
 | RNA Annotation | [GotohScan](http://www.bioinf.uni-leipzig.de/Software/GotohScan/), [RNAcode](http://wash.github.io/rnacode/), [INFERNAL](http://eddylab.org/infernal/), [RNAmmer](http://www.cbs.dtu.dk/services/RNAmmer/), [ARAGORN](http://mbio-serv2.mbioekol.lu.se/ARAGORN/), [tRNAscan](http://lowelab.ucsc.edu/tRNAscan-SE/), [RNABOB](http://eddylab.org/software.html), [Fusion Matcher](https://github.com/yhoogstrate/fuma) |
 | RNA-protein Interaction |  [DoRiNA](http://dorina.mdc-berlin.de/), [Piranha](https://github.com/smithlabcode/piranha), [RNAcommender](https://github.com/gianlucacorrado/RNAcommender), [PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/)|
 | Ribosome Profiling | [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) |
-| RNA-Seq |[SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/), [BlockClust](http://www.bioinf.uni-freiburg.de/Software/) , [MiRDeep2](https://www.mdc-berlin.de/8551903/en/), [FlaiMapper](https://github.com/yhoogstrate/flaimapper)  |
+| RNA-Seq |[SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/), [BlockClust](http://www.bioinf.uni-freiburg.de/Software/) , [MiRDeep2](https://www.mdc-berlin.de/8551903/en/), [FlaiMapper](https://github.com/yhoogstrate/flaimapper), [PIPmiR](https://ohlerlab.mdc-berlin.de/software/Pipeline_for_the_Identification_of_Plant_miRNAs_84/),  [NASTIseq](https://ohlerlab.mdc-berlin.de/software/NASTIseq_104/)|
 | RNA Target Prediction | [TargetFinder](https://github.com/carringtonlab/TargetFinder) |
 
 # Contributors
