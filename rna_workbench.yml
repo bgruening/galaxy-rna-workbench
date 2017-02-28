@@ -114,6 +114,13 @@ tools:
   tool_panel_section_label: "RNA Alignment"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
+- name: segmentation_fold
+  install_resolver_dependencies: true
+  install_tool_dependencies: false
+  owner: yhoogstrate
+  tool_panel_section_label: "RNA Alignment"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+
 # RNA-protein Interaction
 
 - name: dorina
