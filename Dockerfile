@@ -1,6 +1,6 @@
 # Galaxy - RNA workbench
 
-FROM bgruening/galaxy-rna-seq:16.10
+FROM bgruening/galaxy-rna-seq
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
