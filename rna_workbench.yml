@@ -196,6 +196,9 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  revisions:
+    - c47a7c52ac4f
+    - 6e18e0b098cd
 
 - name: rnammer
   owner: lionelguy
