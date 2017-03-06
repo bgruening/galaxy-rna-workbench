@@ -1,0 +1,921 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "AREsite2_CLIP_analysis", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE28865-GSM714639.bed"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 10
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE28865-GSM714639.bed\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "1eee6229-b973-4a4c-b2a2-fe94383e4160", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE28865-GSM714640.bed"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 130
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE28865-GSM714640.bed\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "bd651d66-2b9c-4076-b8c3-f1c976c3f999", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE28865-GSM714641.bed"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 250
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE28865-GSM714641.bed\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "cecf9be8-9106-488c-93c4-484a5c6725ff", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 3, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE29943-GSM741174.bed"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 370
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE29943-GSM741174.bed\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "28c77884-0136-42f6-89cd-b23de97ee504", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 4, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE29943-GSM741175.bed"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 490
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE29943-GSM741175.bed\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "60806757-ba31-404e-af8b-b67e50f1694f", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 5, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE29780-GSM738185.bed"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 610
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"http://lulab.life.tsinghua.edu.cn/clipdb/PARalyzer_download/ELAVL1_GSE29780-GSM738185.bed\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "d6ca77f4-37da-436e-a318-e0d2f370bb21", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST/0.1.2", 
+            "id": 6, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Get motifs from AREsite2", 
+            "outputs": [
+                {
+                    "name": "AREsite2_REST_out", 
+                    "type": "bed"
+                }
+            ], 
+            "position": {
+                "left": 10, 
+                "top": 730
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST/0.1.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "138ff4068d27", 
+                "name": "aresite2", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"motif\": \"\\\"ATTTA\\\"\", \"species_selector\": \"\\\"Homo_sapiens\\\"\", \"__rerun_remap_job_id__\": null, \"gene\": \"\\\"Cxcl2\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\"}", 
+            "tool_version": "0.1.2", 
+            "type": "tool", 
+            "uuid": "1f7b4809-5302-4eb3-be8d-54a26f3b0235", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST/0.1.2", 
+            "id": 7, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Get motifs from AREsite2", 
+            "outputs": [
+                {
+                    "name": "AREsite2_REST_out", 
+                    "type": "bed"
+                }
+            ], 
+            "position": {
+                "left": 10, 
+                "top": 850
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST/0.1.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "138ff4068d27", 
+                "name": "aresite2", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"motif\": \"\\\"WTTTW\\\"\", \"species_selector\": \"\\\"Homo_sapiens\\\"\", \"__rerun_remap_job_id__\": null, \"gene\": \"\\\"CXCL2\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\"}", 
+            "tool_version": "0.1.2", 
+            "type": "tool", 
+            "uuid": "6fb7227a-0458-427a-8dc8-52ac33e49432", 
+            "workflow_outputs": []
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST/0.1.2", 
+            "id": 8, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Get motifs from AREsite2", 
+            "outputs": [
+                {
+                    "name": "AREsite2_REST_out", 
+                    "type": "bed"
+                }
+            ], 
+            "position": {
+                "left": 10, 
+                "top": 970
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST/0.1.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "138ff4068d27", 
+                "name": "aresite2", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"motif\": \"\\\"ATTTA\\\"\", \"species_selector\": \"\\\"Homo_sapiens\\\"\", \"__rerun_remap_job_id__\": null, \"gene\": \"\\\"GNB1\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\"}", 
+            "tool_version": "0.1.2", 
+            "type": "tool", 
+            "uuid": "baef4f69-36a0-4f4b-8dd6-e7dc3ffab94d", 
+            "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST/0.1.2", 
+            "id": 9, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Get motifs from AREsite2", 
+            "outputs": [
+                {
+                    "name": "AREsite2_REST_out", 
+                    "type": "bed"
+                }
+            ], 
+            "position": {
+                "left": 10, 
+                "top": 1090
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST/0.1.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "138ff4068d27", 
+                "name": "aresite2", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"motif\": \"\\\"WTTTW\\\"\", \"species_selector\": \"\\\"Homo_sapiens\\\"\", \"__rerun_remap_job_id__\": null, \"gene\": \"\\\"GNB1\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\"}", 
+            "tool_version": "0.1.2", 
+            "type": "tool", 
+            "uuid": "5c197825-59ca-4bdc-ba9b-053f7416554b", 
+            "workflow_outputs": []
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "cat1", 
+            "id": 10, 
+            "input_connections": {
+                "input1": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "queries_0|input2": {
+                    "id": 1, 
+                    "output_name": "output"
+                }, 
+                "queries_1|input2": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "queries_2|input2": {
+                    "id": 3, 
+                    "output_name": "output"
+                }, 
+                "queries_3|input2": {
+                    "id": 4, 
+                    "output_name": "output"
+                }, 
+                "queries_4|input2": {
+                    "id": 5, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Concatenate datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "cat1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"queries\": \"[{\\\"input2\\\": null, \\\"__index__\\\": 0}, {\\\"input2\\\": null, \\\"__index__\\\": 1}, {\\\"input2\\\": null, \\\"__index__\\\": 2}, {\\\"input2\\\": null, \\\"__index__\\\": 3}, {\\\"input2\\\": null, \\\"__index__\\\": 4}]\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "efa41f7b-f59a-41b6-94e4-3f0a71a1ed1f", 
+            "workflow_outputs": []
+        }, 
+        "11": {
+            "annotation": "", 
+            "content_id": "cat1", 
+            "id": 11, 
+            "input_connections": {
+                "input1": {
+                    "id": 6, 
+                    "output_name": "AREsite2_REST_out"
+                }, 
+                "queries_0|input2": {
+                    "id": 7, 
+                    "output_name": "AREsite2_REST_out"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Concatenate datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 130
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "cat1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"queries\": \"[{\\\"input2\\\": null, \\\"__index__\\\": 0}]\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "4b2214ef-1828-483f-bd24-99592f9a31bc", 
+            "workflow_outputs": []
+        }, 
+        "12": {
+            "annotation": "", 
+            "content_id": "cat1", 
+            "id": 12, 
+            "input_connections": {
+                "input1": {
+                    "id": 8, 
+                    "output_name": "AREsite2_REST_out"
+                }, 
+                "queries_0|input2": {
+                    "id": 9, 
+                    "output_name": "AREsite2_REST_out"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Concatenate datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 250
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "cat1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"queries\": \"[{\\\"input2\\\": null, \\\"__index__\\\": 0}]\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "b41cbb63-a25a-4f3e-8aa6-fcffd3591bea", 
+            "workflow_outputs": []
+        }, 
+        "13": {
+            "annotation": "", 
+            "content_id": "sort1", 
+            "id": 13, 
+            "input_connections": {
+                "input": {
+                    "id": 10, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Sort", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 450, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "sort1", 
+            "tool_state": "{\"__page__\": 0, \"style\": \"\\\"gennum\\\"\", \"column\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"column_set\": \"[{\\\"other_order\\\": \\\"ASC\\\", \\\"__index__\\\": 0, \\\"other_column\\\": \\\"2\\\", \\\"other_style\\\": \\\"num\\\"}]\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"order\": \"\\\"ASC\\\"\"}", 
+            "tool_version": "1.0.3", 
+            "type": "tool", 
+            "uuid": "4e5e75b0-9f1e-4ace-a6c5-7242af38549a", 
+            "workflow_outputs": []
+        }, 
+        "14": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.26.0.0", 
+            "id": 14, 
+            "input_connections": {
+                "inputA": {
+                    "id": 12, 
+                    "output_name": "out_file1"
+                }, 
+                "inputB": {
+                    "id": 13, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Intersect intervals", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 670, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.26.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "7b3aaff0d78c", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"count\": \"\\\"false\\\"\", \"__page__\": 0, \"reciprocal\": \"\\\"false\\\"\", \"overlap_mode\": \"[\\\"-wa\\\"]\", \"invert\": \"\\\"false\\\"\", \"inputB\": \"null\", \"header\": \"\\\"false\\\"\", \"inputA\": \"null\", \"split\": \"\\\"false\\\"\", \"fraction\": \"\\\"\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"__rerun_remap_job_id__\": null, \"strand\": \"\\\"\\\"\", \"once\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.26.0.0", 
+            "type": "tool", 
+            "uuid": "69de88d4-0712-4ed8-9f33-72e355414270", 
+            "workflow_outputs": []
+        }, 
+        "15": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.26.0.0", 
+            "id": 15, 
+            "input_connections": {
+                "inputA": {
+                    "id": 11, 
+                    "output_name": "out_file1"
+                }, 
+                "inputB": {
+                    "id": 13, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Intersect intervals", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 670, 
+                "top": 130
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.26.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "7b3aaff0d78c", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"count\": \"\\\"false\\\"\", \"__page__\": 0, \"reciprocal\": \"\\\"false\\\"\", \"overlap_mode\": \"[\\\"-wa\\\"]\", \"invert\": \"\\\"false\\\"\", \"inputB\": \"null\", \"header\": \"\\\"false\\\"\", \"inputA\": \"null\", \"split\": \"\\\"false\\\"\", \"fraction\": \"\\\"\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"__rerun_remap_job_id__\": null, \"strand\": \"\\\"\\\"\", \"once\": \"\\\"true\\\"\"}", 
+            "tool_version": "2.26.0.0", 
+            "type": "tool", 
+            "uuid": "176057b0-a274-4703-9ca5-059c2ef54b8e", 
+            "workflow_outputs": []
+        }, 
+        "16": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.26.0.0", 
+            "id": 16, 
+            "input_connections": {
+                "inputA": {
+                    "id": 12, 
+                    "output_name": "out_file1"
+                }, 
+                "inputB": {
+                    "id": 13, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Intersect intervals", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 670, 
+                "top": 250
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.26.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "7b3aaff0d78c", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"count\": \"\\\"false\\\"\", \"__page__\": 0, \"reciprocal\": \"\\\"false\\\"\", \"overlap_mode\": \"[\\\"-wa\\\"]\", \"invert\": \"\\\"true\\\"\", \"inputB\": \"null\", \"header\": \"\\\"false\\\"\", \"inputA\": \"null\", \"split\": \"\\\"false\\\"\", \"fraction\": \"\\\"\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"__rerun_remap_job_id__\": null, \"strand\": \"\\\"\\\"\", \"once\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.26.0.0", 
+            "type": "tool", 
+            "uuid": "8b39f46a-bd13-4c7a-95fb-f5ad106779ce", 
+            "workflow_outputs": []
+        }, 
+        "17": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.26.0.0", 
+            "id": 17, 
+            "input_connections": {
+                "inputA": {
+                    "id": 11, 
+                    "output_name": "out_file1"
+                }, 
+                "inputB": {
+                    "id": 13, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Intersect intervals", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 670, 
+                "top": 370
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.26.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "7b3aaff0d78c", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"count\": \"\\\"false\\\"\", \"__page__\": 0, \"reciprocal\": \"\\\"false\\\"\", \"overlap_mode\": \"[\\\"-wa\\\"]\", \"invert\": \"\\\"true\\\"\", \"inputB\": \"null\", \"header\": \"\\\"false\\\"\", \"inputA\": \"null\", \"split\": \"\\\"false\\\"\", \"fraction\": \"\\\"\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"__rerun_remap_job_id__\": null, \"strand\": \"\\\"\\\"\", \"once\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.26.0.0", 
+            "type": "tool", 
+            "uuid": "9d7baa34-9749-444a-b9fe-894eef10240c", 
+            "workflow_outputs": []
+        }, 
+        "18": {
+            "annotation": "", 
+            "content_id": "Cut1", 
+            "id": 18, 
+            "input_connections": {
+                "input": {
+                    "id": 14, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Cut", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 890, 
+                "top": 370
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "Cut1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c9,c10\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "aa4d7f8f-4e5b-4bb5-88df-900eca8f0682", 
+            "workflow_outputs": []
+        }, 
+        "19": {
+            "annotation": "", 
+            "content_id": "Cut1", 
+            "id": 19, 
+            "input_connections": {
+                "input": {
+                    "id": 15, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Cut", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 890, 
+                "top": 250
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "Cut1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c9,c10\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "c12b28a9-d621-4b73-9930-fb13ed548c6b", 
+            "workflow_outputs": []
+        }, 
+        "20": {
+            "annotation": "", 
+            "content_id": "Cut1", 
+            "id": 20, 
+            "input_connections": {
+                "input": {
+                    "id": 16, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Cut", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 890, 
+                "top": 130
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "Cut1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c9,c10\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "34508c3b-a623-4e1e-8842-48f49c943fd7", 
+            "workflow_outputs": []
+        }, 
+        "21": {
+            "annotation": "", 
+            "content_id": "Cut1", 
+            "id": 21, 
+            "input_connections": {
+                "input": {
+                    "id": 17, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Cut", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 890, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "Cut1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c9,c10\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "d77eca39-a590-4687-b9c1-ed9b3211b747", 
+            "workflow_outputs": []
+        }, 
+        "22": {
+            "annotation": "", 
+            "content_id": "addValue", 
+            "id": 22, 
+            "input_connections": {
+                "input": {
+                    "id": 18, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Add column", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 1110, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "addValue", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"exp\": \"\\\"GNB1_overlap\\\"\", \"iterate\": \"\\\"no\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "9f791235-fa72-46da-a73f-7030477d4a36", 
+            "workflow_outputs": []
+        }, 
+        "23": {
+            "annotation": "", 
+            "content_id": "addValue", 
+            "id": 23, 
+            "input_connections": {
+                "input": {
+                    "id": 19, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Add column", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 1110, 
+                "top": 130
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "addValue", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"exp\": \"\\\"CXCL2_overlap\\\"\", \"iterate\": \"\\\"no\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "ab507917-4a83-40af-a643-a071e7dfedfe", 
+            "workflow_outputs": []
+        }, 
+        "24": {
+            "annotation": "", 
+            "content_id": "addValue", 
+            "id": 24, 
+            "input_connections": {
+                "input": {
+                    "id": 20, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Add column", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 1110, 
+                "top": 250
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "addValue", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"exp\": \"\\\"GNB1_no_overlap\\\"\", \"iterate\": \"\\\"no\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "d64c3925-6bd3-40f5-b3b2-d89ba415ed99", 
+            "workflow_outputs": []
+        }, 
+        "25": {
+            "annotation": "", 
+            "content_id": "addValue", 
+            "id": 25, 
+            "input_connections": {
+                "input": {
+                    "id": 21, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Add column", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 1110, 
+                "top": 370
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "addValue", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"exp\": \"\\\"CXCL2_no_overlap\\\"\", \"iterate\": \"\\\"no\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "19fc399b-2e90-4550-afd9-6cee6798fb7e", 
+            "workflow_outputs": []
+        }, 
+        "26": {
+            "annotation": "", 
+            "content_id": "cat1", 
+            "id": 26, 
+            "input_connections": {
+                "input1": {
+                    "id": 23, 
+                    "output_name": "out_file1"
+                }, 
+                "queries_0|input2": {
+                    "id": 25, 
+                    "output_name": "out_file1"
+                }, 
+                "queries_1|input2": {
+                    "id": 22, 
+                    "output_name": "out_file1"
+                }, 
+                "queries_2|input2": {
+                    "id": 24, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Concatenate datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 1330, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "cat1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"queries\": \"[{\\\"input2\\\": null, \\\"__index__\\\": 0}, {\\\"input2\\\": null, \\\"__index__\\\": 1}, {\\\"input2\\\": null, \\\"__index__\\\": 2}]\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "81a47cbb-c8cd-43f9-8cf0-67020396ea1e", 
+            "workflow_outputs": []
+        }
+    }, 
+    "uuid": "9559aa67-5871-4054-a364-521a2f50fbd5"
+}
