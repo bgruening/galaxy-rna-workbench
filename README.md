@@ -105,7 +105,7 @@ The following video demonstrates the main elements that compose the Galaxy user 
 # Available Tools
 
 | Category   | Tools | Description | Reference |
-| -------- | ----------- |
+| -------- | ------- | ----------- | --------- |
 | RNA Structure Analysis| [ViennaRNA](http://www.tbi.univie.ac.at/RNA/) | A tool compilation for prediction and comparison of RNA secondary structures | [Lorenz et al. 2011](http://dx.doi.org/10.1186/1748-7188-6-26) |
 |                       | [Kinwalker](http://www.bioinf.uni-leipzig.de/Software/Kinwalker/) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | |
 |                       | [MEA](http://www.bioinf.uni-leipzig.de/Software/mea/) | Prediction of maximum expected accuracy RNA secondary structures | [Amman et al. 2013](http://link.springer.com/chapter/10.1007/978-3-319-02624-4_1) |
