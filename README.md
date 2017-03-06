@@ -135,7 +135,7 @@ The following video demonstrates the main elements that compose the Galaxy user 
 |         | [BlockClust](http://www.bioinf.uni-freiburg.de/Software/) | Non-coding RNA clustering from deep sequencing read profiles | - |
 |         | [MiRDeep2](https://www.mdc-berlin.de/8551903/en/) | Discovers microRNA genes by analyzing sequenced RNAs | [Friedlaender et al. 2008](https://dx.doi.org/10.1038/nbt1394) |
 |         | [FlaiMapper](https://github.com/yhoogstrate/flaimapper) | A tool for computational annotation of small ncRNA-derived fragments using RNA-seq data | [Hoogstrate et al. 2015](https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btu696) |
-|         | [PIPmiR](https://ohlerlab.mdc-berlin.de/software/Pipeline_for_the_Identification_of_Plant_miRNAs_84/) | - |
+|         | [PIPmiR](https://ohlerlab.mdc-berlin.de/software/Pipeline_for_the_Identification_of_Plant_miRNAs_84/) | An algorithm to identify novel plant miRNA genes from a combination of deep sequencing data and genomic features | - | 
 |         | [NASTIseq](https://ohlerlab.mdc-berlin.de/software/NASTIseq_104/)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Song et al. 2013](http://genome.cshlp.org/content/23/10/1730.long) |
 | RNA Target Prediction | [TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | - |
 
