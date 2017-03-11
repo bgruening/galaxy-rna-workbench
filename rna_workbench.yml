@@ -62,7 +62,7 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA Structure Analysis"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-
+  
 - name: mea
   install_resolver_dependencies: true
   install_tool_dependencies: false
@@ -134,6 +134,13 @@ tools:
   install_resolver_dependencies: true
   install_tool_dependencies: false
   owner: yhoogstrate
+  tool_panel_section_label: "RNA Alignment"
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+
+- name: selectsequencesfrommsa
+  install_resolver_dependencies: true
+  install_tool_dependencies: false
+  owner: rnateam
   tool_panel_section_label: "RNA Alignment"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
