@@ -44,7 +44,7 @@ The following video shows the launch of the RNA workbench from Kitematic:
 For non-Kitematic users, starting the RNA workbench is analogous to start the generic Galaxy Docker image:
 
 ```
-$ docker run -d -p 8080:80 bgruening/galaxy-rna-workbench
+$ docker run -d -p 8080:80 quay.io/bgruening/galaxy-rna-workbench
 ```
 
 A detailed discussion of Docker's parameters is given in the [Docker manual](http://docs.docker.io/). It is really worth reading.
@@ -60,13 +60,13 @@ Nevertheless, here is a quick rundown:
     Inside the container a Apache web server is running on port 80 and that port can be bound to a local port on your host computer.
     With this parameter you can access your Galaxy instance via `http://localhost:8080` immediately after executing the command above
 
-- `bgruening/galaxy-rna-workbench` is the Image/Container name, that directs docker to the correct path in the [docker index](https://index.docker.io/u/bgruening/galaxy-rna-workbench/)
+- `quay.io/bgruening/galaxy-rna-workbench` is the Image/Container name, that directs docker to the correct path in the [docker index](https://quay.io/repository/bgruening/galaxy-rna-workbench)
 - `-d` will start the docker container in Daemon mode.
 
   For an interactive session, one executes:
 
   ```
-  $ docker run -i -t -p 8080:80 bgruening/galaxy-rna-workbench /bin/bash
+  $ docker run -i -t -p 8080:80 quay.io/bgruening/galaxy-rna-workbench /bin/bash
   ```
 
   and manually invokes the `startup` script to start PostgreSQL, Apache and Galaxy.
@@ -76,7 +76,7 @@ Docker images are "read-only". All changes during one session are lost after res
 To install Tool Shed repositories or to save your data, you need to export the calculated data to the host computer. Fortunately, this is as easy as:
 
 ```
-$ docker run -d -p 8080:80 -v /home/user/galaxy_storage/:/export/ bgruening/galaxy-rna-workbench
+$ docker run -d -p 8080:80 -v /home/user/galaxy_storage/:/export/ quay.io/bgruening/galaxy-rna-workbench
 ```
 
 Given the additional `-v /home/user/galaxy_storage/:/export/` parameter, docker will mount the folder `/home/user/galaxy_storage` into the Container under `/export/`. A `startup.sh` script, that is usually starting Apache, PostgreSQL and Galaxy, will recognize the export directory with one of the following outcomes:
