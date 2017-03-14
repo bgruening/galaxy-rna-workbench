@@ -13,4 +13,4 @@ wf = galaxy.workflows.WorkflowClient(gi)
 
 for filepath in os.listdir('/home/galaxy/'):
     if filepath.endswith('.ga'):
-        wf.import_workflow_from_local_path( os.pyth.join('/home/galaxy/', filepath) )
+        wf.import_workflow_from_local_path( os.path.join('/home/galaxy/', filepath) )
