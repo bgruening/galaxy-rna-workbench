@@ -1,0 +1,344 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "scan for C/D-box sequences with segmentation-fold", 
+    "steps": {
+        "0": {
+            "annotation": "If you use for example a file containing C/D-box K-turn annotations, the genome sequence will be tested for stable C/D-box K-turns", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "If you use for example a file containing C/D-box K-turn annotations, the genome sequence will be tested for stable C/D-box K-turns", 
+                    "name": "XML-File describing segments to be tested"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 199.9715576171875, 
+                "top": 199.97157669067383
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"XML-File describing segments to be tested\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "212ec59b-d9b9-4f75-b6ed-350db092a856", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "a407c06c-c3f5-4969-bf71-25b779fa4d01"
+                }
+            ]
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Genome (FASTA file)"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 199.9715576171875, 
+                "top": 283.18181228637695
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Genome (FASTA file)\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "d77307c4-598d-4825-8f08-8d9e9ead8b2e", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "19b0466d-7e5c-4bcd-8cb5-7d2cb7b0184a"
+                }
+            ]
+        }, 
+        "2": {
+            "annotation": "Choose a sequence you would like to test for the presence of sequences likely to contain energetically stable C/D-box motifs", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_fix-fasta-headers/smf-v1.7-0_utils-v2.1.1-1", 
+            "id": 2, 
+            "input_connections": {
+                "fasta_input": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool fix-fasta-headers", 
+                    "name": "fasta_input"
+                }
+            ], 
+            "label": null, 
+            "name": "fix-fasta-headers", 
+            "outputs": [
+                {
+                    "name": "fasta_output", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 432.1590576171875, 
+                "top": 199.97157669067383
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_fix-fasta-headers/smf-v1.7-0_utils-v2.1.1-1", 
+            "tool_shed_repository": {
+                "changeset_revision": "4d16cf9414cf", 
+                "name": "segmentation_fold", 
+                "owner": "yhoogstrate", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"fasta_input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "smf-v1.7-0_utils-v2.1.1-1", 
+            "type": "tool", 
+            "uuid": "11576a4d-5a3d-4c5b-b6ab-11f51f47fd0d", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "fasta_output", 
+                    "uuid": "f3ab65da-704d-493f-b727-1a45da3bc2c1"
+                }
+            ]
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_find-boxes/smf-v1.7-0_utils-v2.1.1-1", 
+            "id": 3, 
+            "input_connections": {
+                "fasta_input": {
+                    "id": 2, 
+                    "output_name": "fasta_output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool find-boxes", 
+                    "name": "fasta_input"
+                }
+            ], 
+            "label": null, 
+            "name": "find-boxes", 
+            "outputs": [
+                {
+                    "name": "bed_output", 
+                    "type": "bed"
+                }
+            ], 
+            "position": {
+                "left": 697.3436965942383, 
+                "top": 199.97157669067383
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_find-boxes/smf-v1.7-0_utils-v2.1.1-1", 
+            "tool_shed_repository": {
+                "changeset_revision": "4d16cf9414cf", 
+                "name": "segmentation_fold", 
+                "owner": "yhoogstrate", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"reverse\": \"\\\"true\\\"\", \"fasta_input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"forward\": \"\\\"true\\\"\", \"box1\": \"\\\"NRUGAUG\\\"\", \"box2\": \"\\\"CUGA\\\"\"}", 
+            "tool_version": "smf-v1.7-0_utils-v2.1.1-1", 
+            "type": "tool", 
+            "uuid": "0ac837ad-db42-4a23-a745-ad338cf9a0de", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "bed_output", 
+                    "uuid": "23bdf6a3-6440-4d21-b68b-4ac0ca3037d7"
+                }
+            ]
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_extract-boxed-sequences/smf-v1.7-0_utils-v2.1.1-1", 
+            "id": 4, 
+            "input_connections": {
+                "bed_input_file": {
+                    "id": 3, 
+                    "output_name": "bed_output"
+                }, 
+                "fasta_input_file": {
+                    "id": 2, 
+                    "output_name": "fasta_output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool extract-boxed-sequences", 
+                    "name": "bed_input_file"
+                }, 
+                {
+                    "description": "runtime parameter for tool extract-boxed-sequences", 
+                    "name": "fasta_input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "extract-boxed-sequences", 
+            "outputs": [
+                {
+                    "name": "fasta_output_file", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 962.5425567626953, 
+                "top": 199.97157669067383
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_extract-boxed-sequences/smf-v1.7-0_utils-v2.1.1-1", 
+            "tool_shed_repository": {
+                "changeset_revision": "4d16cf9414cf", 
+                "name": "segmentation_fold", 
+                "owner": "yhoogstrate", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"fasta_input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_inner_dist\": \"\\\"110\\\"\", \"bed_input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"bp_extension\": \"\\\"10\\\"\"}", 
+            "tool_version": "smf-v1.7-0_utils-v2.1.1-1", 
+            "type": "tool", 
+            "uuid": "583ec618-defd-4882-9c8f-6e2c55db29c8", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "fasta_output_file", 
+                    "uuid": "cd40d44a-0a75-479b-8a5c-53b3db266c41"
+                }
+            ]
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_estimate-energy/smf-v1.7-0_utils-v2.1.1-2", 
+            "id": 5, 
+            "input_connections": {
+                "parameters|input_xml": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "sequences_from_fasta_file": {
+                    "id": 4, 
+                    "output_name": "fasta_output_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool estimate-energy", 
+                    "name": "parameters"
+                }, 
+                {
+                    "description": "runtime parameter for tool estimate-energy", 
+                    "name": "sequences_from_fasta_file"
+                }
+            ], 
+            "label": null, 
+            "name": "estimate-energy", 
+            "outputs": [
+                {
+                    "name": "output_list", 
+                    "type": "dbn"
+                }
+            ], 
+            "position": {
+                "left": 1290.724365234375, 
+                "top": 199.97157669067383
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_estimate-energy/smf-v1.7-0_utils-v2.1.1-2", 
+            "tool_shed_repository": {
+                "changeset_revision": "4d16cf9414cf", 
+                "name": "segmentation_fold", 
+                "owner": "yhoogstrate", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"sequences_from_fasta_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"parameters\": \"{\\\"use_custom_xml\\\": \\\"true\\\", \\\"__current_case__\\\": 1, \\\"input_xml\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"__rerun_remap_job_id__\": null, \"precision\": \"\\\"0.1\\\"\", \"randomize\": \"\\\"0\\\"\"}", 
+            "tool_version": "smf-v1.7-0_utils-v2.1.1-2", 
+            "type": "tool", 
+            "uuid": "da8a42d9-809d-4007-a790-599dfd2a3e47", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output_list", 
+                    "uuid": "1142ef76-1244-45a3-ad75-c61b4019028f"
+                }
+            ]
+        }, 
+        "6": {
+            "annotation": "These are the subsequences that did have a difference in folding dE by including the segment annotations.", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_filter-by-energy/smf-v1.7-0_utils-v2.1.1-1", 
+            "id": 6, 
+            "input_connections": {
+                "dbn_input_file": {
+                    "id": 5, 
+                    "output_name": "output_list"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool filter-by-energy", 
+                    "name": "dbn_input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "filter-by-energy", 
+            "outputs": [
+                {
+                    "name": "dbn_output_file_larger_or_equal", 
+                    "type": "dbn"
+                }, 
+                {
+                    "name": "dbn_output_file_smaller", 
+                    "type": "dbn"
+                }
+            ], 
+            "position": {
+                "left": 1618.8919677734375, 
+                "top": 199.97157669067383
+            }, 
+            "post_job_actions": {
+                "HideDatasetActiondbn_output_file_smaller": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "dbn_output_file_smaller"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/smf_utils_filter-by-energy/smf-v1.7-0_utils-v2.1.1-1", 
+            "tool_shed_repository": {
+                "changeset_revision": "4d16cf9414cf", 
+                "name": "segmentation_fold", 
+                "owner": "yhoogstrate", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"energy\": \"\\\"-15.0\\\"\", \"dbn_input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "smf-v1.7-0_utils-v2.1.1-1", 
+            "type": "tool", 
+            "uuid": "1de988b8-79dd-4773-9ce8-8f08b9a881f3", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "dbn_output_file_larger_or_equal", 
+                    "uuid": "95908cb4-74c8-4871-a059-3536f79cc4ca"
+                }
+            ]
+        }
+    }, 
+    "uuid": "c2ae3efc-d53e-4e53-9733-6aad3509b4a5"
+}

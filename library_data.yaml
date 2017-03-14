@@ -7,3 +7,9 @@ libraries:
           file_type: fasta
         - url: https://raw.githubusercontent.com/bgruening/galaxytools/master/tools/rna_tools/vienna_rna/test-data/rnaplfold_result2.ps
           file_type: rna_eps
+    - name: "Test data segmentation-fold"
+      files:
+        - url: https://github.com/yhoogstrate/segmentation-fold/raw/55d0bb28b01e613844ca35cf21fa41379fd72770/scripts/energy-estimation-utility/tests/test-data/workflow-test_cd-box_kturns.fa
+          file_type: fasta
+        - url: https://raw.githubusercontent.com/yhoogstrate/segmentation-fold/55d0bb28b01e613844ca35cf21fa41379fd72770/scripts/energy-estimation-utility/tests/test-data/workflow-test_cd-box_kturns.xml
+          file_type: xml

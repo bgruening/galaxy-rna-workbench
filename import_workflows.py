@@ -11,7 +11,6 @@ wf = galaxy.workflows.WorkflowClient(gi)
 #wf.import_workflow_from_local_path('/galaxy-dist/GraphClust_two.ga')
 #wf.import_workflow_from_local_path('/galaxy-dist/GraphClust_one.ga')
 
-wf.import_workflow_from_local_path('/home/galaxy/rnateam.workflow.trimming_mapping.ga')
-wf.import_workflow_from_local_path('/home/galaxy/rnateam.workflow.analyse_unaligned_ncrnas.ga')
-wf.import_workflow_from_local_path('/home/galaxy/rnateam.workflow.analyse_PAR-CLIP.ga')
-wf.import_workflow_from_local_path('/home/galaxy/rnateam.workflow.aresite2_CLIP.ga')
+for filepath in os.listdir('/home/galaxy/'):
+    if filepath.endswith('.ga'):
+        wf.import_workflow_from_local_path( os.path.join('/home/galaxy/', filepath) )
