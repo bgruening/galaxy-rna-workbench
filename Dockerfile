@@ -27,6 +27,8 @@ ADD ./rna-workbench-workflow/Galaxy-Workflow-trimming_mapping-treatment_untreatm
 ADD ./rna-workbench-workflow/Galaxy-Workflow-Analyse_unaligned_ncRNAs.ga $GALAXY_HOME/rnateam.workflow.analyse_unaligned_ncrnas.ga
 ADD ./rna-workbench-workflow/Galaxy-Workflow-PAR-CLIP_analysis.ga $GALAXY_HOME/rnateam.workflow.analyse_PAR-CLIP.ga
 ADD ./rna-workbench-workflow/Galaxy-Workflow-AREsite2_CLIP_analysis.ga $GALAXY_HOME/rnateam.workflow.aresite2_CLIP.ga
+ADD ./rna-workbench-workflow/Galaxy-Workflow-RNA_family_model_construction.ga $GALAXY_HOME/rnateam.workflow.RNA_family_model_construction.ga
+
 ADD import_workflows.py $GALAXY_ROOT/import_workflows.py
 
 # Download training data and populate the data library
