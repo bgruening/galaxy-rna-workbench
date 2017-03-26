@@ -26,7 +26,7 @@ ADD ./rna-workbench-tours/viennarna_tour.yaml $GALAXY_ROOT/config/plugins/tours/
 ADD ./rna-workbench-tours/rnaseq-tour.yaml $GALAXY_ROOT/config/plugins/tours/rnateam.rnaseq.yaml
 
 # Data libraries
-ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
+#ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
 ADD library_data.yaml $GALAXY_ROOT/library_data.yaml
 
 ADD ./rna-workbench-workflow/Galaxy-Workflow-trimming_mapping-treatment_untreatment-SE_PE.ga $GALAXY_HOME/rnateam.workflow.trimming_mapping.ga
@@ -41,7 +41,7 @@ ADD import_workflows.py $GALAXY_ROOT/import_workflows.py
 RUN startup_lite && \
     sleep 200 && \
     . $GALAXY_VIRTUAL_ENV/bin/activate && \
-    python $GALAXY_ROOT/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml && \
+    setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml && \
     python $GALAXY_ROOT/import_workflows.py
 
 # Add visualisations
