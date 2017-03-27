@@ -42,7 +42,7 @@ RUN startup_lite && \
     sleep 200 && \
     . $GALAXY_VIRTUAL_ENV/bin/activate && \
     setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml && \
-    python $GALAXY_ROOT/import_workflows.py
+    python $GALAXY_ROOT/import_workflows.py --workflow_path /home/galaxy
 
 # Add visualisations
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > master.tar.gz && \
