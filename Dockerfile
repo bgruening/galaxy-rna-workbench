@@ -41,7 +41,7 @@ ADD import_workflows.py $GALAXY_ROOT/import_workflows.py
 RUN startup_lite && \
     sleep 200 && \
     . $GALAXY_VIRTUAL_ENV/bin/activate && \
-    python $GALAXY_ROOT/import_workflows.py --workflow_path /home/galaxy
+    python $GALAXY_ROOT/import_workflows.py --workflow_path /home/galaxy -g http://localhost:8080 -a HSNiugRFvgT574F43jZ7N9F3
 
 RUN startup_lite && \
     sleep 200 && \
