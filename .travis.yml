@@ -9,8 +9,9 @@ env:
   - TOX_ENV=py27
 
 before_install:
-  - wget -O Makefile.docker https://raw.githubusercontent.com/bgruening/galaxy-flavor-testing/master/Makefile
-  - make -f Makefile.docker docker_install
+  - mv Makefile Makefile.base
+  - wget https://raw.githubusercontent.com/bgruening/galaxy-flavor-testing/master/Makefile
+  - make docker_install
   - sudo apt-get -qq update
   - sudo apt-get install -y python-dev
   - travis_wait 75 make docker_build
