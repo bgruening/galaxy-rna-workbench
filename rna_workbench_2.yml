@@ -48,6 +48,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: 'Full-name-here'
+      url: http://dorina.mdc-berlin.de/
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: piranha
   install_resolver_dependencies: true
@@ -55,6 +60,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: Piranha
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      url: 'http://'
+      description: "Long description string"
 
 - name: rnacommender
   install_resolver_dependencies: true
@@ -62,6 +72,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: 'Full-name-here'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      url: 'http://'
+      description: "Long description string"
 
 - name: intarna
   install_resolver_dependencies: true
@@ -69,6 +84,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA-RNA Interaction"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: IntaRNA
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      url: 'http://'
+      description: "Long description string"
 
 - name: paralyzer
   install_resolver_dependencies: true
@@ -76,6 +96,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: 'Full-name-here'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      url: 'http://'
+      description: "Long description string"
 
 - name: aresite2
   install_resolver_dependencies: true
@@ -83,6 +108,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 # RNA Annotation
 
@@ -92,6 +122,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA Annotation"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: rnacode
   install_resolver_dependencies: true
@@ -99,6 +134,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA Annotation"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: infernal
   owner: bgruening
@@ -109,6 +149,11 @@ tools:
   revisions:
     - c47a7c52ac4f
     - 6e18e0b098cd
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: rnammer
   owner: lionelguy
@@ -116,6 +161,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: trna_prediction
   owner: bgruening
@@ -123,6 +173,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: rnabob
   owner: rnateam
@@ -130,6 +185,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: fuma
   owner: yhoogstrate
@@ -137,6 +197,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 
 # Ribosome Profiling
@@ -147,6 +212,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "Ribosome Profiling"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 # RNA-Seq
 
@@ -156,6 +226,11 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: blockclust
   owner: rnateam
@@ -163,6 +238,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: flaimapper
   owner: yhoogstrate
@@ -170,6 +250,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: true
   install_tool_dependencies: false
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 #- name: suite_mirdeep_2_0
 #  owner: rnateam
@@ -184,6 +269,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 - name: nastiseq
   owner: rnateam
@@ -191,6 +281,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
 
 # RNA Target Prediction
 
@@ -200,3 +295,8 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  summary:
+      full-name: 'Full-name-here'
+      url: 'http://'
+      reference: '[Authors et al. 1999])(https://dx.doi.org/...)'
+      description: "Long description string"
