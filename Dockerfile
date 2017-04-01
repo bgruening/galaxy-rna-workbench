@@ -22,8 +22,7 @@ RUN install-tools $GALAXY_ROOT/tools_2.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs --yes > /dev/null && \
     rm /export/galaxy-central/ -rf
 
-ADD ./rna-workbench-tours/viennarna_tour.yaml $GALAXY_ROOT/config/plugins/tours/rnateam.viennarna.yaml
-ADD ./rna-workbench-tours/rnaseq-tour.yaml $GALAXY_ROOT/config/plugins/tours/rnateam.rnaseq.yaml
+ADD ./rna-workbench-tours/* $GALAXY_ROOT/config/plugins/tours/
 
 # Data libraries
 #ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
@@ -39,12 +38,11 @@ ADD import_workflows.py $GALAXY_ROOT/import_workflows.py
 
 # Download training data and populate the data library
 RUN startup_lite && \
-    sleep 200 && \
-    . $GALAXY_VIRTUAL_ENV/bin/activate && \
-    python $GALAXY_ROOT/import_workflows.py --workflow_path /home/galaxy -g http://localhost:8080 -a HSNiugRFvgT574F43jZ7N9F3
+    sleep 100 && \
+    python $GALAXY_ROOT/import_workflows.py --workflow_path /home/galaxy/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 RUN startup_lite && \
-    sleep 200 && \
+    sleep 100 && \
     . $GALAXY_VIRTUAL_ENV/bin/activate && \
     setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml
 

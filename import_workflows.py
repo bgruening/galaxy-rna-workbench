@@ -22,16 +22,14 @@ def main():
     parser.add_argument("-w", "--workflow_path",
                         help='Path to workflow file or a directory with multiple workflow files ending with ".ga"')
     parser.add_argument("-g", "--galaxy",
-                        dest="galaxy_url",
-                        help="Target Galaxy instance URL/IP address (required "
-                             "if not defined in the tools list file)",)
-    parser.add_argument("-a", "--apikey",
-                        dest="api_key",
-                        help="Galaxy admin user API key (required if not "
-                             "defined in the tools list file)",)
+                        help="Target Galaxy instance URL/IP address")
+    parser.add_argument("-u", "--user",
+                        help="Galaxy user name")
+    parser.add_argument("-p", "--password",
+                        help="Password for the Galaxy user")
     args = parser.parse_args()
 
-    gi = galaxy.GalaxyInstance(url=args.galaxy_url, key=args.api_key)
+    gi = galaxy.GalaxyInstance(url=args.galaxy, email=args.user, password=args.password)
 
     if os.path.isdir(args.workflow_path):
         for file_path in os.listdir(args.workflow_path):
