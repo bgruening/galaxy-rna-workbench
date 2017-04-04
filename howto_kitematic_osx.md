@@ -71,7 +71,7 @@ The installation is now complete.
 
   ![launch_05.png](screenshots/kitematic/osx/launch_05.png "Downloading the workbench")
 
-  Running out of space? Check out our [_troubleshooting_](#Running-out-of-space) section.
+  Running out of space? Check out our [_troubleshooting_](#running-out-of-space) section.
 
 6. Once fully downloaded, the Docker container starts, loggin messages on the console. A web preview of the Galaxy RNA workbench is provided next to the console log. Click on the preview window to open it in a browser.
 
