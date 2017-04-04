@@ -1,20 +1,20 @@
-# <a name="top"></a>Galaxy RNA workbench on Kitematic for Windows
+# Galaxy RNA workbench on Kitematic for Windows
 
 This how-to will guide you through the steps that are needed to run the Galaxy RNA workbench on Windows by setting up [Kitematic](https://kitematic.com), a tool which provides a graphical user interface to run Docker containers stored on [Docker Hub](https://hub.docker.com/).
 
-- [Installation prerequisites](#toc-prerequisites)
-- [Installation procedure](#toc-install)
-- [Launching the workbench](#toc-launch)
-- [Taking a tour](#toc-tour)
-- [Troubleshooting](#toc-troubleshooting)
+- [Installation prerequisites](#Installation-prerequisites)
+- [Installation procedure](#Installation-procedure)
+- [Launching the workbench](#Launching-the-workbench)
+- [Taking a tour](#Taking-a-tour)
+- [Troubleshooting](#Troubleshooting)
 
-## <a name="toc-prerequisites"></a>Installation prerequisites
+## Installation prerequisites
 
 Before proceeding, make sure your system is up to date using Microsoft's Windows Update.  
 Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Docker Toolbox*.
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## <a name="toc-install"></a>Installation procedure
+## Installation procedure
 
 The following instructions are based on our Kitematic installation [screencast](https://www.youtube.com/watch?v=ssnea4HXVfE):
 
@@ -49,7 +49,7 @@ The following instructions are based on our Kitematic installation [screencast](
 The installation is now complete.
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## <a name="toc-launch"></a>Launching the workbench
+## Launching the workbench
 
 1. Locate the Kitematic icon within your system's directories (this will be on the desktop if you left the installation settings as default), and launch it. The Docker GUI starts. Let it load.
 
@@ -73,7 +73,7 @@ The installation is now complete.
 
   ![launch_05.png](screenshots/kitematic/win/launch_05.png "Downloading the workbench")
 
-   Running out of space? Check out our [_troubleshooting_](#troubleshooting-space) section.
+   Running out of space? Check out our [_troubleshooting_](#Running-out-of-space) section.
 
 6. Once fully downloaded, the Docker container starts, loggin messages on the console. A web preview of the Galaxy RNA workbench is provided next to the console log. Click on the preview window to open it in a browser.
 
@@ -86,7 +86,7 @@ The installation is now complete.
 The opening page shows some useful options to configure Galaxy, install new tools, or try the workbench through guided tours. Tours are interactive demos that show how the interface works in different usage scenarios.
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## <a name="toc-tour"></a>Taking a tour
+## Taking a tour
 
 Try the workbench through a guided tour. Tours are interactive, and can be stopped at any time, providing you an overview of what can be done through Galaxy, using its tools, and reusing all available workflows.
 
@@ -97,9 +97,9 @@ To have an introductory tour on how to get accustomed with the Galaxy interface,
 Your Galaxy RNA workbench tour has started. Have fun! :)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## <a name="toc-troubleshooting"></a>Troubleshooting
+## Troubleshooting
 
-#### <a name="troubleshooting-space"></a>Running out of space
+#### Running out of space
 
 Kitematic creates virtual machines with a default storage space of 20GB. The RNA workbench is roughly 12GB, therefore if you want to increase disk space, use the *Docker CLI* (Docker Command Line Interface) that was installed alongside Kitematic.
 
