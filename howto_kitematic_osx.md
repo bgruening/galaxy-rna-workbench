@@ -1,4 +1,4 @@
-<div id="top"></div>
+<span id="top"></span>
 
 # Galaxy RNA workbench on Kitematic for Mac OSX
 
@@ -10,7 +10,7 @@ This how-to will guide you through the steps that are needed to run the Galaxy R
 - [Taking a tour](#toc-tour)
 - [Troubleshooting](#toc-troubleshooting)
 
-<div id="toc-prerequisites"></div>
+<span id="toc-prerequisites"></span>
 
 ## Installation prerequisites
 
@@ -18,7 +18,7 @@ Before proceeding, make sure your system is up to date using App Store's update 
 Finally, go to Kitematic's [page](https://kitematic.com/), and download the *Docker Toolbox*.
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-<div id="toc-install"></div>
+<span id="toc-install"></span>
 
 ## Installation procedure
 
@@ -51,7 +51,7 @@ The following instructions are based on our Kitematic installation [screencast](
 The installation is now complete.
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-<div id="toc-launch"></div>
+<span id="toc-launch"></span>
 
 ## Launching the workbench
 
@@ -90,7 +90,7 @@ The installation is now complete.
 The opening page shows some useful options to configure Galaxy, install new tools, or try the workbench through guided tours. Tours are interactive demos that show how the interface works in different usage scenarios.
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-<div id="toc-tour"></div>
+<span id="toc-tour"></span>
 
 ## Taking a tour
 
@@ -103,11 +103,11 @@ To have an introductory tour on how to get accustomed with the Galaxy interface,
 Your Galaxy RNA workbench tour has started. Have fun! :)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-<div id="toc-troubleshooting"></div>
+<span id="toc-troubleshooting"></span>
 
 ## Troubleshooting
 
-<div id="troubleshooting-space"></div>
+<span id="troubleshooting-space"></span>
 
 #### Running out of space
 
