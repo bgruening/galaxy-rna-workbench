@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 # Galaxy RNA workbench on Kitematic for Mac OSX
 
 This how-to will guide you through the steps that are needed to run the Galaxy RNA workbench on Mac OSX by setting up [Kitematic](https://kitematic.com), a tool which provides a graphical user interface to run Docker containers stored on [Docker Hub](https://hub.docker.com/).
