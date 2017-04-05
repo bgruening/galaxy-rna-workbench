@@ -163,17 +163,17 @@ The following video demonstrates the main elements that compose the Galaxy user 
 
 # Contributors
 
- - Andrea Bagnacani
- - Bérénice Batut
- - Joerg Fallmann
- - Florian Eggenhofer
- - Bjoern Gruening
- - Youri Hoogstrate
- - Torsten Houwaart
- - Cameron Smith
- - Sebastian Will
- - Markus Wolfien
- - Dilmurat Yusuf
+ - [Andrea Bagnacani](https://github.com/bagnacan)
+ - [Bérénice Batut](https://github.com/bebatut)
+ - [Joerg Fallmann](https://github.com/jfallmann)
+ - [Florian Eggenhofer](https://github.com/eggzilla)
+ - [Bjoern Gruening](https://github.com/bgruening)
+ - [Youri Hoogstrate](https://github.com/yhoogstrate)
+ - [Torsten Houwaart](https://github.com/TorHou)
+ - [Cameron Smith](https://github.com/smithcr)
+ - [Sebastian Will](https://github.com/s-will)
+ - [Markus Wolfien](https://github.com/mwolfien)
+ - [Dilmurat Yusuf](https://github.com/dyusuf)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # Support and bug reports
