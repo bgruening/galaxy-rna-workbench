@@ -4,16 +4,12 @@
 RNA Galaxy Workbench
 ====================
 
-The RNA analyses workbench is developed by the RNA Bioinformatics
-Center (RBC). This center is one of the eight service units of the
-[German Network for Bioinformatics Infrastructure](http://www.denbi.de), running the German [ELIXIR Node](https://www.elixir-europe.org/).
+The RNA analyses workbench implements a webserver based on the [Galaxy Docker](https://github.com/bgruening/docker-galaxy-stable) platform. For advanced local deployments, we recommend to check out the upstream [documentation](http://bgruening.github.io/docker-galaxy-stable).
 
-[<img src="assets/img/deNBI_logo.jpg" height="35px" alt="de.NBI"
-valign="middle">](http://www.denbi.de)
-[<img src="assets/img/elixir_germany.png" height="55px" alt="ELIXIR Germany"
-valign="middle">](https://www.elixir-europe.org)
+The workbench is developed by the RNA Bioinformatics Center (RBC). This center is one of the eight service units of the [German Network for Bioinformatics Infrastructure](http://www.denbi.de), running the German [ELIXIR Node](https://www.elixir-europe.org/).
 
-This webserver is based on the [Galaxy Docker](https://github.com/bgruening/docker-galaxy-stable) for advanced local deploymentes we recommend the upstream [documentation](http://bgruening.github.io/docker-galaxy-stable).
+[<img align="left" src="assets/img/deNBI_logo.jpg" height="35px" alt="de.NBI" valign="middle">](http://www.denbi.de)
+[<img align="center" src="assets/img/elixir_germany.png" height="55px" alt="ELIXIR Germany" valign="middle">](https://www.elixir-europe.org)
 
 # Usage
 
@@ -159,7 +155,6 @@ The following video demonstrates the main elements that compose the Galaxy user 
  - Markus Wolfien
  - Dilmurat Yusuf
 
-
 # Support & Bug Reports
 
 For support, questions, or feature requests fill bug reports at https://github.com/bgruening/galaxy-rna-workbench/issues.
@@ -183,3 +178,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
