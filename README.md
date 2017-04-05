@@ -1,7 +1,7 @@
-<div id="top"></div>
-
 [![Build Status](https://travis-ci.org/bgruening/galaxy-rna-workbench.svg?branch=master)](https://travis-ci.org/bgruening/galaxy-rna-workbench)
 [![Docker Repository on Quay](https://quay.io/repository/bgruening/galaxy-rna-workbench/status "Docker Repository on Quay")](https://quay.io/repository/bgruening/galaxy-rna-workbench)
+
+<div id="top"></div>
 
 RNA Galaxy Workbench
 ====================
@@ -13,9 +13,21 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
 [<img align="left" src="assets/img/deNBI_logo.jpg" height="35px" alt="de.NBI" valign="middle">](http://www.denbi.de)
 [<img align="center" src="assets/img/elixir_germany.png" height="55px" alt="ELIXIR Germany" valign="middle">](https://www.elixir-europe.org)
 
+- [Usage](#usage)
+  - [Requirement](#requirement)
+  - [Docker configuration](#docker-configuration)
+  - [RNA workbench launch](#rna-workbench-launch)
+  - [Users and passwords](#users-and-passwords)
+  - [Tours](#tours)
+- [Available tools](#available-tools)
+- [Contributors](#contributors)
+- [Support and bug reports](#support-and-bug-reports)
+- [MIT license](#mit-license)
+
 # Usage
 
 The Galaxy RNA workbench is based on a dedicated Galaxy instance wrapped into a Docker container. It is based on the [Galaxy Docker Image](http://bgruening.github.io/docker-galaxy-stable/)
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## Requirement
 
@@ -24,11 +36,13 @@ To use the Galaxy RNA workbench, you will need [Docker](https://www.docker.com/p
 Non-Linux users are encouraged to use [Kitematic](https://kitematic.com) for [OSX](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic_osx.md) or [Windows](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howto_kitematic_win.md), a graphical User-Interface for managing Docker containers.
 
 Linux users and people familiar with the command line can follow the instruction on installing Docker from [Docker website](https://docs.docker.com/installation).
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## Docker configuration
 
 The RNA workbench docker container is rather large and expected to grow when further tools and workflows are contributed. So for users new to docker, we list here some tweaks that can help to work around issues when first using docker.
 After successful installation of docker, it is recommended to configure some settings, dealing for example with the storage space required by containers. You can find more information [here](howtodocker.md).
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## RNA workbench launch
 
@@ -87,13 +101,15 @@ This enables you to have different export folders for different sessions - meani
 It will start the Galaxy RNA workbench with the configuration and launch of a Galaxy instance and its population with the needed tools. The instance will be accessible at [http://localhost:8080](http://localhost:8080).
 
 For a more specific configuration, you can have a look at the [documentation of the Galaxy Docker Image](http://bgruening.github.io/docker-galaxy-stable/).
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## Users & Passwords
+## Users and passwords
 
 The Galaxy Admin User has the username `admin@galaxy.org` and the password `admin`.
 
 The PostgreSQL username is `galaxy`, the password `galaxy` and the database name `galaxy`.
 If you want to create new users, please make sure to use the `/export/` volume. Otherwise your user will be removed after your docker session is finished.
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## Tours
 
@@ -104,6 +120,7 @@ These show many common operations, such as searching, parametrizing, and running
 The following video demonstrates the main elements that compose the Galaxy user interface:
 
 [![Galaxy RNA workbench UI tour](https://i.imgur.com/c06O3I0.png)](https://www.youtube.com/watch?v=rP59wYIxWcI "Kitematic galaxy-rna-workbench launch")
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # Available Tools
 
@@ -142,6 +159,7 @@ The following video demonstrates the main elements that compose the Galaxy user 
 |         | [PIPmiR](https://ohlerlab.mdc-berlin.de/software/Pipeline_for_the_Identification_of_Plant_miRNAs_84/) | An algorithm to identify novel plant miRNA genes from a combination of deep sequencing data and genomic features | [Breakfield et al. 2011](https://dx.doi.org/10.1101/gr.123547.111)|
 |         | [NASTIseq](https://ohlerlab.mdc-berlin.de/software/NASTIseq_104/)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Song et al. 2013](http://genome.cshlp.org/content/23/10/1730.long) |
 | RNA Target Prediction | [TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | - |
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # Contributors
 
@@ -156,12 +174,14 @@ The following video demonstrates the main elements that compose the Galaxy user 
  - Sebastian Will
  - Markus Wolfien
  - Dilmurat Yusuf
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-# Support & Bug Reports
+# Support and bug reports
 
 For support, questions, or feature requests fill bug reports at https://github.com/bgruening/galaxy-rna-workbench/issues.
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-# License (MIT)
+# MIT license
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -180,4 +200,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
