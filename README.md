@@ -173,7 +173,7 @@ The following video demonstrates the main elements that compose the Galaxy user 
 
 # Support and bug reports
 
-For support, questions, or feature requests fill bug reports at https://github.com/bgruening/galaxy-rna-workbench/issues.
+For support, questions, or feature requests fill bug reports on our [issue page](https://github.com/bgruening/galaxy-rna-workbench/issues).
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # MIT license
