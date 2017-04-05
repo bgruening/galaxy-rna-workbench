@@ -62,7 +62,7 @@ opened using [this form](https://github.com/bgruening/galaxy-rna-workbench/issue
   Galaxy tools should be published to the
   [Tool Shed](https://galaxyproject.org/toolshed) and specified in our
   [tool list](https://github.com/bgruening/galaxy-rna-workbench/blob/master/rna_workbench.yml).
-  Our continuous integration tests, will build a new workbench with your tool included automatically and will run
-  a few tests to check the integrety.
+  Our continuous integration tests will build a new workbench with your tool included automatically and will run
+  a few tests to check the integrity.
 
-  More information about tool development can be found [on the comunity hub](https://galaxyproject.org/develop).
+  More information about tool development can be found [on the community hub](https://galaxyproject.org/develop).
