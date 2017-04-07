@@ -22,7 +22,7 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [Users and passwords](#users-and-passwords)
   - [Tours](#tours)
 - [Available tools](#available-tools)
-  - [RNA structure analysis](#rna-structure-analysis)
+  - [RNA structure prediction and analysis](#rna-structure-prediction-and-analysis)
   - [RNA alignment](#rna-alignment)
   - [RNA annotation](#rna-annotation)
   - [RNA-protein interaction](#rna-protein-interaction)
@@ -131,12 +131,12 @@ The following video demonstrates the main elements that compose the Galaxy user 
 In this section we list all tools that have been integrated in the RNA workbench. The list is likely to grow as soon as further tools and workflows are contributed. To ease readability, we divided them into categories.
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## RNA structure analysis
+## RNA structure prediction and analysis
 
 | Tool | Description | Reference |
 | ---- | ----------- | --------- |
 | [antaRNA](http://www.bioinf.uni-freiburg.de/Software/antaRNA/) | Possibility of inverse RNA structure folding and a specification of a GC value constraint | [Kleinkauf et al. 2015](https://doi.org/10.1093/bioinformatics/btv319) |
-| [C o Fold](http://www.e-rna.org/cofold/) | A thermodynamics-based RNA secondary structure folding algorithm | [Proctor and Meyer, 2015](https://doi.org/10.1093/nar/gkt174) |
+| [CoFold](http://www.e-rna.org/cofold/) | A thermodynamics-based RNA secondary structure folding algorithm | [Proctor and Meyer, 2015](https://doi.org/10.1093/nar/gkt174) |
 | [Kinwalker](http://www.bioinf.uni-leipzig.de/Software/Kinwalker/) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | [Geis et al. 2008](https://dx.doi.org/10.1016/j.jmb.2008.02.064) |
 | [MEA](http://www.bioinf.uni-leipzig.de/Software/mea/) | Prediction of maximum expected accuracy RNA secondary structures | [Amman et al. 2013](https://dx.doi.org/10.1007/978-3-319-02624-4_1) |
 | [RNAshapes](https://bibiserv2.cebitec.uni-bielefeld.de/rnashapes) | Structures to a tree-like domain of shapes, retaining adjacency and nesting of structural features | [Janssen and Giergerich, 2014](https://doi.org/10.1093/bioinformatics/btu649) |
