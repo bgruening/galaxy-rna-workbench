@@ -34,10 +34,12 @@ RUN pip install ephemeris -U && \
     sleep 100 && \
     workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
+ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
+
 RUN startup_lite && \
-    sleep 200 && \
+    sleep 20 && \
     . $GALAXY_VIRTUAL_ENV/bin/activate && \
-    python /usr/local/lib/python2.7/dist-packages/ephemeris/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml
+    python $GALAXY_ROOT/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 # Add visualisations
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > master.tar.gz && \
