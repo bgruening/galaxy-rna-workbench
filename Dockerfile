@@ -16,23 +16,22 @@ RUN install-tools $GALAXY_ROOT/tools.yaml && \
 # Split into two layers, it seems that there is a max-layer size.
 RUN install-tools $GALAXY_ROOT/tools_2.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs --yes > /dev/null && \
-    rm /export/galaxy-central/ -rf
+    rm /export/galaxy-central/ -rf && \
+    mkdir -p $GALAXY_HOME/workflows
 
+# Add Galaxy interactive tours
 ADD ./rna-workbench-tours/* $GALAXY_ROOT/config/plugins/tours/
 
-# Data libraries
+# Add data library defintion file
 ADD library_data.yaml $GALAXY_ROOT/library_data.yaml
 
-ADD ./rna-workbench-workflow/Galaxy-Workflow-trimming_mapping-treatment_untreatment-SE_PE.ga $GALAXY_HOME/rnateam.workflow.trimming_mapping.ga
-ADD ./rna-workbench-workflow/Galaxy-Workflow-Analyse_unaligned_ncRNAs.ga $GALAXY_HOME/rnateam.workflow.analyse_unaligned_ncrnas.ga
-ADD ./rna-workbench-workflow/Galaxy-Workflow-PAR-CLIP_analysis.ga $GALAXY_HOME/rnateam.workflow.analyse_PAR-CLIP.ga
-ADD ./rna-workbench-workflow/Galaxy-Workflow-AREsite2_CLIP_analysis.ga $GALAXY_HOME/rnateam.workflow.aresite2_CLIP.ga
-ADD ./rna-workbench-workflow/Galaxy-Workflow-RNA_family_model_construction.ga $GALAXY_HOME/rnateam.workflow.RNA_family_model_construction.ga
+# Add workflows to the Docker image
+ADD ./rna-workbench-workflow/* $GALAXY_HOME/workflows/
 
 # Download training data and populate the data library
 RUN startup_lite && \
     sleep 100 && \
-    workflow-install --workflow_path /home/galaxy/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
+    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 RUN startup_lite && \
     sleep 100 && \
