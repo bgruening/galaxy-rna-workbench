@@ -221,6 +221,11 @@ In this section we list all tools that have been integrated in the RNA workbench
  - [Dilmurat Yusuf](https://github.com/dyusuf)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
+# How to contribute
+
+The RNA-workbench community welcomes new contributions and help in any way.
+We have collected detailed instructions and some guidence in our [CONTRIBUTING.md](https://github.com/bgruening/galaxy-rna-workbench/blob/master/CONTRIBUTING.md).
+
 # Support and bug reports
 
 For support, questions, or feature requests fill bug reports on our [issue page](https://github.com/bgruening/galaxy-rna-workbench/issues).
