@@ -1,0 +1,266 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "A workflow for analyzing PAR-CLIP data.",
+    "format-version": "0.1",
+    "name": "PAR-CLIP analysis",
+    "steps": {
+        "0": {
+            "annotation": "It should be in fastqsanger format.",
+            "content_id": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "It should be in fastqsanger format.",
+                    "name": "PAR-CLIP fastq"
+                }
+            ],
+            "label": null,
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 214,
+                "top": 319
+            },
+            "tool_errors": null,
+            "tool_id": null,
+            "tool_state": "{\"name\": \"PAR-CLIP fastq\"}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "6e949653-700f-436b-90a9-b4bf4ce52d0c",
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "It should be in fasta format",
+            "content_id": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "It should be in fasta format",
+                    "name": "Reference sequence"
+                }
+            ],
+            "label": null,
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 712,
+                "top": 463
+            },
+            "tool_errors": null,
+            "tool_id": null,
+            "tool_state": "{\"name\": \"Reference sequence\"}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "ed3f5918-0a38-4b97-8771-cf4856358323",
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore/0.4.2",
+            "id": 2,
+            "input_connections": {
+                "singlePaired|input_singles": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trim Galore!",
+                    "name": "singlePaired"
+                }
+            ],
+            "label": null,
+            "name": "Trim Galore!",
+            "outputs": [
+                {
+                    "name": "trimmed_reads_paired_collection",
+                    "type": "input"
+                },
+                {
+                    "name": "trimmed_reads_unpaired_collection",
+                    "type": "input"
+                },
+                {
+                    "name": "trimmed_reads_single",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "trimmed_reads_pair1",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "trimmed_reads_pair2",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "unpaired_reads_1",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "unpaired_reads_2",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "report_file",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 450,
+                "top": 279
+            },
+            "post_job_actions": {},
+            "tool_errors": null,
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore/0.4.2",
+            "tool_shed_repository": {
+                "changeset_revision": "f1e71aeaa923",
+                "name": "trim_galore",
+                "owner": "bgruening",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": 0, \"singlePaired\": \"{\\\"three_prime_clip_R1\\\": \\\"\\\", \\\"trimming\\\": {\\\"adapter\\\": \\\"TCGTATGCCGTCTTCTGCTTG\\\", \\\"trimming_select\\\": \\\"user\\\", \\\"__current_case__\\\": 4}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0, \\\"input_singles\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"__rerun_remap_job_id__\": null, \"params\": \"{\\\"settingsType\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"rrbs\": \"{\\\"settingsType\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\"}",
+            "tool_version": "0.4.2",
+            "type": "tool",
+            "uuid": "01822881-aef7-43b0-9b12-af471d8196f0",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.2.6.2",
+            "id": 3,
+            "input_connections": {
+                "library|input_1": {
+                    "id": 2,
+                    "output_name": "trimmed_reads_single"
+                },
+                "reference_genome|own_file": {
+                    "id": 1,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Bowtie2",
+                    "name": "library"
+                },
+                {
+                    "description": "runtime parameter for tool Bowtie2",
+                    "name": "reference_genome"
+                }
+            ],
+            "label": null,
+            "name": "Bowtie2",
+            "outputs": [
+                {
+                    "name": "output_unaligned_reads_l",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "output_aligned_reads_l",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "output_aligned_reads_r",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "output_unaligned_reads_r",
+                    "type": "fastqsanger"
+                },
+                {
+                    "name": "output",
+                    "type": "bam"
+                },
+                {
+                    "name": "output_sam",
+                    "type": "sam"
+                },
+                {
+                    "name": "mapping_stats",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 923,
+                "top": 139
+            },
+            "post_job_actions": {},
+            "tool_errors": null,
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.2.6.2",
+            "tool_shed_repository": {
+                "changeset_revision": "a9d4f71dbfb0",
+                "name": "bowtie2",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"library\": \"{\\\"aligned_file\\\": \\\"false\\\", \\\"unaligned_file\\\": \\\"false\\\", \\\"type\\\": \\\"single\\\", \\\"__current_case__\\\": 0, \\\"input_1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"reference_genome\": \"{\\\"source\\\": \\\"history\\\", \\\"__current_case__\\\": 1, \\\"own_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"rg\": \"{\\\"rg_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 3}\", \"save_mapping_stats\": \"\\\"false\\\"\", \"analysis_type\": \"{\\\"alignment_options\\\": {\\\"__current_case__\\\": 1, \\\"alignment_options_selector\\\": \\\"no\\\"}, \\\"effort_options\\\": {\\\"effort_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"sam_options\\\": {\\\"omit_sec_seq\\\": \\\"false\\\", \\\"sam_options_selector\\\": \\\"yes\\\", \\\"no_unal\\\": \\\"true\\\", \\\"__current_case__\\\": 0}, \\\"other_options\\\": {\\\"other_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"scoring_options\\\": {\\\"scoring_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"analysis_type_selector\\\": \\\"full\\\", \\\"reporting_options\\\": {\\\"reporting_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 1, \\\"sam_opt\\\": \\\"true\\\", \\\"input_options\\\": {\\\"input_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}}\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+            "tool_version": "2.2.6.2",
+            "type": "tool",
+            "uuid": "8f21ce85-552d-4751-8798-78dc2931a84c",
+            "workflow_outputs": []
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer/1.5",
+            "id": 4,
+            "input_connections": {
+                "input_sam": {
+                    "id": 3,
+                    "output_name": "output_sam"
+                },
+                "refGenomeSource|ownFile": {
+                    "id": 1,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool PARalyzer",
+                    "name": "input_sam"
+                },
+                {
+                    "description": "runtime parameter for tool PARalyzer",
+                    "name": "refGenomeSource"
+                }
+            ],
+            "label": null,
+            "name": "PARalyzer",
+            "outputs": [
+                {
+                    "name": "distribution",
+                    "type": "txt"
+                },
+                {
+                    "name": "groups",
+                    "type": "txt"
+                },
+                {
+                    "name": "clusters",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 1142,
+                "top": 550
+            },
+            "post_job_actions": {},
+            "tool_errors": null,
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer/1.5",
+            "tool_shed_repository": {
+                "changeset_revision": "4dbe81be8b81",
+                "name": "paralyzer",
+                "owner": "rnateam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"input_sam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"conversion\": \"{\\\"selection\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"collapse\": \"\\\"false\\\"\", \"__page__\": 0, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"__rerun_remap_job_id__\": null, \"params\": \"{\\\"settingsType\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"refGenomeSource\": \"{\\\"genomeSource\\\": \\\"history\\\", \\\"ownFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1}\", \"methods\": \"{\\\"__current_case__\\\": 0, \\\"choice\\\": \\\"EXTEND_BY_READ\\\"}\"}",
+            "tool_version": "1.5",
+            "type": "tool",
+            "uuid": "d284b376-1733-4b4d-aff7-8cdb63499c16",
+            "workflow_outputs": []
+        }
+    },
+    "uuid": "334f02d9-f1c1-4b51-a23b-bc9885286ca1"
+}

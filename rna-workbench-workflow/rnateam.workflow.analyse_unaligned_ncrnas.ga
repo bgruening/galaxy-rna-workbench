@@ -1,0 +1,690 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "Take a set of unaligned RNAs, compute alignments by MAFFT and LocARNA and analyze them with RNAcode and RNAz in appropriate settings. Then, the LocARNA alignment is used to build a Covariance Model (CM). The CM is used to search the given sequence database.", 
+    "format-version": "0.1", 
+    "name": "Analyse unaligned ncRNAs", 
+    "steps": {
+        "0": {
+            "annotation": "Set of RNAs", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Set of RNAs", 
+                    "name": "Unaligned RNA sequences"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 189, 
+                "top": 466.296875
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Unaligned RNA sequences\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "27949769-276d-4d63-80c2-8918f4899bb7", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "66f2fd4f-2a91-4bf3-a39c-838ddc0487b3"
+                }
+            ]
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Sequence database"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 188, 
+                "top": 880.296875
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Sequence database\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "3494781a-c37b-432e-b3d0-a9322034199f", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "d11bd593-b6b5-4476-b345-0d1ecc153324"
+                }
+            ]
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.221.3", 
+            "id": 2, 
+            "input_connections": {
+                "inputSequences": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MAFFT", 
+                    "name": "inputSequences"
+                }
+            ], 
+            "label": null, 
+            "name": "MAFFT", 
+            "outputs": [
+                {
+                    "name": "outputAlignment", 
+                    "type": "fasta"
+                }, 
+                {
+                    "name": "outputTree", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 399, 
+                "top": 232.296875
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutputAlignment": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outputAlignment"
+                }, 
+                "HideDatasetActionoutputTree": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outputTree"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.221.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "15974dd17515", 
+                "name": "mafft", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"outputFormat\": \"\\\"--clustalout\\\"\", \"getTree\": \"\\\"false\\\"\", \"inputSequences\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"datatype\": \"\\\"\\\"\", \"cond_flavour\": \"{\\\"flavourType\\\": \\\"mafft-fftns\\\", \\\"__current_case__\\\": 0}\", \"matrix_condition\": \"{\\\"matrix\\\": \\\"\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"adjustdirection\": \"\\\" \\\"\", \"ep\": \"\\\"0.123\\\"\", \"reorder\": \"\\\"false\\\"\", \"op\": \"\\\"1.53\\\"\"}", 
+            "tool_version": "7.221.3", 
+            "type": "tool", 
+            "uuid": "654a1506-43c4-4195-9e93-92695c59df8c", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/locarna_multiple/locarna_multiple/1.9.0.0", 
+            "id": 3, 
+            "input_connections": {
+                "input_data_type|input_data": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool LocARNA Multiple Aligner (mlocarna)", 
+                    "name": "input_data_type"
+                }
+            ], 
+            "label": null, 
+            "name": "LocARNA Multiple Aligner (mlocarna)", 
+            "outputs": [
+                {
+                    "name": "stdout", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "clustal", 
+                    "type": "clustal"
+                }, 
+                {
+                    "name": "clustal_strict", 
+                    "type": "clustal"
+                }, 
+                {
+                    "name": "stockholm", 
+                    "type": "stockholm"
+                }, 
+                {
+                    "name": "pp", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "mlocarna_results_tgz", 
+                    "type": "tar.gz"
+                }
+            ], 
+            "position": {
+                "left": 381.5, 
+                "top": 607.296875
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionclustal": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "clustal"
+                }, 
+                "HideDatasetActionclustal_strict": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "clustal_strict"
+                }, 
+                "HideDatasetActionpp": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "pp"
+                }, 
+                "HideDatasetActionstdout": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "stdout"
+                }, 
+                "HideDatasetActionstockholm": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "stockholm"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/locarna_multiple/locarna_multiple/1.9.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "8414fea2a6fd", 
+                "name": "locarna_multiple", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"Scoring\": \"{\\\"indel_opening\\\": \\\"-900\\\", \\\"tau\\\": \\\"50\\\", \\\"sequence_score\\\": {\\\"__current_case__\\\": 0, \\\"sequence_score_selector\\\": \\\"ribofit\\\"}, \\\"struct_weight\\\": \\\"200\\\", \\\"indel\\\": \\\"-250\\\"}\", \"Heuristics\": \"{\\\"max_diff\\\": \\\"60\\\", \\\"max_bps_length_ratio\\\": \\\"0.0\\\", \\\"max_diff_am\\\": \\\"30\\\", \\\"min_prob\\\": \\\"0.0005\\\", \\\"max_diff_at_am\\\": \\\"-1\\\"}\", \"Folding\": \"{\\\"alifold_consensus_dp\\\": \\\"false\\\", \\\"plfold_winsize\\\": \\\"300\\\", \\\"rnafold_temperature\\\": \\\"37.0\\\", \\\"plfold_span\\\": \\\"150\\\"}\", \"Constraint\": \"{\\\"bed_anchors\\\": {\\\"bed_anchors_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"lonely_pairs\\\": \\\"false\\\", \\\"maxBPspan\\\": \\\"-1\\\", \\\"ignore_constraints\\\": \\\"false\\\"}\", \"__page__\": 0, \"alignment_mode\": \"{\\\"free_endgaps\\\": \\\"\\\", \\\"__current_case__\\\": 0, \\\"alignment_mode_selector\\\": \\\"global_locarna\\\"}\", \"__rerun_remap_job_id__\": null, \"stdout_verbosity\": \"\\\"--quiet\\\"\", \"outputs\": \"[\\\"clustal_strict\\\", \\\"stockholm\\\"]\", \"input_data_type\": \"{\\\"input_data\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"input_data_type_selector\\\": \\\"fasta\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "1.9.0.0", 
+            "type": "tool", 
+            "uuid": "893d7850-84bd-46d0-ae78-12cf1129ba42", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "mlocarna_results_tgz", 
+                    "uuid": "f9c4a2b7-ebe4-4130-8462-c9961ce6bfbf"
+                }
+            ]
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode/0.3.0", 
+            "id": 4, 
+            "input_connections": {
+                "alignment": {
+                    "id": 2, 
+                    "output_name": "outputAlignment"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAcode", 
+                    "name": "alignment"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAcode", 
+            "outputs": [
+                {
+                    "name": "output_eps", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "outFileDefault", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "outFileGTF", 
+                    "type": "gtf"
+                }
+            ], 
+            "position": {
+                "left": 729, 
+                "top": 152.296875
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutFileGTF": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outFileGTF"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode/0.3.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "2c51e264432a", 
+                "name": "rnacode", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"cutoff\": \"\\\"1.0\\\"\", \"best_region\": \"\\\"false\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"outputFormat\": \"\\\"--tabular\\\"\", \"cond_scoringParameters\": \"{\\\"scoringParameters\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"alignment\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"best_only\": \"\\\"false\\\"\", \"num_samples\": \"\\\"100\\\"\", \"cond_generateEPS\": \"{\\\"generateEPS\\\": \\\"create\\\", \\\"eps_cutoff\\\": \\\"0.05\\\", \\\"__current_case__\\\": 0}\", \"stop_early\": \"\\\"false\\\"\"}", 
+            "tool_version": "0.3.0", 
+            "type": "tool", 
+            "uuid": "76c8eeb5-c39f-405e-8238-4622c4eff9a7", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output_eps", 
+                    "uuid": "3191e7f2-9538-423b-8113-1bf1c217a70d"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "outFileDefault", 
+                    "uuid": "2d76f337-0627-4042-ae56-9c276ffbfbf8"
+                }
+            ]
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnaalifold/viennarna_rnaalifold/2.2.10.0", 
+            "id": 5, 
+            "input_connections": {
+                "input": {
+                    "id": 2, 
+                    "output_name": "outputAlignment"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAalifold", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAalifold", 
+            "outputs": [
+                {
+                    "name": "tabularFile", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "imagesFile", 
+                    "type": "tar"
+                }
+            ], 
+            "position": {
+                "left": 735, 
+                "top": 323.296875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnaalifold/viennarna_rnaalifold/2.2.10.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "10b56bba8dee", 
+                "name": "viennarna_rnaalifold", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"model_options\": \"{\\\"ribosum\\\": \\\"true\\\", \\\"temperature\\\": \\\"37.0\\\", \\\"betaScale\\\": \\\"1.0\\\", \\\"dangling\\\": \\\"2\\\", \\\"nogu\\\": \\\"true\\\", \\\"endgaps\\\": \\\"false\\\", \\\"nsp\\\": \\\"\\\", \\\"cfactor\\\": \\\"0.5\\\", \\\"noclosinggu\\\": \\\"true\\\", \\\"notetra\\\": \\\"true\\\", \\\"nfactor\\\": \\\"0.6\\\", \\\"nolp\\\": \\\"true\\\"}\", \"general_options\": \"{\\\"color\\\": \\\"true\\\", \\\"noPS\\\": \\\"true\\\", \\\"layout_type\\\": \\\"1\\\", \\\"verbose\\\": \\\"false\\\", \\\"alignment\\\": \\\"true\\\"}\", \"algorithm_options\": \"{\\\"mea\\\": \\\"1.0\\\", \\\"gquad\\\": \\\"false\\\", \\\"bppmThreshold\\\": \\\"1e-06\\\", \\\"pf\\\": \\\"1\\\", \\\"sci\\\": \\\"false\\\", \\\"mis\\\": \\\"false\\\", \\\"pfScale\\\": \\\"1.07\\\", \\\"stochBT_en\\\": \\\"1\\\", \\\"circular\\\": \\\"false\\\"}\", \"__rerun_remap_job_id__\": null, \"IDs\": \"{\\\"auto_id\\\": \\\"false\\\", \\\"id_digits\\\": \\\"4\\\", \\\"id_start\\\": \\\"1\\\", \\\"continuous_ids\\\": \\\"false\\\", \\\"id_prefix\\\": \\\"alignment\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"constraints\": \"{\\\"constraintLocation\\\": {\\\"constraintSelector\\\": \\\"none\\\", \\\"__current_case__\\\": 0}, \\\"maxBPspan\\\": \\\"-1\\\", \\\"shapeOption\\\": {\\\"shapeSelector\\\": \\\"notUsed\\\", \\\"__current_case__\\\": 1}}\"}", 
+            "tool_version": "2.2.10.0", 
+            "type": "tool", 
+            "uuid": "aa6b003b-eb88-43d7-b660-8a7e3526f56a", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "tabularFile", 
+                    "uuid": "de9ad0b9-38a2-482f-8ea7-450c013d2249"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "imagesFile", 
+                    "uuid": "f4414b36-bf57-499f-a110-8d289fab9694"
+                }
+            ]
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
+            "id": 6, 
+            "input_connections": {
+                "input": {
+                    "id": 2, 
+                    "output_name": "outputAlignment"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAz", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAz", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 739, 
+                "top": 453
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "e23c455f8335", 
+                "name": "rnaz", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"locarnate\": \"\\\"false\\\"\", \"cutoff\": \"\\\"-1.0\\\"\", \"__page__\": 0, \"noshuffle\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"forward_or_reverse\": \"\\\"forward\\\"\", \"mononucleotide\": \"\\\"false\\\"\", \"dinucleotide\": \"\\\"true\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.1.0", 
+            "type": "tool", 
+            "uuid": "336ae32f-5c85-449c-8533-daa34234dc7c", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "outfile", 
+                    "uuid": "7c449944-2d3d-441d-8525-35334c3e6a52"
+                }
+            ]
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
+            "id": 7, 
+            "input_connections": {
+                "input": {
+                    "id": 3, 
+                    "output_name": "clustal_strict"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAz", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAz", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 713, 
+                "top": 565
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "e23c455f8335", 
+                "name": "rnaz", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"locarnate\": \"\\\"true\\\"\", \"cutoff\": \"\\\"-1.0\\\"\", \"__page__\": 0, \"noshuffle\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"forward_or_reverse\": \"\\\"forward\\\"\", \"mononucleotide\": \"\\\"false\\\"\", \"dinucleotide\": \"\\\"true\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.1.0", 
+            "type": "tool", 
+            "uuid": "9b76cfbd-7da0-41fa-aec8-083766c21b1f", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "outfile", 
+                    "uuid": "120e6be1-f804-4283-8a37-e245548edbd9"
+                }
+            ]
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnaalifold/viennarna_rnaalifold/2.2.10.0", 
+            "id": 8, 
+            "input_connections": {
+                "input": {
+                    "id": 3, 
+                    "output_name": "clustal_strict"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAalifold", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAalifold", 
+            "outputs": [
+                {
+                    "name": "tabularFile", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "imagesFile", 
+                    "type": "tar"
+                }
+            ], 
+            "position": {
+                "left": 708, 
+                "top": 681.296875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnaalifold/viennarna_rnaalifold/2.2.10.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "10b56bba8dee", 
+                "name": "viennarna_rnaalifold", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"model_options\": \"{\\\"ribosum\\\": \\\"true\\\", \\\"temperature\\\": \\\"37.0\\\", \\\"betaScale\\\": \\\"1.0\\\", \\\"dangling\\\": \\\"2\\\", \\\"nogu\\\": \\\"true\\\", \\\"endgaps\\\": \\\"false\\\", \\\"nsp\\\": \\\"\\\", \\\"cfactor\\\": \\\"0.6\\\", \\\"noclosinggu\\\": \\\"true\\\", \\\"notetra\\\": \\\"true\\\", \\\"nfactor\\\": \\\"0.5\\\", \\\"nolp\\\": \\\"true\\\"}\", \"general_options\": \"{\\\"color\\\": \\\"true\\\", \\\"noPS\\\": \\\"true\\\", \\\"layout_type\\\": \\\"1\\\", \\\"verbose\\\": \\\"false\\\", \\\"alignment\\\": \\\"true\\\"}\", \"algorithm_options\": \"{\\\"mea\\\": \\\"1.0\\\", \\\"gquad\\\": \\\"false\\\", \\\"bppmThreshold\\\": \\\"1e-06\\\", \\\"pf\\\": \\\"1\\\", \\\"sci\\\": \\\"false\\\", \\\"mis\\\": \\\"true\\\", \\\"pfScale\\\": \\\"1.07\\\", \\\"stochBT_en\\\": \\\"1\\\", \\\"circular\\\": \\\"false\\\"}\", \"__rerun_remap_job_id__\": null, \"IDs\": \"{\\\"auto_id\\\": \\\"false\\\", \\\"id_digits\\\": \\\"4\\\", \\\"id_start\\\": \\\"1\\\", \\\"continuous_ids\\\": \\\"false\\\", \\\"id_prefix\\\": \\\"alignment\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"constraints\": \"{\\\"constraintLocation\\\": {\\\"constraintSelector\\\": \\\"none\\\", \\\"__current_case__\\\": 0}, \\\"maxBPspan\\\": \\\"-1\\\", \\\"shapeOption\\\": {\\\"shapeSelector\\\": \\\"notUsed\\\", \\\"__current_case__\\\": 1}}\"}", 
+            "tool_version": "2.2.10.0", 
+            "type": "tool", 
+            "uuid": "7e53efdc-e83c-48fb-b221-187bf0ffd956", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "tabularFile", 
+                    "uuid": "c3126bdc-89fb-43d1-a60e-55cce3b10975"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "imagesFile", 
+                    "uuid": "edc620f9-dbce-42d9-a130-be583afb3b2b"
+                }
+            ]
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/1.1.0.2", 
+            "id": 9, 
+            "input_connections": {
+                "alignment_infile": {
+                    "id": 3, 
+                    "output_name": "stockholm"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Build covariance models", 
+                    "name": "alignment_infile"
+                }
+            ], 
+            "label": null, 
+            "name": "Build covariance models", 
+            "outputs": [
+                {
+                    "name": "summary_outfile", 
+                    "type": "text"
+                }, 
+                {
+                    "name": "cmfile_outfile", 
+                    "type": "cm"
+                }, 
+                {
+                    "name": "refined_multiple_alignment_output", 
+                    "type": "stockholm"
+                }
+            ], 
+            "position": {
+                "left": 712, 
+                "top": 833.296875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/1.1.0.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "c47a7c52ac4f", 
+                "name": "infernal", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"noss\": \"\\\"false\\\"\", \"is_summery_output\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"effective_opts\": \"{\\\"__current_case__\\\": 0, \\\"effective_opts_selector\\\": \\\"--enone\\\"}\", \"alignment_infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"refining_opts\": \"{\\\"__current_case__\\\": 0, \\\"refining_opts_selector\\\": \\\"\\\"}\", \"model_construction_opts\": \"{\\\"model_construction_opts_selector\\\": \\\"--fast\\\", \\\"symfrac\\\": \\\"0.5\\\", \\\"__current_case__\\\": 0}\", \"relative_weights_opts\": \"{\\\"relative_weights_opts_selector\\\": \\\"--wpb\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "1.1.0.2", 
+            "type": "tool", 
+            "uuid": "45f5756e-8975-475b-b2bd-4f85c924f1e4", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "cmfile_outfile", 
+                    "uuid": "8aac4589-e13d-4a40-881c-44368ebb0a9a"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "summary_outfile", 
+                    "uuid": "770139a3-c0e1-49ab-a340-f2707efae702"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "refined_multiple_alignment_output", 
+                    "uuid": "d7a8130a-015f-4b03-b630-146693e67200"
+                }
+            ]
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmstat/1.1.0.1", 
+            "id": 10, 
+            "input_connections": {
+                "cm_opts|cmfile": {
+                    "id": 9, 
+                    "output_name": "cmfile_outfile"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Summary statistics", 
+                    "name": "cm_opts"
+                }
+            ], 
+            "label": null, 
+            "name": "Summary statistics", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1084, 
+                "top": 800.296875
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outfile"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmstat/1.1.0.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "c47a7c52ac4f", 
+                "name": "infernal", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"cm_opts\": \"{\\\"cmfile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1, \\\"cm_opts_selector\\\": \\\"histdb\\\"}\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "1.1.0.1", 
+            "type": "tool", 
+            "uuid": "14a28833-4bdb-45b3-bd01-d52d20859b03", 
+            "workflow_outputs": []
+        }, 
+        "11": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmsearch/1.1.0.2", 
+            "id": 11, 
+            "input_connections": {
+                "cm_opts|cmfile": {
+                    "id": 9, 
+                    "output_name": "cmfile_outfile"
+                }, 
+                "seqdb": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Search covariance model(s)", 
+                    "name": "seqdb"
+                }, 
+                {
+                    "description": "runtime parameter for tool Search covariance model(s)", 
+                    "name": "cm_opts"
+                }
+            ], 
+            "label": null, 
+            "name": "Search covariance model(s)", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "multiple_alignment_output", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1022.5, 
+                "top": 1031.296875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmsearch/1.1.0.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "c47a7c52ac4f", 
+                "name": "infernal", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"A\": \"\\\"false\\\"\", \"nohmm\": \"\\\"false\\\"\", \"--acyk\": \"\\\"false\\\"\", \"bottomonly\": \"\\\"false\\\"\", \"g\": \"\\\"false\\\"\", \"inclusion_thresholds_opts\": \"{\\\"__current_case__\\\": 0, \\\"inclusion_thresholds_selector\\\": \\\"\\\"}\", \"__page__\": 0, \"max\": \"\\\"false\\\"\", \"notrunc\": \"\\\"false\\\"\", \"mid\": \"\\\"false\\\"\", \"seqdb\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"toponly\": \"\\\"false\\\"\", \"cm_opts\": \"{\\\"cmfile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1, \\\"cm_opts_selector\\\": \\\"histdb\\\"}\", \"reporting_thresholds_opts\": \"{\\\"reporting_thresholds_selector\\\": \\\"\\\", \\\"__current_case__\\\": 0}\", \"cyk\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "1.1.0.2", 
+            "type": "tool", 
+            "uuid": "31dc8347-3b29-4be8-af30-4f069b73f148", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "outfile", 
+                    "uuid": "3507b26c-4fe3-498e-85eb-52f586b3d244"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "multiple_alignment_output", 
+                    "uuid": "561169ba-665b-4dfd-bf18-a725d61b29be"
+                }
+            ]
+        }
+    }, 
+    "uuid": "1d6781a1-c14a-4716-ad3a-07a25d0d2b59"
+}
