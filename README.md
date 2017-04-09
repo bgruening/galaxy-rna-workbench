@@ -225,7 +225,7 @@ In this section we list all tools that have been integrated in the RNA workbench
 # How to contribute
 
 The RNA-workbench community welcomes new contributions and help in any way.
-We have collected detailed instructions and some guidence in our [CONTRIBUTING.md](https://github.com/bgruening/galaxy-rna-workbench/blob/master/CONTRIBUTING.md).
+We have collected detailed instructions and some guidance in our [CONTRIBUTING.md](https://github.com/bgruening/galaxy-rna-workbench/blob/master/CONTRIBUTING.md).
 
 # Support and bug reports
 
