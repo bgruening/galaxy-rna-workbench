@@ -30,6 +30,7 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [RNA-Seq](#rna-seq)
   - [RNA target prediction](#rna-target-prediction)
 - [Contributors](#contributors)
+- [How to contribute](#how-to-contribute)
 - [Support and bug reports](#support-and-bug-reports)
 - [MIT license](#mit-license)
 
@@ -220,6 +221,11 @@ In this section we list all tools that have been integrated in the RNA workbench
  - [Markus Wolfien](https://github.com/mwolfien)
  - [Dilmurat Yusuf](https://github.com/dyusuf)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+# How to contribute
+
+The RNA-workbench community welcomes new contributions and help in any way.
+We have collected detailed instructions and some guidance in our [CONTRIBUTING.md](https://github.com/bgruening/galaxy-rna-workbench/blob/master/CONTRIBUTING.md).
 
 # Support and bug reports
 
