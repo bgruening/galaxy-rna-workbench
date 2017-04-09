@@ -35,7 +35,7 @@ RUN pip install ephemeris -U && \
     workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 RUN startup_lite && \
-    sleep 100 && \
+    sleep 200 && \
     . $GALAXY_VIRTUAL_ENV/bin/activate && \
     python /usr/local/lib/python2.7/dist-packages/ephemeris/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml
 
