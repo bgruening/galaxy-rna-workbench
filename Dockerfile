@@ -39,12 +39,12 @@ ADD import_workflows.py $GALAXY_ROOT/import_workflows.py
 # Download training data and populate the data library
 RUN startup_lite && \
     sleep 100 && \
-    python $GALAXY_ROOT/import_workflows.py --workflow_path /home/galaxy/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
+    workflow-install --workflow_path /home/galaxy/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 RUN startup_lite && \
     sleep 100 && \
     . $GALAXY_VIRTUAL_ENV/bin/activate && \
-    python $GALAXY_ROOT/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml
+    python /usr/local/lib/python2.7/dist-packages/ephemeris/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml
 
 # Add visualisations
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > master.tar.gz && \
