@@ -4,11 +4,7 @@ FROM bgruening/galaxy-rna-seq:17.01
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
-# Enable Conda dependency resolution
-ENV GALAXY_CONFIG_CONDA_AUTO_INSTALL=True \
-    GALAXY_CONFIG_CONDA_AUTO_INIT=True \
-    GALAXY_CONFIG_USE_CACHED_DEPENDENCY_MANAGER=True \
-    GALAXY_CONFIG_BRAND="RNA workbench"
+ENV GALAXY_CONFIG_BRAND="RNA workbench"
 
 # Install tools
 ADD rna_workbench.yml $GALAXY_ROOT/tools.yaml
@@ -25,7 +21,6 @@ RUN install-tools $GALAXY_ROOT/tools_2.yaml && \
 ADD ./rna-workbench-tours/* $GALAXY_ROOT/config/plugins/tours/
 
 # Data libraries
-#ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
 ADD library_data.yaml $GALAXY_ROOT/library_data.yaml
 
 ADD ./rna-workbench-workflow/Galaxy-Workflow-trimming_mapping-treatment_untreatment-SE_PE.ga $GALAXY_HOME/rnateam.workflow.trimming_mapping.ga
@@ -33,8 +28,6 @@ ADD ./rna-workbench-workflow/Galaxy-Workflow-Analyse_unaligned_ncRNAs.ga $GALAXY
 ADD ./rna-workbench-workflow/Galaxy-Workflow-PAR-CLIP_analysis.ga $GALAXY_HOME/rnateam.workflow.analyse_PAR-CLIP.ga
 ADD ./rna-workbench-workflow/Galaxy-Workflow-AREsite2_CLIP_analysis.ga $GALAXY_HOME/rnateam.workflow.aresite2_CLIP.ga
 ADD ./rna-workbench-workflow/Galaxy-Workflow-RNA_family_model_construction.ga $GALAXY_HOME/rnateam.workflow.RNA_family_model_construction.ga
-
-ADD import_workflows.py $GALAXY_ROOT/import_workflows.py
 
 # Download training data and populate the data library
 RUN startup_lite && \
