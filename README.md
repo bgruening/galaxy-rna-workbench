@@ -30,6 +30,7 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [RNA-Seq](#rna-seq)
   - [RNA target prediction](#rna-target-prediction)
 - [Contributors](#contributors)
+- [How to contribute](#how-to-contribute)
 - [Support and bug reports](#support-and-bug-reports)
 - [MIT license](#mit-license)
 
