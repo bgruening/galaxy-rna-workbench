@@ -22,7 +22,7 @@ opened using [this form](https://github.com/bgruening/galaxy-rna-workbench/issue
   should be made through pull requests to this repository (with just two
   exceptions outlined below).
 
-* If you are new to Git, the [Try Git](http://try.github.com/) tutorial is a good places to start.
+* If you are new to Git, the [Try Git](http://try.github.com/) tutorial is a good place to start.
   More learning resources are listed at https://help.github.com/articles/good-resources-for-learning-git-and-github/ .
 
 * Make sure you have a free [GitHub](https://github.com/) account.
@@ -54,10 +54,12 @@ opened using [this form](https://github.com/bgruening/galaxy-rna-workbench/issue
 * The pull request should pass all the continuous integration tests which are
   automatically run by GitHub using e.g. Travis CI.
 
-* Your pull request will be reviewed by the RNA community and merged if one member of the core team
+* Your pull request will be reviewed by the RNA community and merged if a member of the core team
   approves the changes.
 
-## A Quick Note about new Tools
+## A Quick Note about new Tools, Workflows and Tours
+
+### Tools
 
   Galaxy tools should be published to the
   [Tool Shed](https://galaxyproject.org/toolshed) and specified in our
@@ -66,3 +68,10 @@ opened using [this form](https://github.com/bgruening/galaxy-rna-workbench/issue
   a few tests to check the integrity.
 
   More information about tool development can be found [on the community hub](https://galaxyproject.org/develop).
+
+### Workflows
+  Galaxy workflows can be contributed by simply putting them into our [workflow folder](https://github.com/bgruening/galaxy-rna-workbench/tree/master/rna-workbench-workflow). Our Build infrastructure will deploy this workflow in the RNA-workbench. Please make sure that all tools needed for the workflow are integrated into the RNA-workbench. If not please add these tools beforehand.
+
+### Tours
+  Galaxy interactive tours can be contributed by simply putting them into our [tours folder](https://github.com/bgruening/galaxy-rna-workbench/tree/master/rna-workbench-tours). Our Build infrastructure will deploy all tours in this folder in the RNA-workbench.
+
