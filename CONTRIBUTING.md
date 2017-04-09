@@ -57,7 +57,9 @@ opened using [this form](https://github.com/bgruening/galaxy-rna-workbench/issue
 * Your pull request will be reviewed by the RNA community and merged if one member of the core team
   approves the changes.
 
-## A Quick Note about new Tools
+## A Quick Note about new Tools, Workflows and Tours
+
+### Tools
 
   Galaxy tools should be published to the
   [Tool Shed](https://galaxyproject.org/toolshed) and specified in our
@@ -66,3 +68,10 @@ opened using [this form](https://github.com/bgruening/galaxy-rna-workbench/issue
   a few tests to check the integrity.
 
   More information about tool development can be found [on the community hub](https://galaxyproject.org/develop).
+
+### Workflows
+  Galaxy workflows can be contributed by simply putting them into our [workflow folder](https://github.com/bgruening/galaxy-rna-workbench/tree/master/rna-workbench-workflow). Our Build infrastrucutre will deploy this workflow in the RNA-workbench. Please make sure that all tools needed for the workflow are integrated into the RNA-workbench. If not please add these tools as well.
+
+### Tours
+  Galaxy interactive tours can be contributed by simply putting them into our [tours folder](https://github.com/bgruening/galaxy-rna-workbench/tree/master/rna-workbench-tours). Our Build infrastrucutre will deploy all tours in this folder in the RNA-workbench.
+
