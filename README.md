@@ -257,7 +257,7 @@ Tool | Description | Reference
  - [Sebastian Will](https://github.com/s-will)
  - [Markus Wolfien](https://github.com/mwolfien)
  - [Dilmurat Yusuf](https://github.com/dyusuf)
- - [Pavankumar Videm] (https://github.com/pavanvidem)
+ - [Pavankumar Videm](https://github.com/pavanvidem)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # How to contribute
