@@ -59,7 +59,9 @@ tools:
 - name: locarna_multiple
   owner: rnateam
   tool_panel_section_label: "RNA Alignment"
-
+  revisions:
+    - 8414fea2a6fd
+ 
 - name: segmentation_fold
   owner: yhoogstrate
   tool_panel_section_label: "RNA Alignment"
