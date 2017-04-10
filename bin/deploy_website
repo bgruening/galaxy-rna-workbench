@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+# Deploy the website automaticallz
+
+git config user.name "Travis-CI"
+git config user.email "noreply@travis-ci.org"
+git remote rm origin && git remote add origin https://bebatut:${GH_TOKEN}@github.com/bgruening/docker-galaxy-stable
+git fetch origin
+git checkout master
+./bin/generate_index_md
+git add index.md
+git commit -m "[ci skip] Update site on `date "+%Y-%m-%d %H:%M:%S"`"
+git push origin master
