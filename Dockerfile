@@ -28,17 +28,13 @@ ADD library_data.yaml $GALAXY_ROOT/library_data.yaml
 # Add workflows to the Docker image
 ADD ./rna-workbench-workflow/* $GALAXY_HOME/workflows/
 
+ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
+
 # Download training data and populate the data library
 RUN pip install ephemeris -U && \
     startup_lite && \
     sleep 100 && \
-    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
-
-ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
-
-RUN startup_lite && \
-    sleep 60 && \
-    . $GALAXY_VIRTUAL_ENV/bin/activate && \
+    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
     python $GALAXY_ROOT/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 # Add visualisations
