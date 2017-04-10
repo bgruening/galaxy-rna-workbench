@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# Generate the website out of the README file
+
+
+## Generate the index.md
+# Add the top 
+echo "---" > index.md
+echo "layout: default" >> index.md
+echo "---" >> index.md
+echo "" >> index.md
+echo "# About" >> index.md
+
+# Add README content
+cat README.md >> index.md
+
+# Remove not needed lines
+sed -i.bak '/^RNA Galaxy Workbench/d' index.md
+sed -i.bak '/^==================/d' index.md
+sed -i.bak '/Build Status/d' index.md
+sed -i.bak '/Docker Repository on Quay/d' index.md
