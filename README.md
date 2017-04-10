@@ -190,17 +190,41 @@ In this section we list all tools that have been integrated in the RNA workbench
 | [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2016](https://dx.doi.org/10.1038/nmeth.3688) |
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## RNA-Seq
+## NGS | RNA-Seq
 
 | Tool | Description | Reference |
 | ---- | ----------- | --------- |
-| [BlockClust](http://www.bioinf.uni-freiburg.de/Software/) | Non-coding RNA clustering from deep sequencing read profiles | - |
+| [BlockClust](https://toolshed.g2.bx.psu.edu/view/rnateam/blockclust/) | Small non-coding RNA clustering from deep sequencing read profiles | [Videm et al. 2014](https://doi.org/10.1093/bioinformatics/btu270) |
 | [FlaiMapper](https://github.com/yhoogstrate/flaimapper) | A tool for computational annotation of small ncRNA-derived fragments using RNA-seq data | [Hoogstrate et al. 2015](https://doi.org/10.1093/bioinformatics/btu696) |
 | [MiRDeep2](https://www.mdc-berlin.de/8551903/en/) | Discovers microRNA genes by analyzing sequenced RNAs | [Friedländer et al. 2008](https://dx.doi.org/10.1038/nbt1394) |
 | [NASTIseq](https://ohlerlab.mdc-berlin.de/software/NASTIseq_104/)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Li et al. 2013](https://dx.doi.org/10.1101/gr.149310.112) |
 | [PIPmiR](https://ohlerlab.mdc-berlin.de/software/Pipeline_for_the_Identification_of_Plant_miRNAs_84/) | An algorithm to identify novel plant miRNA genes from a combination of deep sequencing data and genomic features | [Breakfield et al. 2011](https://dx.doi.org/10.1101/gr.123547.111)|
 | [SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova et al. 2011](https://dx.doi.org/10.1093/bioinformatics/bts611) |
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+## NGS | Quantification
+| Tool | Description | Reference |
+| ---- | ----------- | --------- |
+| [featurecounts](http://bioinf.wehi.edu.au/featureCounts/) | a ultrafast and accurate read summarization program | [Liao et al. 2014](http://dx.doi.org/10.1093/bioinformatics/btt656) |
+| [htseq-count](http://www-huber.embl.de/HTSeq/doc/count.html) | Tool for counting reads in features | [Anders et al. 2015](https://dx.doi.org/10.1093%2Fbioinformatics%2Fbtu638) |
+| [Sailfish](http://www.cs.cmu.edu/~ckingsf/software/sailfish/) | Rapid Alignment-free Quantification of Isoform Abundance | [Patro et al. 2014](http://dx.doi.org/10.1038/nbt.2862) |
+| [Salmon](https://combine-lab.github.io/salmon/) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](http://dx.doi.org/10.1038/nmeth.4197) |
+## NGS | Transcript Assembly
+| Tool | Description | Reference |
+| ---- | ----------- | --------- |
+| [cufflinks tool suite](http://cole-trapnell-lab.github.io/cufflinks/) | Transcriptome assembly and differential expression analysis for RNA-Seq | [Trapnell et al. 2012](https://dx.doi.org/10.1038/nprot.2012.016), [Trapnell et al. 2013] (https://dx.doi.org/10.1038/nbt.2450) |
+| [trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084) |
+## NGS | Read Mapping
+| Tool | Description | Reference |
+| ---- | ----------- | --------- |
+| [HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://dx.doi.org/10.1038/nprot.2016.095) |
+| [TopHat2](https://ccb.jhu.edu/software/tophat/) | Spliced aligner for RNA-seq experiments | [Kim et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084) |
+## NGS | Utilities
+| Tool | Description | Reference |
+| ---- | ----------- | --------- |
+| [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](http://doi.org/10.1186/s13059-014-0550-8) |
+| [samtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [H et al. 2009](https://doi.org/10.1093/bioinformatics/btp352) |
+| [Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | https://github.com/FelixKrueger/TrimGalore |
 
 ## RNA target prediction
 
@@ -222,6 +246,7 @@ In this section we list all tools that have been integrated in the RNA workbench
  - [Sebastian Will](https://github.com/s-will)
  - [Markus Wolfien](https://github.com/mwolfien)
  - [Dilmurat Yusuf](https://github.com/dyusuf)
+ - [Pavankumar Videm] (https://github.com/pavanvidem)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # How to contribute
