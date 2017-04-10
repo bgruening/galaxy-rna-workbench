@@ -112,6 +112,8 @@ Whether you run Docker images using Kitematic or the command line interface, the
 ## Users and passwords
 
 The Galaxy Admin User has the username `admin@galaxy.org` and the password `admin`.
+In order to use certain features of Galaxy, like e.g. the RNA structure visualization, one has to be logged in.
+Also the installation of additional tools requires a login.
 
 The PostgreSQL username is `galaxy`, the password `galaxy` and the database name `galaxy`.
 
