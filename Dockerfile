@@ -31,10 +31,11 @@ ADD ./rna-workbench-workflow/* $GALAXY_HOME/workflows/
 ADD setup_data_libraries.py $GALAXY_ROOT/setup_data_libraries.py
 
 # Download training data and populate the data library
-RUN pip install ephemeris -U && \
-    startup_lite && \
+RUN startup_lite && \
     sleep 100 && \
+    pip install ephemeris -U && \
     workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
+    sleep 10 && \
     python $GALAXY_ROOT/setup_data_libraries.py -i $GALAXY_ROOT/library_data.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 # Add visualisations
