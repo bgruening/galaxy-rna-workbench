@@ -233,7 +233,7 @@ Tool | Description | Reference
 Tool | Description | Reference
 ---- | ----------- | ---------
 [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](http://doi.org/10.1186/s13059-014-0550-8)
-[samtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [H et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
+[samtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
 [Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | https://github.com/FelixKrueger/TrimGalore
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
