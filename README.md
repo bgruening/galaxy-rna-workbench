@@ -190,6 +190,14 @@ Tool | Description | Reference
 [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2016](https://dx.doi.org/10.1038/nmeth.3688)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
+## NGS | Preprocessing
+
+Tool | Description | Reference
+---- | ----------- | ---------
+[FastQC!](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | A quality control tool for high throughput sequence data | -
+[Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | [](https://github.com/FelixKrueger/TrimGalore)
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
 ## NGS | RNA-Seq
 
 Tool | Description | Reference
@@ -202,39 +210,48 @@ Tool | Description | Reference
 [SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova et al. 2011](https://dx.doi.org/10.1093/bioinformatics/bts611)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS | Quantification
-
-Tool | Description | Reference
----- | ----------- | ---------
-[featurecounts](http://bioinf.wehi.edu.au/featureCounts/) | a ultrafast and accurate read summarization program | [Liao et al. 2014](http://dx.doi.org/10.1093/bioinformatics/btt656)
-[htseq-count](http://www-huber.embl.de/HTSeq/doc/count.html) | Tool for counting reads in features | [Anders et al. 2015](https://dx.doi.org/10.1093%2Fbioinformatics%2Fbtu638)
-[Sailfish](http://www.cs.cmu.edu/~ckingsf/software/sailfish/) | Rapid Alignment-free Quantification of Isoform Abundance | [Patro et al. 2014](http://dx.doi.org/10.1038/nbt.2862)
-[Salmon](https://combine-lab.github.io/salmon/) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](http://dx.doi.org/10.1038/nmeth.4197)
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
-## NGS | Transcript Assembly
-
-Tool | Description | Reference
----- | ----------- | ---------
-[cufflinks tool suite](http://cole-trapnell-lab.github.io/cufflinks/) | Transcriptome assembly and differential expression analysis for RNA-Seq | [Trapnell et al. 2012](https://dx.doi.org/10.1038/nprot.2012.016), [Trapnell et al. 2013](https://dx.doi.org/10.1038/nbt.2450)
-[trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
 ## NGS | Read Mapping
 
 Tool | Description | Reference
 ---- | ----------- | ---------
 [HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://dx.doi.org/10.1038/nprot.2016.095)
 [TopHat2](https://ccb.jhu.edu/software/tophat/) | Spliced aligner for RNA-seq experiments | [Kim et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
+[Bowtie 2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead et al. 2012](https://dx.doi.org/10.1038/nmeth.1923) 
+[BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2009](https://dx.doi.org/10.1093/bioinformatics/btp324), [Li and Durbin 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+## NGS | Transcript Assembly
+
+Tool | Description | Reference
+---- | ----------- | ---------
+[Cufflinks tool suite](http://cole-trapnell-lab.github.io/cufflinks/) | Transcriptome assembly and differential expression analysis for RNA-Seq | [Trapnell et al. 2012](https://dx.doi.org/10.1038/nprot.2012.016), [Trapnell et al. 2013](https://dx.doi.org/10.1038/nbt.2450)
+[Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+## NGS | Quantification
+
+Tool | Description | Reference
+---- | ----------- | ---------
+[featureCounts](http://bioinf.wehi.edu.au/featureCounts/) | a ultrafast and accurate read summarization program | [Liao et al. 2014](http://dx.doi.org/10.1093/bioinformatics/btt656)
+[htseq-count](http://www-huber.embl.de/HTSeq/doc/count.html) | Tool for counting reads in features | [Anders et al. 2015](https://dx.doi.org/10.1093%2Fbioinformatics%2Fbtu638)
+[Sailfish](http://www.cs.cmu.edu/~ckingsf/software/sailfish/) | Rapid Alignment-free Quantification of Isoform Abundance | [Patro et al. 2014](http://dx.doi.org/10.1038/nbt.2862)
+[Salmon](https://combine-lab.github.io/salmon/) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](http://dx.doi.org/10.1038/nmeth.4197)
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+## NGS | Differential expression analysis
+
+Tool | Description | Reference
+---- | ----------- | ---------
+[DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](http://doi.org/10.1186/s13059-014-0550-8)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## NGS | Utilities
 
 Tool | Description | Reference
 ---- | ----------- | ---------
-[DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](http://doi.org/10.1186/s13059-014-0550-8)
-[samtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
-[Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | https://github.com/FelixKrueger/TrimGalore
+[SAMtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
+[BEDTools](http://bedtools.readthedocs.io/en/latest/) | Utilities for genome arithmetic | [Quinlan and Hall 2010](https://doi.org/10.1093/bioinformatics/btq033)
+[deepTools](https://deeptools.github.io/) | Tools for exploring deep-sequencing data | [Ramirez et al. 2014](https://doi.org/10.1093/nar/gku365)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## RNA target prediction
