@@ -27,7 +27,7 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [RNA annotation](#rna-annotation)
   - [RNA-protein interaction](#rna-protein-interaction)
   - [RNA target prediction](#rna-target-prediction)
-  - [RNA-Seq](#ngs-preprocessing)
+  - [RNA-Seq](#ngs---preprocessing)
   - [Ribosome profiling](#ribosome-profiling)
 - [Contributors](#contributors)
 - [How to contribute](#how-to-contribute)
