@@ -27,7 +27,7 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [RNA annotation](#rna-annotation)
   - [RNA-protein interaction](#rna-protein-interaction)
   - [Ribosome profiling](#ribosome-profiling)
-  - [RNA-Seq](#ngs-preprocessing)
+  - [RNA-Seq](#ngs|preprocessing)
   - [RNA target prediction](#rna-target-prediction)
 - [Contributors](#contributors)
 - [How to contribute](#how-to-contribute)
@@ -195,7 +195,7 @@ Tool | Description | Reference
 Tool | Description | Reference
 ---- | ----------- | ---------
 [FastQC!](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | A quality control tool for high throughput sequence data | -
-[Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | [](https://github.com/FelixKrueger/TrimGalore)
+[Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | -
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## NGS | RNA-Seq
