@@ -26,9 +26,9 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [RNA alignment](#rna-alignment)
   - [RNA annotation](#rna-annotation)
   - [RNA-protein interaction](#rna-protein-interaction)
-  - [Ribosome profiling](#ribosome-profiling)
-  - [RNA-Seq](#ngs|preprocessing)
   - [RNA target prediction](#rna-target-prediction)
+  - [RNA-Seq](#ngs-preprocessing)
+  - [Ribosome profiling](#ribosome-profiling)
 - [Contributors](#contributors)
 - [How to contribute](#how-to-contribute)
 - [Support and bug reports](#support-and-bug-reports)
@@ -183,14 +183,14 @@ Tool | Description | Reference
 [RNAcommender](https://github.com/gianlucacorrado/RNAcommender) | A tool for genome-wide recommendation of RNA-protein interactions | [Corrado et al. 2016](https://doi.org/10.1093/bioinformatics/btw517)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## Ribosome profiling
+## RNA target prediction
 
 Tool | Description | Reference
 ---- | ----------- | ---------
-[RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2016](https://dx.doi.org/10.1038/nmeth.3688)
+[TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | -
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS | Preprocessing
+## NGS - Preprocessing
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -198,7 +198,7 @@ Tool | Description | Reference
 [Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | -
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS | RNA-Seq
+## NGS - RNA-Seq
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -210,7 +210,7 @@ Tool | Description | Reference
 [SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova et al. 2011](https://dx.doi.org/10.1093/bioinformatics/bts611)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS | Read Mapping
+## NGS - Read Mapping
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -220,7 +220,7 @@ Tool | Description | Reference
 [BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2009](https://dx.doi.org/10.1093/bioinformatics/btp324), [Li and Durbin 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS | Transcript Assembly
+## NGS - Transcript Assembly
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -228,7 +228,7 @@ Tool | Description | Reference
 [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS | Quantification
+## NGS - Quantification
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -238,14 +238,14 @@ Tool | Description | Reference
 [Salmon](https://combine-lab.github.io/salmon/) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](http://dx.doi.org/10.1038/nmeth.4197)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS | Differential expression analysis
+## NGS - Differential expression analysis
 
 Tool | Description | Reference
 ---- | ----------- | ---------
 [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](http://doi.org/10.1186/s13059-014-0550-8)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS | Utilities
+## NGS - Utilities
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -254,11 +254,11 @@ Tool | Description | Reference
 [deepTools](https://deeptools.github.io/) | Tools for exploring deep-sequencing data | [Ramirez et al. 2014](https://doi.org/10.1093/nar/gku365), [Ramirez et al. 2016](https://doi.org/10.1093/nar/gkw257)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## RNA target prediction
+## Ribosome profiling
 
 Tool | Description | Reference
 ---- | ----------- | ---------
-[TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | -
+[RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2016](https://dx.doi.org/10.1038/nmeth.3688)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # Contributors
