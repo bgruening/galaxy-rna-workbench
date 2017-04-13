@@ -27,7 +27,7 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [RNA annotation](#rna-annotation)
   - [RNA-protein interaction](#rna-protein-interaction)
   - [RNA target prediction](#rna-target-prediction)
-  - [RNA-Seq](#ngs---preprocessing)
+  - [RNA Seq and HTS analysis](#rna-seq-and-hts-analysis)
   - [Ribosome profiling](#ribosome-profiling)
 - [Contributors](#contributors)
 - [How to contribute](#how-to-contribute)
@@ -190,7 +190,9 @@ Tool | Description | Reference
 [TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | -
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS - Preprocessing
+## RNA Seq and HTS analysis
+
+### Preprocessing
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -198,7 +200,7 @@ Tool | Description | Reference
 [Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | -
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS - RNA-Seq
+### RNA-Seq
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -210,7 +212,7 @@ Tool | Description | Reference
 [SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova et al. 2011](https://dx.doi.org/10.1093/bioinformatics/bts611)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS - Read Mapping
+### Read Mapping
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -220,7 +222,7 @@ Tool | Description | Reference
 [BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2009](https://dx.doi.org/10.1093/bioinformatics/btp324), [Li and Durbin 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS - Transcript Assembly
+### Transcript Assembly
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -228,7 +230,7 @@ Tool | Description | Reference
 [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS - Quantification
+### Quantification
 
 Tool | Description | Reference
 ---- | ----------- | ---------
@@ -238,14 +240,14 @@ Tool | Description | Reference
 [Salmon](https://combine-lab.github.io/salmon/) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](http://dx.doi.org/10.1038/nmeth.4197)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS - Differential expression analysis
+### Differential expression analysis
 
 Tool | Description | Reference
 ---- | ----------- | ---------
 [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](http://doi.org/10.1186/s13059-014-0550-8)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## NGS - Utilities
+### Utilities
 
 Tool | Description | Reference
 ---- | ----------- | ---------
