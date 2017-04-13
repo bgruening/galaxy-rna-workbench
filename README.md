@@ -29,6 +29,7 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [RNA target prediction](#rna-target-prediction)
   - [RNA Seq and HTS analysis](#rna-seq-and-hts-analysis)
   - [Ribosome profiling](#ribosome-profiling)
+- [Training](#training)
 - [Contributors](#contributors)
 - [How to contribute](#how-to-contribute)
 - [Support and bug reports](#support-and-bug-reports)
@@ -262,6 +263,12 @@ Tool | Description | Reference
 ---- | ----------- | ---------
 [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2016](https://dx.doi.org/10.1038/nmeth.3688)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+# Training
+
+To learn about RNA sequencing data analysis, we recommend you to have a look at the training material from the [Galaxy Training network](http://galaxyproject.github.io/training-material/RNA-Seq/), and particularly the tutorial about the [Reference-based RNA-seq data analysis](https://galaxyproject.github.io/training-material//RNA-Seq/tutorials/ref_based).
+
+In the Galaxy RNA workbench, you will also find way to learn about the RNA analyis with some [Galaxy interactive tours](https://github.com/galaxyproject/galaxy-tours) to show you the way into the Galaxy instance, its tools and possibilities.
 
 # Contributors
 
