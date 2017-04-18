@@ -38,108 +38,34 @@
 
 api_key: admin
 galaxy_instance: http://localhost:8080
+install_resolver_dependencies: true
+install_tool_dependencies: false
 tools:
-
-# RNA Structure Analysis
-
-- name: suite_viennarna
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
-  owner: rnateam
-  tool_panel_section_label: "RNA Structure Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-
-- name: kinwalker
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
-  owner: rnateam
-  tool_panel_section_label: "RNA Structure Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-
-- name: rnalien
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
-  owner: rnateam
-  tool_panel_section_label: "RNA Structure Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
-- name: mea
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
-  owner: rnateam
-  tool_panel_section_label: "RNA Structure Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-
-- name: rnaz
-  owner: bgruening
-  tool_panel_section_label: "RNA Structure Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: cofold
-  owner: rnateam
-  tool_panel_section_label: "RNA Structure Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: rnashapes
-  owner: rnateam
-  tool_panel_section_label: "RNA Structure Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: antarna
-  owner: rnateam
-  tool_panel_section_label: "RNA Structure Analysis"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 # RNA Alignment
 
 - name: compalignp
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA Alignment"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: mafft
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA Alignment"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: suite_locarna
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA Alignment"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: locarna_multiple
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA Alignment"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
     - 8414fea2a6fd
-
+ 
 - name: segmentation_fold
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: yhoogstrate
   tool_panel_section_label: "RNA Alignment"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: selectsequencesfrommsa
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA Alignment"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
