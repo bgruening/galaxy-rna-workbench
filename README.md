@@ -249,7 +249,7 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[featureCounts](http://bioinf.wehi.edu.au/featureCounts/) | a ultrafast and accurate read summarization program | [Liao et al. 2014](http://dx.doi.org/10.1093/bioinformatics/btt656)
+[featureCounts](http://bioinf.wehi.edu.au/featureCounts/) | Ultrafast and accurate read summarization program | [Liao et al. 2014](http://dx.doi.org/10.1093/bioinformatics/btt656)
 [htseq-count](http://www-huber.embl.de/HTSeq/doc/count.html) | Tool for counting reads in features | [Anders et al. 2015](https://dx.doi.org/10.1093%2Fbioinformatics%2Fbtu638)
 [Sailfish](http://www.cs.cmu.edu/~ckingsf/software/sailfish/) | Rapid Alignment-free Quantification of Isoform Abundance | [Patro et al. 2014](http://dx.doi.org/10.1038/nbt.2862)
 [Salmon](https://combine-lab.github.io/salmon/) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](http://dx.doi.org/10.1038/nmeth.4197)
