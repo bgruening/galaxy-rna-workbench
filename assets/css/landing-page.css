@@ -164,3 +164,22 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+td, th {
+    padding-right: 15px;
+}
+
+table tr td:first-child, table tr th:first-child {
+    padding-left: 7px;
+    width: 20%;
+}
+
+table tr td:last-child, table tr th:last-child {
+    padding-right: 7px;
+    width: 20%;
+}
