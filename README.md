@@ -286,7 +286,9 @@ Tool | Description | Reference
 
 To learn about RNA sequencing data analysis, we recommend you to have a look at the training material from the [Galaxy Training network](http://galaxyproject.github.io/training-material/RNA-Seq/), and particularly the tutorial about the [Reference-based RNA-seq data analysis](https://galaxyproject.github.io/training-material//RNA-Seq/tutorials/ref_based).
 
-In the Galaxy RNA workbench we also included [Galaxy interactive tours](https://github.com/galaxyproject/galaxy-tours) to guide you through the Galaxy, it's tools and possibilities. 
+In the Galaxy RNA workbench, we also included [Galaxy interactive tours](https://github.com/galaxyproject/galaxy-tours) to guide you through the Galaxy, it's tools and possibilities.
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # Contributors
 
@@ -302,6 +304,7 @@ In the Galaxy RNA workbench we also included [Galaxy interactive tours](https://
  - [Markus Wolfien](https://github.com/mwolfien)
  - [Dilmurat Yusuf](https://github.com/dyusuf)
  - [Pavankumar Videm](https://github.com/pavanvidem)
+
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # How to contribute
