@@ -173,6 +173,7 @@ Tool | Description | Reference
 [RNAcode](http://wash.github.io/rnacode/) | Predicts protein coding regions in a a set of homologous nucleotide sequences | [Washietl et al. 2011](https://dx.doi.org/10.1261/rna.2536111)
 [RNAmmer](http://www.cbs.dtu.dk/services/RNAmmer/) | Predicts 5s/8s, 16s/18s, and 23s/28s ribosomal RNA in full genome sequences | [Lagesen et al. 2007](https://dx.doi.org/10.1093/nar/gkm160)
 [tRNAscan](http://lowelab.ucsc.edu/tRNAscan-SE/) | Searches for tRNA genes in genomic sequences | [Lowe and Eddy, 1997](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC146525/)
+[RCAS](https://github.com/BIMSBbioinfo/RCAS) | A generic reporting tool for the functional analysis of transcriptome-wide regions of interest detected by high-throughput experiments | [Uyar et al.](https://www.ncbi.nlm.nih.gov/pubmed/28334930)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
