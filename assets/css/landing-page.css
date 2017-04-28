@@ -22,7 +22,7 @@ h6 {
 }
 
 .lead {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -43,7 +43,6 @@ h6 {
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
 }
 
@@ -51,10 +50,6 @@ h6 {
     width: 400px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-.intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
 @media(max-width:767px) {
@@ -163,4 +158,23 @@ footer {
 
 p.copyright {
     margin: 15px 0 0;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+td, th {
+    padding-right: 15px;
+}
+
+table tr td:first-child, table tr th:first-child {
+    padding-left: 7px;
+    width: 20%;
+}
+
+table tr td:last-child, table tr th:last-child {
+    padding-right: 7px;
+    width: 20%;
 }
