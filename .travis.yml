@@ -9,7 +9,7 @@ env:
   matrix:
   - TOX_ENV=py27
   global:
-  - secure: "XKCJ9UrBl9/UGNYhUmCmbwHkssxmPsff3HeOLZH+QGsHlPzl2l3QVMo/2qp/ZEdks0eRCpRIoGtxHgGI7LM2vyxMy0wLkOkdPx/pFdEMHJXNo7A1zTR7o3Njp+8UoIVIFVOnYBWN4N3Qv0MFNvSXppXBZHX1UHgKQKm7PPOc1DQ="
+  - secure: "MIG6qcBRKqJhmhPTl+IwgLN4nS7jbSOR5TEhC142J4kG708qLOy8uR616Z+6KONE6A8wAX6vFlBhevIr5n+9EZ71FjwxXignN9yM6REG7pxOLHKbp4fJl1jg+wFQq7GxXbdIlatOKZsnca2jh9VezeQg1bc1OzGG9hyVgL+Rp4w="
 
 before_install:
   - wget https://raw.githubusercontent.com/bgruening/galaxy-flavor-testing/master/Makefile
