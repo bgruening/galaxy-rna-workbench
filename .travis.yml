@@ -6,7 +6,10 @@ services:
   - docker
 
 env:
+  matrix:
   - TOX_ENV=py27
+  global:
+  - secure: "XKCJ9UrBl9/UGNYhUmCmbwHkssxmPsff3HeOLZH+QGsHlPzl2l3QVMo/2qp/ZEdks0eRCpRIoGtxHgGI7LM2vyxMy0wLkOkdPx/pFdEMHJXNo7A1zTR7o3Njp+8UoIVIFVOnYBWN4N3Qv0MFNvSXppXBZHX1UHgKQKm7PPOc1DQ="
 
 before_install:
   - wget https://raw.githubusercontent.com/bgruening/galaxy-flavor-testing/master/Makefile
@@ -25,3 +28,12 @@ script:
   - make test_ftp
   - make test_bioblend
   #- make test_docker_in_docker
+
+after_success:
+  - |
+    if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]
+    then
+      echo "Generate and deploy html website"
+      ./bin/deploy_website
+    fi
+
