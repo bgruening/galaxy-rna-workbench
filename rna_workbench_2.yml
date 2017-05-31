@@ -38,74 +38,48 @@
 
 api_key: admin
 galaxy_instance: http://localhost:8080
+install_resolver_dependencies: true
+install_tool_dependencies: false
 tools:
-
 # RNA-protein Interaction
 
 - name: dorina
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: piranha
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: rnacommender
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: intarna
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA-RNA Interaction"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: paralyzer
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: aresite2
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 # RNA Annotation
-
 - name: gotohscan
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: rnacode
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 - name: infernal
   owner: bgruening
   tool_panel_section_label: "RNA Annotation"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
   revisions:
     - c47a7c52ac4f
     - 6e18e0b098cd
@@ -113,69 +87,45 @@ tools:
 - name: rnammer
   owner: lionelguy
   tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 - name: trna_prediction
   owner: bgruening
   tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 - name: rnabob
   owner: rnateam
   tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 - name: fuma
   owner: yhoogstrate
   tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 - name: rcas
   owner: rnateam
   tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 # Ribosome Profiling
 
 - name: ribotaper
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "Ribosome Profiling"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 # RNA-Seq
 
 - name: sortmerna
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
+
+- name: data_manager_sortmerna_database_downloader
+  owner: rnateam
 
 - name: blockclust
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 - name: flaimapper
   owner: yhoogstrate
   tool_panel_section_label: "RNA-Seq"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: true
-  install_tool_dependencies: false
 
 #- name: suite_mirdeep_2_0
 #  owner: rnateam
@@ -187,22 +137,13 @@ tools:
 - name: pipmir
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 - name: nastiseq
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
 
 # RNA Target Prediction
 
 - name: targetfinder
   owner: rnateam
   tool_panel_section_label: "RNA Target Prediction"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
