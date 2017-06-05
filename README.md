@@ -1,3 +1,4 @@
+[![Manuscript](https://img.shields.io/badge/DOI-10.1093%2Fnar%2Fgkx409-blue.svg)](https://doi.org/10.1093/nar/gkx409)
 [![Build Status](https://travis-ci.org/bgruening/galaxy-rna-workbench.svg?branch=master)](https://travis-ci.org/bgruening/galaxy-rna-workbench)
 [![Docker Repository on Quay](https://quay.io/repository/bgruening/galaxy-rna-workbench/status "Docker Repository on Quay")](https://quay.io/repository/bgruening/galaxy-rna-workbench)
 
