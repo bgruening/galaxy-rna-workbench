@@ -3,6 +3,7 @@ layout: default
 ---
 
 # About
+[![Manuscript](https://img.shields.io/badge/DOI-10.1093%2Fnar%2Fgkx409-blue.svg)](https://doi.org/10.1093/nar/gkx409)
 
 <div id="top"></div>
 
