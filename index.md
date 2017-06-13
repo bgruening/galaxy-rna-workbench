@@ -320,6 +320,8 @@ We have collected detailed instructions and some guidance in our [CONTRIBUTING.m
 For support, questions, or feature requests fill bug reports on our [issue page](https://github.com/bgruening/galaxy-rna-workbench/issues).
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
+If you want to support us, please aswer 4 small questions during our [survey](https://www.surveymonkey.de/r/denbi-service?sc=rbc&tool=galaxy-workbench).
+
 # MIT license
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
