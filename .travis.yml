@@ -12,7 +12,7 @@ env:
   - secure: "MIG6qcBRKqJhmhPTl+IwgLN4nS7jbSOR5TEhC142J4kG708qLOy8uR616Z+6KONE6A8wAX6vFlBhevIr5n+9EZ71FjwxXignN9yM6REG7pxOLHKbp4fJl1jg+wFQq7GxXbdIlatOKZsnca2jh9VezeQg1bc1OzGG9hyVgL+Rp4w="
 
 before_install:
-  - wget https://raw.githubusercontent.com/galaxyproject/galaxy-flavor-testing/d443915a43f3632708afbcdb1e97a7adaf5b5c77/Makefile
+  - wget https://github.com/galaxyproject/galaxy-flavor-testing/blob/master/Makefile
   - make docker_install
   - sudo apt-get -qq update
   - sudo apt-get install -y python-dev
