@@ -1,6 +1,6 @@
 # Galaxy - RNA workbench
 
-FROM bgruening/galaxy-rna-structural-analysis:17.01
+FROM bgruening/galaxy-rna-structural-analysis:17.05
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
@@ -31,7 +31,6 @@ ADD ./rna-workbench-workflow/* $GALAXY_HOME/workflows/
 # Download training data and populate the data library
 RUN startup_lite && \
     sleep 30 && \
-    pip install ephemeris -U && \
     workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
     setup-data-libraries -i $GALAXY_ROOT/library_data.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 

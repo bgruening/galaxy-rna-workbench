@@ -1,6 +1,6 @@
-name: Galaxy RNA-workbench Introduction Exercise
+name: Galaxy RNA-workbench ViennaRNA Exercise
 description: The Galaxy RNA-workbench introduces itself
-title_default: "Galaxy RNA-workbench Introduction Exercise"
+title_default: "Galaxy RNA-workbench ViennaRNA Introduction Exercise"
 
 steps:
 
@@ -17,10 +17,6 @@ steps:
     - title: "<b>Goal</b>"
       content: "The goal of this exercise is to <b>become familiar with some of the ViennaRNA tools</b>."
       backdrop: true
-
-#    - title: "<b>Disclaimer</b>"
-#      content: "We are <b>not affiliated</b> with the authors of the paper and we don't make a statement about the relevance or quality of the paper. It is <b>just a fitting example</b> and nothing else.<br>"
-#      backdrop: true
 
     - title: "<b>Overview</b>"
       content: "Together we will go through the following:<br>
@@ -57,23 +53,23 @@ steps:
         - ".upload-button"
 
     - title: "<b>Step 1: Download fasta file with RNA sequence</b>"
-      element: "button#btn-local"
+      element: "#btn-local"
       intro: "This is the upload screen.<br><br>
               Simply click <b>'Next'</b> and tour will open up your file directory for you to select the downloaded <b>'Homo_sapiens_CXCL2_sequence.fa'</b>."
       position: "top"
       postclick:
-        - "button#btn-local"
+        - "#btn-local"
 
     - title: "<b>Step 1: Download fasta file with RNA sequence</b>"
-      element: "button#btn-start"
+      element: "#btn-start"
       intro: "Now that you've selected the file, select <b>'hg19'</b> as the genome
               and fasta as file format.<br><br>
               Click <b>'Next'</b> and the tour will <b>'Start'</b> the upload.<br>
               Galaxy will automatically unpack the file."
       position: "bottom"
       postclick:
-        - "button#btn-start"
-        - "button#btn-close"
+        - "#btn-start"
+        - "#btn-close"
 
     - title: "<b>Step 1: Download fasta file with RNA sequence</b>"
       element: "#right"
@@ -184,19 +180,28 @@ steps:
       backdrop: true
 
     - title: "<b>Step 8: Use binding sites as constraint for folding</b>"
-      element: ".upload-text-content:first"
+      element: ".upload-button"
       content: "We will now upload the file containing constraints (the file <b>'Homo_sapiens_CXCL2_constraints.fa'</b>) from <a href=\"https://github.com/jfallmann/test-data/blob/master/viennarna-galaxy-tour\" target=\"_blank\">github</a> to Galaxy. In contrast to the beginning of this tour, this will be done automatically this time" #, set the file type to txt."
-      preclick:
+      postclick:       
         - ".upload-button"
-        - "button#btn-new"
-      textinsert: |
-            https://github.com/jfallmann/test-data/raw/master/viennarna-galaxy-tour/Homo_sapiens_CXCL2_constraints.fa
+        - "#btn-new"
 
     - title: "<b>Step 8: Use binding sites as constraint for folding</b>"
-      element: "button#btn-start"
+      element: ".upload-text-content"
+      content: "We will now upload the file containing constraints (the file <b>'Homo_sapiens_CXCL2_constraints.fa'</b>) from <a href=\"https://github.com/jfallmann/test-data/blob/master/viennarna-galaxy-tour\" target=\"_blank\">github</a> to Galaxy."
+      textinsert: |
+        https://github.com/jfallmann/test-data/raw/master/viennarna-galaxy-tour/Homo_sapiens_CXCL2_constraints.fa
+
+    - title: "<b>Step 8: Use binding sites as constraint for folding</b>"
+      element: "#btn-start"
       content: "Click next to start the upload.<br>"
       postclick:
-        - "button#btn-start"
+        - "#btn-start"
+
+    - title: "<b>Step 8: Use binding sites as constraint for folding</b>"
+      element: ".upload-box"
+      content: "Set filetype and genome accordingly and click next to proceed.<br>"
+      postclick:
         - "#btn-close"
            
     - title: "<b>Step 8: Use binding sites as constraint for folding</b>"
@@ -231,15 +236,15 @@ steps:
       content: "Now we upload a file containing a multiple alignment of the gene of interest across 8 primate species (the file <b>'CXCL2_8_primates_EPO.aln'</b>) from <<a href=\"https://github.com/jfallmann/test-data/blob/master/viennarna-galaxy-tour\" target=\"_blank\">github</a> to Galaxy, this will be done automatically this time" #, set the file type to txt."
       preclick:
         - ".upload-button"
-        - "button#btn-new"
+        - "#btn-new"
       textinsert: |
             https://github.com/jfallmann/test-data/raw/master/viennarna-galaxy-tour/CXCL2_8_primates_EPO.aln
 
     - title: "<b>Step 10: Download alignment of gene of interest</b>"
-      element: "button#btn-start"
+      element: "#btn-start"
       content: "Click next to start the upload.<br>"
       postclick:
-        - "button#btn-start"
+        - "#btn-start"
         - "#btn-close"
       
     - title: "<b>Step 11: Fold alignment and compare consesus structure to single sequence structure</b>"
