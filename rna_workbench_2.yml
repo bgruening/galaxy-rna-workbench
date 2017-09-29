@@ -147,3 +147,7 @@ tools:
 - name: targetfinder
   owner: rnateam
   tool_panel_section_label: "RNA Target Prediction"
+
+- name: mqc
+  owner: rnateam
+  tool_panel_section_label: "Quality Control"
