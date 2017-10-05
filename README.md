@@ -232,6 +232,8 @@ Tool | Description | Reference
 Tool | Description | Reference
 --- | --- | ---
 [HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://dx.doi.org/10.1038/nprot.2016.095)
+[STAR](https://github.com/alexdobin/STAR) | Rapid spliced aligner for RNA-seq data | [Dobin et al. 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537/STAR-ultrafast-universal-RNA-seq-aligner)
+[STAR-fusion](https://github.com/STAR-Fusion/STAR-Fusion) | Fast fusion gene finder | [Haas et al. 2017](https://www.biorxiv.org/content/early/2017/03/24/120295)
 [TopHat2](https://ccb.jhu.edu/software/tophat/) | Spliced aligner for RNA-seq experiments | [Kim et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
 [Bowtie 2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead et al. 2012](https://dx.doi.org/10.1038/nmeth.1923) 
 [BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2009](https://dx.doi.org/10.1093/bioinformatics/btp324), [Li and Durbin 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
