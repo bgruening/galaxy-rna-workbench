@@ -18,7 +18,7 @@ before_install:
   - make docker_install
   - sudo apt-get -qq update
   - sudo apt-get install -y python-dev
-  - travis_wait 75 make docker_build
+  - make docker_build
   - make docker_run
   - sleep 60
 
