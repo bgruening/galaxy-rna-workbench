@@ -14,10 +14,9 @@ env:
 before_install:
   - set -e
   - rm -rf /home/travis/perl5/ /home/travis/.phpenv /home/travis/gopath /home/travis/otp /home/travis/.gimme/ /home/travis/.rvm /home/travis/.nvm
+  - ls -l /home/travis/
   - wget https://raw.githubusercontent.com/galaxyproject/galaxy-flavor-testing/master/Makefile
   - make docker_install
-  - sudo apt-get -qq update
-  - sudo apt-get install -y python-dev
   - make docker_build
   - make docker_run
   - sleep 60
