@@ -14,7 +14,8 @@ env:
 before_install:
   - set -e
   - rm -rf /home/travis/perl5/ /home/travis/.phpenv /home/travis/gopath /home/travis/otp /home/travis/.gimme/ /home/travis/.rvm /home/travis/.nvm
-  - ls -l /home/travis/
+  - ls -la /home/travis/
+  - du -h /home/travis/
   - wget https://raw.githubusercontent.com/galaxyproject/galaxy-flavor-testing/master/Makefile
   - make docker_install
   - make docker_build
