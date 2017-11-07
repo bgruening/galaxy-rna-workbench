@@ -53,6 +53,7 @@ tools:
 
 - name: rnacommender
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA-protein Interaction"
 
 - name: intarna
@@ -61,6 +62,7 @@ tools:
 
 - name: paralyzer
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA-protein Interaction"
 
 - name: aresite2
@@ -136,6 +138,7 @@ tools:
 
 - name: pipmir
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA-Seq"
 
 - name: nastiseq
