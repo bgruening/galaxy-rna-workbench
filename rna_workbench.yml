@@ -64,7 +64,7 @@ tools:
  
 - name: segmentation_fold
   owner: yhoogstrate
-  tool_panel_section_label: "RNA Alignment"
+  tool_panel_section_label: "RNA Structure Analysis"
 
 - name: selectsequencesfrommsa
   owner: rnateam
