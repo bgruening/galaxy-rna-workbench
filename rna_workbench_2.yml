@@ -38,46 +38,55 @@
 
 api_key: admin
 galaxy_instance: http://localhost:8080
-install_resolver_dependencies: true
 install_tool_dependencies: false
 tools:
 # RNA-protein Interaction
 
 - name: dorina
   owner: rnateam
+  install_resolver_dependencies: true
+
   tool_panel_section_label: "RNA-protein Interaction"
 
 - name: piranha
   owner: rnateam
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA-protein Interaction"
 
 - name: rnacommender
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA-protein Interaction"
 
 - name: intarna
   owner: rnateam
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA-RNA Interaction"
 
 - name: paralyzer
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA-protein Interaction"
 
 - name: aresite2
   owner: rnateam
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA-protein Interaction"
 
 # RNA Annotation
 - name: gotohscan
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA Annotation"
 
 - name: rnacode
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA Annotation"
 
 - name: infernal
   owner: bgruening
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA Annotation"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
@@ -86,45 +95,55 @@ tools:
 
 - name: rnammer
   owner: lionelguy
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA Annotation"
 
 - name: trna_prediction
   owner: bgruening
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA Annotation"
 
 - name: rnabob
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA Annotation"
 
 - name: fuma
   owner: yhoogstrate
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA Annotation"
 
 - name: rcas
   owner: rnateam
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA Annotation"
 
 # Ribosome Profiling
 
 - name: ribotaper
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "Ribosome Profiling"
 
 # RNA-Seq
 
 - name: sortmerna
   owner: rnateam
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA-Seq"
 
 - name: data_manager_sortmerna_database_downloader
+  install_resolver_dependencies: true
   owner: rnateam
 
 - name: blockclust
   owner: rnateam
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA-Seq"
 
 - name: flaimapper
   owner: yhoogstrate
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA-Seq"
 
 #- name: suite_mirdeep_2_0
@@ -136,14 +155,22 @@ tools:
 
 - name: pipmir
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA-Seq"
 
 - name: nastiseq
   owner: rnateam
+  install_resolver_dependencies: false
   tool_panel_section_label: "RNA-Seq"
 
 # RNA Target Prediction
 
 - name: targetfinder
   owner: rnateam
+  install_resolver_dependencies: true
   tool_panel_section_label: "RNA Target Prediction"
+
+- name: mqc
+  owner: rnateam
+  install_resolver_dependencies: true
+  tool_panel_section_label: "Quality Control"
