@@ -41,66 +41,51 @@ galaxy_instance: http://localhost:8080
 install_resolver_dependencies: true
 install_tool_dependencies: false
 tools:
-# RNA-protein Interaction
 
-- name: dorina
+# Ribosome Profiling
+
+- name: ribotaper
   owner: rnateam
-  tool_panel_section_label: "RNA-protein Interaction"
+  tool_panel_section_label: "Ribosome Profiling"
 
-- name: piranha
+# RNA-Seq
+
+- name: sortmerna
   owner: rnateam
-  tool_panel_section_label: "RNA-protein Interaction"
+  tool_panel_section_label: "RNA-Seq"
 
-- name: rnacommender
+- name: data_manager_sortmerna_database_downloader
   owner: rnateam
-  tool_panel_section_label: "RNA-protein Interaction"
 
-- name: intarna
+- name: blockclust
   owner: rnateam
-  tool_panel_section_label: "RNA-RNA Interaction"
+  tool_panel_section_label: "RNA-Seq"
 
-- name: paralyzer
-  owner: rnateam
-  tool_panel_section_label: "RNA-protein Interaction"
-
-- name: aresite2
-  owner: rnateam
-  tool_panel_section_label: "RNA-protein Interaction"
-
-# RNA Annotation
-- name: gotohscan
-  owner: rnateam
-  tool_panel_section_label: "RNA Annotation"
-
-- name: rnacode
-  owner: rnateam
-  tool_panel_section_label: "RNA Annotation"
-
-- name: infernal
-  owner: bgruening
-  tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  revisions:
-    - c47a7c52ac4f
-    - 6e18e0b098cd
-
-- name: rnammer
-  owner: lionelguy
-  tool_panel_section_label: "RNA Annotation"
-
-- name: trna_prediction
-  owner: bgruening
-  tool_panel_section_label: "RNA Annotation"
-
-- name: rnabob
-  owner: rnateam
-  tool_panel_section_label: "RNA Annotation"
-
-- name: fuma
+- name: flaimapper
   owner: yhoogstrate
-  tool_panel_section_label: "RNA Annotation"
+  tool_panel_section_label: "RNA-Seq"
 
-- name: rcas
+#- name: suite_mirdeep_2_0
+#  owner: rnateam
+#  tool_panel_section_label: "RNA-Seq"
+#  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: True
+#  install_tool_dependencies: False
+
+- name: pipmir
   owner: rnateam
-  tool_panel_section_label: "RNA Annotation"
+  tool_panel_section_label: "RNA-Seq"
 
+- name: nastiseq
+  owner: rnateam
+  tool_panel_section_label: "RNA-Seq"
+
+- name: dr_disco
+  owner: erasmus-medical-center
+  tool_panel_section_label: "RNA-Seq"  
+
+# RNA Target Prediction
+
+- name: targetfinder
+  owner: rnateam
+  tool_panel_section_label: "RNA Target Prediction"
