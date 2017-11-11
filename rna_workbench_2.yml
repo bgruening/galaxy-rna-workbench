@@ -79,10 +79,6 @@ tools:
 - name: infernal
   owner: bgruening
   tool_panel_section_label: "RNA Annotation"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-  revisions:
-    - c47a7c52ac4f
-    - 6e18e0b098cd
 
 - name: rnammer
   owner: lionelguy
