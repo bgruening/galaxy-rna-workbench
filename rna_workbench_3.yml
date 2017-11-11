@@ -57,9 +57,10 @@ tools:
 - name: data_manager_sortmerna_database_downloader
   owner: rnateam
 
-- name: blockclust
-  owner: rnateam
-  tool_panel_section_label: "RNA-Seq"
+# Conda package missing
+#- name: blockclust
+#  owner: rnateam
+#  tool_panel_section_label: "RNA-Seq"
 
 - name: flaimapper
   owner: yhoogstrate
