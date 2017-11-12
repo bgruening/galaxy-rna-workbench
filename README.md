@@ -191,7 +191,6 @@ Tool | Description | Reference
 [DoRiNA](http://dorina.mdc-berlin.de/) | A database of RNA interactions in post-transcriptional regulation | [Blin et al. 2014](https://dx.doi.org/10.1093/nar/gku1180)
 [PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran et al. 2011](https://dx.doi.org/10.1186/gb-2011-12-8-r79)
 [Piranha](https://github.com/smithlabcode/piranha) | A peak-caller for CLIP- and RIP-seq data | -
-[RNAcommender](https://github.com/gianlucacorrado/RNAcommender) | A tool for genome-wide recommendation of RNA-protein interactions | [Corrado et al. 2016](https://doi.org/10.1093/bioinformatics/btw517)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -234,7 +233,6 @@ Tool | Description | Reference
 [HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://dx.doi.org/10.1038/nprot.2016.095)
 [STAR](https://github.com/alexdobin/STAR) | Rapid spliced aligner for RNA-seq data | [Dobin et al. 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537/STAR-ultrafast-universal-RNA-seq-aligner)
 [STAR-fusion](https://github.com/STAR-Fusion/STAR-Fusion) | Fast fusion gene finder | [Haas et al. 2017](https://www.biorxiv.org/content/early/2017/03/24/120295)
-[TopHat2](https://ccb.jhu.edu/software/tophat/) | Spliced aligner for RNA-seq experiments | [Kim et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
 [Bowtie 2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead et al. 2012](https://dx.doi.org/10.1038/nmeth.1923) 
 [BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2009](https://dx.doi.org/10.1093/bioinformatics/btp324), [Li and Durbin 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
 
@@ -244,7 +242,6 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[Cufflinks tool suite](http://cole-trapnell-lab.github.io/cufflinks/) | Transcriptome assembly and differential expression analysis for RNA-Seq | [Trapnell et al. 2012](https://dx.doi.org/10.1038/nprot.2012.016), [Trapnell et al. 2013](https://dx.doi.org/10.1038/nbt.2450)
 [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
