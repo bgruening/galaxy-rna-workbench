@@ -30,6 +30,8 @@ ADD library_data.yaml $GALAXY_ROOT/library_data.yaml
 # Add workflows to the Docker image
 ADD ./rna-workbench-workflow/* $GALAXY_HOME/workflows/
 
+ENV GALAXY_CONFIG_TOOL_PATH=/galaxy-central/tools/
+
 # Download training data and populate the data library
 #RUN startup_lite && \
 ##    sleep 30 && \
