@@ -9,7 +9,6 @@ ENV GALAXY_CONFIG_BRAND="RNA workbench"
 # Install tools
 ADD rna_workbench.yml $GALAXY_ROOT/tools.yaml
 ADD rna_workbench_2.yml $GALAXY_ROOT/tools_2.yaml
-ADD rna_workbench_3.yml $GALAXY_ROOT/tools_3.yaml
 
 RUN install-tools $GALAXY_ROOT/tools.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs --yes > /dev/null && \
