@@ -47,6 +47,7 @@ tools:
 - name: ribotaper
   owner: rnateam
   tool_panel_section_label: "Ribosome Profiling"
+  install_resolver_dependencies: true
 
 # RNA-Seq
 
@@ -65,6 +66,7 @@ tools:
 - name: flaimapper
   owner: yhoogstrate
   tool_panel_section_label: "RNA-Seq"
+  install_resolver_dependencies: true
 
 #- name: suite_mirdeep_2_0
 #  owner: rnateam
@@ -76,17 +78,23 @@ tools:
 - name: pipmir
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
+  install_resolver_dependencies: true
 
 - name: nastiseq
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
+  install_resolver_dependencies: true
 
 - name: dr_disco
   owner: erasmus-medical-center
   tool_panel_section_label: "RNA-Seq"  
+  install_resolver_dependencies: true
+
 
 # RNA Target Prediction
 
 - name: targetfinder
   owner: rnateam
   tool_panel_section_label: "RNA Target Prediction"
+  install_resolver_dependencies: true
+
