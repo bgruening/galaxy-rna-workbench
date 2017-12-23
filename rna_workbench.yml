@@ -76,6 +76,8 @@ tools:
 - name: ribotaper
   owner: rnateam
   tool_panel_section_label: "Ribosome Profiling"
+  install_resolver_dependencies: false
+
 
 # RNA-Seq
 
@@ -85,6 +87,7 @@ tools:
 
 - name: data_manager_sortmerna_database_downloader
   owner: rnateam
+  install_resolver_dependencies: false
 
 # Conda package missing
 #- name: blockclust
@@ -105,10 +108,12 @@ tools:
 - name: pipmir
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
+  install_resolver_dependencies: false
 
 - name: nastiseq
   owner: rnateam
   tool_panel_section_label: "RNA-Seq"
+  install_resolver_dependencies: false
 
 - name: dr_disco
   owner: erasmus-medical-center
