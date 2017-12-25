@@ -58,10 +58,12 @@ tools:
 - name: paralyzer
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
+  install_resolver_dependencies: false
 
 - name: aresite2
   owner: rnateam
   tool_panel_section_label: "RNA-protein Interaction"
+  install_resolver_dependencies: false
 
 # RNA Annotation
 - name: gotohscan
@@ -83,6 +85,7 @@ tools:
 - name: rnammer
   owner: lionelguy
   tool_panel_section_label: "RNA Annotation"
+  install_resolver_dependencies: false
 
 - name: trna_prediction
   owner: bgruening
@@ -99,4 +102,5 @@ tools:
 - name: rcas
   owner: rnateam
   tool_panel_section_label: "RNA Annotation"
+  install_resolver_dependencies: false
 
