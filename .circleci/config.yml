@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Compile Docker image
+          command: |
+               wget https://raw.githubusercontent.com/galaxyproject/galaxy-flavor-testing/master/Makefile
+               make docker_install
+               make docker_build
+               make docker_run
+               sleep 60
+      - run:
+          name: Install test environment
+          command: |
+               make install
+      - run:
+          name: Run tests 
+          command: |   
+               make test_api
+               make test_ftp
+               #make test_bioblend
+          environment:
+               TOX_ENV: py27
+      - run:
+          name: push image
+          command: |
+            set -x
+            sh +x -c 'echo $QUAY_TOKEN' | docker login -u=$QUAY_USERNAME --password-stdin quay.io
+            docker tag galaxy-docker/test quay.io/bgruening/galaxy-rna-workbench:circle 
+            docker push quay.io/bgruening/galaxy-rna-workbench:circle
