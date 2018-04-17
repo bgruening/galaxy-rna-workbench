@@ -29,5 +29,5 @@ jobs:
           command: |
             set -x
             sh +x -c 'echo $QUAY_TOKEN' | docker login -u=$QUAY_USERNAME --password-stdin quay.io
-            docker tag galaxy-docker/test quay.io/bgruening/galaxy-rna-workbench:circle 
-            docker push quay.io/bgruening/galaxy-rna-workbench:circle
+            docker tag galaxy-docker/test quay.io/bgruening/galaxy-rna-workbench:circle18.01 
+            docker push quay.io/bgruening/galaxy-rna-workbench:circle18.01

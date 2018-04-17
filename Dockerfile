@@ -1,6 +1,6 @@
 # Galaxy - RNA workbench
 
-FROM quay.io/bgruening/galaxy-rna-structural-analysis:17.09
+FROM quay.io/bgruening/galaxy-rna-structural-analysis:18.01
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
@@ -33,10 +33,10 @@ ADD ./rna-workbench-workflow/* $GALAXY_HOME/workflows/
 ENV GALAXY_CONFIG_TOOL_PATH=/galaxy-central/tools/
 
 # Download training data and populate the data library
-RUN startup_lite && \
-    galaxy-wait && \
-    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
-    setup-data-libraries -i $GALAXY_ROOT/library_data.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
+#RUN startup_lite && \
+#    galaxy-wait && \
+    #workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
+    #setup-data-libraries -i $GALAXY_ROOT/library_data.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 # Add visualisations
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > master.tar.gz && \
