@@ -24,7 +24,7 @@ RUN install-tools $GALAXY_ROOT/tools_2.yaml && \
 # Add Galaxy interactive tours
 ADD ./rna-workbench-tours/* $GALAXY_ROOT/config/plugins/tours/
 
-# Add data library defintion file
+# Add data library definition file
 ADD library_data.yaml $GALAXY_ROOT/library_data.yaml
 
 # Add workflows to the Docker image
