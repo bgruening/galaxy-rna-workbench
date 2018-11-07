@@ -70,6 +70,13 @@ tools:
   owner: rnateam
   tool_panel_section_label: "RNA Alignment"
 
+- name: rnalien
+  owner: rnateam
+  tool_panel_section_label: "RNA Alignment"
+
+- name: cmv
+  owner: rnateam
+  tool_panel_section_label: "RNA Alignment"
 
 # Ribosome Profiling
 
