@@ -220,11 +220,12 @@ Tool | Description | Reference
 
 ## RNA Seq and HTS analysis
 
-### Preprocessing
+#### Quality control
 
 Tool | Description | Reference
 --- | --- | ---
-[FastQC!](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | A quality control tool for high throughput sequence data | -
+[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | A quality control tool for high throughput sequence data | -
+[MultiQC](https://multiqc.info/) | A tool to create reports visualising output from multiple tools across many samples | [Ewels *et al.* 2016](https://dx.doi.org/10.1093/bioinformatics/btw354)
 [Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | -
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
