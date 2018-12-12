@@ -265,9 +265,9 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[SAMtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
-[BEDTools](http://bedtools.readthedocs.io/en/latest/) | Utilities for genome arithmetic | [Quinlan and Hall 2010](https://doi.org/10.1093/bioinformatics/btq033)
-[deepTools](https://deeptools.github.io/) | Tools for exploring deep-sequencing data | [Ramirez et al. 2014](https://doi.org/10.1093/nar/gku365), [Ramirez et al. 2016](https://doi.org/10.1093/nar/gkw257)
+[SAMtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [Heng *et al.* 2009](https://doi.org/10.1093/bioinformatics/btp352)
+[BEDTools](https://bedtools.readthedocs.io/en/latest/) | Utilities for genome arithmetic | [Quinlan *et al.* 2010](https://doi.org/10.1093/bioinformatics/btq033)
+[deepTools](https://deeptools.github.io/) | Tools for exploring deep-sequencing data | [Ramirez *et al.* 2016](https://doi.org/10.1093/nar/gkw257)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
