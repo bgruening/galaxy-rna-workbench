@@ -193,6 +193,14 @@ Tool | Description | Reference
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
+## RNA-RNA interaction
+
+Tool | Description | Reference
+--- | --- | ---
+[IntaRNA](https://github.com/BackofenLab/IntaRNA) | Efficient RNA-RNA interaction prediction incorporating accessibility and seeding of interaction sites | [Mann *et al.* 2017](https://dx.doi.org/10.1093/nar/gkx279)
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
 ## RNA target prediction
 
 Tool | Description | Reference
