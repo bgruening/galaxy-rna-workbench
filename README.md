@@ -146,6 +146,7 @@ In this section we list all tools that have been integrated in the RNA workbench
 
 Tool | Description | Reference
 --- | --- | ---
+[CMCompare](http://nibiru.tbi.univie.ac.at/cmcws/introduction.html) | Tool to compare RNA families via covariance models | [Eggenhofer *et al.* 2013](https://dx.doi.org/10.1093/nar/gkt329)
 [CoFold](https://www.e-rna.org/cofold/) | A thermodynamics-based RNA secondary structure folding algorithm | [Proctor *et al.* 2013](https://dx.doi.org/10.1093/nar/gkt174)
 [Kinwalker](http://www.bioinf.uni-leipzig.de/Software/Kinwalker/) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | [Geis *et al.* 2008](https://dx.doi.org/10.1016/j.jmb.2008.02.064)
 [MEA](http://www.bioinf.uni-leipzig.de/Software/mea/) | Prediction of maximum expected accuracy RNA secondary structures | [Amman *et al.* 2013](https://dx.doi.org/10.1007/978-3-319-02624-4_1)
