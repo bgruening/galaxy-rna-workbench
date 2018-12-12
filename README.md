@@ -205,7 +205,7 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | -
+[TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | [Fahlgren *et al.* 2009](https://dx.doi.org/10.1007/978-1-60327-005-2_4)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
