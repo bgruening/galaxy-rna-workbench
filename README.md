@@ -230,27 +230,26 @@ Tool | Description | Reference
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-### RNA-Seq
+#### RNA-Seq
 
 Tool | Description | Reference
 --- | --- | ---
-[BlockClust](https://toolshed.g2.bx.psu.edu/view/rnateam/blockclust/) | Small non-coding RNA clustering from deep sequencing read profiles | [Videm et al. 2014](https://doi.org/10.1093/bioinformatics/btu270)
-[FlaiMapper](https://github.com/yhoogstrate/flaimapper) | A tool for computational annotation of small ncRNA-derived fragments using RNA-seq data | [Hoogstrate et al. 2015](https://doi.org/10.1093/bioinformatics/btu696)
-[MiRDeep2](https://www.mdc-berlin.de/8551903/en/) | Discovers microRNA genes by analyzing sequenced RNAs | [Friedländer et al. 2008](https://dx.doi.org/10.1038/nbt1394)
-[NASTIseq](https://ohlerlab.mdc-berlin.de/software/NASTIseq_104/)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Li et al. 2013](https://dx.doi.org/10.1101/gr.149310.112)
-[PIPmiR](https://ohlerlab.mdc-berlin.de/software/Pipeline_for_the_Identification_of_Plant_miRNAs_84/) | An algorithm to identify novel plant miRNA genes from a combination of deep sequencing data and genomic features | [Breakfield et al. 2011](https://dx.doi.org/10.1101/gr.123547.111)
-[SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova et al. 2011](https://dx.doi.org/10.1093/bioinformatics/bts611)
-
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
-### Read Mapping
-
-Tool | Description | Reference
---- | --- | ---
-[HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://dx.doi.org/10.1038/nprot.2016.095)
-[TopHat2](https://ccb.jhu.edu/software/tophat/) | Spliced aligner for RNA-seq experiments | [Kim et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
-[Bowtie 2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead et al. 2012](https://dx.doi.org/10.1038/nmeth.1923) 
-[BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2009](https://dx.doi.org/10.1093/bioinformatics/btp324), [Li and Durbin 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
+[Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead *et al.* 2012](https://dx.doi.org/10.1038/nmeth.1923)
+[BWA](http://bio-bwa.sourceforge.net/) | Burrow-Wheeler Aligner for short-read alignment | [Li *et al.* 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
+[BWA-MEM](https://github.com/lh3/bwa) | Fast and accurate long-read alignment with Burrows–Wheeler transform | [Li *et al.* 2010](https://doi.org/10.1093/bioinformatics/btp698)
+[DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love *et al.* 2014](https://dx.doi.org/10.1186/s13059-014-0550-8)
+[Dr. Disco](https://github.com/yhoogstrate/dr-disco) | Detection of exon-to-exon and genomic breakpoints in RNA-Seq data | -
+[featureCounts](http://bioinf.wehi.edu.au/featureCounts/) | Ultrafast and accurate read summarization program | [Liao *et al.* 2013](https://dx.doi.org/10.1093/bioinformatics/btt656)
+[FlaiMapper](https://github.com/yhoogstrate/flaimapper) | A tool for computational annotation of small ncRNA-derived fragments using RNA-seq data | [Hoogstrate *et al.* 2014](https://dx.doi.org/10.1093/bioinformatics/btu696)
+[HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Kim *et al.* 2015](https://dx.doi.org/10.1038/nmeth.3317)
+[NASTIseq](https://ohlerlab.mdc-berlin.de/software/NASTIseq_104/)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Li *et al.* 2013](https://dx.doi.org/10.1101/gr.149310.112)
+[PIPmiR](https://ohlerlab.mdc-berlin.de/software/Pipeline_for_the_Identification_of_Plant_miRNAs_84/) | An algorithm to identify novel plant miRNA genes from a combination of deep sequencing data and genomic features | [Breakfield *et al.* 2011](https://dx.doi.org/10.1101/gr.123547.111)
+[RNA STAR](https://github.com/alexdobin/STAR) | Ultrafast universal RNA-seq aligner | [Dobin *et al.* 2012](https://dx.doi.org/10.1093/bioinformatics/bts635)
+[Sailfish](https://www.cs.cmu.edu/~ckingsf/software/sailfish/) | A tool for rapid alignment-free quantification of isoform abundance | [Patro *et al.* 2014](https://dx.doi.org/10.1038/nbt.2862)
+[Salmon](https://github.com/COMBINE-lab/Salmon) | A tool for transcript quantification from RNA-seq data | [Patro *et al.* 2015](https://dx.doi.org/10.1101/021592)
+[SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova *et al.* 2011](https://dx.doi.org/10.1093/bioinformatics/bts611)
+[STAR-Fusion](https://github.com/STAR-Fusion/STAR-Fusion) | A tool that leverages on the STAR aligner to identify candidate fusion transcripts supported by Illumina reads | -
+[Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | A tool to assemble transcript sequences from Illumina RNA-Seq data | [Grabherr *et al.* 2011](https://dx.doi.org/10.1038/nbt.1883)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -259,26 +258,6 @@ Tool | Description | Reference
 Tool | Description | Reference
 --- | --- | ---
 [Cufflinks tool suite](http://cole-trapnell-lab.github.io/cufflinks/) | Transcriptome assembly and differential expression analysis for RNA-Seq | [Trapnell et al. 2012](https://dx.doi.org/10.1038/nprot.2012.016), [Trapnell et al. 2013](https://dx.doi.org/10.1038/nbt.2450)
-[Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
-
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
-### Quantification
-
-Tool | Description | Reference
---- | --- | ---
-[featureCounts](http://bioinf.wehi.edu.au/featureCounts/) | Ultrafast and accurate read summarization program | [Liao et al. 2014](http://dx.doi.org/10.1093/bioinformatics/btt656)
-[htseq-count](http://www-huber.embl.de/HTSeq/doc/count.html) | Tool for counting reads in features | [Anders et al. 2015](https://dx.doi.org/10.1093%2Fbioinformatics%2Fbtu638)
-[Sailfish](http://www.cs.cmu.edu/~ckingsf/software/sailfish/) | Rapid Alignment-free Quantification of Isoform Abundance | [Patro et al. 2014](http://dx.doi.org/10.1038/nbt.2862)
-[Salmon](https://combine-lab.github.io/salmon/) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](http://dx.doi.org/10.1038/nmeth.4197)
-
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
-### Differential expression analysis
-
-Tool | Description | Reference
---- | --- | ---
-[DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](http://doi.org/10.1186/s13059-014-0550-8)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
