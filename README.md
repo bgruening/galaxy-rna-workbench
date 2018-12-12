@@ -209,6 +209,14 @@ Tool | Description | Reference
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
+## Ribosome profiling
+
+Tool | Description | Reference
+--- | --- | ---
+[RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello *et al.* 2015](https://dx.doi.org/10.1038/nmeth.3688)
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
 ## RNA Seq and HTS analysis
 
 ### Preprocessing
@@ -279,14 +287,6 @@ Tool | Description | Reference
 [SAMtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
 [BEDTools](http://bedtools.readthedocs.io/en/latest/) | Utilities for genome arithmetic | [Quinlan and Hall 2010](https://doi.org/10.1093/bioinformatics/btq033)
 [deepTools](https://deeptools.github.io/) | Tools for exploring deep-sequencing data | [Ramirez et al. 2014](https://doi.org/10.1093/nar/gku365), [Ramirez et al. 2016](https://doi.org/10.1093/nar/gkw257)
-
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
-## Ribosome profiling
-
-Tool | Description | Reference
---- | --- | ---
-[RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2016](https://dx.doi.org/10.1038/nmeth.3688)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
