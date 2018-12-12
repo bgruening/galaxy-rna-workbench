@@ -145,14 +145,13 @@ In this section we list all tools that have been integrated in the RNA workbench
 
 Tool | Description | Reference
 --- | --- | ---
-[antaRNA](http://www.bioinf.uni-freiburg.de/Software/antaRNA/) | Possibility of inverse RNA structure folding and a specification of a GC value constraint | [Kleinkauf et al. 2015](https://doi.org/10.1093/bioinformatics/btv319)
-[CoFold](http://www.e-rna.org/cofold/) | A thermodynamics-based RNA secondary structure folding algorithm | [Proctor and Meyer, 2015](https://doi.org/10.1093/nar/gkt174)
-[Kinwalker](http://www.bioinf.uni-leipzig.de/Software/Kinwalker/) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | [Geis et al. 2008](https://dx.doi.org/10.1016/j.jmb.2008.02.064)
-[MEA](http://www.bioinf.uni-leipzig.de/Software/mea/) | Prediction of maximum expected accuracy RNA secondary structures | [Amman et al. 2013](https://dx.doi.org/10.1007/978-3-319-02624-4_1)
-[RNAshapes](https://bibiserv2.cebitec.uni-bielefeld.de/rnashapes) | Structures to a tree-like domain of shapes, retaining adjacency and nesting of structural features | [Janssen and Giergerich, 2014](https://doi.org/10.1093/bioinformatics/btu649)
-[RNAz](http://www.tbi.univie.ac.at/~wash/RNAz/) | Predicts structurally conserved and therm. stable RNA secondary structures in mult. seq. alignments | [Washietl et al. 2005](https://dx.doi.org/10.1073/pnas.0409169102)
-[segmentation-fold](https://github.com/yhoogstrate/segmentation-fold)| An application that predicts RNA 2D-structure with an extended version of the Zuker algorithm | -
-[ViennaRNA](http://www.tbi.univie.ac.at/RNA/) | A tool compilation for prediction and comparison of RNA secondary structures | [Lorenz et al. 2011](https://dx.doi.org/10.1186/1748-7188-6-26)
+[CoFold](https://www.e-rna.org/cofold/) | A thermodynamics-based RNA secondary structure folding algorithm | [Proctor *et al.* 2013](https://dx.doi.org/10.1093/nar/gkt174)
+[Kinwalker](http://www.bioinf.uni-leipzig.de/Software/Kinwalker/) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | [Geis *et al.* 2008](https://dx.doi.org/10.1016/j.jmb.2008.02.064)
+[MEA](http://www.bioinf.uni-leipzig.de/Software/mea/) | Prediction of maximum expected accuracy RNA secondary structures | [Amman *et al.* 2013](https://dx.doi.org/10.1007/978-3-319-02624-4_1)
+[RNAshapes](https://bibiserv2.cebitec.uni-bielefeld.de/rnashapes) | Structures to a tree-like domain of shapes, retaining adjacency and nesting of structural features | [Janssen *et al.* 2014](https://dx.doi.org/10.1093/bioinformatics/btu649)
+[RNAz](http://www.tbi.univie.ac.at/~wash/RNAz/) | Predicts structurally conserved and therm. stable RNA secondary structures in mult. seq. alignments | [Gruber *et al.* 2010](https://dx.doi.org/10.1142/9789814295291_0009)
+[segmentation-fold](https://github.com/yhoogstrate/segmentation-fold)| An application that predicts RNA 2D-structure with an extended version of the Zuker algorithm | [Hoogstrate 2012](https://yh-kt-fold.googlecode.com/files/Report.pdf)
+[ViennaRNA](https://www.tbi.univie.ac.at/RNA/) | A tool compilation for prediction and comparison of RNA secondary structures | [Lorenz *et al.* 2011](https://dx.doi.org/10.1186/1748-7188-6-26)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
