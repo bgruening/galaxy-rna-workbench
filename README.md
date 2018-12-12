@@ -148,6 +148,7 @@ Tool | Description | Reference
 [CoFold](https://www.e-rna.org/cofold/) | A thermodynamics-based RNA secondary structure folding algorithm | [Proctor *et al.* 2013](https://dx.doi.org/10.1093/nar/gkt174)
 [Kinwalker](http://www.bioinf.uni-leipzig.de/Software/Kinwalker/) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | [Geis *et al.* 2008](https://dx.doi.org/10.1016/j.jmb.2008.02.064)
 [MEA](http://www.bioinf.uni-leipzig.de/Software/mea/) | Prediction of maximum expected accuracy RNA secondary structures | [Amman *et al.* 2013](https://dx.doi.org/10.1007/978-3-319-02624-4_1)
+[RNAlien](http://rna.tbi.univie.ac.at/rnalien/) | Unsupervised covariance model construction from a single input sequence | [Eggenhofer *et al.* 2016](https://dx.doi.org/10.1093/nar/gkw558)
 [RNAshapes](https://bibiserv2.cebitec.uni-bielefeld.de/rnashapes) | Structures to a tree-like domain of shapes, retaining adjacency and nesting of structural features | [Janssen *et al.* 2014](https://dx.doi.org/10.1093/bioinformatics/btu649)
 [RNAz](http://www.tbi.univie.ac.at/~wash/RNAz/) | Predicts structurally conserved and therm. stable RNA secondary structures in mult. seq. alignments | [Gruber *et al.* 2010](https://dx.doi.org/10.1142/9789814295291_0009)
 [segmentation-fold](https://github.com/yhoogstrate/segmentation-fold)| An application that predicts RNA 2D-structure with an extended version of the Zuker algorithm | [Hoogstrate 2012](https://yh-kt-fold.googlecode.com/files/Report.pdf)
@@ -159,10 +160,9 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[Compalignp](http://www.biophys.uni-duesseldorf.de/bralibase/) | An RNA counterpart of the protein specific "Benchmark Alignment Database" | [Wilm et al. 2006](https://dx.doi.org/10.1186/1748-7188-1-19)
-[LocARNA](http://rna.informatik.uni-freiburg.de/LocARNA/Input.jsp) | A tool for multiple alignment of RNA molecules | [Will et al. 2012](https://dx.doi.org/10.1261/rna.029041.111)
-[MAFFT](http://mafft.cbrc.jp/alignment/software/) | A multiple sequence alignment program for unix-like operating systems | [Katoh and Standley, 2016](https://doi.org/10.1093/bioinformatics/btw108)
-[RNAlien](http://rna.tbi.univie.ac.at/rnalien/) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
+[Compalignp](http://www.biophys.uni-duesseldorf.de/bralibase/) | An RNA counterpart of the protein specific "Benchmark Alignment Database" | [Wilm *et al.* 2006](https://dx.doi.org/10.1186/1748-7188-1-19)
+[LocARNA](http://rna.informatik.uni-freiburg.de/LocARNA/Input.jsp) | A tool for multiple alignment of RNA molecules | [Will *et al.* 2015](https://dx.doi.org/10.1093/bioinformatics/btv185)
+[MAFFT](https://mafft.cbrc.jp/alignment/software/) | A multiple sequence alignment program for unix-like operating systems | [Katoh *et al.* 2013](https://dx.doi.org/10.1093/molbev/mst010)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
