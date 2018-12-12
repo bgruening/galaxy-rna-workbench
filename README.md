@@ -254,15 +254,7 @@ Tool | Description | Reference
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-### Transcript Assembly
-
-Tool | Description | Reference
---- | --- | ---
-[Cufflinks tool suite](http://cole-trapnell-lab.github.io/cufflinks/) | Transcriptome assembly and differential expression analysis for RNA-Seq | [Trapnell et al. 2012](https://dx.doi.org/10.1038/nprot.2012.016), [Trapnell et al. 2013](https://dx.doi.org/10.1038/nbt.2450)
-
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
-### Utilities
+#### Utilities
 
 Tool | Description | Reference
 --- | --- | ---
