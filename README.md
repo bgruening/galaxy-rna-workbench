@@ -186,11 +186,10 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[AREsite2](http://rna.tbi.univie.ac.at/AREsite2) | A database for AU-/GU-/U-rich elements in human and model organisms | [Fallmann et al. 2016](https://dx.doi.org/10.1093/nar/gkv1238)
-[DoRiNA](http://dorina.mdc-berlin.de/) | A database of RNA interactions in post-transcriptional regulation | [Blin et al. 2014](https://dx.doi.org/10.1093/nar/gku1180)
-[PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran et al. 2011](https://dx.doi.org/10.1186/gb-2011-12-8-r79)
+[AREsite2](http://rna.tbi.univie.ac.at/AREsite2) | A database for AU-/GU-/U-rich elements in human and model organisms | [Fallmann *et al.* 2015](https://dx.doi.org/10.1093/nar/gkv1238)
+[doRiNA](https://dorina.mdc-berlin.de/) | A database of RNA interactions in post-transcriptional regulation | [Blin *et al.* 2014](https://dx.doi.org/10.1093/nar/gku1180)
+[PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran *et al.* 2011](https://dx.doi.org/10.1186/gb-2011-12-8-r79)
 [Piranha](https://github.com/smithlabcode/piranha) | A peak-caller for CLIP- and RIP-seq data | -
-[RNAcommender](https://github.com/gianlucacorrado/RNAcommender) | A tool for genome-wide recommendation of RNA-protein interactions | [Corrado et al. 2016](https://doi.org/10.1093/bioinformatics/btw517)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
