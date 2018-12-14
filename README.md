@@ -63,7 +63,7 @@ Whether you run Docker images using Kitematic or the command line interface, the
 
 Kitematic users can launch the RNA workbench directly from its interface. The following video shows how to load the docker container that is necessary to use the workbench:
 
-[<img align="center" src="assets/img/video_kitematic.png" height="600px" alt="Kitematic galaxy-rna-workbench launch" valign="middle">](https://www.youtube.com/watch?v=fYer4Xdw_h4)
+[<img align="center" src="assets/img/video_kitematic.png" alt="Kitematic galaxy-rna-workbench launch" valign="middle">](https://www.youtube.com/watch?v=fYer4Xdw_h4)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ### Without Kitematic
@@ -134,7 +134,7 @@ The RNA workbench provides the possibility to run interactive tours that illustr
 
 The following video demonstrates the main elements that compose the Galaxy user interface:
 
-[<img align="center" src="assets/img/video_tours.png" height="600px" alt="Galaxy UI tour" valign="middle">](https://www.youtube.com/watch?v=rP59wYIxWcI)
+[<img align="center" src="assets/img/video_tours.png" alt="Galaxy UI tour" valign="middle">](https://www.youtube.com/watch?v=rP59wYIxWcI)
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 # Available tools
