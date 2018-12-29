@@ -4,6 +4,8 @@ layout: default
 
 # About
 [![Manuscript](https://img.shields.io/badge/DOI-10.1093%2Fnar%2Fgkx409-blue.svg)](https://doi.org/10.1093/nar/gkx409)
+![docker pulls](https://img.shields.io/docker/pulls/bgruening/galaxy-rna-workbench.svg)
+![docker stars](https://img.shields.io/docker/stars/bgruening/galaxy-rna-workbench.svg)
 
 <div id="top"></div>
 
