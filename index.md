@@ -4,6 +4,8 @@ layout: default
 
 # About
 [![Manuscript](https://img.shields.io/badge/DOI-10.1093%2Fnar%2Fgkx409-blue.svg)](https://doi.org/10.1093/nar/gkx409)
+![docker pulls](https://img.shields.io/docker/pulls/bgruening/galaxy-rna-workbench.svg)
+![docker stars](https://img.shields.io/docker/stars/bgruening/galaxy-rna-workbench.svg)
 
 <div id="top"></div>
 
@@ -165,6 +167,7 @@ Tool | Description | Reference
 [LocARNA](http://rna.informatik.uni-freiburg.de/LocARNA/Input.jsp) | A tool for multiple alignment of RNA molecules | [Will et al. 2012](https://dx.doi.org/10.1261/rna.029041.111)
 [MAFFT](http://mafft.cbrc.jp/alignment/software/) | A multiple sequence alignment program for unix-like operating systems | [Katoh and Standley, 2016](https://doi.org/10.1093/bioinformatics/btw108)
 [RNAlien](http://rna.tbi.univie.ac.at/rnalien/) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
+[CMV](https://github.com/eggzilla/cmv) | RNA family model visualisation | [Eggenhofer et al. 2018](https://doi.org/10.1093/bioinformatics/bty158)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -192,7 +195,6 @@ Tool | Description | Reference
 [DoRiNA](http://dorina.mdc-berlin.de/) | A database of RNA interactions in post-transcriptional regulation | [Blin et al. 2014](https://dx.doi.org/10.1093/nar/gku1180)
 [PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran et al. 2011](https://dx.doi.org/10.1186/gb-2011-12-8-r79)
 [Piranha](https://github.com/smithlabcode/piranha) | A peak-caller for CLIP- and RIP-seq data | -
-[RNAcommender](https://github.com/gianlucacorrado/RNAcommender) | A tool for genome-wide recommendation of RNA-protein interactions | [Corrado et al. 2016](https://doi.org/10.1093/bioinformatics/btw517)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -233,7 +235,8 @@ Tool | Description | Reference
 Tool | Description | Reference
 --- | --- | ---
 [HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://dx.doi.org/10.1038/nprot.2016.095)
-[TopHat2](https://ccb.jhu.edu/software/tophat/) | Spliced aligner for RNA-seq experiments | [Kim et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
+[STAR](https://github.com/alexdobin/STAR) | Rapid spliced aligner for RNA-seq data | [Dobin et al. 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537/STAR-ultrafast-universal-RNA-seq-aligner)
+[STAR-fusion](https://github.com/STAR-Fusion/STAR-Fusion) | Fast fusion gene finder | [Haas et al. 2017](https://www.biorxiv.org/content/early/2017/03/24/120295)
 [Bowtie 2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead et al. 2012](https://dx.doi.org/10.1038/nmeth.1923) 
 [BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2009](https://dx.doi.org/10.1093/bioinformatics/btp324), [Li and Durbin 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
 
@@ -243,7 +246,6 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[Cufflinks tool suite](http://cole-trapnell-lab.github.io/cufflinks/) | Transcriptome assembly and differential expression analysis for RNA-Seq | [Trapnell et al. 2012](https://dx.doi.org/10.1038/nprot.2012.016), [Trapnell et al. 2013](https://dx.doi.org/10.1038/nbt.2450)
 [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>

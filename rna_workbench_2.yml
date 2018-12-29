@@ -67,11 +67,13 @@ tools:
   owner: rnateam
   install_resolver_dependencies: false
   tool_panel_section_label: "RNA-protein Interaction"
+  install_resolver_dependencies: false
 
 - name: aresite2
   owner: rnateam
   install_resolver_dependencies: true
   tool_panel_section_label: "RNA-protein Interaction"
+  install_resolver_dependencies: false
 
 # RNA Annotation
 - name: gotohscan
@@ -97,6 +99,7 @@ tools:
   owner: lionelguy
   install_resolver_dependencies: false
   tool_panel_section_label: "RNA Annotation"
+  install_resolver_dependencies: false
 
 - name: trna_prediction
   owner: bgruening
@@ -117,6 +120,7 @@ tools:
   owner: rnateam
   install_resolver_dependencies: true
   tool_panel_section_label: "RNA Annotation"
+  install_resolver_dependencies: false
 
 # Ribosome Profiling
 

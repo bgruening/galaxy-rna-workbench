@@ -1,6 +1,8 @@
 [![Manuscript](https://img.shields.io/badge/DOI-10.1093%2Fnar%2Fgkx409-blue.svg)](https://doi.org/10.1093/nar/gkx409)
 [![Build Status](https://travis-ci.org/bgruening/galaxy-rna-workbench.svg?branch=master)](https://travis-ci.org/bgruening/galaxy-rna-workbench)
 [![Docker Repository on Quay](https://quay.io/repository/bgruening/galaxy-rna-workbench/status "Docker Repository on Quay")](https://quay.io/repository/bgruening/galaxy-rna-workbench)
+![docker pulls](https://img.shields.io/docker/pulls/bgruening/galaxy-rna-workbench.svg)
+![docker stars](https://img.shields.io/docker/stars/bgruening/galaxy-rna-workbench.svg)
 
 <div id="top"></div>
 
@@ -162,9 +164,11 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[Compalignp](http://www.biophys.uni-duesseldorf.de/bralibase/) | An RNA counterpart of the protein specific "Benchmark Alignment Database" | [Wilm *et al.* 2006](https://dx.doi.org/10.1186/1748-7188-1-19)
-[LocARNA](http://rna.informatik.uni-freiburg.de/LocARNA/Input.jsp) | A tool for multiple alignment of RNA molecules | [Will *et al.* 2015](https://dx.doi.org/10.1093/bioinformatics/btv185)
-[MAFFT](https://mafft.cbrc.jp/alignment/software/) | A multiple sequence alignment program for unix-like operating systems | [Katoh *et al.* 2013](https://dx.doi.org/10.1093/molbev/mst010)
+[Compalignp](http://www.biophys.uni-duesseldorf.de/bralibase/) | An RNA counterpart of the protein specific "Benchmark Alignment Database" | [Wilm et al. 2006](https://dx.doi.org/10.1186/1748-7188-1-19)
+[LocARNA](http://rna.informatik.uni-freiburg.de/LocARNA/Input.jsp) | A tool for multiple alignment of RNA molecules | [Will et al. 2012](https://dx.doi.org/10.1261/rna.029041.111)
+[MAFFT](http://mafft.cbrc.jp/alignment/software/) | A multiple sequence alignment program for unix-like operating systems | [Katoh and Standley, 2016](https://doi.org/10.1093/bioinformatics/btw108)
+[RNAlien](http://rna.tbi.univie.ac.at/rnalien/) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
+[CMV](https://github.com/eggzilla/cmv) | RNA family model visualisation | [Eggenhofer et al. 2018](https://doi.org/10.1093/bioinformatics/bty158)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -195,6 +199,25 @@ Tool | Description | Reference
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
+## RNA target prediction
+
+Tool | Description | Reference
+--- | --- | ---
+[TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | -
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+## RNA Seq and HTS analysis
+
+### Preprocessing
+
+Tool | Description | Reference
+--- | --- | ---
+[FastQC!](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | A quality control tool for high throughput sequence data | -
+[Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Automatic quality and adapter trimming as well as quality control | -
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
 ## RNA-RNA interaction
 
 Tool | Description | Reference
@@ -208,6 +231,11 @@ Tool | Description | Reference
 Tool | Description | Reference
 --- | --- | ---
 [TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | [Fahlgren *et al.* 2009](https://dx.doi.org/10.1007/978-1-60327-005-2_4)
+[HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://dx.doi.org/10.1038/nprot.2016.095)
+[STAR](https://github.com/alexdobin/STAR) | Rapid spliced aligner for RNA-seq data | [Dobin et al. 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537/STAR-ultrafast-universal-RNA-seq-aligner)
+[STAR-fusion](https://github.com/STAR-Fusion/STAR-Fusion) | Fast fusion gene finder | [Haas et al. 2017](https://www.biorxiv.org/content/early/2017/03/24/120295)
+[Bowtie 2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead et al. 2012](https://dx.doi.org/10.1038/nmeth.1923) 
+[BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2009](https://dx.doi.org/10.1093/bioinformatics/btp324), [Li and Durbin 2010](https://dx.doi.org/10.1093/bioinformatics/btp698)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -216,6 +244,7 @@ Tool | Description | Reference
 Tool | Description | Reference
 --- | --- | ---
 [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello *et al.* 2015](https://dx.doi.org/10.1038/nmeth.3688)
+[Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://dx.doi.org/10.1038%2Fnprot.2013.084)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 

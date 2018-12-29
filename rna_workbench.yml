@@ -64,8 +64,70 @@ tools:
  
 - name: segmentation_fold
   owner: yhoogstrate
-  tool_panel_section_label: "RNA Alignment"
+  tool_panel_section_label: "RNA Structure Analysis"
 
 - name: selectsequencesfrommsa
   owner: rnateam
   tool_panel_section_label: "RNA Alignment"
+
+- name: rnalien
+  owner: rnateam
+  tool_panel_section_label: "RNA Alignment"
+
+- name: cmv
+  owner: rnateam
+  tool_panel_section_label: "RNA Alignment"
+
+# Ribosome Profiling
+
+- name: ribotaper
+  owner: rnateam
+  tool_panel_section_label: "Ribosome Profiling"
+  install_resolver_dependencies: false
+
+
+# RNA-Seq
+
+- name: sortmerna
+  owner: rnateam
+  tool_panel_section_label: "RNA-Seq"
+
+- name: data_manager_sortmerna_database_downloader
+  owner: rnateam
+  install_resolver_dependencies: false
+
+# Conda package missing
+#- name: blockclust
+#  owner: rnateam
+#  tool_panel_section_label: "RNA-Seq"
+
+- name: flaimapper
+  owner: yhoogstrate
+  tool_panel_section_label: "RNA-Seq"
+
+#- name: suite_mirdeep_2_0
+#  owner: rnateam
+#  tool_panel_section_label: "RNA-Seq"
+#  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: True
+#  install_tool_dependencies: False
+
+- name: pipmir
+  owner: rnateam
+  tool_panel_section_label: "RNA-Seq"
+  install_resolver_dependencies: false
+
+- name: nastiseq
+  owner: rnateam
+  tool_panel_section_label: "RNA-Seq"
+  install_resolver_dependencies: false
+
+- name: dr_disco
+  owner: erasmus-medical-center
+  tool_panel_section_label: "RNA-Seq"  
+
+# RNA Target Prediction
+
+- name: targetfinder
+  owner: rnateam
+  tool_panel_section_label: "RNA Target Prediction"

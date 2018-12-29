@@ -1,6 +1,6 @@
 # Galaxy - RNA workbench
 
-FROM bgruening/galaxy-rna-structural-analysis:17.05
+FROM quay.io/bgruening/galaxy-rna-structural-analysis:18.01
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
@@ -13,26 +13,30 @@ ADD rna_workbench_2.yml $GALAXY_ROOT/tools_2.yaml
 RUN install-tools $GALAXY_ROOT/tools.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs --yes > /dev/null && \
     rm /export/galaxy-central/ -rf
-# Split into two layers, it seems that there is a max-layer size.
+
+# Split into multiple layers, it seems that there is a max-layer size.
 RUN install-tools $GALAXY_ROOT/tools_2.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs --yes > /dev/null && \
     rm /export/galaxy-central/ -rf && \
     mkdir -p $GALAXY_HOME/workflows
 
+
 # Add Galaxy interactive tours
 ADD ./rna-workbench-tours/* $GALAXY_ROOT/config/plugins/tours/
 
-# Add data library defintion file
+# Add data library definition file
 ADD library_data.yaml $GALAXY_ROOT/library_data.yaml
 
 # Add workflows to the Docker image
 ADD ./rna-workbench-workflow/* $GALAXY_HOME/workflows/
 
+ENV GALAXY_CONFIG_TOOL_PATH=/galaxy-central/tools/
+
 # Download training data and populate the data library
-RUN startup_lite && \
-    sleep 30 && \
-    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
-    setup-data-libraries -i $GALAXY_ROOT/library_data.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
+#RUN startup_lite && \
+#    galaxy-wait && \
+    #workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
+    #setup-data-libraries -i $GALAXY_ROOT/library_data.yaml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 # Add visualisations
 RUN curl -sL https://github.com/bgruening/galaxytools/archive/master.tar.gz > master.tar.gz && \
