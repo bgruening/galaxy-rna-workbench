@@ -180,7 +180,7 @@
             "workflow_outputs": []
         }, 
         "4": {
-            "annotation": "CMV - RNA family model visualization", 
+            "annotation": "Detailed RNA family model visualisation, showing nodes and probabilites of the model. The alignment is annotated with node indices of the model.", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/cmv/cmv/1.0.8", 
             "errors": null, 
             "id": 4, 
