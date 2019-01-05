@@ -1,0 +1,941 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "Take a set of unaligned RNAs, compute alignments by MAFFT and LocARNA and analyze them with RNAcode and RNAz in appropriate settings. Then, the LocARNA alignment is used to build a Covariance Model (CM). The CM is used to search the given sequence database.", 
+    "format-version": "0.1", 
+    "name": "Analyse unaligned ncRNAs", 
+    "steps": {
+        "0": {
+            "annotation": "Set of RNAs", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Set of RNAs", 
+                    "name": "Unaligned RNA sequences"
+                }
+            ], 
+            "label": "Unaligned RNA sequences", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 160, 
+                "top": 160
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Unaligned RNA sequences\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "27949769-276d-4d63-80c2-8918f4899bb7", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "66f2fd4f-2a91-4bf3-a39c-838ddc0487b3"
+                }
+            ]
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Sequence database"
+                }
+            ], 
+            "label": "Sequence database", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 160, 
+                "top": 244
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Sequence database\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "3494781a-c37b-432e-b3d0-a9322034199f", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "d11bd593-b6b5-4476-b345-0d1ecc153324"
+                }
+            ]
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.221.3", 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {
+                "inputSequences": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MAFFT", 
+                    "name": "inputSequences"
+                }
+            ], 
+            "label": "MAFFT - multiple sequence alignment", 
+            "name": "MAFFT", 
+            "outputs": [
+                {
+                    "name": "outputAlignment", 
+                    "type": "fasta"
+                }, 
+                {
+                    "name": "outputTree", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 352, 
+                "top": 160
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutputAlignment": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outputAlignment"
+                }, 
+                "HideDatasetActionoutputTree": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outputTree"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.221.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "c5908940967d", 
+                "name": "mafft", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"outputFormat\": \"\\\"--clustalout\\\"\", \"getTree\": \"\\\"false\\\"\", \"inputSequences\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"datatype\": \"\\\"\\\"\", \"cond_flavour\": \"{\\\"__current_case__\\\": 0, \\\"flavourType\\\": \\\"mafft-fftns\\\"}\", \"matrix_condition\": \"{\\\"__current_case__\\\": 0, \\\"matrix\\\": \\\"\\\"}\", \"__rerun_remap_job_id__\": null, \"adjustdirection\": \"\\\" \\\"\", \"ep\": \"\\\"0.123\\\"\", \"reorder\": \"\\\"false\\\"\", \"op\": \"\\\"1.53\\\"\"}", 
+            "tool_version": "7.221.3", 
+            "type": "tool", 
+            "uuid": "654a1506-43c4-4195-9e93-92695c59df8c", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "Locarna uses RNA secondary considers during mutliple sequence alignment.", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/locarna_multiple/locarna_multiple/1.9.0.1", 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {
+                "input_data_type|input_data": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool LocARNA Multiple Aligner", 
+                    "name": "input_data_type"
+                }
+            ], 
+            "label": "LocARNA - RNA structure aware multiple sequence alignment ", 
+            "name": "LocARNA Multiple Aligner", 
+            "outputs": [
+                {
+                    "name": "stdout", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "clustal", 
+                    "type": "clustal"
+                }, 
+                {
+                    "name": "clustal_strict", 
+                    "type": "clustal"
+                }, 
+                {
+                    "name": "stockholm", 
+                    "type": "stockholm"
+                }, 
+                {
+                    "name": "pp", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "mlocarna_results_tgz", 
+                    "type": "tar.gz"
+                }
+            ], 
+            "position": {
+                "left": 352, 
+                "top": 289.6000061035156
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionclustal": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "clustal"
+                }, 
+                "HideDatasetActionclustal_strict": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "clustal_strict"
+                }, 
+                "HideDatasetActionpp": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "pp"
+                }, 
+                "HideDatasetActionstdout": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "stdout"
+                }, 
+                "HideDatasetActionstockholm": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "stockholm"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/locarna_multiple/locarna_multiple/1.9.0.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "94b0468f0db8", 
+                "name": "locarna_multiple", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"Scoring\": \"{\\\"indel\\\": \\\"-250\\\", \\\"indel_opening\\\": \\\"-900\\\", \\\"sequence_score\\\": {\\\"__current_case__\\\": 0, \\\"sequence_score_selector\\\": \\\"ribofit\\\"}, \\\"struct_weight\\\": \\\"200\\\", \\\"tau\\\": \\\"50\\\"}\", \"Heuristics\": \"{\\\"max_bps_length_ratio\\\": \\\"0.0\\\", \\\"max_diff_am\\\": \\\"30\\\", \\\"max_diff_mode\\\": {\\\"__current_case__\\\": 1, \\\"max_diff\\\": \\\"60\\\", \\\"max_diff_mode_selector\\\": \\\"max-diff\\\"}, \\\"min_prob\\\": \\\"0.0005\\\"}\", \"Folding\": \"{\\\"alifold_consensus_dp\\\": \\\"false\\\", \\\"plfold_span\\\": \\\"150\\\", \\\"plfold_winsize\\\": \\\"300\\\", \\\"rnafold_temperature\\\": \\\"37.0\\\"}\", \"stdout_verbosity\": \"\\\"--quiet\\\"\", \"__page__\": null, \"alignment_mode\": \"{\\\"__current_case__\\\": 0, \\\"alignment_mode_selector\\\": \\\"global_locarna\\\", \\\"free_endgaps\\\": \\\"\\\"}\", \"__rerun_remap_job_id__\": null, \"outputs\": \"[\\\"clustal_strict\\\", \\\"stockholm\\\"]\", \"input_data_type\": \"{\\\"__current_case__\\\": 0, \\\"input_data\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"input_data_type_selector\\\": \\\"fasta\\\"}\", \"Constraints\": \"{\\\"bed_anchors\\\": {\\\"__current_case__\\\": 0, \\\"bed_anchors_selector\\\": \\\"no\\\"}, \\\"ignore_constraints\\\": \\\"false\\\", \\\"lonely_pairs\\\": \\\"false\\\", \\\"maxBPspan\\\": \\\"-1\\\"}\"}", 
+            "tool_version": "1.9.0.1", 
+            "type": "tool", 
+            "uuid": "893d7850-84bd-46d0-ae78-12cf1129ba42", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "mlocarna_results_tgz", 
+                    "uuid": "f9c4a2b7-ebe4-4130-8462-c9961ce6bfbf"
+                }
+            ]
+        }, 
+        "4": {
+            "annotation": "Selects representative sequence from big alignments", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "input_clustal": {
+                    "id": 2, 
+                    "output_name": "outputAlignment"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Select Sequences", 
+                    "name": "input_clustal"
+                }
+            ], 
+            "label": "Select Sequences", 
+            "name": "Select Sequences", 
+            "outputs": [
+                {
+                    "name": "clustal", 
+                    "type": "clustal"
+                }
+            ], 
+            "position": {
+                "left": 614.4000244140625, 
+                "top": 160
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionclustal": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "clustal"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "48fc2c21fe1c", 
+                "name": "selectsequencesfrommsa", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"i\": \"\\\"80.0\\\"\", \"__rerun_remap_job_id__\": null, \"m\": \"\\\"95.0\\\"\", \"n\": \"\\\"6\\\"\", \"input_clustal\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"x\": \"\\\"true\\\"\"}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "3bf85c9d-4ed1-4cf0-8615-00bddf2530ad", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "Selects representative sequences from large alignments", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "errors": null, 
+            "id": 5, 
+            "input_connections": {
+                "input_clustal": {
+                    "id": 3, 
+                    "output_name": "clustal_strict"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Select Sequences", 
+                    "name": "input_clustal"
+                }
+            ], 
+            "label": null, 
+            "name": "Select Sequences", 
+            "outputs": [
+                {
+                    "name": "clustal", 
+                    "type": "clustal"
+                }
+            ], 
+            "position": {
+                "left": 614.4000244140625, 
+                "top": 252.79998779296875
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionclustal": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "clustal"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "48fc2c21fe1c", 
+                "name": "selectsequencesfrommsa", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"i\": \"\\\"80.0\\\"\", \"__rerun_remap_job_id__\": null, \"m\": \"\\\"95.0\\\"\", \"n\": \"\\\"6\\\"\", \"input_clustal\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"x\": \"\\\"true\\\"\"}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "0a399934-a4ed-4334-a8cf-e1c2ce537305", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "The alignment is used to construct a probabilistic model representing structure and sequence of the RNA family.", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/1.1.0.2", 
+            "errors": null, 
+            "id": 6, 
+            "input_connections": {
+                "alignment_infile": {
+                    "id": 3, 
+                    "output_name": "stockholm"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Build covariance models", 
+                    "name": "alignment_infile"
+                }
+            ], 
+            "label": "cmbuild - Create RNA family model", 
+            "name": "Build covariance models", 
+            "outputs": [
+                {
+                    "name": "summary_outfile", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "cmfile_outfile", 
+                    "type": "cm"
+                }, 
+                {
+                    "name": "refined_multiple_alignment_output", 
+                    "type": "stockholm"
+                }
+            ], 
+            "position": {
+                "left": 614.4000244140625, 
+                "top": 345.6000061035156
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/1.1.0.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "c47a7c52ac4f", 
+                "name": "infernal", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"noss\": \"\\\"false\\\"\", \"is_summery_output\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"effective_opts\": \"{\\\"__current_case__\\\": 0, \\\"effective_opts_selector\\\": \\\"--enone\\\"}\", \"alignment_infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"refining_opts\": \"{\\\"__current_case__\\\": 0, \\\"refining_opts_selector\\\": \\\"\\\"}\", \"model_construction_opts\": \"{\\\"__current_case__\\\": 0, \\\"model_construction_opts_selector\\\": \\\"--fast\\\", \\\"symfrac\\\": \\\"0.5\\\"}\", \"relative_weights_opts\": \"{\\\"__current_case__\\\": 0, \\\"relative_weights_opts_selector\\\": \\\"--wpb\\\"}\"}", 
+            "tool_version": "1.1.0.2", 
+            "type": "tool", 
+            "uuid": "45f5756e-8975-475b-b2bd-4f85c924f1e4", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "cmfile_outfile", 
+                    "uuid": "8aac4589-e13d-4a40-881c-44368ebb0a9a"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "summary_outfile", 
+                    "uuid": "770139a3-c0e1-49ab-a340-f2707efae702"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "refined_multiple_alignment_output", 
+                    "uuid": "d7a8130a-015f-4b03-b630-146693e67200"
+                }
+            ]
+        }, 
+        "7": {
+            "annotation": "Tests for protein coding potential", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode/0.3.0", 
+            "errors": null, 
+            "id": 7, 
+            "input_connections": {
+                "alignment": {
+                    "id": 4, 
+                    "output_name": "clustal"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAcode", 
+                    "name": "alignment"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAcode", 
+            "outputs": [
+                {
+                    "name": "output_eps", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "outFileDefault", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "outFileGTF", 
+                    "type": "gtf"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 160
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutFileGTF": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outFileGTF"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode/0.3.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "7a84c6c1c4e0", 
+                "name": "rnacode", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"cutoff\": \"\\\"1.0\\\"\", \"outputFormat\": \"\\\"--tabular\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"best_region\": \"\\\"false\\\"\", \"cond_generateEPS\": \"{\\\"__current_case__\\\": 0, \\\"eps_cutoff\\\": \\\"0.05\\\", \\\"generateEPS\\\": \\\"create\\\"}\", \"alignment\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"best_only\": \"\\\"false\\\"\", \"num_samples\": \"\\\"100\\\"\", \"cond_scoringParameters\": \"{\\\"__current_case__\\\": 0, \\\"scoringParameters\\\": \\\"default\\\"}\", \"stop_early\": \"\\\"false\\\"\"}", 
+            "tool_version": "0.3.0", 
+            "type": "tool", 
+            "uuid": "76c8eeb5-c39f-405e-8238-4622c4eff9a7", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output_eps", 
+                    "uuid": "3191e7f2-9538-423b-8113-1bf1c217a70d"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "outFileDefault", 
+                    "uuid": "2d76f337-0627-4042-ae56-9c276ffbfbf8"
+                }
+            ]
+        }, 
+        "8": {
+            "annotation": "Computes consensus structure", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnaalifold/viennarna_rnaalifold/2.2.10.0", 
+            "errors": null, 
+            "id": 8, 
+            "input_connections": {
+                "input": {
+                    "id": 4, 
+                    "output_name": "clustal"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAalifold", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAalifold", 
+            "outputs": [
+                {
+                    "name": "tabularFile", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "imagesFile", 
+                    "type": "tar"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 297.6000061035156
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnaalifold/viennarna_rnaalifold/2.2.10.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "3bc9bd5290c1", 
+                "name": "viennarna_rnaalifold", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"model_options\": \"{\\\"betaScale\\\": \\\"1.0\\\", \\\"cfactor\\\": \\\"0.5\\\", \\\"dangling\\\": \\\"2\\\", \\\"endgaps\\\": \\\"false\\\", \\\"nfactor\\\": \\\"0.6\\\", \\\"noclosinggu\\\": \\\"true\\\", \\\"nogu\\\": \\\"true\\\", \\\"nolp\\\": \\\"true\\\", \\\"notetra\\\": \\\"true\\\", \\\"nsp\\\": \\\"\\\", \\\"ribosum\\\": \\\"true\\\", \\\"temperature\\\": \\\"37.0\\\"}\", \"general_options\": \"{\\\"alignment\\\": \\\"true\\\", \\\"color\\\": \\\"true\\\", \\\"layout_type\\\": \\\"1\\\", \\\"noPS\\\": \\\"true\\\", \\\"verbose\\\": \\\"false\\\"}\", \"algorithm_options\": \"{\\\"bppmThreshold\\\": \\\"1e-06\\\", \\\"circular\\\": \\\"false\\\", \\\"gquad\\\": \\\"false\\\", \\\"mea\\\": \\\"1.0\\\", \\\"mis\\\": \\\"false\\\", \\\"pf\\\": \\\"1\\\", \\\"pfScale\\\": \\\"1.07\\\", \\\"sci\\\": \\\"false\\\", \\\"stochBT_en\\\": \\\"1\\\"}\", \"__rerun_remap_job_id__\": null, \"IDs\": \"{\\\"auto_id\\\": \\\"false\\\", \\\"continuous_ids\\\": \\\"false\\\", \\\"id_digits\\\": \\\"4\\\", \\\"id_prefix\\\": \\\"alignment\\\", \\\"id_start\\\": \\\"1\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"constraints\": \"{\\\"constraintLocation\\\": {\\\"__current_case__\\\": 0, \\\"constraintSelector\\\": \\\"none\\\"}, \\\"maxBPspan\\\": \\\"-1\\\", \\\"shapeOption\\\": {\\\"__current_case__\\\": 1, \\\"shapeSelector\\\": \\\"notUsed\\\"}}\"}", 
+            "tool_version": "2.2.10.0", 
+            "type": "tool", 
+            "uuid": "aa6b003b-eb88-43d7-b660-8a7e3526f56a", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "tabularFile", 
+                    "uuid": "de9ad0b9-38a2-482f-8ea7-450c013d2249"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "imagesFile", 
+                    "uuid": "f4414b36-bf57-499f-a110-8d289fab9694"
+                }
+            ]
+        }, 
+        "9": {
+            "annotation": "RNAz tests the alignments for features of a structural RNA alignment", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
+            "errors": null, 
+            "id": 9, 
+            "input_connections": {
+                "input": {
+                    "id": 4, 
+                    "output_name": "clustal"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAz", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAz", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 412.79998779296875
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "e23c455f8335", 
+                "name": "rnaz", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"locarnate\": \"\\\"false\\\"\", \"cutoff\": \"\\\"-1.0\\\"\", \"__page__\": null, \"noshuffle\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"forward_or_reverse\": \"\\\"forward\\\"\", \"mononucleotide\": \"\\\"false\\\"\", \"dinucleotide\": \"\\\"true\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.1.0", 
+            "type": "tool", 
+            "uuid": "336ae32f-5c85-449c-8533-daa34234dc7c", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "outfile", 
+                    "uuid": "7c449944-2d3d-441d-8525-35334c3e6a52"
+                }
+            ]
+        }, 
+        "10": {
+            "annotation": "RNAz tests the alignment for features of a structural RNA alignment.", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
+            "errors": null, 
+            "id": 10, 
+            "input_connections": {
+                "input": {
+                    "id": 5, 
+                    "output_name": "clustal"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAz", 
+                    "name": "input"
+                }
+            ], 
+            "label": "RNAz statistics", 
+            "name": "RNAz", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 505.6000061035156
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "e23c455f8335", 
+                "name": "rnaz", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"locarnate\": \"\\\"true\\\"\", \"cutoff\": \"\\\"-1.0\\\"\", \"__page__\": null, \"noshuffle\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"forward_or_reverse\": \"\\\"forward\\\"\", \"mononucleotide\": \"\\\"false\\\"\", \"dinucleotide\": \"\\\"true\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.1.0", 
+            "type": "tool", 
+            "uuid": "9b76cfbd-7da0-41fa-aec8-083766c21b1f", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "outfile", 
+                    "uuid": "120e6be1-f804-4283-8a37-e245548edbd9"
+                }
+            ]
+        }, 
+        "11": {
+            "annotation": "Computes consensus secondary structure", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnaalifold/viennarna_rnaalifold/2.2.10.0", 
+            "errors": null, 
+            "id": 11, 
+            "input_connections": {
+                "input": {
+                    "id": 5, 
+                    "output_name": "clustal"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAalifold", 
+                    "name": "input"
+                }
+            ], 
+            "label": "RNAalifold", 
+            "name": "RNAalifold", 
+            "outputs": [
+                {
+                    "name": "tabularFile", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "imagesFile", 
+                    "type": "tar"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 598.3999938964844
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnaalifold/viennarna_rnaalifold/2.2.10.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "3bc9bd5290c1", 
+                "name": "viennarna_rnaalifold", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"model_options\": \"{\\\"betaScale\\\": \\\"1.0\\\", \\\"cfactor\\\": \\\"0.6\\\", \\\"dangling\\\": \\\"2\\\", \\\"endgaps\\\": \\\"false\\\", \\\"nfactor\\\": \\\"0.5\\\", \\\"noclosinggu\\\": \\\"true\\\", \\\"nogu\\\": \\\"true\\\", \\\"nolp\\\": \\\"true\\\", \\\"notetra\\\": \\\"true\\\", \\\"nsp\\\": \\\"\\\", \\\"ribosum\\\": \\\"true\\\", \\\"temperature\\\": \\\"37.0\\\"}\", \"general_options\": \"{\\\"alignment\\\": \\\"true\\\", \\\"color\\\": \\\"true\\\", \\\"layout_type\\\": \\\"1\\\", \\\"noPS\\\": \\\"true\\\", \\\"verbose\\\": \\\"false\\\"}\", \"algorithm_options\": \"{\\\"bppmThreshold\\\": \\\"1e-06\\\", \\\"circular\\\": \\\"false\\\", \\\"gquad\\\": \\\"false\\\", \\\"mea\\\": \\\"1.0\\\", \\\"mis\\\": \\\"true\\\", \\\"pf\\\": \\\"1\\\", \\\"pfScale\\\": \\\"1.07\\\", \\\"sci\\\": \\\"false\\\", \\\"stochBT_en\\\": \\\"1\\\"}\", \"__rerun_remap_job_id__\": null, \"IDs\": \"{\\\"auto_id\\\": \\\"false\\\", \\\"continuous_ids\\\": \\\"false\\\", \\\"id_digits\\\": \\\"4\\\", \\\"id_prefix\\\": \\\"alignment\\\", \\\"id_start\\\": \\\"1\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"constraints\": \"{\\\"constraintLocation\\\": {\\\"__current_case__\\\": 0, \\\"constraintSelector\\\": \\\"none\\\"}, \\\"maxBPspan\\\": \\\"-1\\\", \\\"shapeOption\\\": {\\\"__current_case__\\\": 1, \\\"shapeSelector\\\": \\\"notUsed\\\"}}\"}", 
+            "tool_version": "2.2.10.0", 
+            "type": "tool", 
+            "uuid": "7e53efdc-e83c-48fb-b221-187bf0ffd956", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "tabularFile", 
+                    "uuid": "c3126bdc-89fb-43d1-a60e-55cce3b10975"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "imagesFile", 
+                    "uuid": "edc620f9-dbce-42d9-a130-be583afb3b2b"
+                }
+            ]
+        }, 
+        "12": {
+            "annotation": "Tests for protein coding potential", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode/0.3.1", 
+            "errors": null, 
+            "id": 12, 
+            "input_connections": {
+                "alignment": {
+                    "id": 5, 
+                    "output_name": "clustal"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RNAcode", 
+                    "name": "alignment"
+                }
+            ], 
+            "label": null, 
+            "name": "RNAcode", 
+            "outputs": [
+                {
+                    "name": "output_eps", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "outFileDefault", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "outFileGTF", 
+                    "type": "gtf"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 742.3999938964844
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutFileDefault": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outFileDefault"
+                }, 
+                "HideDatasetActionoutFileGTF": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outFileGTF"
+                }, 
+                "HideDatasetActionoutput_eps": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_eps"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode/0.3.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "434332033e82", 
+                "name": "rnacode", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"cutoff\": \"\\\"1.0\\\"\", \"outputFormat\": \"\\\"--tabular\\\"\", \"__page__\": null, \"cond_breakmaf\": \"{\\\"__current_case__\\\": 1, \\\"select_breakmaf\\\": \\\"keepmaf\\\"}\", \"__rerun_remap_job_id__\": null, \"best_region\": \"\\\"false\\\"\", \"cond_generateEPS\": \"{\\\"__current_case__\\\": 0, \\\"eps_cutoff\\\": \\\"0.05\\\", \\\"generateEPS\\\": \\\"create\\\"}\", \"alignment\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"best_only\": \"\\\"false\\\"\", \"num_samples\": \"\\\"100\\\"\", \"cond_scoringParameters\": \"{\\\"__current_case__\\\": 0, \\\"scoringParameters\\\": \\\"default\\\"}\", \"stop_early\": \"\\\"false\\\"\"}", 
+            "tool_version": "0.3.1", 
+            "type": "tool", 
+            "uuid": "d9f1765d-a0d9-4740-af80-225abddba4d7", 
+            "workflow_outputs": []
+        }, 
+        "13": {
+            "annotation": "Statistics describing the created family model, e.g. number of nodes,\ninformation content of sequence and strucutre", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmstat/1.1.0.1", 
+            "errors": null, 
+            "id": 13, 
+            "input_connections": {
+                "cm_opts|cmfile": {
+                    "id": 6, 
+                    "output_name": "cmfile_outfile"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Summary statistics", 
+                    "name": "cm_opts"
+                }
+            ], 
+            "label": "cmstat - RNA family model statistics", 
+            "name": "Summary statistics", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 879.9999694824219
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outfile"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmstat/1.1.0.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "c47a7c52ac4f", 
+                "name": "infernal", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"cm_opts\": \"{\\\"__current_case__\\\": 1, \\\"cm_opts_selector\\\": \\\"histdb\\\", \\\"cmfile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "1.1.0.1", 
+            "type": "tool", 
+            "uuid": "14a28833-4bdb-45b3-bd01-d52d20859b03", 
+            "workflow_outputs": []
+        }, 
+        "14": {
+            "annotation": "The RNA family model is used to detect further potentially homologous RNA sequences.", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmsearch/1.1.0.2", 
+            "errors": null, 
+            "id": 14, 
+            "input_connections": {
+                "cm_opts|cmfile": {
+                    "id": 6, 
+                    "output_name": "cmfile_outfile"
+                }, 
+                "seqdb": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Search covariance model(s)", 
+                    "name": "seqdb"
+                }, 
+                {
+                    "description": "runtime parameter for tool Search covariance model(s)", 
+                    "name": "cm_opts"
+                }
+            ], 
+            "label": "cmsearch - Find homologous sequences", 
+            "name": "Search covariance model(s)", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "multiple_alignment_output", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 1001.6000061035156
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmsearch/1.1.0.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "c47a7c52ac4f", 
+                "name": "infernal", 
+                "owner": "bgruening", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"A\": \"\\\"false\\\"\", \"nohmm\": \"\\\"false\\\"\", \"--acyk\": \"\\\"false\\\"\", \"bottomonly\": \"\\\"false\\\"\", \"g\": \"\\\"false\\\"\", \"inclusion_thresholds_opts\": \"{\\\"__current_case__\\\": 0, \\\"inclusion_thresholds_selector\\\": \\\"\\\"}\", \"__page__\": null, \"max\": \"\\\"false\\\"\", \"notrunc\": \"\\\"false\\\"\", \"mid\": \"\\\"false\\\"\", \"seqdb\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"toponly\": \"\\\"false\\\"\", \"cm_opts\": \"{\\\"__current_case__\\\": 1, \\\"cm_opts_selector\\\": \\\"histdb\\\", \\\"cmfile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"reporting_thresholds_opts\": \"{\\\"__current_case__\\\": 0, \\\"reporting_thresholds_selector\\\": \\\"\\\"}\", \"cyk\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "1.1.0.2", 
+            "type": "tool", 
+            "uuid": "31dc8347-3b29-4be8-af30-4f069b73f148", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "outfile", 
+                    "uuid": "3507b26c-4fe3-498e-85eb-52f586b3d244"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "multiple_alignment_output", 
+                    "uuid": "561169ba-665b-4dfd-bf18-a725d61b29be"
+                }
+            ]
+        }, 
+        "15": {
+            "annotation": "Detailed RNA family model visualisation, showing nodes and probabilites of the model. The alignment is annotated with node indices of the model.", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/cmv/cmv/1.0.8", 
+            "errors": null, 
+            "id": 15, 
+            "input_connections": {
+                "common|alignment_filepath": {
+                    "id": 3, 
+                    "output_name": "stockholm"
+                }, 
+                "model_filepath": {
+                    "id": 6, 
+                    "output_name": "cmfile_outfile"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool cmv", 
+                    "name": "model_filepath"
+                }, 
+                {
+                    "description": "runtime parameter for tool cmv", 
+                    "name": "common"
+                }
+            ], 
+            "label": "cmv - RNA family model visualization", 
+            "name": "cmv", 
+            "outputs": [
+                {
+                    "name": "output_pdfs", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_svg", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_png", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_ps", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 876.7999877929688, 
+                "top": 1167.9999694824219
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput_pdfs": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_pdfs"
+                }, 
+                "HideDatasetActionoutput_png": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_png"
+                }, 
+                "HideDatasetActionoutput_ps": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_ps"
+                }, 
+                "HideDatasetActionoutput_svg": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_svg"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/cmv/cmv/1.0.8", 
+            "tool_shed_repository": {
+                "changeset_revision": "6e36667f1729", 
+                "name": "cmv", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"model_filepath\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"common\": \"{\\\"alignment_filepath\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"c\\\": \\\"2.0\\\", \\\"emission_layout\\\": \\\"score\\\", \\\"model_details\\\": \\\"minimal\\\", \\\"n\\\": \\\"50\\\", \\\"output_format\\\": \\\"pdf\\\", \\\"t\\\": \\\"0.01\\\", \\\"w\\\": \\\"100\\\"}\"}", 
+            "tool_version": "1.0.8", 
+            "type": "tool", 
+            "uuid": "7f7a50b5-b2a7-4597-95dc-3d7058df027a", 
+            "workflow_outputs": []
+        }
+    }, 
+    "tags": [], 
+    "uuid": "ce2d1ed0-608e-45f0-8c5a-ed34233ff737", 
+    "version": 4
+}

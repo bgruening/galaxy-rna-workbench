@@ -7,22 +7,22 @@
         "0": {
             "annotation": "The RNA family model construction workflow accepts a single sequence in fasta format as input. In the first step RNAlien collects potentially homolog sequences via homology search with sequences and secondary-structure information. The found sequences are then used to construct a structural sequences alignment with consensus structure and a RNA family, also called covariance, model. In the second step the results of the construction process are analysed. Representative sequences from the structural alignment are selected and evaluated by RNAz, which classifies if the alignment is of structural RNA quality and by RNAcode which search for open readng frames and allows the identification of dual RNAs. Statistics for the resulting covariance model are generated with cmstat.", 
             "content_id": null, 
+            "errors": null, 
             "id": 0, 
             "input_connections": {}, 
             "inputs": [
                 {
-                    "description": "Workflow input is a single sequence in fasta format", 
+                    "description": "The RNA family model construction workflow accepts a single sequence in fasta format as input. In the first step RNAlien collects potentially homolog sequences via homology search with sequences and secondary-structure information. The found sequences are then used to construct a structural sequences alignment with consensus structure and a RNA family, also called covariance, model. In the second step the results of the construction process are analysed. Representative sequences from the structural alignment are selected and evaluated by RNAz, which classifies if the alignment is of structural RNA quality and by RNAcode which search for open readng frames and allows the identification of dual RNAs. Statistics for the resulting covariance model are generated with cmstat.", 
                     "name": "Input fasta"
                 }
             ], 
-            "label": null, 
+            "label": "Input fasta", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
-                "left": 200, 
+                "left": 202, 
                 "top": 200
             }, 
-            "tool_errors": null, 
             "tool_id": null, 
             "tool_state": "{\"name\": \"Input fasta\"}", 
             "tool_version": null, 
@@ -33,6 +33,7 @@
         "1": {
             "annotation": "RNA family model construction with RNAlien, which yields a covariance model and structural alignments with consensus structure", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien/1.3.6", 
+            "errors": null, 
             "id": 1, 
             "input_connections": {
                 "input_sequence": {
@@ -75,11 +76,10 @@
                 }
             ], 
             "position": {
-                "left": 428, 
+                "left": 430, 
                 "top": 200
             }, 
             "post_job_actions": {}, 
-            "tool_errors": null, 
             "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien/1.3.6", 
             "tool_shed_repository": {
                 "changeset_revision": "9e173f038156", 
@@ -96,6 +96,7 @@
         "2": {
             "annotation": "Selection of representative sequences prior of running analysis tools.", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "errors": null, 
             "id": 2, 
             "input_connections": {
                 "input_clustal": {
@@ -118,11 +119,10 @@
                 }
             ], 
             "position": {
-                "left": 662, 
+                "left": 664, 
                 "top": 200
             }, 
             "post_job_actions": {}, 
-            "tool_errors": null, 
             "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
             "tool_shed_repository": {
                 "changeset_revision": "48fc2c21fe1c", 
@@ -139,6 +139,7 @@
         "3": {
             "annotation": "Statistics for the constructed RNA family model.", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmstat/1.1.2.0", 
+            "errors": null, 
             "id": 3, 
             "input_connections": {
                 "cm_opts|cmfile": {
@@ -161,28 +162,91 @@
                 }
             ], 
             "position": {
-                "left": 662, 
+                "left": 664, 
                 "top": 313
             }, 
             "post_job_actions": {}, 
-            "tool_errors": null, 
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmstat/1.1.2.0", 
             "tool_shed_repository": {
-                "changeset_revision": "6e18e0b098cd", 
+                "changeset_revision": "477d829d3250", 
                 "name": "infernal", 
                 "owner": "bgruening", 
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
-            "tool_state": "{\"__page__\": 0, \"cm_opts\": \"{\\\"cmfile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1, \\\"cm_opts_selector\\\": \\\"histdb\\\"}\", \"__rerun_remap_job_id__\": null}", 
+            "tool_state": "{\"__page__\": 0, \"cm_opts\": \"{\\\"__current_case__\\\": 1, \\\"cm_opts_selector\\\": \\\"histdb\\\", \\\"cmfile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"__rerun_remap_job_id__\": null}", 
             "tool_version": "1.1.2.0", 
             "type": "tool", 
             "uuid": "6ff06aa4-def0-4db8-b80e-c3946cc09faa", 
             "workflow_outputs": []
         }, 
         "4": {
+            "annotation": "Detailed RNA family model visualisation, showing nodes and probabilites of the model. The alignment is annotated with node indices of the model.", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/cmv/cmv/1.0.8", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "common|alignment_filepath": {
+                    "id": 1, 
+                    "output_name": "stockholm"
+                }, 
+                "model_filepath": {
+                    "id": 1, 
+                    "output_name": "cm"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool cmv", 
+                    "name": "model_filepath"
+                }, 
+                {
+                    "description": "runtime parameter for tool cmv", 
+                    "name": "common"
+                }
+            ], 
+            "label": null, 
+            "name": "cmv", 
+            "outputs": [
+                {
+                    "name": "output_pdfs", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_svg", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_png", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_ps", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 663.5, 
+                "top": 452.5
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/cmv/cmv/1.0.8", 
+            "tool_shed_repository": {
+                "changeset_revision": "6e36667f1729", 
+                "name": "cmv", 
+                "owner": "rnateam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"model_filepath\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"common\": \"{\\\"alignment_filepath\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"c\\\": \\\"2.0\\\", \\\"emission_layout\\\": \\\"score\\\", \\\"model_details\\\": \\\"detailed\\\", \\\"n\\\": \\\"50\\\", \\\"output_format\\\": \\\"pdf\\\", \\\"t\\\": \\\"0.01\\\", \\\"w\\\": \\\"100\\\"}\"}", 
+            "tool_version": "1.0.8", 
+            "type": "tool", 
+            "uuid": "3a5b4714-0dc1-443b-9901-924e89fa71fe", 
+            "workflow_outputs": []
+        }, 
+        "5": {
             "annotation": "RNAz analysis which classifies the result alignment if it is of structured RNA quality and computes statistics for the alignment.", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
-            "id": 4, 
+            "errors": null, 
+            "id": 5, 
             "input_connections": {
                 "input": {
                     "id": 2, 
@@ -204,11 +268,10 @@
                 }
             ], 
             "position": {
-                "left": 968, 
+                "left": 970, 
                 "top": 200
             }, 
             "post_job_actions": {}, 
-            "tool_errors": null, 
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz/2.1.0", 
             "tool_shed_repository": {
                 "changeset_revision": "e23c455f8335", 
@@ -222,10 +285,11 @@
             "uuid": "a857a0f2-81ab-448e-90cb-e82a1f033dc1", 
             "workflow_outputs": []
         }, 
-        "5": {
+        "6": {
             "annotation": "RNA code analysis, that detects open reading frams and can help to identify dual RNAs.", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode/0.3.0", 
-            "id": 5, 
+            "errors": null, 
+            "id": 6, 
             "input_connections": {
                 "alignment": {
                     "id": 2, 
@@ -255,24 +319,25 @@
                 }
             ], 
             "position": {
-                "left": 968, 
+                "left": 970, 
                 "top": 313
             }, 
             "post_job_actions": {}, 
-            "tool_errors": null, 
             "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode/0.3.0", 
             "tool_shed_repository": {
-                "changeset_revision": "2c51e264432a", 
+                "changeset_revision": "7a84c6c1c4e0", 
                 "name": "rnacode", 
                 "owner": "rnateam", 
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
-            "tool_state": "{\"cutoff\": \"\\\"1.0\\\"\", \"best_region\": \"\\\"false\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"outputFormat\": \"\\\"--tabular\\\"\", \"cond_scoringParameters\": \"{\\\"scoringParameters\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"alignment\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"best_only\": \"\\\"false\\\"\", \"num_samples\": \"\\\"100\\\"\", \"cond_generateEPS\": \"{\\\"generateEPS\\\": \\\"create\\\", \\\"eps_cutoff\\\": \\\"0.05\\\", \\\"__current_case__\\\": 0}\", \"stop_early\": \"\\\"false\\\"\"}", 
+            "tool_state": "{\"cutoff\": \"\\\"1.0\\\"\", \"outputFormat\": \"\\\"--tabular\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"best_region\": \"\\\"false\\\"\", \"cond_generateEPS\": \"{\\\"__current_case__\\\": 0, \\\"eps_cutoff\\\": \\\"0.05\\\", \\\"generateEPS\\\": \\\"create\\\"}\", \"alignment\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"best_only\": \"\\\"false\\\"\", \"num_samples\": \"\\\"100\\\"\", \"cond_scoringParameters\": \"{\\\"__current_case__\\\": 0, \\\"scoringParameters\\\": \\\"default\\\"}\", \"stop_early\": \"\\\"false\\\"\"}", 
             "tool_version": "0.3.0", 
             "type": "tool", 
             "uuid": "a90cb101-b1ca-4ac0-9b50-b9d9b529c28e", 
             "workflow_outputs": []
         }
     }, 
-    "uuid": "0c7690f6-aac6-4d09-bb22-7630234fb682"
+    "tags": [], 
+    "uuid": "13d259bb-6d5d-4b58-b8aa-89e6c1f38f37", 
+    "version": 1
 }
