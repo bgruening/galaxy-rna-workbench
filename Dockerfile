@@ -20,7 +20,6 @@ RUN install-tools $GALAXY_ROOT/tools_2.yaml && \
     rm /export/galaxy-central/ -rf && \
     mkdir -p $GALAXY_HOME/workflows
 
-
 # Add Galaxy interactive tours
 ADD ./rna-workbench-tours/* $GALAXY_ROOT/config/plugins/tours/
 
