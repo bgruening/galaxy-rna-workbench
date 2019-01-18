@@ -30,10 +30,10 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
   - [RNA alignment](#rna-alignment)
   - [RNA annotation](#rna-annotation)
   - [RNA-protein interaction](#rna-protein-interaction)
-  - [RNA target prediction](#rna-target-prediction)
-  - [RNA Seq and HTS analysis](#rna-seq-and-hts-analysis)
   - [RNA-RNA interaction](#rna-rna-interaction)
+  - [RNA target prediction](#rna-target-prediction)
   - [Ribosome profiling](#ribosome-profiling)
+  - [RNA-Seq and HTS analysis](#rna-seq-and-hts-analysis)
 - [Training](#training)
 - [Contributors](#contributors)
 - [How to contribute](#how-to-contribute)
@@ -55,7 +55,7 @@ To use the Galaxy RNA workbench, you only need [Docker](https://www.docker.com/p
 ## Docker configuration
 
 The RNA workbench docker container is rather large and expected to grow when further tools and workflows are contributed. So for users new to docker, we list here some tweaks that can help to work around issues when first using docker.
-After successful installation of docker, it is recommended to configure some settings, dealing for example with the storage space required by containers. You can find more information [here](https://github.com/bgruening/galaxy-rna-workbench/blob/master/howtodocker.md).
+After successful installation of docker, it is recommended to configure some settings, dealing for example with the storage space required by containers. You can find more information [here](howtodocker.md).
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## RNA workbench launch
@@ -230,7 +230,7 @@ Tool | Description | Reference
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
-## RNA Seq and HTS analysis
+## RNA-Seq and HTS analysis
 
 ### Preprocessing
 
