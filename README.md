@@ -252,6 +252,8 @@ Dr. Disco | An analysis pipeline to detect genomic breakpoints in RNA-Seq data |
 
 ### Read mapping
 
+Tool | Description | Reference
+--- | --- | ---
 [Bowtie2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2) | Fast and sensitive read alignment | [Langmead et al. 2012](https://doi.org/10.1038/nmeth.1923)
 [BWA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa) | Burrows-Wheeler Aligner for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2010](https://doi.org/10.1093/bioinformatics/btp698)
 [BWA-MEM](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem) | Fast and accurate long-read alignment with Burrows-Wheeler transform | [Li et al. 2010](https://doi.org/10.1093/bioinformatics/btp698)
@@ -292,7 +294,7 @@ Tool | Description | Reference
 Tool | Description | Reference
 --- | --- | ---
 SAMtools | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
-BEDTools | [Quinlan et al. 2010](https://doi.org/10.1093/bioinformatics/btq033)
+BEDTools | Utilities for genome arithmetic | [Quinlan et al. 2010](https://doi.org/10.1093/bioinformatics/btq033)
 deepTools | A suite of tools for exploring hight-throughput sequencing data (HTS), such as ChIP-seq, RNA-seq, and MNase-seq | [Ramirez et al. 2016](https://doi.org/10.1093/nar/gkw257)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
