@@ -154,7 +154,7 @@ Tool | Description | Reference
 [CMCompare](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/cmcv/cmcv) | Tool to compare RNA families via covariance models | [Eggenhofer et al. 2013](https://doi.org/10.1093/nar/gkt329)
 [Kinwalker](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/kinwalker/rbc_kinwalker) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | [Geis et al. 2008](https://doi.org/10.1016/j.jmb.2008.02.064)
 [MEA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mea/mea) | Prediction of maximum expected accuracy RNA secondary structures | [Amman et al. 2013](https://doi.org/10.1007/978-3-319-02624-4_1)
-[RNAlien](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien) | Unsupervised covariance model construction from a single input sequence | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
+[RNAlien](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
 [RNAshapes](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnashapes/RNAshapes) | Structures to a tree-like domain of shapes, retaining adjacency and nesting of structural features | [Janssen et al. 2014](https://doi.org/10.1093/bioinformatics/btu649)
 [RNAz](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz) | Predicts structurally conserved and therm. stable RNA secondary structures in mult. seq. alignments | [Gruber et al. 2010](https://doi.org/10.1142/9789814295291_0009)
 [segmentation-fold](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/segmentation_fold)| An application that predicts RNA 2D-structure with an extended version of the Zuker algorithm | -
@@ -166,11 +166,11 @@ ViennaRNA | A tool compilation for prediction and comparison of RNA secondary st
 
 Tool | Description | Reference
 --- | --- | ---
-[Compalignp](http://www.biophys.uni-duesseldorf.de/bralibase/) | An RNA counterpart of the protein specific "Benchmark Alignment Database" | [Wilm et al. 2006](https://doi.org/10.1186/1748-7188-1-19)
-[LocARNA](http://rna.informatik.uni-freiburg.de/LocARNA/Input.jsp) | A tool for multiple alignment of RNA molecules | [Will et al. 2012](https://doi.org/10.1261/rna.029041.111)
-[MAFFT](http://mafft.cbrc.jp/alignment/software/) | A multiple sequence alignment program for unix-like operating systems | [Katoh and Standley 2016](https://doi.org/10.1093/bioinformatics/btw108)
-[RNAlien](http://rna.tbi.univie.ac.at/rnalien/) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
-[CMV](https://github.com/eggzilla/cmv) | RNA family model visualisation | [Eggenhofer et al. 2018](https://doi.org/10.1093/bioinformatics/bty158)
+[CMV](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/cmv/cmv) | RNA family model visualisation | [Eggenhofer et al. 2018](https://doi.org/10.1093/bioinformatics/bty158)
+[Compalignp](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/compalignp/compalignp) | An RNA counterpart of the protein specific "Benchmark Alignment Database" | [Wilm et al. 2006](https://doi.org/10.1186/1748-7188-1-19)
+[LocARNA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mlocarna/mlocarna) | A tool for multiple alignment of RNA molecules | [Will et al. 2012](https://doi.org/10.1261/rna.029041.111)
+[MAFFT](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft) | A multiple sequence alignment program for unix-like operating systems | [Katoh and Standley 2016](https://doi.org/10.1093/bioinformatics/btw108)
+[RNAlien](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
