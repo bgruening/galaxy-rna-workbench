@@ -194,10 +194,10 @@ Infernal | Suite of tools for building RNA families covariance models (CMs) from
 
 Tool | Description | Reference
 --- | --- | ---
-[AREsite2](https://usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST) | A database for AU-/GU-/U-rich elements in human and model organisms | [Fallmann et al. 2015](https://doi.org/10.1093/nar/gkv1238)
-[doRiNA](https://usegalaxy.eu/tool_runner/data_source_redirect?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/dorina/dorina_search) | A database of RNA interactions in post-transcriptional regulation | [Blin et al. 2014](https://doi.org/10.1093/nar/gku1180)
-[PARalyzer](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran et al. 2011](https://doi.org/10.1186/gb-2011-12-8-r79)
-[Piranha](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/piranha/piranha) | A peak-caller for CLIP- and RIP-seq data | -
+[AREsite2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST) | A database for AU-/GU-/U-rich elements in human and model organisms | [Fallmann et al. 2015](https://doi.org/10.1093/nar/gkv1238)
+[doRiNA](https://rna.usegalaxy.eu/tool_runner/data_source_redirect?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/dorina/dorina_search) | A database of RNA interactions in post-transcriptional regulation | [Blin et al. 2014](https://doi.org/10.1093/nar/gku1180)
+[PARalyzer](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran et al. 2011](https://doi.org/10.1186/gb-2011-12-8-r79)
+[Piranha](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/piranha/piranha) | A peak-caller for CLIP- and RIP-seq data | -
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
