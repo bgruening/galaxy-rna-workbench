@@ -157,7 +157,7 @@ Tool | Description | Reference
 [RNAlien](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
 [RNAshapes](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnashapes/RNAshapes) | Structures to a tree-like domain of shapes, retaining adjacency and nesting of structural features | [Janssen et al. 2014](https://doi.org/10.1093/bioinformatics/btu649)
 [RNAz](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz) | Predicts structurally conserved and therm. stable RNA secondary structures in mult. seq. alignments | [Gruber et al. 2010](https://doi.org/10.1142/9789814295291_0009)
-[segmentation-fold](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/segmentation_fold)| An application that predicts RNA 2D-structure with an extended version of the Zuker algorithm | -
+[segmentation-fold](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/segmentation_fold)| An application that predicts RNA 2D-structure with an extended version of the Zuker algorithm |
 ViennaRNA | A tool compilation for prediction and comparison of RNA secondary structures | [Lorenz et al. 2011](https://doi.org/10.1186/1748-7188-6-26)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
@@ -197,7 +197,7 @@ Tool | Description | Reference
 [AREsite2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST) | A database for AU-/GU-/U-rich elements in human and model organisms | [Fallmann et al. 2015](https://doi.org/10.1093/nar/gkv1238)
 [doRiNA](https://rna.usegalaxy.eu/tool_runner/data_source_redirect?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/dorina/dorina_search) | A database of RNA interactions in post-transcriptional regulation | [Blin et al. 2014](https://doi.org/10.1093/nar/gku1180)
 [PARalyzer](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran et al. 2011](https://doi.org/10.1186/gb-2011-12-8-r79)
-[Piranha](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/piranha/piranha) | A peak-caller for CLIP- and RIP-seq data | -
+[Piranha](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/piranha/piranha) | A peak-caller for CLIP- and RIP-seq data |
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -231,10 +231,10 @@ RiboTaper | An analysis pipeline for Ribo-Seq experiments, exploiting the triple
 
 Tool | Description | Reference
 --- | --- | ---
-[FastQC!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc) | A quality control tool for high throughput sequence data | -
+[FastQC!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc) | A quality control tool for high throughput sequence data |
 [mQC](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mqc/mqc) | A quality control tool for ribosome profiling mapping results | [Verbruggen and Menschaert 2017](https://doi.org/10.1016/j.cmpb.2018.10.018)
 [MultiQC](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc) | A tool to create reports visualising output from multiple tools across many samples | [Ewels et al. 2016](https://doi.org/10.1093/bioinformatics/btw354)
-[Trim Galore!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences | -
+[Trim Galore!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences |
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -242,7 +242,7 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-Dr. Disco | An analysis pipeline to detect genomic breakpoints in RNA-Seq data | -
+Dr. Disco | An analysis pipeline to detect genomic breakpoints in RNA-Seq data |
 [FlaiMapper](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/flaimapper/flaimapper) | A tool for computational annotation of small ncRNA-derived fragments using RNA-seq data | [Hoogstrate et al. 2014](https://doi.org/10.1093/bioinformatics/btu696)
 [NASTIseq](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/nastiseq/nastiseq)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Li et al. 2013](https://doi.org/10.1101/gr.149310.112)
 [PIPmiR](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/pipmir/pipmir) | An algorithm to identify novel plant miRNA genes from a combination of deep sequencing data and genomic features | [Breakfield et al. 2011](https://doi.org/10.1101/gr.123547.111)
