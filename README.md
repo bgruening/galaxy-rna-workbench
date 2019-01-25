@@ -240,10 +240,10 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[FastQC!](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc) | A quality control tool for high throughput sequence data | -
-[mQC](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Frnateam%2Fmqc%2Fmqc%2F1.9) | A quality control tool for ribosome profiling mapping results | [Verbruggen and Menschaert 2017](https://doi.org/10.1016/j.cmpb.2018.10.018)
-[MultiQC](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc) | A tool to create reports visualising output from multiple tools across many samples | [Ewels et al. 2016](https://doi.org/10.1093/bioinformatics/btw354)
-[Trim Galore!](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences | -
+[FastQC!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc) | A quality control tool for high throughput sequence data | -
+[mQC](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mqc/mqc) | A quality control tool for ribosome profiling mapping results | [Verbruggen and Menschaert 2017](https://doi.org/10.1016/j.cmpb.2018.10.018)
+[MultiQC](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc) | A tool to create reports visualising output from multiple tools across many samples | [Ewels et al. 2016](https://doi.org/10.1093/bioinformatics/btw354)
+[Trim Galore!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences | -
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
