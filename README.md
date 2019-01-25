@@ -221,7 +221,7 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2015](https://doi.org/10.1038/nmeth.3688)
+RiboTaper | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2015](https://doi.org/10.1038/nmeth.3688)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -231,8 +231,8 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[FastQC!](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc) | A quality control tool for high throughput sequence data | -
-[Trim Galore!](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences | -
+[FastQC!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc) | A quality control tool for high throughput sequence data | -
+[Trim Galore!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences | -
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
