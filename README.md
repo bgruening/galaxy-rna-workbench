@@ -242,7 +242,6 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[DESeq2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](https://doi.org/10.1186/s13059-014-0550-8)
 Dr. Disco | An analysis pipeline to detect genomic breakpoints in RNA-Seq data | -
 [FlaiMapper](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/flaimapper/flaimapper) | A tool for computational annotation of small ncRNA-derived fragments using RNA-seq data | [Hoogstrate et al. 2014](https://doi.org/10.1093/bioinformatics/btu696)
 [NASTIseq](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/nastiseq/nastiseq)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Li et al. 2013](https://doi.org/10.1101/gr.149310.112)
@@ -277,6 +276,14 @@ Tool | Description | Reference
 [featureCounts](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts) | Ultrafast and accurate read summarization program | [Liao et al. 2014](https://doi.org/10.1093/bioinformatics/btt656)
 [Sailfish](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/sailfish/sailfish) | Rapid alignment-free quantification of isoform abundance | [Patro et al. 2014](https://doi.org/10.1038/nbt.2862)
 [Salmon](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/salmon/salmon) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](https://doi.org/10.1038/nmeth.4197)
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+### Differential expression analysis
+
+Tool | Description | Reference
+--- | --- | ---
+[DESeq2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](https://doi.org/10.1186/s13059-014-0550-8)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
