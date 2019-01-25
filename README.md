@@ -251,7 +251,6 @@ Dr. Disco | An analysis pipeline to detect genomic breakpoints in RNA-Seq data |
 [Sailfish](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/sailfish/sailfish) | A tool for rapid alignment-free quantification of isoform abundance | [Patro et al. 2014](https://doi.org/10.1038/nbt.2862)
 [Salmon](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/salmon/salmon) | A tool for transcript quantification from RNA-seq data | [Patro et al. 2015](https://doi.org/10.1101/021592)
 [SortMeRNA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/sortmerna/bg_sortmerna) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova et al. 2011](https://doi.org/10.1093/bioinformatics/bts611)
-[Trinity](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity) | A tool to assemble transcript sequences from Illumina RNA-Seq data | [Grabherr et al. 2011](https://doi.org/10.1038/nbt.1883)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -265,6 +264,12 @@ Dr. Disco | An analysis pipeline to detect genomic breakpoints in RNA-Seq data |
 [STAR-fusion](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/star_fusion/star_fusion) | Fast fusion gene finder | [Haas et al. 2017](https://www.biorxiv.org/content/early/2017/03/24/120295)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+### Transcript assembly
+
+Tool | Description | Reference
+--- | --- | ---
+[Trinity](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://doi.org/10.1038/nprot.2013.084)
 
 ### Utilities
 
