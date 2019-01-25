@@ -214,11 +214,6 @@ Tool | Description | Reference
 Tool | Description | Reference
 --- | --- | ---
 [TargetFinder](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/targetfinder/targetfinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | [Fahlgren et al. 2009](https://doi.org/10.1007/978-1-60327-005-2_4)
-[HISAT2](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://doi.org/10.1038/nprot.2016.095)
-[RNA STAR](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star) | Rapid spliced aligner for RNA-seq data | [Dobin et al. 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537/STAR-ultrafast-universal-RNA-seq-aligner)
-[STAR-fusion](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/star_fusion/star_fusion) | Fast fusion gene finder | [Haas et al. 2017](https://www.biorxiv.org/content/early/2017/03/24/120295)
-[Bowtie2](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2) | Fast and sensitive read alignment | [Langmead et al. 2012](https://doi.org/10.1038/nmeth.1923)
-[BWA](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa) | Burrows-Wheeler Aligner for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2010](https://doi.org/10.1093/bioinformatics/btp698)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -227,7 +222,6 @@ Tool | Description | Reference
 Tool | Description | Reference
 --- | --- | ---
 [RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2015](https://doi.org/10.1038/nmeth.3688)
-[Trinity](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity) | A tool to assemble transcript sequences from Illumina RNA-Seq data | [Grabherr et al. 2011](https://doi.org/10.1038/nbt.1883)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
