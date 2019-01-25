@@ -178,15 +178,15 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[ARAGORN](http://mbio-serv2.mbioekol.lu.se/ARAGORN/) | A tool to identify tRNA and tmRNA genes | [Laslett et al. 2004](https://doi.org/10.1093/nar/gkh152)
-[FuMa (Fusion Matcher)](https://github.com/yhoogstrate/fuma) | A tool to reports identical fusion genes based on gene-name annotations | [Hoogstrate et al. 2015](https://doi.org/10.1093/bioinformatics/btv721)
-[GotohScan](http://www.bioinf.uni-leipzig.de/Software/GotohScan/) | A search tool to find shorter sequences in large database sequences | [Hertel et al. 2009](https://doi.org/10.1093/nar/gkn1084)
-[Infernal](http://eddylab.org/infernal/) | A tool for searching DNA sequence databases for RNA structure and sequence similarities | [Nawrocki et al. 2013](https://doi.org/10.1093/bioinformatics/btt509)
-[RNABOB](http://eddylab.org/software.html) | A tool for fast pattern matching of RNA secondary structures | [Gautheret et al. 1990](https://doi.org/10.1093/bioinformatics/6.4.325)
-[RNAcode](https://wash.github.io/rnacode/) | Predicts protein coding regions in a set of homologous nucleotide sequences | [Washietl et al. 2011](https://doi.org/10.1261/rna.2536111)
-[RNAmmer](http://www.cbs.dtu.dk/services/RNAmmer/) | Predicts 5s/8s, 16s/18s, and 23s/28s ribosomal RNA in full genome sequences | [Lagesen et al. 2007](https://doi.org/10.1093/nar/gkm160)
-[tRNAscan](http://lowelab.ucsc.edu/tRNAscan-SE/) | Searches for tRNA genes in genomic sequences | [Lowe et al. 1997](https://doi.org/10.1093/nar/25.5.955)
-[RCAS](https://github.com/BIMSBbioinfo/RCAS) | A generic reporting tool for the functional analysis of transcriptome-wide regions of interest detected by high-throughput experiments | [Uyar et al. 2017](https://doi.org/10.1093/nar/gkx120)
+[ARAGORN](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trna_prediction/aragorn_trna) | A tool to identify tRNA and tmRNA genes | [Laslett et al. 2004](https://doi.org/10.1093/nar/gkh152)
+[FuMa (Fusion Matcher)](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/fuma/fuma) | A tool to reports identical fusion genes based on gene-name annotations | [Hoogstrate et al. 2015](https://doi.org/10.1093/bioinformatics/btv721)
+[GotohScan](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/gotohscan/rbc_gotohscan) | A search tool to find shorter sequences in large database sequences | [Hertel et al. 2009](https://doi.org/10.1093/nar/gkn1084)
+Infernal | Suite of tools for building RNA families covariance models (CMs) from structurally annotated sequence alignments | [Nawrocki et al. 2013](https://doi.org/10.1093/bioinformatics/btt509)
+[RNABOB](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnabob/rbc_rnabob) | A tool for fast pattern matching of RNA secondary structures | [Gautheret et al. 1990](https://doi.org/10.1093/bioinformatics/6.4.325)
+[RNAcode](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode) | Predicts protein coding regions in a set of homologous nucleotide sequences | [Washietl et al. 2011](https://doi.org/10.1261/rna.2536111)
+[RNAmmer](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/lionelguy/rnammer) | Predicts 5s/8s, 16s/18s, and 23s/28s ribosomal RNA in full genome sequences | [Lagesen et al. 2007](https://doi.org/10.1093/nar/gkm160)
+[tRNAscan](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trna_prediction/trnascan) | Searches for tRNA genes in genomic sequences | [Lowe et al. 1997](https://doi.org/10.1093/nar/25.5.955)
+[RCAS](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rcas/rcas) | A generic reporting tool for the functional analysis of transcriptome-wide regions of interest detected by high-throughput experiments | [Uyar et al. 2017](https://doi.org/10.1093/nar/gkx120)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
