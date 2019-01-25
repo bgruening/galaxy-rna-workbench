@@ -227,15 +227,6 @@ RiboTaper | An analysis pipeline for Ribo-Seq experiments, exploiting the triple
 
 ## RNA-Seq and HTS analysis
 
-### Preprocessing
-
-Tool | Description | Reference
---- | --- | ---
-[FastQC!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc) | A quality control tool for high throughput sequence data | -
-[Trim Galore!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences | -
-
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
 ### Quality control
 
 Tool | Description | Reference
