@@ -291,10 +291,9 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[SAMtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
-[BEDTools](https://bedtools.readthedocs.io/en/latest/) | Utilities for genome arithmetic | [Quinlan et al. 2010](https://doi.org/10.1093/bioinformatics/btq033)
-[deepTools](https://deeptools.readthedocs.io/en/develop/) | A suite of tools for exploring hight-throughput sequencing data (HTS), such as ChIP-seq, RNA-seq, and MNase-seq | [Ramirez et al. 2016](https://doi.org/10.1093/nar/gkw257)
-[Picard](https://broadinstitute.github.io/picard/) | A suite of tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF | -
+SAMtools | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
+BEDTools | [Quinlan et al. 2010](https://doi.org/10.1093/bioinformatics/btq033)
+deepTools | A suite of tools for exploring hight-throughput sequencing data (HTS), such as ChIP-seq, RNA-seq, and MNase-seq | [Ramirez et al. 2016](https://doi.org/10.1093/nar/gkw257)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
