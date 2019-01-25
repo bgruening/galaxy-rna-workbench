@@ -205,7 +205,7 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[IntaRNA](https://usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/intarna/intarna) | Efficient RNA-RNA interaction prediction incorporating accessibility and seeding of interaction sites | [Mann et al. 2017](https://doi.org/10.1093/nar/gkx279)
+[IntaRNA](https://rna.usegalaxy.eu/tool_runner?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/intarna/intarna) | Efficient RNA-RNA interaction prediction incorporating accessibility and seeding of interaction sites | [Mann et al. 2017](https://doi.org/10.1093/nar/gkx279)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
