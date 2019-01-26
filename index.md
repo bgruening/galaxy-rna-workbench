@@ -150,15 +150,16 @@ In this section we list all tools that have been integrated in the RNA workbench
 
 Tool | Description | Reference
 --- | --- | ---
-[CMCompare](http://nibiru.tbi.univie.ac.at/cmcws/introduction.html) | Tool to compare RNA families via covariance models | [Eggenhofer et al. 2013](https://doi.org/10.1093/nar/gkt329)
-[CoFold](https://www.e-rna.org/cofold/) | A thermodynamics-based RNA secondary structure folding algorithm | [Proctor et al. 2013](https://doi.org/10.1093/nar/gkt174)
-[Kinwalker](http://www.bioinf.uni-leipzig.de/Software/Kinwalker/) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | [Geis et al. 2008](https://doi.org/10.1016/j.jmb.2008.02.064)
-[MEA](http://www.bioinf.uni-leipzig.de/Software/mea/) | Prediction of maximum expected accuracy RNA secondary structures | [Amman et al. 2013](https://doi.org/10.1007/978-3-319-02624-4_1)
-[RNAlien](http://rna.tbi.univie.ac.at/rnalien/) | Unsupervised covariance model construction from a single input sequence | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
-[RNAshapes](https://bibiserv2.cebitec.uni-bielefeld.de/rnashapes) | Structures to a tree-like domain of shapes, retaining adjacency and nesting of structural features | [Janssen et al. 2014](https://doi.org/10.1093/bioinformatics/btu649)
-[RNAz](http://www.tbi.univie.ac.at/~wash/RNAz/) | Predicts structurally conserved and therm. stable RNA secondary structures in mult. seq. alignments | [Gruber et al. 2010](https://doi.org/10.1142/9789814295291_0009)
-[segmentation-fold](https://github.com/yhoogstrate/segmentation-fold)| An application that predicts RNA 2D-structure with an extended version of the Zuker algorithm | -
-[ViennaRNA](https://www.tbi.univie.ac.at/RNA/) | A tool compilation for prediction and comparison of RNA secondary structures | [Lorenz et al. 2011](https://doi.org/10.1186/1748-7188-6-26)
+[antaRNA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/antarna/antarna) | Possibility of inverse RNA structure folding and a specification of a GC value constraint | [Kleinkauf et al. 2015](https://doi.org/10.1093/bioinformatics/btv319)
+[CoFold](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/viennarna_rnacofold/viennarna_rnacofold) | A thermodynamics-based RNA secondary structure folding algorithm | [Proctor et al. 2013](https://doi.org/10.1093/nar/gkt174)
+[CMCompare](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/cmcv/cmcv) | Tool to compare RNA families via covariance models | [Eggenhofer et al. 2013](https://doi.org/10.1093/nar/gkt329)
+[Kinwalker](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/kinwalker/rbc_kinwalker) | Algorithm for cotranscriptional folding of RNAs to obtain the min. free energy structure | [Geis et al. 2008](https://doi.org/10.1016/j.jmb.2008.02.064)
+[MEA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mea/mea) | Prediction of maximum expected accuracy RNA secondary structures | [Amman et al. 2013](https://doi.org/10.1007/978-3-319-02624-4_1)
+[RNAlien](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
+[RNAshapes](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnashapes/RNAshapes) | Structures to a tree-like domain of shapes, retaining adjacency and nesting of structural features | [Janssen et al. 2014](https://doi.org/10.1093/bioinformatics/btu649)
+[RNAz](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/rnaz/rnaz) | Predicts structurally conserved and therm. stable RNA secondary structures in mult. seq. alignments | [Gruber et al. 2010](https://doi.org/10.1142/9789814295291_0009)
+[segmentation-fold](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/segmentation_fold/segmentation_fold)| An application that predicts RNA 2D-structure with an extended version of the Zuker algorithm |
+ViennaRNA | A tool compilation for prediction and comparison of RNA secondary structures | [Lorenz et al. 2011](https://doi.org/10.1186/1748-7188-6-26)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -166,11 +167,11 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[Compalignp](http://www.biophys.uni-duesseldorf.de/bralibase/) | An RNA counterpart of the protein specific "Benchmark Alignment Database" | [Wilm et al. 2006](https://doi.org/10.1186/1748-7188-1-19)
-[LocARNA](http://rna.informatik.uni-freiburg.de/LocARNA/Input.jsp) | A tool for multiple alignment of RNA molecules | [Will et al. 2012](https://doi.org/10.1261/rna.029041.111)
-[MAFFT](http://mafft.cbrc.jp/alignment/software/) | A multiple sequence alignment program for unix-like operating systems | [Katoh and Standley 2016](https://doi.org/10.1093/bioinformatics/btw108)
-[RNAlien](http://rna.tbi.univie.ac.at/rnalien/) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
-[CMV](https://github.com/eggzilla/cmv) | RNA family model visualisation | [Eggenhofer et al. 2018](https://doi.org/10.1093/bioinformatics/bty158)
+[CMV](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/cmv/cmv) | RNA family model visualisation | [Eggenhofer et al. 2018](https://doi.org/10.1093/bioinformatics/bty158)
+[Compalignp](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/compalignp/compalignp) | An RNA counterpart of the protein specific "Benchmark Alignment Database" | [Wilm et al. 2006](https://doi.org/10.1186/1748-7188-1-19)
+[LocARNA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mlocarna/mlocarna) | A tool for multiple alignment of RNA molecules | [Will et al. 2012](https://doi.org/10.1261/rna.029041.111)
+[MAFFT](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft) | A multiple sequence alignment program for unix-like operating systems | [Katoh and Standley 2016](https://doi.org/10.1093/bioinformatics/btw108)
+[RNAlien](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnalien/RNAlien) | A tool for RNA family model construction | [Eggenhofer et al. 2016](https://doi.org/10.1093/nar/gkw558)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -178,15 +179,15 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[ARAGORN](http://mbio-serv2.mbioekol.lu.se/ARAGORN/) | A tool to identify tRNA and tmRNA genes | [Laslett et al. 2004](https://doi.org/10.1093/nar/gkh152)
-[FuMa (Fusion Matcher)](https://github.com/yhoogstrate/fuma) | A tool to reports identical fusion genes based on gene-name annotations | [Hoogstrate et al. 2015](https://doi.org/10.1093/bioinformatics/btv721)
-[GotohScan](http://www.bioinf.uni-leipzig.de/Software/GotohScan/) | A search tool to find shorter sequences in large database sequences | [Hertel et al. 2009](https://doi.org/10.1093/nar/gkn1084)
-[Infernal](http://eddylab.org/infernal/) | A tool for searching DNA sequence databases for RNA structure and sequence similarities | [Nawrocki et al. 2013](https://doi.org/10.1093/bioinformatics/btt509)
-[RNABOB](http://eddylab.org/software.html) | A tool for fast pattern matching of RNA secondary structures | [Gautheret et al. 1990](https://doi.org/10.1093/bioinformatics/6.4.325)
-[RNAcode](https://wash.github.io/rnacode/) | Predicts protein coding regions in a set of homologous nucleotide sequences | [Washietl et al. 2011](https://doi.org/10.1261/rna.2536111)
-[RNAmmer](http://www.cbs.dtu.dk/services/RNAmmer/) | Predicts 5s/8s, 16s/18s, and 23s/28s ribosomal RNA in full genome sequences | [Lagesen et al. 2007](https://doi.org/10.1093/nar/gkm160)
-[tRNAscan](http://lowelab.ucsc.edu/tRNAscan-SE/) | Searches for tRNA genes in genomic sequences | [Lowe et al. 1997](https://doi.org/10.1093/nar/25.5.955)
-[RCAS](https://github.com/BIMSBbioinfo/RCAS) | A generic reporting tool for the functional analysis of transcriptome-wide regions of interest detected by high-throughput experiments | [Uyar et al. 2017](https://doi.org/10.1093/nar/gkx120)
+[ARAGORN](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trna_prediction/aragorn_trna) | A tool to identify tRNA and tmRNA genes | [Laslett et al. 2004](https://doi.org/10.1093/nar/gkh152)
+[FuMa (Fusion Matcher)](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/fuma/fuma) | A tool to reports identical fusion genes based on gene-name annotations | [Hoogstrate et al. 2015](https://doi.org/10.1093/bioinformatics/btv721)
+[GotohScan](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/gotohscan/rbc_gotohscan) | A search tool to find shorter sequences in large database sequences | [Hertel et al. 2009](https://doi.org/10.1093/nar/gkn1084)
+Infernal | Suite of tools for building RNA families covariance models (CMs) from structurally annotated sequence alignments | [Nawrocki et al. 2013](https://doi.org/10.1093/bioinformatics/btt509)
+[RNABOB](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnabob/rbc_rnabob) | A tool for fast pattern matching of RNA secondary structures | [Gautheret et al. 1990](https://doi.org/10.1093/bioinformatics/6.4.325)
+[RNAcode](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode) | Predicts protein coding regions in a set of homologous nucleotide sequences | [Washietl et al. 2011](https://doi.org/10.1261/rna.2536111)
+[RNAmmer](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/lionelguy/rnammer) | Predicts 5s/8s, 16s/18s, and 23s/28s ribosomal RNA in full genome sequences | [Lagesen et al. 2007](https://doi.org/10.1093/nar/gkm160)
+[tRNAscan](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trna_prediction/trnascan) | Searches for tRNA genes in genomic sequences | [Lowe et al. 1997](https://doi.org/10.1093/nar/25.5.955)
+[RCAS](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rcas/rcas) | A generic reporting tool for the functional analysis of transcriptome-wide regions of interest detected by high-throughput experiments | [Uyar et al. 2017](https://doi.org/10.1093/nar/gkx120)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -194,10 +195,10 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[AREsite2](http://rna.tbi.univie.ac.at/AREsite2) | A database for AU-/GU-/U-rich elements in human and model organisms | [Fallmann et al. 2015](https://doi.org/10.1093/nar/gkv1238)
-[doRiNA](https://dorina.mdc-berlin.de/) | A database of RNA interactions in post-transcriptional regulation | [Blin et al. 2014](https://doi.org/10.1093/nar/gku1180)
-[PARalyzer](https://ohlerlab.mdc-berlin.de/software/PARalyzer_85/)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran et al. 2011](https://doi.org/10.1186/gb-2011-12-8-r79)
-[Piranha](https://github.com/smithlabcode/piranha) | A peak-caller for CLIP- and RIP-seq data | -
+[AREsite2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/aresite2/AREsite2_REST) | A database for AU-/GU-/U-rich elements in human and model organisms | [Fallmann et al. 2015](https://doi.org/10.1093/nar/gkv1238)
+[doRiNA](https://rna.usegalaxy.eu/tool_runner/data_source_redirect?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/dorina/dorina_search) | A database of RNA interactions in post-transcriptional regulation | [Blin et al. 2014](https://doi.org/10.1093/nar/gku1180)
+[PARalyzer](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/paralyzer/paralyzer)| An algorithm to generate a map of interacting RNA-binding proteins and their targets | [Corcoran et al. 2011](https://doi.org/10.1186/gb-2011-12-8-r79)
+[Piranha](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/piranha/piranha) | A peak-caller for CLIP- and RIP-seq data |
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -205,7 +206,7 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[IntaRNA](https://github.com/BackofenLab/IntaRNA) | Efficient RNA-RNA interaction prediction incorporating accessibility and seeding of interaction sites | [Mann et al. 2017](https://doi.org/10.1093/nar/gkx279)
+[IntaRNA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/intarna/intarna) | Efficient RNA-RNA interaction prediction incorporating accessibility and seeding of interaction sites | [Mann et al. 2017](https://doi.org/10.1093/nar/gkx279)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -213,12 +214,7 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[TargetFinder](https://github.com/carringtonlab/TargetFinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | [Fahlgren et al. 2009](https://doi.org/10.1007/978-1-60327-005-2_4)
-[HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Pertea et al. 2016](https://doi.org/10.1038/nprot.2016.095)
-[STAR](https://github.com/alexdobin/STAR) | Rapid spliced aligner for RNA-seq data | [Dobin et al. 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537/STAR-ultrafast-universal-RNA-seq-aligner)
-[STAR-fusion](https://github.com/STAR-Fusion/STAR-Fusion) | Fast fusion gene finder | [Haas et al. 2017](https://www.biorxiv.org/content/early/2017/03/24/120295)
-[Bowtie 2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead et al. 2012](https://doi.org/10.1038/nmeth.1923)
-[BWA](http://bio-bwa.sourceforge.net/) | Software package for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2010](https://doi.org/10.1093/bioinformatics/btp698)
+[TargetFinder](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/targetfinder/targetfinder) | A tool to predict small RNA binding sites on target transcripts from a sequence database | [Fahlgren et al. 2009](https://doi.org/10.1007/978-1-60327-005-2_4)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -226,29 +222,20 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[RiboTaper](https://ohlerlab.mdc-berlin.de/software/RiboTaper_126/) | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2015](https://doi.org/10.1038/nmeth.3688)
-[Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | A tool to assemble transcript sequences from Illumina RNA-Seq data | [Grabherr et al. 2011](https://doi.org/10.1038/nbt.1883)
+RiboTaper | An analysis pipeline for Ribo-Seq experiments, exploiting the triplet periodicity of ribosomal footprints to call translated regions | [Calviello et al. 2015](https://doi.org/10.1038/nmeth.3688)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## RNA-Seq and HTS analysis
 
-### Preprocessing
-
-Tool | Description | Reference
---- | --- | ---
-[FastQC!](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | A quality control tool for high throughput sequence data | -
-[Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences | -
-
-<p align="right"><a href="#top">&#x25B2; back to top</a></p>
-
 ### Quality control
 
 Tool | Description | Reference
 --- | --- | ---
-[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | A quality control tool for high throughput sequence data | -
-[MultiQC](https://multiqc.info/) | A tool to create reports visualising output from multiple tools across many samples | [Ewels et al. 2016](https://doi.org/10.1093/bioinformatics/btw354)
-[Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences | -
+[FastQC!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc) | A quality control tool for high throughput sequence data |
+[mQC](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/mqc/mqc) | A quality control tool for ribosome profiling mapping results | [Verbruggen and Menschaert 2017](https://doi.org/10.1016/j.cmpb.2018.10.018)
+[MultiQC](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc) | A tool to create reports visualising output from multiple tools across many samples | [Ewels et al. 2016](https://doi.org/10.1093/bioinformatics/btw354)
+[Trim Galore!](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore) | A tool for the automation of quality and adapter trimming on paired-end or non-paired-end end sequences |
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -256,22 +243,50 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | Fast and sensitive read alignment | [Langmead et al. 2012](https://doi.org/10.1038/nmeth.1923)
-[BWA](http://bio-bwa.sourceforge.net/) | Burrow-Wheeler Aligner for short-read alignment | [Li et al. 2010](https://doi.org/10.1093/bioinformatics/btp698)
-[BWA-MEM](https://github.com/lh3/bwa) | Fast and accurate long-read alignment with Burrows–Wheeler transform | [Li et al. 2010](https://doi.org/10.1093/bioinformatics/btp698)
-[DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](https://doi.org/10.1186/s13059-014-0550-8)
-[Dr. Disco](https://github.com/yhoogstrate/dr-disco) | Detection of exon-to-exon and genomic breakpoints in RNA-Seq data | -
-[featureCounts](http://bioinf.wehi.edu.au/featureCounts/) | Ultrafast and accurate read summarization program | [Liao et al. 2013](https://doi.org/10.1093/bioinformatics/btt656)
-[FlaiMapper](https://github.com/yhoogstrate/flaimapper) | A tool for computational annotation of small ncRNA-derived fragments using RNA-seq data | [Hoogstrate et al. 2014](https://doi.org/10.1093/bioinformatics/btu696)
-[HISAT2](https://ccb.jhu.edu/software/hisat2/) | Hierarchical indexing for spliced alignment of transcripts | [Kim et al. 2015](https://doi.org/10.1038/nmeth.3317)
-[NASTIseq](https://ohlerlab.mdc-berlin.de/software/NASTIseq_104/)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Li et al. 2013](https://doi.org/10.1101/gr.149310.112)
-[PIPmiR](https://ohlerlab.mdc-berlin.de/software/Pipeline_for_the_Identification_of_Plant_miRNAs_84/) | An algorithm to identify novel plant miRNA genes from a combination of deep sequencing data and genomic features | [Breakfield et al. 2011](https://doi.org/10.1101/gr.123547.111)
-[RNA STAR](https://github.com/alexdobin/STAR) | Ultrafast universal RNA-seq aligner | [Dobin et al. 2012](https://doi.org/10.1093/bioinformatics/bts635)
-[Sailfish](https://www.cs.cmu.edu/~ckingsf/software/sailfish/) | A tool for rapid alignment-free quantification of isoform abundance | [Patro et al. 2014](https://doi.org/10.1038/nbt.2862)
-[Salmon](https://github.com/COMBINE-lab/Salmon) | A tool for transcript quantification from RNA-seq data | [Patro et al. 2015](https://doi.org/10.1101/021592)
-[SortMeRNA](http://bioinfo.lifl.fr/RNA/sortmerna/) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova et al. 2011](https://doi.org/10.1093/bioinformatics/bts611)
-[STAR-Fusion](https://github.com/STAR-Fusion/STAR-Fusion) | A tool that leverages on the STAR aligner to identify candidate fusion transcripts supported by Illumina reads | -
-[Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) | A tool to assemble transcript sequences from Illumina RNA-Seq data | [Grabherr et al. 2011](https://doi.org/10.1038/nbt.1883)
+Dr. Disco | An analysis pipeline to detect genomic breakpoints in RNA-Seq data |
+[FlaiMapper](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/yhoogstrate/flaimapper/flaimapper) | A tool for computational annotation of small ncRNA-derived fragments using RNA-seq data | [Hoogstrate et al. 2014](https://doi.org/10.1093/bioinformatics/btu696)
+[NASTIseq](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/nastiseq/nastiseq)| A method that incorporates the inherent variable efficiency of generating perfectly strand-specific libraries | [Li et al. 2013](https://doi.org/10.1101/gr.149310.112)
+[PIPmiR](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/pipmir/pipmir) | An algorithm to identify novel plant miRNA genes from a combination of deep sequencing data and genomic features | [Breakfield et al. 2011](https://doi.org/10.1101/gr.123547.111)
+[SortMeRNA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/sortmerna/bg_sortmerna) | A tool for filtering, mapping and OTU-picking NGS reads in metatranscriptomic and -genomic data | [Kopylova et al. 2011](https://doi.org/10.1093/bioinformatics/bts611)
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+### Read mapping
+
+Tool | Description | Reference
+--- | --- | ---
+[Bowtie2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2) | Fast and sensitive read alignment | [Langmead et al. 2012](https://doi.org/10.1038/nmeth.1923)
+[BWA](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa) | Burrows-Wheeler Aligner for mapping low-divergent sequences against a large reference genome | [Li and Durbin 2010](https://doi.org/10.1093/bioinformatics/btp698)
+[BWA-MEM](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem) | Fast and accurate long-read alignment with Burrows-Wheeler transform | [Li et al. 2010](https://doi.org/10.1093/bioinformatics/btp698)
+[HISAT2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2) | Hierarchical indexing for spliced alignment of transcripts | [Kim et al. 2015](https://doi.org/10.1038/nmeth.3317)
+[RNA STAR](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star) | Rapid spliced aligner for RNA-seq data | [Dobin et al. 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537/STAR-ultrafast-universal-RNA-seq-aligner)
+[STAR-fusion](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/star_fusion/star_fusion) | Fast fusion gene finder | [Haas et al. 2017](https://www.biorxiv.org/content/early/2017/03/24/120295)
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+### Transcript assembly
+
+Tool | Description | Reference
+--- | --- | ---
+[Trinity](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/trinity/trinity) | De novo transcript sequence reconstruction from RNA-Seq | [Haas et al. 2013](https://doi.org/10.1038/nprot.2013.084)
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+### Transcript quantification
+
+Tool | Description | Reference
+--- | --- | ---
+[featureCounts](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts) | Ultrafast and accurate read summarization program | [Liao et al. 2014](https://doi.org/10.1093/bioinformatics/btt656)
+[Sailfish](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/sailfish/sailfish) | Rapid alignment-free quantification of isoform abundance | [Patro et al. 2014](https://doi.org/10.1038/nbt.2862)
+[Salmon](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/salmon/salmon) | Fast, accurate and bias-aware transcript quantification | [Patro et al. 2017](https://doi.org/10.1038/nmeth.4197)
+
+<p align="right"><a href="#top">&#x25B2; back to top</a></p>
+
+### Differential expression analysis
+
+Tool | Description | Reference
+--- | --- | ---
+[DESeq2](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2) | Differential gene expression analysis based on the negative binomial distribution | [Love et al. 2014](https://doi.org/10.1186/s13059-014-0550-8)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
@@ -279,9 +294,9 @@ Tool | Description | Reference
 
 Tool | Description | Reference
 --- | --- | ---
-[SAMtools](http://samtools.sourceforge.net/) | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
-[BEDTools](https://bedtools.readthedocs.io/en/latest/) | Utilities for genome arithmetic | [Quinlan et al. 2010](https://doi.org/10.1093/bioinformatics/btq033)
-[deepTools](https://deeptools.readthedocs.io/en/develop/) | A suite of tools for exploring hight-throughput sequencing data, such as ChIP-seq, RNA-seq, and MNase-seq | [Ramirez et al. 2016](https://doi.org/10.1093/nar/gkw257)
+SAMtools | Utilities for manipulating alignments in the SAM format | [Heng et al. 2009](https://doi.org/10.1093/bioinformatics/btp352)
+BEDTools | Utilities for genome arithmetic | [Quinlan et al. 2010](https://doi.org/10.1093/bioinformatics/btq033)
+deepTools | A suite of tools for exploring hight-throughput sequencing data (HTS), such as ChIP-seq, RNA-seq, and MNase-seq | [Ramirez et al. 2016](https://doi.org/10.1093/nar/gkw257)
 
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
