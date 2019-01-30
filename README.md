@@ -184,7 +184,6 @@ Tool | Description | Reference
 Infernal | Suite of tools for building RNA families covariance models (CMs) from structurally annotated sequence alignments | [Nawrocki et al. 2013](https://doi.org/10.1093/bioinformatics/btt509)
 [RNABOB](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnabob/rbc_rnabob) | A tool for fast pattern matching of RNA secondary structures | [Gautheret et al. 1990](https://doi.org/10.1093/bioinformatics/6.4.325)
 [RNAcode](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rnacode/rbc_rnacode) | Predicts protein coding regions in a set of homologous nucleotide sequences | [Washietl et al. 2011](https://doi.org/10.1261/rna.2536111)
-[RNAmmer](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/lionelguy/rnammer) | Predicts 5s/8s, 16s/18s, and 23s/28s ribosomal RNA in full genome sequences | [Lagesen et al. 2007](https://doi.org/10.1093/nar/gkm160)
 [tRNAscan](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/trna_prediction/trnascan) | Searches for tRNA genes in genomic sequences | [Lowe et al. 1997](https://doi.org/10.1093/nar/25.5.955)
 [RCAS](https://rna.usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/rnateam/rcas/rcas) | A generic reporting tool for the functional analysis of transcriptome-wide regions of interest detected by high-throughput experiments | [Uyar et al. 2017](https://doi.org/10.1093/nar/gkx120)
 
