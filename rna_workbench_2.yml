@@ -162,7 +162,7 @@ tools:
   tool_panel_section_label: "RNA-Seq"
   
 - name: srnapipe
-  owner: 	brasset_jensen
+  owner: brasset_jensen
   install_resolver_dependencies: false
   tool_panel_section_label: "RNA-Seq"
 
