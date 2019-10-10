@@ -223,7 +223,7 @@
         }, 
         "4": {
             "annotation": "Selects representative sequence from big alignments", 
-            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.5", 
             "errors": null, 
             "id": 4, 
             "input_connections": {
@@ -257,7 +257,7 @@
                     "output_name": "clustal"
                 }
             }, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.5", 
             "tool_shed_repository": {
                 "changeset_revision": "48fc2c21fe1c", 
                 "name": "selectsequencesfrommsa", 
@@ -265,14 +265,14 @@
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"__page__\": null, \"i\": \"\\\"80.0\\\"\", \"__rerun_remap_job_id__\": null, \"m\": \"\\\"95.0\\\"\", \"n\": \"\\\"6\\\"\", \"input_clustal\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"x\": \"\\\"true\\\"\"}", 
-            "tool_version": "1.0.2", 
+            "tool_version": "1.0.5", 
             "type": "tool", 
             "uuid": "3bf85c9d-4ed1-4cf0-8615-00bddf2530ad", 
             "workflow_outputs": []
         }, 
         "5": {
             "annotation": "Selects representative sequences from large alignments", 
-            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.5", 
             "errors": null, 
             "id": 5, 
             "input_connections": {
@@ -306,7 +306,7 @@
                     "output_name": "clustal"
                 }
             }, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.2", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/selectsequencesfrommsa/selectsequencesfrommsa/1.0.5", 
             "tool_shed_repository": {
                 "changeset_revision": "48fc2c21fe1c", 
                 "name": "selectsequencesfrommsa", 
@@ -314,7 +314,7 @@
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"__page__\": null, \"i\": \"\\\"80.0\\\"\", \"__rerun_remap_job_id__\": null, \"m\": \"\\\"95.0\\\"\", \"n\": \"\\\"6\\\"\", \"input_clustal\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"x\": \"\\\"true\\\"\"}", 
-            "tool_version": "1.0.2", 
+            "tool_version": "1.0.5", 
             "type": "tool", 
             "uuid": "0a399934-a4ed-4334-a8cf-e1c2ce537305", 
             "workflow_outputs": []
