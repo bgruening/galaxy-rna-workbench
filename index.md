@@ -3,7 +3,7 @@ layout: default
 ---
 
 # About
-[![Manuscript](https://img.shields.io/badge/DOI-10.1093%2Fnar%2Fgkx409-blue.svg)](https://doi.org/10.1093/nar/gkx409)
+[![Manuscript](https://img.shields.io/badge/DOI-10.1093%2Fnar%2Fgkz353-blue.svg)](https://doi.org/10.1093/nar/gkz353)
 ![docker pulls](https://img.shields.io/docker/pulls/bgruening/galaxy-rna-workbench.svg)
 ![docker stars](https://img.shields.io/docker/stars/bgruening/galaxy-rna-workbench.svg)
 
@@ -11,7 +11,7 @@ layout: default
 <div id="top"></div>
 
 
-The RNA Galaxy workbench is a comprehensive set of analysis tools and consolidated workflows. The workbench is based on the Galaxy framework, which guarantees simple access, easy extension, flexible adaption to personal and security needs, and sophisticated analyses independent of command-line knowledge.
+The RNA Galaxy workbench is a comprehensive set of analysis tools and consolidated workflows. The workbench is based on the Galaxy framework, which guarantees simple access, easy extension, flexible adaption to personal and security needs, and sophisticated analyses independent of command-line knowledge. The workbench is described in two manuscripts published in Nucleic Acid Research (see [version1](https://doi.org/10.1093/nar/gkx409), [version2](https://doi.org/10.1093/nar/gkx409)).
 
 The current implementation comprises more than 50 bioinformatics tools dedicated to different research areas of RNA biology, including RNA structure analysis, RNA alignment, RNA annotation, RNA-protein interaction, ribosome profiling, RNA-Seq analysis, and RNA target prediction.
 
@@ -43,7 +43,7 @@ The workbench is developed by the RNA Bioinformatics Center (RBC). This center i
 
 # Usage
 
-The RNA analyses workbench implements a webserver based on the [Galaxy Docker](https://github.com/bgruening/docker-galaxy-stable) platform: a dedicated Galaxy instance wrapped in a Docker container. For advanced local deployments, we recommend to check out the upstream [documentation](http://bgruening.github.io/docker-galaxy-stable).
+The RNA analyses workbench implements a webserver based on the [Galaxy Docker](https://github.com/bgruening/docker-galaxy-stable) platform: a dedicated Galaxy instance wrapped in a Docker container. For advanced local deployments, we recommend to check out the upstream [documentation](http://bgruening.github.io/docker-galaxy-stable). The workbench is directly use and testable as instance of usegalaxy.eu [rna.usegalaxy.eu](rna.usegalaxy.eu).
 <p align="right"><a href="#top">&#x25B2; back to top</a></p>
 
 ## Requirement
