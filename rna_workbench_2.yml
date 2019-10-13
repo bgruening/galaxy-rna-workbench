@@ -160,6 +160,11 @@ tools:
   owner: rnateam
   install_resolver_dependencies: false
   tool_panel_section_label: "RNA-Seq"
+  
+- name: srnapipe
+  owner: brasset_jensen
+  install_resolver_dependencies: false
+  tool_panel_section_label: "RNA-Seq"
 
 # RNA Target Prediction
 
@@ -172,3 +177,5 @@ tools:
   owner: rnateam
   install_resolver_dependencies: true
   tool_panel_section_label: "Quality Control"
+  
+
