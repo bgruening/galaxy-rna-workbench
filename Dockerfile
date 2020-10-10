@@ -1,6 +1,6 @@
 # Galaxy - RNA workbench
 
-FROM bgruening/galaxy-rna-structural-analysis:19.01
+FROM quay.io/bgruening/galaxy-rna-structural-analysis:20.09
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
