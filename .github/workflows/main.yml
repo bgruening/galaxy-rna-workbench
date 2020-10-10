@@ -1,0 +1,33 @@
+name: Test Docker image building
+
+on: [push, pull_request]
+env:
+  TOX_ENV: py37
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install test script
+        run: |
+          wget https://raw.githubusercontent.com/galaxyproject/galaxy-flavor-testing/master/Makefile
+          # As Test VM disk space is limited, we remove all conda envs once they are installed successfully to free some disk space (see #23)
+          sed -i 's|\(install-tools.*&&\) \\|\1 rm \-rf /tool_deps/_conda/envs/* \&\& \\|g' Dockerfile
+      - name: Build Docker image
+        run: make docker_build
+      - name: Run the newly built Docker image
+        run: |
+          make docker_run
+      - name: Check API availability
+        run: make test_api
+      - name: Run FTP tests
+        run: make test_ftp
+      - name: Install Bioblend
+        run: make install
+      - name: Run Bioblend tests
+        run: make test_bioblend
